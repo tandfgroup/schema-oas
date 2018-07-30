@@ -1,0 +1,5 @@
+Error:
+  allOf:
+    - $ref: 'thing.yml#/Thing'
+    - type: object
+      description: For failed actions, more information on the cause of the failure.

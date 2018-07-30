@@ -1,0 +1,12 @@
+Article:
+  allOf:
+    - $ref: 'creative_work.yml#/CreativeWork'
+    - type: object
+      description: An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.
+      properties:
+        articleBody:
+          type: string
+          description: The actual body of the article.
+        articleSection:
+          type: string
+          description: Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.

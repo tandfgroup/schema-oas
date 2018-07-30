@@ -1,0 +1,89 @@
+Place:
+  allOf:
+    - $ref: 'thing.yml#/Thing'
+    - type: object
+      description: Entities that have a somewhat fixed, physical extension.
+      properties:
+        additionalProperty:
+          type: string
+          description: >
+            A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
+            Note; Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+        address:
+          oneOf:
+            - type: string
+            - $ref: 'postal_address.yml#/PostalAddress'
+          description: Physical address of the item.
+        aggregateRating:
+          $ref: 'aggregate_rating.yml#/AggregateRating'
+          description: The overall rating, based on a collection of reviews or ratings, of the item.
+        amenityFeature:
+          $ref: 'location_feature_specification.yml#/LocationFeatureSpecification'
+          description: An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
+        branchCode:
+          type: string
+          description: >
+            A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
+            For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
+        containedInPlace:
+          $ref: 'place.yml#/Place'
+          description: The basic containment relation between a place and one that contains it. Supersedes containedIn. Inverse property; containsPlace.
+        containsPlace:
+          $ref: 'place.yml#/Place'
+          description: The basic containment relation between a place and another that it contains. Inverse property; containedInPlace.
+        event:
+          $ref: 'event.yml#/Event'
+          description: Upcoming or past event associated with this place, organization, or action. Supersedes events.
+        faxNumber:
+          type: string
+          description: The fax number.
+        geo:
+          oneOf:
+            - $ref: 'geo_coordinates.yml#/GeoCoordinates'
+            - $ref: 'geo_Shape.yml#/GeoShape'
+          description: The geo coordinates of the place.
+        globalLocationNumber:
+          type: string
+          description: The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.
+        hasMap:
+          oneOf:
+            - type: string
+            - $ref: 'map.yml#/Map'
+          description: A URL to a map of the place. Supersedes map, maps.
+        isAccessibleForFree:
+          type: boolean
+          description: A flag to signal that the item, event, or place is accessible for free. Supersedes free.
+        isicV4:
+          type: string
+          description: The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.
+        logo:
+          oneOf:
+            - type: string
+            - $ref: 'image_object.yml#/ImageObject'
+          description: An associated logo.
+        maximumAttendeeCapacity:
+          type: integer
+          description: The total number of individuals that may attend an event or venue.
+        openingHoursSpecification:
+          $ref: 'opening_hours_specification.yml#/OpeningHoursSpecification'
+          description: The opening hours of a certain place.
+        photo:
+          oneOf:
+            - $ref: 'image_object.yml#/ImageObject'
+            - $ref: 'photograph.yml#/Photograph'
+          description: A photograph of this place. Supersedes photos.
+        publicAccess:
+          type: boolean
+          description: A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value
+        review:
+          $ref: 'review.yml#/Review'
+          description: A review of the item. Supersedes reviews.
+        smokingAllowed:
+          type: boolean
+          description: Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
+        specialOpeningHoursSpecification:
+          $ref: 'opening_hours_specification.yml#/OpeningHoursSpecification'
+          description: The special opening hours of a certain place. Use this to explicitly override general opening hours brought in scope by openingHoursSpecification or openingHours.
+        telephone:
+          type: string
+          description: The telephone number.

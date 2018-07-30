@@ -1,0 +1,18 @@
+ContactPoint:
+  allOf:
+    - $ref: 'structured_value.yml#/StructuredValue'
+    - type: object
+      description: A contact point—for example, a Customer Complaints department.
+      properties:
+        contactType:
+          type: string
+          description: A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.
+        email:
+          type: string
+          description: Email address.
+        faxNumber:
+          type: string
+          description: The fax number.
+        telephone:
+          type: string
+          description: The telephone number.

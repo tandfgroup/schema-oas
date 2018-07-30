@@ -1,0 +1,50 @@
+Thing:
+  type: object
+  description: The most generic type of item.
+  properties:
+    _id:
+      type: string
+      description: Hexstring unique identifier. Generated automatically for new instances.
+    additionalType:
+      type: string
+      description: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.
+    alternateName:
+      type: string
+      description: An alias for the item.
+    description:
+      type: string
+      description: A description of the item.
+    disambiguatingDescription:
+      type: string
+      description: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+    identifier:
+      oneOf:
+        - type: string
+        - $ref: 'property_value.yml#/PropertyValue'
+      description: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
+    image:
+      oneOf:
+        - type: string
+        - $ref: 'image_object.yml#/ImageObject'
+      description: An image of the item. This can be a URL or a fully described ImageObject.
+    mainEntityOfPage:
+      oneOf:
+        - type: string
+        - $ref: 'creative_work.yml#/CreativeWork'
+      description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. Inverse property; mainEntity.
+    potentialAction:
+      $ref: 'action.yml#/Action'
+    name:
+      type: string
+      description: The name of the item.
+    sameAs:
+      type: string
+      description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+    subjectOf:
+      oneOf:
+        - $ref: 'creative_work.yml#/CreativeWork'
+        - $ref: 'event.yml#/Event'
+      description: A CreativeWork or Event about this Thing. Inverse property; about.
+    url:
+      type: string
+      description: URL of the item.

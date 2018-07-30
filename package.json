@@ -1,0 +1,37 @@
+{
+  "name": "@tandfgroup/shemaorg-openapi-spec",
+  "description": "OpenAPI Specifications for Schema.org standards",
+  "version": "0.0.0-development",
+  "author": "T&F Group",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/tandfgroup/shemaorg-openapi-spec",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tandfgroup/shemaorg-openapi-spec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tandfgroup/shemaorg-openapi-spec/issues"
+  },
+  "scripts": {
+    "commitmsg": "commitlint -E GIT_PARAMS",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "swagger-ui": "^3.17.3",
+    "swagger-ui-dist": "^3.17.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "@commitlint/travis-cli": "^7.0.0",
+    "husky": "^0.14.3",
+    "semantic-release": "^12.0.0",
+    "tandf-shell": "^1.6.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

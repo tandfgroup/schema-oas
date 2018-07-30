@@ -1,0 +1,25 @@
+Person:
+  allOf:
+    - $ref: 'thing.yml#/Thing'
+    - type: object
+      description: A person (alive, dead, undead, or fictional).
+      properties:
+        additionalName:
+          type: string
+          description: An additional name for a Person, can be used for a middle name.
+        address:
+          oneOf:
+            - type: string
+            - $ref: 'postal_address.yml#/PostalAddress'
+          description: Physical address of the item.
+        affiliation: # An organization that this person is affiliated with. For example, a school/university, a club, or a team.
+          $ref: 'organization.yml#/Organization'
+        email:
+          type: string
+          description: Email address.
+        familyName:
+          type: string
+          description: Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property.
+        givenName:
+          type: string
+          description: Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property.

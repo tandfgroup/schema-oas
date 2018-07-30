@@ -1,0 +1,5 @@
+ScholarlyArticle:
+  allOf:
+    - $ref: 'article.yml#/Article'
+    - type: object
+      description: A scholarly article.

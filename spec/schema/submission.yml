@@ -1,0 +1,43 @@
+Submission:
+  allOf:
+    - $ref: 'thing.yml#/Thing'
+    - type: object
+      description: A submission object.
+      properties:
+        creator:
+          $ref: 'person.yml#/Person'
+        dateCreated:
+          type: string
+          description: Creation date of object
+          format: date
+        dateModified:
+          type: string
+          description: Date of last modification to object
+          format: date
+        reviews:
+          type: array
+          description: Reviews of object
+          items:
+            $ref: 'review.yml#/Review'
+        scholarlyArticle:
+          $ref: 'scholarly_article.yml#/ScholarlyArticle'
+        status:
+          type: string
+          description: Status of submission
+        submissionType:
+          type: string
+          description: |
+            Type of submission
+            This should be determined/generated based on the type of submission.
+          enum:
+            - audio
+            - article
+            - book
+            - chapter
+            - ebook
+            - issue
+            - journal
+            - media
+            - other
+            - video
+            - volume

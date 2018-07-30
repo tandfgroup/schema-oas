@@ -1,0 +1,13 @@
+AggregateRating:
+  type: object
+  description: The average rating based on multiple ratings or reviews.
+  properties:
+    itemReviewed:
+      type: integer
+      description: The item that is being reviewed/rated.
+    ratingCount:
+      type: integer
+      description: The count of total number of ratings.
+    reviewCount:
+      type: integer
+      description: The count of total number of reviews.
