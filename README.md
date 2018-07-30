@@ -14,6 +14,15 @@
 
 This is a collection of OpenAPI Specs for all the Schema.org entities.
 
+### Links
+
+- Documentation: https://tandfgroup.github.io/schemaorg-openapi-spec/
+- SwaggerUI: https://tandfgroup.github.io/schemaorg-openapi-spec/swagger-ui/
+- Specification:
+  - JSON https://tandfgroup.github.io/schemaorg-openapi-spec/swagger.json
+  - YAML https://tandfgroup.github.io/schemaorg-openapi-spec/swagger.yaml
+- Preview specifications for branch `[branch]`: https://tandfgroup.github.io/schemaorg-openapi-spec/preview/[branch]
+
 ## Usage <a id="usage"></a>
 
 TBD...
