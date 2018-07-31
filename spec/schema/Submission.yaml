@@ -1,11 +1,11 @@
 Submission:
   allOf:
-    - $ref: 'thing.yml#/Thing'
+    - $ref: 'thing.yaml#/Thing'
     - type: object
       description: A submission object.
       properties:
         creator:
-          $ref: 'person.yml#/Person'
+          $ref: 'person.yaml#/Person'
         dateCreated:
           type: string
           description: Creation date of object
@@ -18,9 +18,9 @@ Submission:
           type: array
           description: Reviews of object
           items:
-            $ref: 'review.yml#/Review'
+            $ref: 'review.yaml#/Review'
         scholarlyArticle:
-          $ref: 'scholarly_article.yml#/ScholarlyArticle'
+          $ref: 'scholarly_article.yaml#/ScholarlyArticle'
         status:
           type: string
           description: Status of submission

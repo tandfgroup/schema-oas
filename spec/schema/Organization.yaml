@@ -1,20 +1,20 @@
 Organization:
   allOf:
-    - $ref: 'thing.yml#/Thing'
+    - $ref: 'thing.yaml#/Thing'
     - type: object
       description: An organization such as a school, NGO, corporation, club, etc.
       properties:
         address:
           oneOf:
             - type: string
-            - $ref: 'postal_address.yml#/PostalAddress'
+            - $ref: 'postal_address.yaml#/PostalAddress'
           description: Physical address of the item.
         contactPoint: # A contact point for a person or organization. Supersedes 'contactPoints'.
-          $ref: 'contact_point.yml#/ContactPoint'
+          $ref: 'contact_point.yaml#/ContactPoint'
         department: # A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours).
-          $ref: 'organization.yml#/Organization'
+          $ref: 'organization.yaml#/Organization'
         email:
           type: string
           description: Email address.
         employee: # Someone working for this organization. Supersedes employees.
-          $ref: 'person.yml#/Person'
+          $ref: 'person.yaml#/Person'

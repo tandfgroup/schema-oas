@@ -1,5 +1,5 @@
 Enumeration:
   allOf:
-    - $ref: 'intangible.yml#/Intangible'
+    - $ref: 'intangible.yaml#/Intangible'
     - type: object
       description: Lists or enumerations—for example, a list of cuisines or music genres, etc.

@@ -1,0 +1,19 @@
+openapi: '3.0.0'
+info:
+  description: |
+    This is an API based on Schema.org standards.
+  version: '0.0.0-development'
+  title: 'OpenAPI Specs for Schema.org'
+  termsOfService: http://localhost:80/terms
+  contact:
+    name: email@domain.com
+  license:
+    name: Private
+    url: http://localhost:80/license
+servers:
+  - url: http://localhost:3000
+paths:
+  # $ref: paths.yaml <- not allowed
+components:
+  schema:
+    $ref: ./schema.yaml
