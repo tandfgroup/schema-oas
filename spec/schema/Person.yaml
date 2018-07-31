@@ -1,6 +1,6 @@
 Person:
   allOf:
-    - $ref: 'thing.yml#/Thing'
+    - $ref: 'thing.yaml#/Thing'
     - type: object
       description: A person (alive, dead, undead, or fictional).
       properties:
@@ -10,10 +10,10 @@ Person:
         address:
           oneOf:
             - type: string
-            - $ref: 'postal_address.yml#/PostalAddress'
+            - $ref: 'postal_address.yaml#/PostalAddress'
           description: Physical address of the item.
         affiliation: # An organization that this person is affiliated with. For example, a school/university, a club, or a team.
-          $ref: 'organization.yml#/Organization'
+          $ref: 'organization.yaml#/Organization'
         email:
           type: string
           description: Email address.

@@ -1,6 +1,6 @@
 Place:
   allOf:
-    - $ref: 'thing.yml#/Thing'
+    - $ref: 'thing.yaml#/Thing'
     - type: object
       description: Entities that have a somewhat fixed, physical extension.
       properties:
@@ -12,13 +12,13 @@ Place:
         address:
           oneOf:
             - type: string
-            - $ref: 'postal_address.yml#/PostalAddress'
+            - $ref: 'postal_address.yaml#/PostalAddress'
           description: Physical address of the item.
         aggregateRating:
-          $ref: 'aggregate_rating.yml#/AggregateRating'
+          $ref: 'aggregate_rating.yaml#/AggregateRating'
           description: The overall rating, based on a collection of reviews or ratings, of the item.
         amenityFeature:
-          $ref: 'location_feature_specification.yml#/LocationFeatureSpecification'
+          $ref: 'location_feature_specification.yaml#/LocationFeatureSpecification'
           description: An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
         branchCode:
           type: string
@@ -26,21 +26,21 @@ Place:
             A short textual code (also called "store code") that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
             For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
         containedInPlace:
-          $ref: 'place.yml#/Place'
+          $ref: 'place.yaml#/Place'
           description: The basic containment relation between a place and one that contains it. Supersedes containedIn. Inverse property; containsPlace.
         containsPlace:
-          $ref: 'place.yml#/Place'
+          $ref: 'place.yaml#/Place'
           description: The basic containment relation between a place and another that it contains. Inverse property; containedInPlace.
         event:
-          $ref: 'event.yml#/Event'
+          $ref: 'event.yaml#/Event'
           description: Upcoming or past event associated with this place, organization, or action. Supersedes events.
         faxNumber:
           type: string
           description: The fax number.
         geo:
           oneOf:
-            - $ref: 'geo_coordinates.yml#/GeoCoordinates'
-            - $ref: 'geo_Shape.yml#/GeoShape'
+            - $ref: 'geo_coordinates.yaml#/GeoCoordinates'
+            - $ref: 'geo_Shape.yaml#/GeoShape'
           description: The geo coordinates of the place.
         globalLocationNumber:
           type: string
@@ -48,7 +48,7 @@ Place:
         hasMap:
           oneOf:
             - type: string
-            - $ref: 'map.yml#/Map'
+            - $ref: 'map.yaml#/Map'
           description: A URL to a map of the place. Supersedes map, maps.
         isAccessibleForFree:
           type: boolean
@@ -59,30 +59,30 @@ Place:
         logo:
           oneOf:
             - type: string
-            - $ref: 'image_object.yml#/ImageObject'
+            - $ref: 'image_object.yaml#/ImageObject'
           description: An associated logo.
         maximumAttendeeCapacity:
           type: integer
           description: The total number of individuals that may attend an event or venue.
         openingHoursSpecification:
-          $ref: 'opening_hours_specification.yml#/OpeningHoursSpecification'
+          $ref: 'opening_hours_specification.yaml#/OpeningHoursSpecification'
           description: The opening hours of a certain place.
         photo:
           oneOf:
-            - $ref: 'image_object.yml#/ImageObject'
-            - $ref: 'photograph.yml#/Photograph'
+            - $ref: 'image_object.yaml#/ImageObject'
+            - $ref: 'photograph.yaml#/Photograph'
           description: A photograph of this place. Supersedes photos.
         publicAccess:
           type: boolean
           description: A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value
         review:
-          $ref: 'review.yml#/Review'
+          $ref: 'review.yaml#/Review'
           description: A review of the item. Supersedes reviews.
         smokingAllowed:
           type: boolean
           description: Indicates whether it is allowed to smoke in the place, e.g. in the restaurant, hotel or hotel room.
         specialOpeningHoursSpecification:
-          $ref: 'opening_hours_specification.yml#/OpeningHoursSpecification'
+          $ref: 'opening_hours_specification.yaml#/OpeningHoursSpecification'
           description: The special opening hours of a certain place. Use this to explicitly override general opening hours brought in scope by openingHoursSpecification or openingHours.
         telephone:
           type: string

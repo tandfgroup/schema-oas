@@ -1,8 +1,8 @@
 Review:
   allOf:
-    - $ref: 'creative_work.yml#/CreativeWork'
+    - $ref: 'creative_work.yaml#/CreativeWork'
     - type: object
       description: A review of an item - for example, of a restaurant, movie, or store.
       properties:
         author:
-          $ref: 'person.yml#/Person'
+          $ref: 'person.yaml#/Person'
