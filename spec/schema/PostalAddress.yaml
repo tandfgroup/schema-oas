@@ -1,6 +1,6 @@
 PostalAddress:
   allOf:
-    - $ref: 'contact_point.yml#/ContactPoint'
+    - $ref: 'contact_point.yaml#/ContactPoint'
     - type: object
       description: The mailing address.
       properties:

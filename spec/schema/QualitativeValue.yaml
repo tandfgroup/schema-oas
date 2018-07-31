@@ -1,6 +1,6 @@
 QualitativeValue:
   allOf:
-    - $ref: 'enumeration.yml#/Enumeration'
+    - $ref: 'enumeration.yaml#/Enumeration'
     - type: object
       description: A predefined value for a product characteristic, e.g. the power cord plug type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
       properties:
@@ -10,27 +10,27 @@ QualitativeValue:
             A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
             Note; Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
         equal:
-          $ref: 'qualitative_value.yml#/QualitativeValue'
+          $ref: 'qualitative_value.yaml#/QualitativeValue'
           description: This ordering relation for qualitative values indicates that the subject is equal to the object.
         greater:
-          $ref: 'qualitative_value.yml#/QualitativeValue'
+          $ref: 'qualitative_value.yaml#/QualitativeValue'
           description: This ordering relation for qualitative values indicates that the subject is greater than the object.
         greaterOrEqual:
-          $ref: 'qualitative_value.yml#/QualitativeValue'
+          $ref: 'qualitative_value.yaml#/QualitativeValue'
           description: This ordering relation for qualitative values indicates that the subject is greater than or equal to the object.
         lesser:
-          $ref: 'qualitative_value.yml#/QualitativeValue'
+          $ref: 'qualitative_value.yaml#/QualitativeValue'
           description: This ordering relation for qualitative values indicates that the subject is lesser than the object.
         lesserOrEqual:
-          $ref: 'qualitative_value.yml#/QualitativeValue'
+          $ref: 'qualitative_value.yaml#/QualitativeValue'
           description: This ordering relation for qualitative values indicates that the subject is lesser than or equal to the object.
         nonEqual:
-          $ref: 'qualitative_value.yml#/QualitativeValue'
+          $ref: 'qualitative_value.yaml#/QualitativeValue'
           description: This ordering relation for qualitative values indicates that the subject is not equal to the object.
         valueReference:
           oneOf:
-            - $ref: 'enumeration.yml#/Enumeration'
-            - $ref: 'qualitative_value.yml#/QualitativeValue'
-            - $ref: 'quantitative_value.yml#/QuantitativeValue'
-            - $ref: 'structured_value.yml#/StructuredValue'
+            - $ref: 'enumeration.yaml#/Enumeration'
+            - $ref: 'qualitative_value.yaml#/QualitativeValue'
+            - $ref: 'quantitative_value.yaml#/QuantitativeValue'
+            - $ref: 'structured_value.yaml#/StructuredValue'
           description: A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.

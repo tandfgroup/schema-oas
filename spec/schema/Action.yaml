@@ -1,10 +1,10 @@
 Action:
   allOf:
-    - $ref: 'thing.yml#/Thing'
+    - $ref: 'thing.yaml#/Thing'
     - type: object
       description: An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.
       properties:
         actionStatus: # Indicates the current disposition of the Action.
-          $ref: 'action_status_type.yml#/ActionStatusType'
+          $ref: 'action_status_type.yaml#/ActionStatusType'
         agent: # The direct performer or driver of the action (animate or inanimate).
-          $ref: 'person.yml#/Person'
+          $ref: 'person.yaml#/Person'
