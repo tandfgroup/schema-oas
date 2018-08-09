@@ -1,3 +1,3 @@
-configUrl: spec/swagger.yml
+configUrl: spec/swagger.yaml
 dom_id: '#swagger-ui'
-url: spec/swagger.yml
+url: spec/swagger.yaml
