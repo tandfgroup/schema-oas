@@ -50,7 +50,7 @@ fi
 
 # Load 'T&F Shell' support
 if [[ -z "${TFSHELL_SUPPORT:-}" ]] && [[ -d "${__DIR}/node_modules/tandf-shell" ]]; then
-  # shellcheck source=./node_modules/tandf-shell/scripts/support.sh
+  # shellcheck disable=SC1090,SC1091
   . "${__DIR}/node_modules/tandf-shell/scripts/support.sh"
 else
   echo "!!! 'T&F Shell' is required to run this script !!!" && echo ""
@@ -661,16 +661,41 @@ elif ( $RUN_BUILD ); then sh_heading "BUILD script started"
 
   (rm -rf "$TEMP_BUILD_PATH") < /dev/null 2> /dev/null
   sh_info "Building application"
+
+  SPEC_DIR="./spec"
   # find spec/schema -type f -name '*.yaml' -exec cat {} + >> spec/schema.yaml
-  echo "# file to be auto-generated." > "./spec/schema.yaml"
+  echo "# this file is auto-generated. do not change." > "$SPEC_DIR/schema.yaml"
+  echo "# this file is auto-generated. do not change." > "$SPEC_DIR/schema-ref.yaml"
 
   NL=$'\n'
   for file in ./spec/schema/*.yaml; do
     [ -e "$file" ] || continue
-    filename=$(echo "$file" | sed -r "s/.+\/(.+)\..+/\1/")
-    lineitem="${filename}:${NL}  \$ref: ./schema/${filename}.yaml"
-    echo "$lineitem" >> "./spec/schema.yaml"
+    filename=$(echo "$file" | sed -r "s/.+\\/(.+)\\..+/\\1/")
+    schema_def=$(cat "$file")
+    echo "$schema_def" >> "./spec/schema.yaml"
+    schema_def_ref="${filename}:${NL}  \$ref: ./schema/${filename}.yaml"
+    echo "$schema_def_ref" >> "$SPEC_DIR/schema-ref.yaml"
   done
+
+  {
+    cat "$SPEC_DIR/head.yaml"
+    cat "$SPEC_DIR/info.yaml";
+    cat "$SPEC_DIR/paths.yaml";
+    cat "$SPEC_DIR/components.yaml";
+    cat "$SPEC_DIR/schemas.yaml" | sed 's/^/  /';
+  } > "$SPEC_DIR/swagger.yaml"
+
+  cp -a "$SPEC_DIR/swagger.yaml" "$SPEC_DIR/swagger-ref.yaml"
+
+  {
+    cat "$SPEC_DIR/schema-ref.yaml" | sed 's/^/    /';
+  } >> "$SPEC_DIR/swagger-ref.yaml"
+
+  {
+    cat "$SPEC_DIR/schema.yaml" | sed 's/^/    /';
+  } >> "$SPEC_DIR/swagger.yaml"
+
+  sed -i -E "s/[a-z\\_]+\\.yaml\\#\\//\\#\\/components\\/schemas\\//g" "$SPEC_DIR/swagger.yaml"
 
 # --------------------------------------------------------------------------------------------------
 sh_success "BUILD script completed successfully"; fi
