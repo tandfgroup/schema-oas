@@ -1,0 +1,5 @@
+info:
+  title: 'OpenAPI Specs for Schema.org'
+  version: 1.0.0
+  description: |
+    This is an API based on Schema.org standards.

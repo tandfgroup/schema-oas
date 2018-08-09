@@ -1,0 +1,66 @@
+openapi: 3.0.0
+info:
+  title: 'OpenAPI Specs for Schema.org'
+  version: 1.0.0
+  description: |
+    This is an API based on Schema.org standards.
+paths: {}
+components:
+  schemas:
+    # this file is auto-generated. do not change.
+    Action:
+      $ref: ./schema/Action.yaml
+    ActionStatusType:
+      $ref: ./schema/ActionStatusType.yaml
+    AggregateRating:
+      $ref: ./schema/AggregateRating.yaml
+    Article:
+      $ref: ./schema/Article.yaml
+    ContactPoint:
+      $ref: ./schema/ContactPoint.yaml
+    CreativeWork:
+      $ref: ./schema/CreativeWork.yaml
+    Distance:
+      $ref: ./schema/Distance.yaml
+    Duration:
+      $ref: ./schema/Duration.yaml
+    Enumeration:
+      $ref: ./schema/Enumeration.yaml
+    Error:
+      $ref: ./schema/Error.yaml
+    ImageObject:
+      $ref: ./schema/ImageObject.yaml
+    Intangible:
+      $ref: ./schema/Intangible.yaml
+    MediaObject:
+      $ref: ./schema/MediaObject.yaml
+    NewsArticle:
+      $ref: ./schema/NewsArticle.yaml
+    Organization:
+      $ref: ./schema/Organization.yaml
+    Person:
+      $ref: ./schema/Person.yaml
+    Place:
+      $ref: ./schema/Place.yaml
+    PostalAddress:
+      $ref: ./schema/PostalAddress.yaml
+    Property:
+      $ref: ./schema/Property.yaml
+    PropertyValue:
+      $ref: ./schema/PropertyValue.yaml
+    QualitativeValue:
+      $ref: ./schema/QualitativeValue.yaml
+    QuantitativeValue:
+      $ref: ./schema/QuantitativeValue.yaml
+    Quantity:
+      $ref: ./schema/Quantity.yaml
+    Review:
+      $ref: ./schema/Review.yaml
+    ScholarlyArticle:
+      $ref: ./schema/ScholarlyArticle.yaml
+    StructuredValue:
+      $ref: ./schema/StructuredValue.yaml
+    Submission:
+      $ref: ./schema/Submission.yaml
+    Thing:
+      $ref: ./schema/Thing.yaml
