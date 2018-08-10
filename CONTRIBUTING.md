@@ -15,6 +15,7 @@
 ## Guidelines <a id="guidelines"></a>
 
 As a contributor, here are the guidelines we would like you to follow:
+
 - [Code of conduct](https://github.com/tandfgroup/engineering/blob/master/CODE_OF_CONDUCT.md)
 - [How can I contribute?](https://github.com/tandfgroup/engineering/blob/master/CONTRIBUTING.md#how-can-i-contribute)
 - [Using the issue tracker](https://github.com/tandfgroup/engineering/blob/master/CONTRIBUTING.md#using-the-issue-tracker)
