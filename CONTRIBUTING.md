@@ -52,6 +52,7 @@ git clone https://github.com/tandfgroup/schema-oas.git schema-oas && cd schema-o
 ```
 
 ## Install Dependencies <a id="install-dependencies"></a>
+
 ```bash
 # Using NPM:
 npm install
@@ -60,7 +61,8 @@ npm install
 ---
 
 ## File Structure <a id="file-structure"></a>
-```
+
+```text
 schema-oas/
  ├─ spec/                      * directory containing all OpenAPI spec files
  │   ├─ endpoints/             * directory containing endpoint-based specs
