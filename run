@@ -662,11 +662,12 @@ elif ( $RUN_BUILD ); then sh_heading "BUILD script started"
   (rm -rf "$TEMP_BUILD_PATH") < /dev/null 2> /dev/null
   sh_info "Building application"
 
+  sh_info "Generating compiled specification"
   SPEC_DIR="./spec"
   # find spec/schema -type f -name '*.yaml' -exec cat {} + >> spec/schema.yaml
   echo "# this file is auto-generated. do not change." > "$SPEC_DIR/schema.yaml"
   echo "# this file is auto-generated. do not change." > "$SPEC_DIR/schema-ref.yaml"
-
+  # compile schema specs
   NL=$'\n'
   for file in ./spec/schema/*.yaml; do
     [ -e "$file" ] || continue
@@ -676,7 +677,7 @@ elif ( $RUN_BUILD ); then sh_heading "BUILD script started"
     schema_def_ref="${filename}:${NL}  \$ref: ./schema/${filename}.yaml"
     echo "$schema_def_ref" >> "$SPEC_DIR/schema-ref.yaml"
   done
-
+  # compile primary swagger/oas properties
   {
     cat "$SPEC_DIR/head.yaml"
     cat "$SPEC_DIR/info.yaml";
@@ -684,17 +685,17 @@ elif ( $RUN_BUILD ); then sh_heading "BUILD script started"
     cat "$SPEC_DIR/components.yaml";
     cat "$SPEC_DIR/schemas.yaml" | sed 's/^/  /';
   } > "$SPEC_DIR/swagger.yaml"
-
+  # duplicate swagger/oas for $ref-based specs
   cp -a "$SPEC_DIR/swagger.yaml" "$SPEC_DIR/swagger-ref.yaml"
-
+  # add $ref-based schema to swagger/oas $ref-based specs
   {
     cat "$SPEC_DIR/schema-ref.yaml" | sed 's/^/    /';
   } >> "$SPEC_DIR/swagger-ref.yaml"
-
+  # add schema to swagger/oas
   {
     cat "$SPEC_DIR/schema.yaml" | sed 's/^/    /';
   } >> "$SPEC_DIR/swagger.yaml"
-
+  # search/replace $ref file references with local-object references
   sed -i -E "s/[a-z\\_]+\\.yaml\\#\\//\\#\\/components\\/schemas\\//g" "$SPEC_DIR/swagger.yaml"
 
 # --------------------------------------------------------------------------------------------------

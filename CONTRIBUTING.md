@@ -48,7 +48,7 @@ Thank you for contributing.
 ## Clone the Repository <a id="clone-repo"></a>
 
 ```bash
-git clone https://github.com/tandfgroup/shemaorg-openapi-spec.git shemaorg-openapi-spec && cd shemaorg-openapi-spec
+git clone https://github.com/tandfgroup/schema-oas.git schema-oas && cd schema-oas
 ```
 
 ## Install Dependencies <a id="install-dependencies"></a>
@@ -61,7 +61,7 @@ npm install
 
 ## File Structure <a id="file-structure"></a>
 ```
-shemaorg-openapi-spec/
+schema-oas/
  ├─ spec/                      * directory containing all OpenAPI spec files
  │   ├─ endpoints/             * directory containing endpoint-based specs
  │   │   ├─ <endpoint>/        * <endpoint> directory

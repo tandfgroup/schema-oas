@@ -1,16 +1,16 @@
 {
-  "name": "@tandfgroup/shemaorg-openapi-spec",
+  "name": "@tandfgroup/schema-oas",
   "description": "OpenAPI Specifications for Schema.org standards",
   "version": "0.0.0-development",
   "author": "T&F Group",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/tandfgroup/shemaorg-openapi-spec",
+  "homepage": "https://github.com/tandfgroup/schema-oas",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tandfgroup/shemaorg-openapi-spec.git"
+    "url": "git+https://github.com/tandfgroup/schema-oas.git"
   },
   "bugs": {
-    "url": "https://github.com/tandfgroup/shemaorg-openapi-spec/issues"
+    "url": "https://github.com/tandfgroup/schema-oas/issues"
   },
   "scripts": {
     "commitmsg": "commitlint -E GIT_PARAMS",
