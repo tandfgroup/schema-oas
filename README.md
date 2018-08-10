@@ -1,4 +1,4 @@
-# OpenAPI Specifications for Schema.org standards
+# OpenAPI Specifications for Schema.org
 
 ## Table of Contents
 
