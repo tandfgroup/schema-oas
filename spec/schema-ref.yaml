@@ -51,7 +51,5 @@ ScholarlyArticle:
   $ref: ./schema/ScholarlyArticle.yaml
 StructuredValue:
   $ref: ./schema/StructuredValue.yaml
-Submission:
-  $ref: ./schema/Submission.yaml
 Thing:
   $ref: ./schema/Thing.yaml

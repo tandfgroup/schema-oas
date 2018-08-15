@@ -1,5 +1,5 @@
 PropertyValue:
   allOf:
-    - $ref: 'structured_value.yaml#/StructuredValue'
+    - $ref: 'StructuredValue.yaml#/StructuredValue'
     - type: object
       description: A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.

@@ -1,5 +1,5 @@
 ScholarlyArticle:
   allOf:
-    - $ref: 'article.yaml#/Article'
+    - $ref: 'Article.yaml#/Article'
     - type: object
       description: A scholarly article.

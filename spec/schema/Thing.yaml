@@ -20,20 +20,20 @@ Thing:
     identifier:
       oneOf:
         - type: string
-        - $ref: 'property_value.yaml#/PropertyValue'
+        - $ref: 'PropertyValue.yaml#/PropertyValue'
       description: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
     image:
       oneOf:
         - type: string
-        - $ref: 'image_object.yaml#/ImageObject'
+        - $ref: 'ImageObject.yaml#/ImageObject'
       description: An image of the item. This can be a URL or a fully described ImageObject.
     mainEntityOfPage:
       oneOf:
         - type: string
-        - $ref: 'creative_work.yaml#/CreativeWork'
+        - $ref: 'CreativeWork.yaml#/CreativeWork'
       description: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. Inverse property; mainEntity.
     potentialAction:
-      $ref: 'action.yaml#/Action'
+      $ref: 'Action.yaml#/Action'
     name:
       type: string
       description: The name of the item.
@@ -42,8 +42,8 @@ Thing:
       description: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
     subjectOf:
       oneOf:
-        - $ref: 'creative_work.yaml#/CreativeWork'
-        - $ref: 'event.yaml#/Event'
+        - $ref: 'CreativeWork.yaml#/CreativeWork'
+        - $ref: 'Event.yaml#/Event'
       description: A CreativeWork or Event about this Thing. Inverse property; about.
     url:
       type: string

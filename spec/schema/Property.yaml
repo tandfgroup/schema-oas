@@ -1,5 +1,5 @@
 Property:
   allOf:
-    - $ref: 'intangible.yaml#/Intangible'
+    - $ref: 'Intangible.yaml#/Intangible'
     - type: object
       description: A property, used to indicate attributes and relationships of some Thing.

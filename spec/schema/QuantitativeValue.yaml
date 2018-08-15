@@ -1,6 +1,6 @@
 QuantitativeValue:
   allOf:
-    - $ref: 'structured_value.yaml#/StructuredValue'
+    - $ref: 'StructuredValue.yaml#/StructuredValue'
     - type: object
       description: A point value or interval for product characteristics and other purposes.
       properties:
@@ -25,15 +25,15 @@ QuantitativeValue:
           oneOf:
             - type: string
             - type: number
-            - $ref: 'structured_value.yaml#/StructuredValue'
+            - $ref: 'StructuredValue.yaml#/StructuredValue'
           description: >
             The value of the quantitative value or property value node.
             * For QuantitativeValue and MonetaryAmount, the recommended type for values is 'Number'.
             * For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.
         valueReference:
           oneOf:
-            - $ref: 'enumeration.yaml#/Enumeration'
-            - $ref: 'qualitative_value.yaml#/QualitativeValue'
-            - $ref: 'quantitative_value.yaml#/QuantitativeValue'
-            - $ref: 'structured_value.yaml#/StructuredValue'
+            - $ref: 'Enumeration.yaml#/Enumeration'
+            - $ref: 'QualitativeValue.yaml#/QualitativeValue'
+            - $ref: 'QuantitativeValue.yaml#/QuantitativeValue'
+            - $ref: 'StructuredValue.yaml#/StructuredValue'
           description: A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.

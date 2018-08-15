@@ -1,6 +1,6 @@
 ContactPoint:
   allOf:
-    - $ref: 'structured_value.yaml#/StructuredValue'
+    - $ref: 'StructuredValue.yaml#/StructuredValue'
     - type: object
       description: A contact point—for example, a Customer Complaints department.
       properties:
