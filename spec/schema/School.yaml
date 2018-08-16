@@ -1,0 +1,2 @@
+School:
+  $ref: 'educationalorganization.yaml#/EducationalOrganization'

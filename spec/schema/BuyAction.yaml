@@ -1,0 +1,24 @@
+BuyAction:
+  description: >-
+    The act of giving money to a seller in exchange for goods or services
+    rendered. An agent buys an object, product, or service from a seller for a
+    price. Reciprocal of SellAction.
+  allOf:
+    - $ref: 'tradeaction.yaml#/TradeAction'
+    - type: object
+      properties:
+        vendor:
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+          description: '''vendor'' is an earlier term for ''seller''.'
+        seller:
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+          description: >-
+            An entity which offers (sells / leases / lends / loans) the services
+            / goods.  A seller may also be a provider.
+        warrantyPromise:
+          $ref: 'warrantypromise.yaml#/WarrantyPromise'
+          description: The warranty promise(s) included in the offer.

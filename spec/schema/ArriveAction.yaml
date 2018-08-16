@@ -1,0 +1,2 @@
+ArriveAction:
+  $ref: 'moveaction.yaml#/MoveAction'

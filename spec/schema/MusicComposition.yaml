@@ -1,0 +1,42 @@
+MusicComposition:
+  description: A musical composition.
+  allOf:
+    - $ref: 'CreativeWork.yaml#/CreativeWork'
+    - type: object
+      properties:
+        composer:
+          oneOf:
+            - $ref: 'Organization.yaml#/Organization'
+            - $ref: 'Person.yaml#/Person'
+          description: >-
+            The person or organization who wrote a composition, or who is the
+            composer of a work performed at some event.
+        musicCompositionForm:
+          type: string
+          description: 'The type of composition (e.g. overture, sonata, symphony, etc.).'
+        iswcCode:
+          type: string
+          description: The International Standard Musical Work Code for the composition.
+        musicalKey:
+          type: string
+          description: 'The key, mode, or scale this composition uses.'
+        musicArrangement:
+          $ref: 'MusicComposition.yaml#/MusicComposition'
+          description: An arrangement derived from the composition.
+        firstPerformance:
+          $ref: 'Event.yaml#/Event'
+          description: The date and place the work was first performed.
+        includedComposition:
+          $ref: 'MusicComposition.yaml#/MusicComposition'
+          description: >-
+            Smaller compositions included in this work (e.g. a movement in a
+            symphony).
+        lyricist:
+          $ref: 'Person.yaml#/Person'
+          description: The person who wrote the words.
+        lyrics:
+          $ref: 'CreativeWork.yaml#/CreativeWork'
+          description: The words in the song.
+        recordedAs:
+          $ref: 'MusicRecording.yaml#/MusicRecording'
+          description: An audio recording of the work.

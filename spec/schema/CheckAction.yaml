@@ -1,0 +1,2 @@
+CheckAction:
+  $ref: 'findaction.yaml#/FindAction'

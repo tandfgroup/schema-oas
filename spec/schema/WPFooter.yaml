@@ -1,0 +1,2 @@
+WPFooter:
+  $ref: 'webpageelement.yaml#/WebPageElement'

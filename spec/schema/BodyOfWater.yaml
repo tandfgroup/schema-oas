@@ -1,0 +1,2 @@
+BodyOfWater:
+  $ref: 'landform.yaml#/Landform'

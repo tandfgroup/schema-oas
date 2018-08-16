@@ -1,0 +1,13 @@
+ReservationPackage:
+  description: >-
+    A group of multiple reservations with common values for all
+    sub-reservations.
+  allOf:
+    - $ref: 'reservation.yaml#/Reservation'
+    - type: object
+      properties:
+        subReservation:
+          $ref: 'reservation.yaml#/Reservation'
+          description: >-
+            The individual reservations included in the package. Typically a
+            repeated property.

@@ -1,0 +1,2 @@
+BoardingPolicyType:
+  $ref: 'enumeration.yaml#/Enumeration'

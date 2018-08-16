@@ -1,0 +1,56 @@
+Ticket:
+  description: 'Used to describe a ticket to an event, a flight, a bus ride, etc.'
+  allOf:
+    - $ref: 'intangible.yaml#/Intangible'
+    - type: object
+      properties:
+        issuedBy:
+          $ref: 'organization.yaml#/Organization'
+          description: The organization issuing the ticket or permit.
+        underName:
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+          description: The person or organization the reservation or ticket is for.
+        totalPrice:
+          oneOf:
+            - $ref: 'pricespecification.yaml#/PriceSpecification'
+            - type: number
+            - type: string
+          description: >-
+            The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+        ticketedSeat:
+          $ref: 'seat.yaml#/Seat'
+          description: The seat associated with the ticket.
+        dateIssued:
+          type: string
+          format: date-time
+          description: The date the ticket was issued.
+        ticketToken:
+          oneOf:
+            - type: string
+            - $ref: 'url.yaml#/URL'
+          description: >-
+            Reference to an asset (e.g., Barcode, QR code image or PDF) usable
+            for entrance.
+        ticketNumber:
+          type: string
+          description: The unique identifier for the ticket.
+        priceCurrency:
+          type: string
+          description: >-
+            The currency of the price, or a price component when attached to <a
+            class="localLink"
+            href="http://schema.org/PriceSpecification">PriceSpecification</a>
+            and its subtypes.<br/><br/>
+
+
+            Use standard formats: <a
+            href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency
+            format</a> e.g. "USD"; <a
+            href="https://en.wikipedia.org/wiki/List_of_cryptocurrencies">Ticker
+            symbol</a> for cryptocurrencies e.g. "BTC"; well known names for <a
+            href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
+            Exchange Tradings Systems</a> (LETS) and other currency types e.g.
+            "Ithaca HOUR".

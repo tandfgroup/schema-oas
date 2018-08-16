@@ -1,0 +1,56 @@
+VideoGame:
+  properties:
+    directors:
+      $ref: 'person.yaml#/Person'
+      description: >-
+        A director of e.g. tv, radio, movie, video games etc. content. Directors
+        can be associated with individual items or with a series, episode, clip.
+    playMode:
+      $ref: 'gameplaymode.yaml#/GamePlayMode'
+      description: >-
+        Indicates whether this game is multi-player, co-op or single-player. 
+        The game can be marked as multi-player, co-op and single-player at the
+        same time.
+    gamePlatform:
+      oneOf:
+        - $ref: 'url.yaml#/URL'
+        - $ref: 'thing.yaml#/Thing'
+        - type: string
+      description: >-
+        The electronic systems used to play <a
+        href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
+        games</a>.
+    gameServer:
+      $ref: 'gameserver.yaml#/GameServer'
+      description: The server on which  it is possible to play the game.
+    musicBy:
+      oneOf:
+        - $ref: 'person.yaml#/Person'
+        - $ref: 'musicgroup.yaml#/MusicGroup'
+      description: The composer of the soundtrack.
+    actors:
+      $ref: 'person.yaml#/Person'
+      description: >-
+        An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+        associated with individual items or with a series, episode, clip.
+    actor:
+      $ref: 'person.yaml#/Person'
+      description: >-
+        An actor, e.g. in tv, radio, movie, video games etc., or in an event.
+        Actors can be associated with individual items or with a series,
+        episode, clip.
+    director:
+      $ref: 'person.yaml#/Person'
+      description: >-
+        A director of e.g. tv, radio, movie, video gaming etc. content, or of an
+        event. Directors can be associated with individual items or with a
+        series, episode, clip.
+    trailer:
+      $ref: 'videoobject.yaml#/VideoObject'
+      description: 'The trailer of a movie or tv/radio series, season, episode, etc.'
+    cheatCode:
+      $ref: 'creativework.yaml#/CreativeWork'
+      description: Cheat codes to the game.
+    gameTip:
+      $ref: 'creativework.yaml#/CreativeWork'
+      description: 'Links to tips, tactics, etc.'

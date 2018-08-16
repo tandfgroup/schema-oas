@@ -1,0 +1,20 @@
+MusicAlbum:
+  description: A collection of music tracks.
+  allOf:
+    - $ref: 'musicplaylist.yaml#/MusicPlaylist'
+    - type: object
+      properties:
+        albumProductionType:
+          $ref: 'musicalbumproductiontype.yaml#/MusicAlbumProductionType'
+          description: >-
+            Classification of the album by it's type of content: soundtrack,
+            live album, studio album, etc.
+        albumReleaseType:
+          $ref: 'musicalbumreleasetype.yaml#/MusicAlbumReleaseType'
+          description: 'The kind of release which this album is: single, EP or album.'
+        albumRelease:
+          $ref: 'musicrelease.yaml#/MusicRelease'
+          description: A release of this album.
+        byArtist:
+          $ref: 'musicgroup.yaml#/MusicGroup'
+          description: The artist that performed this album or recording.

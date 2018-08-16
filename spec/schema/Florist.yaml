@@ -1,0 +1,2 @@
+Florist:
+  $ref: 'store.yaml#/Store'

@@ -1,0 +1,2 @@
+MarryAction:
+  $ref: 'interactaction.yaml#/InteractAction'

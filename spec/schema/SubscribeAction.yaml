@@ -1,0 +1,2 @@
+SubscribeAction:
+  $ref: 'interactaction.yaml#/InteractAction'

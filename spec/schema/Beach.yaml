@@ -1,0 +1,2 @@
+Beach:
+  $ref: 'civicstructure.yaml#/CivicStructure'

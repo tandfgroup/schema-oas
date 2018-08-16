@@ -1,0 +1,2 @@
+Specialty:
+  $ref: 'enumeration.yaml#/Enumeration'

@@ -1,0 +1,2 @@
+Pharmacy:
+  $ref: 'medicalorganization.yaml#/MedicalOrganization'

@@ -1,0 +1,2 @@
+AutomotiveBusiness:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

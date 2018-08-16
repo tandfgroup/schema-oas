@@ -1,0 +1,2 @@
+AssignAction:
+  $ref: 'allocateaction.yaml#/AllocateAction'

@@ -1,0 +1,2 @@
+GovernmentPermit:
+  $ref: 'permit.yaml#/Permit'

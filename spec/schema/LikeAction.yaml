@@ -1,0 +1,2 @@
+LikeAction:
+  $ref: 'reactaction.yaml#/ReactAction'

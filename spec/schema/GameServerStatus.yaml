@@ -1,0 +1,2 @@
+GameServerStatus:
+  $ref: 'enumeration.yaml#/Enumeration'

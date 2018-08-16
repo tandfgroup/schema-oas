@@ -1,0 +1,2 @@
+ConvenienceStore:
+  $ref: 'store.yaml#/Store'

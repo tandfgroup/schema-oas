@@ -1,0 +1,2 @@
+Painting:
+  $ref: 'creativework.yaml#/CreativeWork'

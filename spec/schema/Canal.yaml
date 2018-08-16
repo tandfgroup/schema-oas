@@ -1,0 +1,2 @@
+Canal:
+  $ref: 'BodyOfWater.yaml#/BodyOfWater'

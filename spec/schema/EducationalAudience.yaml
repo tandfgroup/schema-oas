@@ -1,0 +1,9 @@
+EducationalAudience:
+  description: An EducationalAudience.
+  allOf:
+    - $ref: 'audience.yaml#/Audience'
+    - type: object
+      properties:
+        educationalRole:
+          type: string
+          description: An educationalRole of an EducationalAudience.

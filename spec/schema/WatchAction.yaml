@@ -1,0 +1,2 @@
+WatchAction:
+  $ref: 'consumeaction.yaml#/ConsumeAction'

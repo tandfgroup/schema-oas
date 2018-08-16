@@ -1,0 +1,2 @@
+HousePainter:
+  $ref: 'homeandconstructionbusiness.yaml#/HomeAndConstructionBusiness'

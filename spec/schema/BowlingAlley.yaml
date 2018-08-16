@@ -1,0 +1,2 @@
+BowlingAlley:
+  $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'

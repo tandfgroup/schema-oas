@@ -1,0 +1,2 @@
+MovieClip:
+  $ref: 'clip.yaml#/Clip'

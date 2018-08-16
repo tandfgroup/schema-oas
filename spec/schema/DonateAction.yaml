@@ -1,0 +1,17 @@
+DonateAction:
+  description: >-
+    The act of providing goods, services, or money without compensation, often
+    for philanthropic reasons.
+  allOf:
+    - $ref: 'TradeAction.yaml#/TradeAction'
+    - type: object
+      properties:
+        recipient:
+          oneOf:
+            - $ref: 'Audience.yaml#/Audience'
+            - $ref: 'ContactPoint.yaml#/ContactPoint'
+            - $ref: 'Person.yaml#/Person'
+            - $ref: 'Organization.yaml#/Organization'
+          description: >-
+            A sub property of participant. The participant who is at the
+            receiving end of the action.

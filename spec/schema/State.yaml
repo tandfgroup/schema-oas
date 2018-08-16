@@ -1,0 +1,2 @@
+State:
+  $ref: 'AdministrativeArea.yaml#/AdministrativeArea'

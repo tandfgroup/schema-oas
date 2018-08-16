@@ -1,0 +1,2 @@
+TelevisionStation:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

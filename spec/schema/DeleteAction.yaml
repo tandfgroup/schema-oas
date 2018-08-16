@@ -1,0 +1,2 @@
+DeleteAction:
+  $ref: 'updateaction.yaml#/UpdateAction'

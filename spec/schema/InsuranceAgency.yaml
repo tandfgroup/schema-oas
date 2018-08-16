@@ -1,0 +1,2 @@
+InsuranceAgency:
+  $ref: 'financialservice.yaml#/FinancialService'

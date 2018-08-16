@@ -1,0 +1,26 @@
+BorrowAction:
+  description: >
+    The act of obtaining an object under an agreement to return it at a later
+    date. Reciprocal of LendAction.<br/><br/>
+
+
+    Related actions:<br/><br/>
+
+
+    <ul>
+
+    <li><a class="localLink" href="http://schema.org/LendAction">LendAction</a>:
+    Reciprocal of BorrowAction.</li>
+
+    </ul>
+  allOf:
+    - $ref: 'TransferAction.yaml#/TransferAction'
+    - type: object
+      properties:
+        lender:
+          oneOf:
+            - $ref: 'Organization.yaml#/Organization'
+            - $ref: 'Person.yaml#/Person'
+          description: >-
+            A sub property of participant. The person that lends the object
+            being borrowed.

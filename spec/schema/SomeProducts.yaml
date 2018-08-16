@@ -1,0 +1,9 @@
+SomeProducts:
+  description: A placeholder for multiple similar products of the same kind.
+  allOf:
+    - $ref: 'product.yaml#/Product'
+    - type: object
+      properties:
+        inventoryLevel:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          description: The current approximate inventory level for the item or items.

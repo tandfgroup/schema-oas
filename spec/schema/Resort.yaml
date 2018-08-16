@@ -1,0 +1,2 @@
+Resort:
+  $ref: 'lodgingbusiness.yaml#/LodgingBusiness'

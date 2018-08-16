@@ -1,0 +1,2 @@
+CableOrSatelliteService:
+  $ref: 'service.yaml#/Service'

@@ -1,0 +1,21 @@
+SportsEvent:
+  description: 'Event type: Sports event.'
+  allOf:
+    - $ref: 'event.yaml#/Event'
+    - type: object
+      properties:
+        competitor:
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'sportsteam.yaml#/SportsTeam'
+          description: A competitor in a sports event.
+        homeTeam:
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'sportsteam.yaml#/SportsTeam'
+          description: The home team in a sports event.
+        awayTeam:
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'sportsteam.yaml#/SportsTeam'
+          description: The away team in a sports event.

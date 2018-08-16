@@ -1,0 +1,2 @@
+ChildCare:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

@@ -1,0 +1,2 @@
+TravelAgency:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

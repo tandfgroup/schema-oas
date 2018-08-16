@@ -1,0 +1,2 @@
+CityHall:
+  $ref: 'governmentbuilding.yaml#/GovernmentBuilding'

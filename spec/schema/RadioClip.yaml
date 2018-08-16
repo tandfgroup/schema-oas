@@ -1,0 +1,2 @@
+RadioClip:
+  $ref: 'clip.yaml#/Clip'

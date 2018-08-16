@@ -1,0 +1,2 @@
+TattooParlor:
+  $ref: 'healthandbeautybusiness.yaml#/HealthAndBeautyBusiness'

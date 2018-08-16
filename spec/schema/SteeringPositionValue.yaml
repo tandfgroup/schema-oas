@@ -1,0 +1,2 @@
+SteeringPositionValue:
+  $ref: 'qualitativevalue.yaml#/QualitativeValue'

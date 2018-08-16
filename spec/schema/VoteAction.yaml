@@ -1,0 +1,11 @@
+VoteAction:
+  description: >-
+    The act of expressing a preference from a fixed/finite/structured set of
+    choices/options.
+  allOf:
+    - $ref: 'chooseaction.yaml#/ChooseAction'
+    - type: object
+      properties:
+        candidate:
+          $ref: 'person.yaml#/Person'
+          description: A sub property of object. The candidate subject of this action.

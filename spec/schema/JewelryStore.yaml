@@ -1,0 +1,2 @@
+JewelryStore:
+  $ref: 'store.yaml#/Store'

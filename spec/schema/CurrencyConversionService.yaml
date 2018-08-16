@@ -1,0 +1,2 @@
+CurrencyConversionService:
+  $ref: 'financialproduct.yaml#/FinancialProduct'

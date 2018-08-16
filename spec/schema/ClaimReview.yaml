@@ -1,0 +1,11 @@
+ClaimReview:
+  description: >-
+    A fact-checking review of claims made (or reported) in some creative work
+    (referenced via itemReviewed).
+  allOf:
+    - $ref: 'review.yaml#/Review'
+    - type: object
+      properties:
+        claimReviewed:
+          type: string
+          description: A short summary of the specific claims reviewed in a ClaimReview.

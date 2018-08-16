@@ -1,0 +1,2 @@
+HealthAndBeautyBusiness:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

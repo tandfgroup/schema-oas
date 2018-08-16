@@ -1,0 +1,2 @@
+PaymentStatusType:
+  $ref: 'enumeration.yaml#/Enumeration'

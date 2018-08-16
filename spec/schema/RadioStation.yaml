@@ -1,0 +1,2 @@
+RadioStation:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

@@ -1,0 +1,2 @@
+EmailMessage:
+  $ref: 'message.yaml#/Message'

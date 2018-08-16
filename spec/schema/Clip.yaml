@@ -1,0 +1,48 @@
+Clip:
+  description: A short TV or radio program or a segment/part of a program.
+  allOf:
+    - $ref: 'CreativeWork.yaml#/CreativeWork'
+    - type: object
+      properties:
+        partOfEpisode:
+          $ref: 'Episode.yaml#/Episode'
+          description: The episode to which this clip belongs.
+        directors:
+          $ref: 'Person.yaml#/Person'
+          description: >-
+            A director of e.g. tv, radio, movie, video games etc. content.
+            Directors can be associated with individual items or with a series,
+            episode, clip.
+        partOfSeason:
+          $ref: 'CreativeWorkSeason.yaml#/CreativeWorkSeason'
+          description: The season to which this episode belongs.
+        musicBy:
+          oneOf:
+            - $ref: 'MusicGroup.yaml#/MusicGroup'
+            - $ref: 'Person.yaml#/Person'
+          description: The composer of the soundtrack.
+        clipNumber:
+          oneOf:
+            - type: string
+            - type: integer
+          description: Position of the clip within an ordered group of clips.
+        actors:
+          $ref: 'Person.yaml#/Person'
+          description: >-
+            An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+            associated with individual items or with a series, episode, clip.
+        actor:
+          $ref: 'Person.yaml#/Person'
+          description: >-
+            An actor, e.g. in tv, radio, movie, video games etc., or in an
+            event. Actors can be associated with individual items or with a
+            series, episode, clip.
+        director:
+          $ref: 'Person.yaml#/Person'
+          description: >-
+            A director of e.g. tv, radio, movie, video gaming etc. content, or
+            of an event. Directors can be associated with individual items or
+            with a series, episode, clip.
+        partOfSeries:
+          $ref: 'CreativeWorkSeries.yaml#/CreativeWorkSeries'
+          description: The series to which this episode or season belongs.

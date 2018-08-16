@@ -1,0 +1,2 @@
+ComputerStore:
+  $ref: 'store.yaml#/Store'

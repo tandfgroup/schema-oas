@@ -1,0 +1,9 @@
+LoseAction:
+  description: The act of being defeated in a competitive activity.
+  allOf:
+    - $ref: 'achieveaction.yaml#/AchieveAction'
+    - type: object
+      properties:
+        winner:
+          $ref: 'person.yaml#/Person'
+          description: A sub property of participant. The winner of the action.

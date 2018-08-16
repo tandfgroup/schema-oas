@@ -1,0 +1,2 @@
+SelfStorage:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

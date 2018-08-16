@@ -1,0 +1,19 @@
+WriteAction:
+  description: The act of authoring written creative content.
+  allOf:
+    - $ref: 'createaction.yaml#/CreateAction'
+    - type: object
+      properties:
+        language:
+          $ref: 'language.yaml#/Language'
+          description: A sub property of instrument. The language used on this action.
+        inLanguage:
+          oneOf:
+            - $ref: 'language.yaml#/Language'
+            - type: string
+          description: >-
+            The language of the content or performance or used in an action.
+            Please use one of the language codes from the <a
+            href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>.
+            See also <a class="localLink"
+            href="http://schema.org/availableLanguage">availableLanguage</a>.

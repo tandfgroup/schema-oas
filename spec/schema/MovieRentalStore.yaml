@@ -1,0 +1,2 @@
+MovieRentalStore:
+  $ref: 'Store.yaml#/Store'

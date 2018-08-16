@@ -1,0 +1,2 @@
+BedAndBreakfast:
+  $ref: 'lodgingbusiness.yaml#/LodgingBusiness'

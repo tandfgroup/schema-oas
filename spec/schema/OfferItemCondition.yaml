@@ -1,0 +1,2 @@
+OfferItemCondition:
+  $ref: 'enumeration.yaml#/Enumeration'

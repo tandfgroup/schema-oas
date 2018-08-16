@@ -1,0 +1,2 @@
+DiscussionForumPosting:
+  $ref: 'socialmediaposting.yaml#/SocialMediaPosting'

@@ -1,0 +1,2 @@
+TelevisionChannel:
+  $ref: 'broadcastchannel.yaml#/BroadcastChannel'

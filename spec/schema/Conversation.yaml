@@ -1,0 +1,2 @@
+Conversation:
+  $ref: 'creativework.yaml#/CreativeWork'

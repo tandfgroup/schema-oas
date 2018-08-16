@@ -1,0 +1,2 @@
+SiteNavigationElement:
+  $ref: 'webpageelement.yaml#/WebPageElement'

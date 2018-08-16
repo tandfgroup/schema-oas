@@ -1,0 +1,2 @@
+CampingPitch:
+  $ref: 'accommodation.yaml#/Accommodation'

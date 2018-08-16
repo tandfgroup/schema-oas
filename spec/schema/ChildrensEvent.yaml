@@ -1,0 +1,2 @@
+ChildrensEvent:
+  $ref: 'Event.yaml#/Event'

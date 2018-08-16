@@ -1,0 +1,2 @@
+CatholicChurch:
+  $ref: 'placeofworship.yaml#/PlaceOfWorship'

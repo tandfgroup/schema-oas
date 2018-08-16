@@ -1,0 +1,2 @@
+DepartAction:
+  $ref: 'moveaction.yaml#/MoveAction'

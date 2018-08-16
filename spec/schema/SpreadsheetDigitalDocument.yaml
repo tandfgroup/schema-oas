@@ -1,0 +1,2 @@
+SpreadsheetDigitalDocument:
+  $ref: 'digitaldocument.yaml#/DigitalDocument'

@@ -1,0 +1,2 @@
+RealEstateAgent:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

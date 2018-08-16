@@ -1,0 +1,19 @@
+MedicalOrganization:
+  description: >-
+    A medical organization (physical or not), such as hospital, institution or
+    clinic.
+  allOf:
+    - $ref: 'organization.yaml#/Organization'
+    - type: object
+      properties:
+        healthPlanNetworkId:
+          type: string
+          description: >-
+            Name or unique ID of network. (Networks are often reused across
+            different insurance plans).
+        isAcceptingNewPatients:
+          type: boolean
+          description: Whether the provider is accepting new patients.
+        medicalSpecialty:
+          type: object
+          description: A medical specialty of the provider.

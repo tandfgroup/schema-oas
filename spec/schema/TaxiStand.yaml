@@ -1,0 +1,2 @@
+TaxiStand:
+  $ref: 'civicstructure.yaml#/CivicStructure'

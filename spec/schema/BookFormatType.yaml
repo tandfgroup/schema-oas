@@ -1,0 +1,2 @@
+BookFormatType:
+  $ref: 'enumeration.yaml#/Enumeration'

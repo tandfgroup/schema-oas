@@ -1,0 +1,2 @@
+AutoWash:
+  $ref: 'automotivebusiness.yaml#/AutomotiveBusiness'

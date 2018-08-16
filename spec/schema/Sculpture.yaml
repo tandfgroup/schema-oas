@@ -1,0 +1,2 @@
+Sculpture:
+  $ref: 'creativework.yaml#/CreativeWork'

@@ -1,0 +1,2 @@
+ImageGallery:
+  $ref: 'collectionpage.yaml#/CollectionPage'

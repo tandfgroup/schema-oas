@@ -1,0 +1,2 @@
+NGO:
+  $ref: 'organization.yaml#/Organization'

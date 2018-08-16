@@ -1,0 +1,2 @@
+TrainStation:
+  $ref: 'civicstructure.yaml#/CivicStructure'

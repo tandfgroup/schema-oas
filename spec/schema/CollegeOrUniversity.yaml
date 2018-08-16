@@ -1,0 +1,2 @@
+CollegeOrUniversity:
+  $ref: 'EducationalOrganization.yaml#/EducationalOrganization'

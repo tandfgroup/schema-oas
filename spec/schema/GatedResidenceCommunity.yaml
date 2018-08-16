@@ -1,0 +1,2 @@
+GatedResidenceCommunity:
+  $ref: 'residence.yaml#/Residence'

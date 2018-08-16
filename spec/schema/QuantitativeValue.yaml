@@ -1,39 +1,74 @@
 QuantitativeValue:
+  description: A point value or interval for product characteristics and other purposes.
   allOf:
-    - $ref: 'structured_value.yaml#/StructuredValue'
+    - $ref: 'StructuredValue.yaml#/StructuredValue'
     - type: object
-      description: A point value or interval for product characteristics and other purposes.
       properties:
-        additionalProperty:
-          type: string
-          description: >
-            A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
-            Note; Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
-        maxValue:
-          type: string
-          description: The upper value of some characteristic or property.
-        minValue:
-          type: string
-          description: The lower value of some characteristic or property.
         unitCode:
-          type: string
-          description: The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
-        unitText:
-          type: string
-          description: A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for unitCode.
-        value:
           oneOf:
+            - $ref: 'URL.yaml#/URL'
             - type: string
-            - type: number
-            - $ref: 'structured_value.yaml#/StructuredValue'
-          description: >
-            The value of the quantitative value or property value node.
-            * For QuantitativeValue and MonetaryAmount, the recommended type for values is 'Number'.
-            * For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.
+          description: >-
+            The unit of measurement given using the UN/CEFACT Common Code (3
+            characters) or a URL. Other codes than the UN/CEFACT Common Code may
+            be used with a prefix followed by a colon.
+        minValue:
+          type: number
+          description: The lower value of some characteristic or property.
         valueReference:
           oneOf:
-            - $ref: 'enumeration.yaml#/Enumeration'
-            - $ref: 'qualitative_value.yaml#/QualitativeValue'
-            - $ref: 'quantitative_value.yaml#/QuantitativeValue'
-            - $ref: 'structured_value.yaml#/StructuredValue'
-          description: A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.
+            - $ref: 'QuantitativeValue.yaml#/QuantitativeValue'
+            - $ref: 'QualitativeValue.yaml#/QualitativeValue'
+            - $ref: 'PropertyValue.yaml#/PropertyValue'
+            - $ref: 'Enumeration.yaml#/Enumeration'
+            - $ref: 'StructuredValue.yaml#/StructuredValue'
+          description: >-
+            A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+        value:
+          oneOf:
+            - type: boolean
+            - type: string
+            - type: number
+            - $ref: 'StructuredValue.yaml#/StructuredValue'
+          description: >
+            The value of the quantitative value or property value
+            node.<br/><br/>
+
+
+            <ul>
+
+            <li>For <a class="localLink"
+            href="http://schema.org/QuantitativeValue">QuantitativeValue</a> and
+            <a class="localLink"
+            href="http://schema.org/MonetaryAmount">MonetaryAmount</a>, the
+            recommended type for values is 'Number'.</li>
+
+            <li>For <a class="localLink"
+            href="http://schema.org/PropertyValue">PropertyValue</a>, it can be
+            'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
+
+            </ul>
+        additionalProperty:
+          $ref: 'PropertyValue.yaml#/PropertyValue'
+          description: >-
+            A property-value pair representing an additional characteristics of
+            the entitity, e.g. a product feature or another characteristic for
+            which there is no matching property in schema.org.<br/><br/>
+
+
+            Note: Publishers should be aware that applications designed to use
+            specific schema.org properties (e.g. http://schema.org/width,
+            http://schema.org/color, http://schema.org/gtin13, ...) will
+            typically expect such data to be provided using those properties,
+            rather than using the generic property/value mechanism.
+        maxValue:
+          type: number
+          description: The upper value of some characteristic or property.
+        unitText:
+          type: string
+          description: >-
+            A string or text indicating the unit of measurement. Useful if you
+            cannot provide a standard unit code for
+
+            <a href='unitCode'>unitCode</a>.

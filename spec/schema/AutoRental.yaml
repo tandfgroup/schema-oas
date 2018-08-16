@@ -1,0 +1,2 @@
+AutoRental:
+  $ref: 'automotivebusiness.yaml#/AutomotiveBusiness'

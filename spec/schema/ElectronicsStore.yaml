@@ -1,0 +1,2 @@
+ElectronicsStore:
+  $ref: 'store.yaml#/Store'

@@ -1,0 +1,10 @@
+TVSeason:
+  properties:
+    partOfTVSeries:
+      $ref: 'tvseries.yaml#/TVSeries'
+      description: The TV series to which this episode or season belongs.
+    countryOfOrigin:
+      $ref: 'country.yaml#/Country'
+      description: >-
+        The country of the principal offices of the production company or
+        individual responsible for the movie or program.

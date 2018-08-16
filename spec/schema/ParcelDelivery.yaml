@@ -1,0 +1,56 @@
+ParcelDelivery:
+  description: >-
+    The delivery of a parcel either via the postal service or a commercial
+    service.
+  allOf:
+    - $ref: 'Intangible.yaml#/Intangible'
+    - type: object
+      properties:
+        hasDeliveryMethod:
+          $ref: 'DeliveryMethod.yaml#/DeliveryMethod'
+          description: Method used for delivery or shipping.
+        deliveryAddress:
+          $ref: 'PostalAddress.yaml#/PostalAddress'
+          description: Destination address.
+        trackingUrl:
+          $ref: 'URL.yaml#/URL'
+          description: Tracking url for the parcel delivery.
+        provider:
+          oneOf:
+            - $ref: 'Person.yaml#/Person'
+            - $ref: 'Organization.yaml#/Organization'
+          description: >-
+            The service provider, service operator, or service performer; the
+            goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the
+            seller.
+        trackingNumber:
+          type: string
+          description: Shipper tracking number.
+        partOfOrder:
+          $ref: 'Order.yaml#/Order'
+          description: The overall order the items in this delivery were included in.
+        expectedArrivalFrom:
+          type: string
+          format: date-time
+          description: The earliest date the package may arrive.
+        itemShipped:
+          $ref: 'Product.yaml#/Product'
+          description: Item(s) being shipped.
+        originAddress:
+          $ref: 'PostalAddress.yaml#/PostalAddress'
+          description: Shipper's address.
+        expectedArrivalUntil:
+          type: string
+          format: date-time
+          description: The latest date the package may arrive.
+        carrier:
+          $ref: 'Organization.yaml#/Organization'
+          description: >-
+            'carrier' is an out-dated term indicating the 'provider' for parcel
+            delivery and flights.
+        deliveryStatus:
+          $ref: 'DeliveryEvent.yaml#/DeliveryEvent'
+          description: >-
+            New entry added as the package passes through each leg of its
+            journey (from shipment to final delivery).

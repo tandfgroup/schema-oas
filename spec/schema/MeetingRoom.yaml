@@ -1,0 +1,2 @@
+MeetingRoom:
+  $ref: 'room.yaml#/Room'

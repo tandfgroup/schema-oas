@@ -1,0 +1,2 @@
+Museum:
+  $ref: 'civicstructure.yaml#/CivicStructure'

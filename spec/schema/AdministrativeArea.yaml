@@ -1,0 +1,2 @@
+AdministrativeArea:
+  $ref: 'place.yaml#/Place'

@@ -1,0 +1,2 @@
+Taxi:
+  $ref: 'service.yaml#/Service'

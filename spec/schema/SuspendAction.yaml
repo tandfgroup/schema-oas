@@ -1,0 +1,2 @@
+SuspendAction:
+  $ref: 'controlaction.yaml#/ControlAction'

@@ -1,0 +1,2 @@
+AssessAction:
+  $ref: 'action.yaml#/Action'

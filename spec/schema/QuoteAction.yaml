@@ -1,0 +1,2 @@
+QuoteAction:
+  $ref: 'TradeAction.yaml#/TradeAction'

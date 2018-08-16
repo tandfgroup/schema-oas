@@ -1,0 +1,2 @@
+VideoGallery:
+  $ref: 'collectionpage.yaml#/CollectionPage'

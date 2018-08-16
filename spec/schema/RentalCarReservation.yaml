@@ -1,0 +1,30 @@
+RentalCarReservation:
+  description: >-
+    A reservation for a rental car.<br/><br/>
+
+
+    Note: This type is for information about actual reservations, e.g. in
+    confirmation emails or HTML pages with individual confirmations of
+    reservations.
+  allOf:
+    - $ref: 'reservation.yaml#/Reservation'
+    - type: object
+      properties:
+        pickupTime:
+          type: string
+          format: date-time
+          description: >-
+            When a taxi will pickup a passenger or a rental car can be picked
+            up.
+        dropoffLocation:
+          $ref: 'place.yaml#/Place'
+          description: Where a rental car can be dropped off.
+        dropoffTime:
+          type: string
+          format: date-time
+          description: When a rental car can be dropped off.
+        pickupLocation:
+          $ref: 'place.yaml#/Place'
+          description: >-
+            Where a taxi will pick up a passenger or a rental car can be picked
+            up.

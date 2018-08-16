@@ -1,0 +1,29 @@
+Permit:
+  description: 'A permit issued by an organization, e.g. a parking pass.'
+  allOf:
+    - $ref: 'intangible.yaml#/Intangible'
+    - type: object
+      properties:
+        issuedBy:
+          $ref: 'organization.yaml#/Organization'
+          description: The organization issuing the ticket or permit.
+        validFor:
+          $ref: 'duration.yaml#/Duration'
+          description: The time validity of the permit.
+        issuedThrough:
+          $ref: 'service.yaml#/Service'
+          description: The service through with the permit was granted.
+        permitAudience:
+          $ref: 'audience.yaml#/Audience'
+          description: The target audience for this permit.
+        validIn:
+          $ref: 'administrativearea.yaml#/AdministrativeArea'
+          description: The geographic area where the permit is valid.
+        validFrom:
+          type: string
+          format: date-time
+          description: The date when the item becomes valid.
+        validUntil:
+          type: string
+          format: date
+          description: The date when the item is no longer valid.

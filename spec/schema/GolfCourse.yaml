@@ -1,0 +1,2 @@
+GolfCourse:
+  $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'

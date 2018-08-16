@@ -1,0 +1,2 @@
+InternetCafe:
+  $ref: 'LocalBusiness.yaml#/LocalBusiness'

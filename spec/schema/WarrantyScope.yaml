@@ -1,0 +1,2 @@
+WarrantyScope:
+  $ref: 'enumeration.yaml#/Enumeration'

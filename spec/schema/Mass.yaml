@@ -1,0 +1,2 @@
+Mass:
+  $ref: 'quantity.yaml#/Quantity'

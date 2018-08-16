@@ -1,0 +1,2 @@
+ContactPointOption:
+  $ref: 'Enumeration.yaml#/Enumeration'

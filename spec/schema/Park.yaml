@@ -1,0 +1,2 @@
+Park:
+  $ref: 'civicstructure.yaml#/CivicStructure'

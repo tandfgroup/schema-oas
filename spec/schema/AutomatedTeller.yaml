@@ -1,0 +1,2 @@
+AutomatedTeller:
+  $ref: 'financialservice.yaml#/FinancialService'

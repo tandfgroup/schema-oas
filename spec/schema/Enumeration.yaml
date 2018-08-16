@@ -1,5 +1,16 @@
 Enumeration:
+  description: 'Lists or enumerations—for example, a list of cuisines or music genres, etc.'
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
     - type: object
-      description: Lists or enumerations—for example, a list of cuisines or music genres, etc.
+      properties:
+        supersededBy:
+          oneOf:
+            - $ref: 'enumeration.yaml#/Enumeration'
+            - type: object
+              description: 'Type: Property This type is not published yet in schema.org.'
+            - type: object
+              description: 'Type: Class This type is not published yet in schema.org.'
+          description: >-
+            Relates a term (i.e. a property, class or enumeration) to one that
+            supersedes it.

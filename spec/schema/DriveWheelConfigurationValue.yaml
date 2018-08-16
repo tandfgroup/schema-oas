@@ -1,0 +1,2 @@
+DriveWheelConfigurationValue:
+  $ref: 'qualitativevalue.yaml#/QualitativeValue'

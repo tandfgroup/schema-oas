@@ -1,0 +1,2 @@
+BookStore:
+  $ref: 'store.yaml#/Store'

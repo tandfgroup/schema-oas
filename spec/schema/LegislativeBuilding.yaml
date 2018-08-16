@@ -1,0 +1,2 @@
+LegislativeBuilding:
+  $ref: 'governmentbuilding.yaml#/GovernmentBuilding'

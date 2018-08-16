@@ -1,0 +1,2 @@
+PerformingGroup:
+  $ref: 'organization.yaml#/Organization'

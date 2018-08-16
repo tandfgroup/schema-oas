@@ -1,0 +1,24 @@
+WebPageElement:
+  description: 'A web page element, like a table or an image.'
+  allOf:
+    - $ref: 'creativework.yaml#/CreativeWork'
+    - type: object
+      properties:
+        cssSelector:
+          type: object
+          description: >-
+            A CSS selector, e.g. of a <a class="localLink"
+            href="http://schema.org/SpeakableSpecification">SpeakableSpecification</a>
+            or <a class="localLink"
+            href="http://schema.org/WebPageElement">WebPageElement</a>. In the
+            latter case, multiple matches within a page can constitute a single
+            conceptual "Web page element".
+        xpath:
+          type: object
+          description: >-
+            An XPath, e.g. of a <a class="localLink"
+            href="http://schema.org/SpeakableSpecification">SpeakableSpecification</a>
+            or <a class="localLink"
+            href="http://schema.org/WebPageElement">WebPageElement</a>. In the
+            latter case, multiple matches within a page can constitute a single
+            conceptual "Web page element".

@@ -1,0 +1,2 @@
+DanceGroup:
+  $ref: 'performinggroup.yaml#/PerformingGroup'

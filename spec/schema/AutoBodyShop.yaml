@@ -1,0 +1,2 @@
+AutoBodyShop:
+  $ref: 'automotivebusiness.yaml#/AutomotiveBusiness'

@@ -1,0 +1,2 @@
+Bridge:
+  $ref: 'CivicStructure.yaml#/CivicStructure'

@@ -1,0 +1,2 @@
+WPSideBar:
+  $ref: 'webpageelement.yaml#/WebPageElement'

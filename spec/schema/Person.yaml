@@ -1,25 +1,297 @@
 Person:
+  description: 'A person (alive, dead, undead, or fictional).'
   allOf:
-    - $ref: 'thing.yaml#/Thing'
+    - $ref: 'Thing.yaml#/Thing'
     - type: object
-      description: A person (alive, dead, undead, or fictional).
       properties:
-        additionalName:
+        parents:
+          $ref: 'Person.yaml#/Person'
+          description: A parents of the person.
+        sibling:
+          $ref: 'Person.yaml#/Person'
+          description: A sibling of the person.
+        siblings:
+          $ref: 'Person.yaml#/Person'
+          description: A sibling of the person.
+        birthPlace:
+          $ref: 'Place.yaml#/Place'
+          description: The place where the person was born.
+        spouse:
+          $ref: 'Person.yaml#/Person'
+          description: The person's spouse.
+        givenName:
           type: string
-          description: An additional name for a Person, can be used for a middle name.
+          description: >-
+            Given name. In the U.S., the first name of a Person. This can be
+            used along with familyName instead of the name property.
+        colleagues:
+          $ref: 'Person.yaml#/Person'
+          description: A colleague of the person.
+        faxNumber:
+          type: string
+          description: The fax number.
+        colleague:
+          oneOf:
+            - $ref: 'Person.yaml#/Person'
+            - $ref: 'URL.yaml#/URL'
+          description: A colleague of the person.
+        parent:
+          $ref: 'Person.yaml#/Person'
+          description: A parent of this person.
         address:
           oneOf:
             - type: string
-            - $ref: 'postal_address.yaml#/PostalAddress'
+            - $ref: 'PostalAddress.yaml#/PostalAddress'
           description: Physical address of the item.
-        affiliation: # An organization that this person is affiliated with. For example, a school/university, a club, or a team.
-          $ref: 'organization.yaml#/Organization'
+        relatedTo:
+          $ref: 'Person.yaml#/Person'
+          description: The most generic familial relation.
+        gender:
+          oneOf:
+            - $ref: 'GenderType.yaml#/GenderType'
+            - type: string
+          description: >-
+            Gender of the person. While http://schema.org/Male and
+            http://schema.org/Female may be used, text strings are also
+            acceptable for people who do not identify as a binary gender.
+        awards:
+          type: string
+          description: Awards won by or for this item.
+        height:
+          oneOf:
+            - $ref: 'Distance.yaml#/Distance'
+            - $ref: 'QuantitativeValue.yaml#/QuantitativeValue'
+          description: The height of the item.
+        honorificSuffix:
+          type: string
+          description: >-
+            An honorific suffix preceding a Person's name such as M.D.
+            /PhD/MSCSW.
+        birthDate:
+          type: string
+          format: date
+          description: Date of birth.
+        memberOf:
+          oneOf:
+            - $ref: 'ProgramMembership.yaml#/ProgramMembership'
+            - $ref: 'Organization.yaml#/Organization'
+          description: >-
+            An Organization (or ProgramMembership) to which this Person or
+            Organization belongs.
+        deathDate:
+          type: string
+          format: date
+          description: Date of death.
+        owns:
+          oneOf:
+            - $ref: 'Product.yaml#/Product'
+            - $ref: 'OwnershipInfo.yaml#/OwnershipInfo'
+          description: Products owned by the organization or person.
+        brand:
+          oneOf:
+            - $ref: 'Brand.yaml#/Brand'
+            - $ref: 'Organization.yaml#/Organization'
+          description: >-
+            The brand(s) associated with a product or service, or the brand(s)
+            maintained by an organization or business person.
+        workLocation:
+          oneOf:
+            - $ref: 'ContactPoint.yaml#/ContactPoint'
+            - $ref: 'Place.yaml#/Place'
+          description: A contact location for a person's place of work.
+        children:
+          $ref: 'Person.yaml#/Person'
+          description: A child of the person.
+        netWorth:
+          oneOf:
+            - $ref: 'PriceSpecification.yaml#/PriceSpecification'
+            - $ref: 'MonetaryAmount.yaml#/MonetaryAmount'
+          description: >-
+            The total financial value of the person as calculated by subtracting
+            assets from liabilities.
+        hasOfferCatalog:
+          $ref: 'OfferCatalog.yaml#/OfferCatalog'
+          description: >-
+            Indicates an OfferCatalog listing for this Organization, Person, or
+            Service.
+        follows:
+          $ref: 'Person.yaml#/Person'
+          description: The most generic uni-directional social relation.
+        familyName:
+          type: string
+          description: >-
+            Family name. In the U.S., the last name of an Person. This can be
+            used along with givenName instead of the name property.
+        makesOffer:
+          $ref: 'Offer.yaml#/Offer'
+          description: >-
+            A pointer to products or services offered by the organization or
+            person.
+        honorificPrefix:
+          type: string
+          description: An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
+        duns:
+          type: string
+          description: >-
+            The Dun &amp; Bradstreet DUNS number for identifying an organization
+            or business person.
+        isicV4:
+          type: string
+          description: >-
+            The International Standard of Industrial Classification of All
+            Economic Activities (ISIC), Revision 4 code for a particular
+            organization, business person, or place.
+        knowsAbout:
+          oneOf:
+            - $ref: 'Thing.yaml#/Thing'
+            - type: string
+            - $ref: 'URL.yaml#/URL'
+          description: >-
+            Of a <a class="localLink"
+            href="http://schema.org/Person">Person</a>, and less typically of an
+            <a class="localLink"
+            href="http://schema.org/Organization">Organization</a>, to indicate
+            a topic that is known about - suggesting possible expertise but not
+            implying it. We do not distinguish skill levels here, or yet relate
+            this to educational content, events, objectives or <a
+            class="localLink" href="http://schema.org/JobPosting">JobPosting</a>
+            descriptions.
+        knows:
+          $ref: 'Person.yaml#/Person'
+          description: The most generic bi-directional social/work relation.
+        seeks:
+          $ref: 'Demand.yaml#/Demand'
+          description: >-
+            A pointer to products or services sought by the organization or
+            person (demand).
+        affiliation:
+          $ref: 'Organization.yaml#/Organization'
+          description: >-
+            An organization that this person is affiliated with. For example, a
+            school/university, a club, or a team.
+        telephone:
+          type: string
+          description: The telephone number.
+        nationality:
+          $ref: 'Country.yaml#/Country'
+          description: Nationality of the person.
+        knowsLanguage:
+          oneOf:
+            - type: string
+            - $ref: 'Language.yaml#/Language'
+          description: >-
+            Of a <a class="localLink"
+            href="http://schema.org/Person">Person</a>, and less typically of an
+            <a class="localLink"
+            href="http://schema.org/Organization">Organization</a>, to indicate
+            a known language. We do not distinguish skill levels or
+            reading/writing/speaking/signing here. Use language codes from the
+            <a href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>.
+        naics:
+          type: string
+          description: >-
+            The North American Industry Classification System (NAICS) code for a
+            particular organization or business person.
+        deathPlace:
+          $ref: 'Place.yaml#/Place'
+          description: The place where the person died.
+        award:
+          type: string
+          description: An award won by or for this item.
+        contactPoints:
+          $ref: 'ContactPoint.yaml#/ContactPoint'
+          description: A contact point for a person or organization.
+        alumniOf:
+          oneOf:
+            - $ref: 'EducationalOrganization.yaml#/EducationalOrganization'
+            - $ref: 'Organization.yaml#/Organization'
+          description: An organization that the person is an alumni of.
+        taxID:
+          type: string
+          description: >-
+            The Tax / Fiscal ID of the organization or person, e.g. the TIN in
+            the US or the CIF/NIF in Spain.
+        homeLocation:
+          oneOf:
+            - $ref: 'Place.yaml#/Place'
+            - $ref: 'ContactPoint.yaml#/ContactPoint'
+          description: A contact location for a person's residence.
+        contactPoint:
+          $ref: 'ContactPoint.yaml#/ContactPoint'
+          description: A contact point for a person or organization.
+        funder:
+          oneOf:
+            - $ref: 'Person.yaml#/Person'
+            - $ref: 'Organization.yaml#/Organization'
+          description: >-
+            A person or organization that supports (sponsors) something through
+            some kind of financial contribution.
+        jobTitle:
+          type: string
+          description: 'The job title of the person (for example, Financial Manager).'
+        performerIn:
+          $ref: 'Event.yaml#/Event'
+          description: Event that this person is a performer or participant in.
+        hasOccupation:
+          type: object
+          description: >-
+            The Person's occupation. For past professions, use Role for
+            expressing dates.
         email:
           type: string
           description: Email address.
-        familyName:
+        sponsor:
+          oneOf:
+            - $ref: 'Organization.yaml#/Organization'
+            - $ref: 'Person.yaml#/Person'
+          description: >-
+            A person or organization that supports a thing through a pledge,
+            promise, or financial contribution. e.g. a sponsor of a Medical
+            Study or a corporate sponsor of an event.
+        hasPOS:
+          $ref: 'Place.yaml#/Place'
+          description: Points-of-Sales operated by the organization or person.
+        globalLocationNumber:
           type: string
-          description: Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property.
-        givenName:
+          description: >-
+            The <a href="http://www.gs1.org/gln">Global Location Number</a>
+            (GLN, sometimes also referred to as International Location Number or
+            ILN) of the respective organization, person, or place. The GLN is a
+            13-digit number used to identify parties and physical locations.
+        additionalName:
           type: string
-          description: Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property.
+          description: 'An additional name for a Person, can be used for a middle name.'
+        vatID:
+          type: string
+          description: The Value-added Tax ID of the organization or person.
+        weight:
+          $ref: 'QuantitativeValue.yaml#/QuantitativeValue'
+          description: The weight of the product or person.
+        worksFor:
+          $ref: 'Organization.yaml#/Organization'
+          description: Organizations that the person works for.
+        publishingPrinciples:
+          oneOf:
+            - $ref: 'URL.yaml#/URL'
+            - $ref: 'CreativeWork.yaml#/CreativeWork'
+          description: >-
+            The publishingPrinciples property indicates (typically via <a
+            class="localLink" href="http://schema.org/URL">URL</a>) a document
+            describing the editorial principles of an <a class="localLink"
+            href="http://schema.org/Organization">Organization</a> (or
+            individual e.g. a <a class="localLink"
+            href="http://schema.org/Person">Person</a> writing a blog) that
+            relate to their activities as a publisher, e.g. ethics or diversity
+            policies. When applied to a <a class="localLink"
+            href="http://schema.org/CreativeWork">CreativeWork</a> (e.g. <a
+            class="localLink"
+            href="http://schema.org/NewsArticle">NewsArticle</a>) the principles
+            are those of the party primarily responsible for the creation of the
+            <a class="localLink"
+            href="http://schema.org/CreativeWork">CreativeWork</a>.<br/><br/>
+
+
+            While such policies are most typically expressed in natural
+            language, sometimes related information (e.g. indicating a <a
+            class="localLink" href="http://schema.org/funder">funder</a>) can be
+            expressed using schema.org terminology.

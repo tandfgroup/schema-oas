@@ -1,0 +1,2 @@
+ApartmentComplex:
+  $ref: 'residence.yaml#/Residence'

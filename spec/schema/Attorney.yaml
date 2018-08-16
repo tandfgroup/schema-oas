@@ -1,0 +1,2 @@
+Attorney:
+  $ref: 'legalservice.yaml#/LegalService'

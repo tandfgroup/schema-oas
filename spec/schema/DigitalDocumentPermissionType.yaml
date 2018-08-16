@@ -1,0 +1,2 @@
+DigitalDocumentPermissionType:
+  $ref: 'enumeration.yaml#/Enumeration'

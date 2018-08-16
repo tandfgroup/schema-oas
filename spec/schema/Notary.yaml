@@ -1,0 +1,2 @@
+Notary:
+  $ref: 'legalservice.yaml#/LegalService'

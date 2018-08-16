@@ -1,62 +1,107 @@
 MediaObject:
+  description: >-
+    A media object, such as an image, video, or audio object embedded in a web
+    page or a downloadable dataset i.e. DataDownload. Note that a creative work
+    may have many media objects associated with it on the same web page. For
+    example, a page about a single song (MusicRecording) may have a music video
+    (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
   allOf:
-    - $ref: 'creative_work.yaml#/CreativeWork'
+    - $ref: 'CreativeWork.yaml#/CreativeWork'
     - type: object
-      description: A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
       properties:
-        associatedArticle:
-          $ref: 'news_article.yaml#/NewsArticle'
-          description: A NewsArticle associated with the Media Object.
-        bitrate:
-          type: string
-          description: The bitrate of the media object.
+        regionsAllowed:
+          $ref: 'Place.yaml#/Place'
+          description: >-
+            The regions where the media is allowed. If not specified, then it's
+            assumed to be allowed everywhere. Specify the countries in <a
+            href="http://en.wikipedia.org/wiki/ISO_3166">ISO 3166 format</a>.
+        requiresSubscription:
+          oneOf:
+            - type: object
+              description: >-
+                Type: MediaSubscription This type is not published yet in
+                schema.org.
+            - type: boolean
+          description: >-
+            Indicates if use of the media require a subscription  (either paid
+            or free). Allowed values are <code>true</code> or <code>false</code>
+            (note that an earlier version had 'yes', 'no').
+        width:
+          oneOf:
+            - $ref: 'QuantitativeValue.yaml#/QuantitativeValue'
+            - $ref: 'Distance.yaml#/Distance'
+          description: The width of the item.
+        height:
+          oneOf:
+            - $ref: 'Distance.yaml#/Distance'
+            - $ref: 'QuantitativeValue.yaml#/QuantitativeValue'
+          description: The height of the item.
         contentSize:
           type: string
           description: File size in (mega/kilo) bytes.
-        contentUrl:
-          type: string
-          description: Actual bytes of the media object, for example the image file or video file.
-        # duration:
-        #   $ref: 'duration.yaml#/Duration'
-        #   description: The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.
-        embedUrl:
-          type: string
-          description: A URL pointing to a player for a specific video. In general, this is the information in the src element of an embed tag and should not be the same as the content of the loc tag.
-        encodesCreativeWork:
-          $ref: 'creative_work.yaml#/CreativeWork'
-          description: The CreativeWork encoded by this media object.
-        encodingFormat:
-          type: string
-          description: >
-            Media type typically expressed using a MIME format (see IANA site and MDN reference) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).
-            In cases where a CreativeWork has several media type representations, encoding can be used to indicate each MediaObject alongside particular encodingFormat information.
-            Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry. Supersedes fileFormat.
-        height:
-          oneOf:
-            - $ref: 'distance.yaml#/Distance'
-            - $ref: 'quantitative_value.yaml#/QuantitativeValue'
-          description: The height of the item.
         playerType:
           type: string
-          description: Player type required—for example, Flash or Silverlight.
-        productionCompany:
-          $ref: 'organization.yaml#/Organization'
-          description: The production company or studio responsible for the item e.g. series, video game, episode etc.
-        regionsAllowed:
-          $ref: 'place.yaml#/Place'
-          description: The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in ISO 3166 format.
-        # requiresSubscription:
-        #   oneOf:
-        #     - type: boolean
-        #     - $ref: 'media_subscription.yaml#/MediaSubscription'
-        #   description: Indicates if use of the media require a subscription (either paid or free). Allowed values are true or false (note that an earlier version had 'yes', 'no').
+          description: 'Player type required&#x2014;for example, Flash or Silverlight.'
+        embedUrl:
+          $ref: 'URL.yaml#/URL'
+          description: >-
+            A URL pointing to a player for a specific video. In general, this is
+            the information in the <code>src</code> element of an
+            <code>embed</code> tag and should not be the same as the content of
+            the <code>loc</code> tag.
+        contentUrl:
+          $ref: 'URL.yaml#/URL'
+          description: >-
+            Actual bytes of the media object, for example the image file or
+            video file.
         uploadDate:
-          oneOf:
-            - type: string
-            - $ref: 'date.yaml#/Date'
+          type: string
+          format: date
           description: Date when this media object was uploaded to this site.
-        width:
+        bitrate:
+          type: string
+          description: The bitrate of the media object.
+        encodingFormat:
           oneOf:
-            - $ref: 'distance.yaml#/Distance'
-            - $ref: 'quantitativeValue.yaml#/QuantitativeValue'
-          description: The width of the item.
+            - $ref: 'URL.yaml#/URL'
+            - type: string
+          description: >-
+            Media type typically expressed using a MIME format (see <a
+            href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA
+            site</a> and <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MDN
+            reference</a>) e.g. application/zip for a SoftwareApplication
+            binary, audio/mpeg for .mp3 etc.).<br/><br/>
+
+
+            In cases where a <a class="localLink"
+            href="http://schema.org/CreativeWork">CreativeWork</a> has several
+            media type representations, <a class="localLink"
+            href="http://schema.org/encoding">encoding</a> can be used to
+            indicate each <a class="localLink"
+            href="http://schema.org/MediaObject">MediaObject</a> alongside
+            particular <a class="localLink"
+            href="http://schema.org/encodingFormat">encodingFormat</a>
+            information.<br/><br/>
+
+
+            Unregistered or niche encoding and file formats can be indicated
+            instead via the most appropriate URL, e.g. defining Web page or a
+            Wikipedia/Wikidata entry.
+        encodesCreativeWork:
+          $ref: 'CreativeWork.yaml#/CreativeWork'
+          description: The CreativeWork encoded by this media object.
+        productionCompany:
+          $ref: 'Organization.yaml#/Organization'
+          description: >-
+            The production company or studio responsible for the item e.g.
+            series, video game, episode etc.
+        associatedArticle:
+          $ref: 'NewsArticle.yaml#/NewsArticle'
+          description: A NewsArticle associated with the Media Object.
+        duration:
+          $ref: 'Duration.yaml#/Duration'
+          description: >-
+            The duration of the item (movie, audio recording, event, etc.) in <a
+            href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date
+            format</a>.

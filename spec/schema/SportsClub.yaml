@@ -1,0 +1,2 @@
+SportsClub:
+  $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'

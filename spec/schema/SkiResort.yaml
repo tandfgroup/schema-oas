@@ -1,0 +1,2 @@
+SkiResort:
+  $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'

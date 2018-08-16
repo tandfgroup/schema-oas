@@ -1,0 +1,2 @@
+FoodService:
+  $ref: 'service.yaml#/Service'

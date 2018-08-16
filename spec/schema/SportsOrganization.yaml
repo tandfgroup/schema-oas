@@ -1,0 +1,13 @@
+SportsOrganization:
+  description: >-
+    Represents the collection of all sports organizations, including sports
+    teams, governing bodies, and sports associations.
+  allOf:
+    - $ref: 'organization.yaml#/Organization'
+    - type: object
+      properties:
+        sport:
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+          description: A type of sport (e.g. Baseball).

@@ -1,0 +1,2 @@
+ContactPage:
+  $ref: 'webpage.yaml#/WebPage'

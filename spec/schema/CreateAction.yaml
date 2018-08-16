@@ -1,0 +1,2 @@
+CreateAction:
+  $ref: 'action.yaml#/Action'

@@ -1,0 +1,2 @@
+DeliveryMethod:
+  $ref: 'enumeration.yaml#/Enumeration'

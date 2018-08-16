@@ -1,24 +1,29 @@
 PostalAddress:
+  description: The mailing address.
   allOf:
-    - $ref: 'contact_point.yaml#/ContactPoint'
+    - $ref: 'contactpoint.yaml#/ContactPoint'
     - type: object
-      description: The mailing address.
       properties:
-        addressCountry:
-          type: string
-          description: The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.
-        addressLocality:
-          type: string
-          description: The locality. For example, Mountain View.
-        addressRegion:
-          type: string
-          description: The region. For example, CA.
         postOfficeBoxNumber:
           type: string
           description: The post office box number for PO box addresses.
+        addressRegion:
+          type: string
+          description: 'The region. For example, CA.'
+        addressCountry:
+          oneOf:
+            - type: string
+            - $ref: 'country.yaml#/Country'
+          description: >-
+            The country. For example, USA. You can also provide the two-letter
+            <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1 alpha-2
+            country code</a>.
         postalCode:
           type: string
-          description: The postal code. For example, 94043.
+          description: 'The postal code. For example, 94043.'
+        addressLocality:
+          type: string
+          description: 'The locality. For example, Mountain View.'
         streetAddress:
           type: string
-          description: The street address. For example, 1600 Amphitheatre Pkwy.
+          description: 'The street address. For example, 1600 Amphitheatre Pkwy.'

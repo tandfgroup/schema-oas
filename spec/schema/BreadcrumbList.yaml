@@ -1,0 +1,2 @@
+BreadcrumbList:
+  $ref: 'itemlist.yaml#/ItemList'

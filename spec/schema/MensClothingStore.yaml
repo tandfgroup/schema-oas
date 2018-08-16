@@ -1,0 +1,2 @@
+MensClothingStore:
+  $ref: 'store.yaml#/Store'

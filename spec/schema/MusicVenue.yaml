@@ -1,0 +1,2 @@
+MusicVenue:
+  $ref: 'civicstructure.yaml#/CivicStructure'

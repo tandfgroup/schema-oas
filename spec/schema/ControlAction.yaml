@@ -1,0 +1,2 @@
+ControlAction:
+  $ref: 'action.yaml#/Action'

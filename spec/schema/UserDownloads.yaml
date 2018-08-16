@@ -1,0 +1,2 @@
+UserDownloads:
+  $ref: 'UserInteraction.yaml#/UserInteraction'

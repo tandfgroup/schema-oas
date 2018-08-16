@@ -1,0 +1,2 @@
+Country:
+  $ref: 'administrativearea.yaml#/AdministrativeArea'

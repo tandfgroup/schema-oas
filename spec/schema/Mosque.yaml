@@ -1,0 +1,2 @@
+Mosque:
+  $ref: 'placeofworship.yaml#/PlaceOfWorship'

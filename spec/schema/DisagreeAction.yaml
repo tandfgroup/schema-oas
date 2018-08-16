@@ -1,0 +1,2 @@
+DisagreeAction:
+  $ref: 'ReactAction.yaml#/ReactAction'

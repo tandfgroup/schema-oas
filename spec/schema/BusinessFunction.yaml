@@ -1,0 +1,2 @@
+BusinessFunction:
+  $ref: 'enumeration.yaml#/Enumeration'

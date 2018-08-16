@@ -1,0 +1,122 @@
+SoftwareApplication:
+  description: A software application.
+  allOf:
+    - $ref: 'creativework.yaml#/CreativeWork'
+    - type: object
+      properties:
+        softwareAddOn:
+          $ref: 'softwareapplication.yaml#/SoftwareApplication'
+          description: Additional content for a software application.
+        fileSize:
+          type: string
+          description: >-
+            Size of the application / package (e.g. 18MB). In the absence of a
+            unit (MB, KB etc.), KB will be assumed.
+        processorRequirements:
+          type: string
+          description: Processor architecture required to run the application (e.g. IA64).
+        countriesSupported:
+          type: string
+          description: >-
+            Countries for which the application is supported. You can also
+            provide the two-letter ISO 3166-1 alpha-2 country code.
+        device:
+          type: string
+          description: >-
+            Device required to run the application. Used in cases where a
+            specific make/model is required to run the application.
+        supportingData:
+          $ref: 'datafeed.yaml#/DataFeed'
+          description: Supporting data for a SoftwareApplication.
+        installUrl:
+          $ref: 'url.yaml#/URL'
+          description: >-
+            URL at which the app may be installed, if different from the URL of
+            the item.
+        softwareVersion:
+          type: string
+          description: Version of the software instance.
+        permissions:
+          type: string
+          description: >-
+            Permission(s) required to run the app (for example, a mobile app may
+            require full internet access or may run only on wifi).
+        applicationCategory:
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+          description: 'Type of software application, e.g. ''Game, Multimedia''.'
+        memoryRequirements:
+          oneOf:
+            - type: string
+            - $ref: 'url.yaml#/URL'
+          description: Minimum memory requirements.
+        countriesNotSupported:
+          type: string
+          description: >-
+            Countries for which the application is not supported. You can also
+            provide the two-letter ISO 3166-1 alpha-2 country code.
+        softwareHelp:
+          $ref: 'creativework.yaml#/CreativeWork'
+          description: Software application help.
+        operatingSystem:
+          type: string
+          description: 'Operating systems supported (Windows 7, OSX 10.6, Android 1.6).'
+        applicationSuite:
+          type: string
+          description: >-
+            The name of the application suite to which the application belongs
+            (e.g. Excel belongs to Office).
+        availableOnDevice:
+          type: string
+          description: >-
+            Device required to run the application. Used in cases where a
+            specific make/model is required to run the application.
+        releaseNotes:
+          oneOf:
+            - type: string
+            - $ref: 'url.yaml#/URL'
+          description: Description of what changed in this version.
+        downloadUrl:
+          $ref: 'url.yaml#/URL'
+          description: 'If the file can be downloaded, URL to download the binary.'
+        featureList:
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+          description: >-
+            Features or modules provided by this application (and possibly
+            required by other applications).
+        softwareRequirements:
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+          description: >-
+            Component dependency requirements for application. This includes
+            runtime environments and shared libraries that are not included in
+            the application distribution package, but required to run the
+            application (Examples: DirectX, Java or .NET runtime).
+        screenshot:
+          oneOf:
+            - $ref: 'imageobject.yaml#/ImageObject'
+            - $ref: 'url.yaml#/URL'
+          description: A link to a screenshot image of the app.
+        requirements:
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+          description: >-
+            Component dependency requirements for application. This includes
+            runtime environments and shared libraries that are not included in
+            the application distribution package, but required to run the
+            application (Examples: DirectX, Java or .NET runtime).
+        storageRequirements:
+          oneOf:
+            - type: string
+            - $ref: 'url.yaml#/URL'
+          description: Storage requirements (free space required).
+        applicationSubCategory:
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+          description: 'Subcategory of the application, e.g. ''Arcade Game''.'

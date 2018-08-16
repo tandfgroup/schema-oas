@@ -1,0 +1,2 @@
+PublicSwimmingPool:
+  $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'

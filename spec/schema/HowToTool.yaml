@@ -1,0 +1,2 @@
+HowToTool:
+  $ref: 'HowToItem.yaml#/HowToItem'

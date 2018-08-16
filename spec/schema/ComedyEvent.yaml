@@ -1,0 +1,2 @@
+ComedyEvent:
+  $ref: 'event.yaml#/Event'

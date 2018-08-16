@@ -1,0 +1,2 @@
+TakeAction:
+  $ref: 'transferaction.yaml#/TransferAction'

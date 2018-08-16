@@ -1,0 +1,2 @@
+QAPage:
+  $ref: 'webpage.yaml#/WebPage'

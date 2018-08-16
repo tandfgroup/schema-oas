@@ -1,0 +1,2 @@
+VideoGameClip:
+  $ref: 'clip.yaml#/Clip'

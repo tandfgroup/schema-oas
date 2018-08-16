@@ -1,0 +1,2 @@
+AccountingService:
+  $ref: 'financialservice.yaml#/FinancialService'

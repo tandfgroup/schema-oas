@@ -1,0 +1,2 @@
+UserBlocks:
+  $ref: 'userinteraction.yaml#/UserInteraction'

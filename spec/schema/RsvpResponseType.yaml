@@ -1,0 +1,2 @@
+RsvpResponseType:
+  $ref: 'enumeration.yaml#/Enumeration'

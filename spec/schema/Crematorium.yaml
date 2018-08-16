@@ -1,0 +1,2 @@
+Crematorium:
+  $ref: 'civicstructure.yaml#/CivicStructure'

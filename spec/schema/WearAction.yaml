@@ -1,0 +1,2 @@
+WearAction:
+  $ref: 'UseAction.yaml#/UseAction'

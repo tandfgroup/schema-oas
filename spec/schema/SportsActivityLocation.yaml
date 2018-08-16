@@ -1,0 +1,2 @@
+SportsActivityLocation:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

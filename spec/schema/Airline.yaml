@@ -1,0 +1,14 @@
+Airline:
+  description: An organization that provides flights for passengers.
+  allOf:
+    - $ref: 'organization.yaml#/Organization'
+    - type: object
+      properties:
+        boardingPolicy:
+          $ref: 'boardingpolicytype.yaml#/BoardingPolicyType'
+          description: >-
+            The type of boarding policy used by the airline (e.g. zone-based or
+            group-based).
+        iataCode:
+          type: string
+          description: IATA identifier for an airline or airport.

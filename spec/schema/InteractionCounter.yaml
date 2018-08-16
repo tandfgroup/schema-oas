@@ -1,0 +1,30 @@
+InteractionCounter:
+  description: >-
+    A summary of how users have interacted with this CreativeWork. In most
+    cases, authors will use a subtype to specify the specific type of
+    interaction.
+  allOf:
+    - $ref: 'structuredvalue.yaml#/StructuredValue'
+    - type: object
+      properties:
+        interactionService:
+          oneOf:
+            - $ref: 'website.yaml#/WebSite'
+            - $ref: 'softwareapplication.yaml#/SoftwareApplication'
+          description: >-
+            The WebSite or SoftwareApplication where the interactions took
+            place.
+        userInteractionCount:
+          type: integer
+          description: >-
+            The number of interactions for the CreativeWork using the WebSite or
+            SoftwareApplication.
+        interactionType:
+          $ref: 'action.yaml#/Action'
+          description: >-
+            The Action representing the type of interaction. For up votes, +1s,
+            etc. use <a class="localLink"
+            href="http://schema.org/LikeAction">LikeAction</a>. For down votes
+            use <a class="localLink"
+            href="http://schema.org/DislikeAction">DislikeAction</a>. Otherwise,
+            use the most specific Action.

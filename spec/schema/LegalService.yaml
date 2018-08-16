@@ -1,0 +1,2 @@
+LegalService:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

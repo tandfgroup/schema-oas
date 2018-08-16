@@ -1,0 +1,2 @@
+ActivateAction:
+  $ref: 'controlaction.yaml#/ControlAction'

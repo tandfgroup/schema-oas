@@ -1,0 +1,2 @@
+ExhibitionEvent:
+  $ref: 'event.yaml#/Event'

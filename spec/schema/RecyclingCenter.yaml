@@ -1,0 +1,2 @@
+RecyclingCenter:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

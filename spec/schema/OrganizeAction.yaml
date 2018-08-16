@@ -1,0 +1,2 @@
+OrganizeAction:
+  $ref: 'action.yaml#/Action'

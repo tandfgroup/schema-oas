@@ -1,0 +1,2 @@
+RegisterAction:
+  $ref: 'interactaction.yaml#/InteractAction'

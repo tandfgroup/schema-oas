@@ -1,0 +1,2 @@
+OfficeEquipmentStore:
+  $ref: 'store.yaml#/Store'

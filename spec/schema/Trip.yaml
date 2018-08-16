@@ -1,0 +1,53 @@
+Trip:
+  description: A trip or journey. An itinerary of visits to one or more places.
+  allOf:
+    - $ref: 'intangible.yaml#/Intangible'
+    - type: object
+      properties:
+        itinerary:
+          oneOf:
+            - $ref: 'place.yaml#/Place'
+            - $ref: 'itemlist.yaml#/ItemList'
+          description: >-
+            Destination(s) ( <a class="localLink"
+            href="http://schema.org/Place">Place</a> ) that make up a trip. For
+            a trip where destination order is important use <a class="localLink"
+            href="http://schema.org/ItemList">ItemList</a> to specify that order
+            (see examples).
+        departureTime:
+          type: string
+          format: date-time
+          description: The expected departure time.
+        isPartOf:
+          oneOf:
+            - $ref: 'creativework.yaml#/CreativeWork'
+            - $ref: 'trip.yaml#/Trip'
+          description: >-
+            Indicates an item or CreativeWork that this item, or CreativeWork
+            (in some sense), is part of.
+        provider:
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+          description: >-
+            The service provider, service operator, or service performer; the
+            goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the
+            seller.
+        arrivalTime:
+          type: string
+          format: date-time
+          description: The expected arrival time.
+        hasPart:
+          oneOf:
+            - $ref: 'trip.yaml#/Trip'
+            - $ref: 'creativework.yaml#/CreativeWork'
+          description: >-
+            Indicates an item or CreativeWork that is part of this item, or
+            CreativeWork (in some sense).
+        offers:
+          $ref: 'offer.yaml#/Offer'
+          description: >-
+            An offer to provide this item&#x2014;for example, an offer to sell a
+            product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.

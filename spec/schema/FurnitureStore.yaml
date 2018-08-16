@@ -1,0 +1,2 @@
+FurnitureStore:
+  $ref: 'store.yaml#/Store'

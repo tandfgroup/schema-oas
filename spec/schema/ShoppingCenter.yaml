@@ -1,0 +1,2 @@
+ShoppingCenter:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

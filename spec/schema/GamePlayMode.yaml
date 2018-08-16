@@ -1,0 +1,2 @@
+GamePlayMode:
+  $ref: 'enumeration.yaml#/Enumeration'

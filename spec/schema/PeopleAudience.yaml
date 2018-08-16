@@ -1,0 +1,31 @@
+PeopleAudience:
+  description: >-
+    A set of characteristics belonging to people, e.g. who compose an item's
+    target audience.
+  allOf:
+    - $ref: 'audience.yaml#/Audience'
+    - type: object
+      properties:
+        suggestedMaxAge:
+          type: number
+          description: Maximal age recommended for viewing content.
+        requiredMinAge:
+          type: integer
+          description: Audiences defined by a person's minimum age.
+        healthCondition:
+          type: object
+          description: >-
+            Specifying the health condition(s) of a patient, medical study, or
+            other target audience.
+        requiredMaxAge:
+          type: integer
+          description: Audiences defined by a person's maximum age.
+        requiredGender:
+          type: string
+          description: Audiences defined by a person's gender.
+        suggestedMinAge:
+          type: number
+          description: Minimal age recommended for viewing content.
+        suggestedGender:
+          type: string
+          description: The gender of the person or audience.

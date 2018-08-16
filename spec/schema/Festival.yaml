@@ -1,0 +1,2 @@
+Festival:
+  $ref: 'event.yaml#/Event'

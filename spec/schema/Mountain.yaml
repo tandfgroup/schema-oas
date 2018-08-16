@@ -1,0 +1,2 @@
+Mountain:
+  $ref: 'Landform.yaml#/Landform'

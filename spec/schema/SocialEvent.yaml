@@ -1,0 +1,2 @@
+SocialEvent:
+  $ref: 'event.yaml#/Event'

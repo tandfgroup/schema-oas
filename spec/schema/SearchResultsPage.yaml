@@ -1,0 +1,2 @@
+SearchResultsPage:
+  $ref: 'webpage.yaml#/WebPage'

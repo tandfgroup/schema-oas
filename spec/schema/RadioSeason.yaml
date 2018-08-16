@@ -1,0 +1,2 @@
+RadioSeason:
+  $ref: 'creativeworkseason.yaml#/CreativeWorkSeason'

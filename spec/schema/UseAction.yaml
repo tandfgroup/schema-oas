@@ -1,0 +1,2 @@
+UseAction:
+  $ref: 'consumeaction.yaml#/ConsumeAction'

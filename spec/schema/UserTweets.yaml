@@ -1,0 +1,2 @@
+UserTweets:
+  $ref: 'userinteraction.yaml#/UserInteraction'

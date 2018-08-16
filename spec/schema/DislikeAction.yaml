@@ -1,0 +1,2 @@
+DislikeAction:
+  $ref: 'reactaction.yaml#/ReactAction'

@@ -1,0 +1,2 @@
+HairSalon:
+  $ref: 'healthandbeautybusiness.yaml#/HealthAndBeautyBusiness'

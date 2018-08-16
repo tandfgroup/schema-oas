@@ -1,0 +1,2 @@
+GenderType:
+  $ref: 'Enumeration.yaml#/Enumeration'

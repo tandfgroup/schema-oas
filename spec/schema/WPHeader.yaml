@@ -1,0 +1,2 @@
+WPHeader:
+  $ref: 'webpageelement.yaml#/WebPageElement'

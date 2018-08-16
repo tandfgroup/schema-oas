@@ -1,0 +1,2 @@
+CheckInAction:
+  $ref: 'communicateaction.yaml#/CommunicateAction'

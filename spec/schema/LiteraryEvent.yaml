@@ -1,0 +1,2 @@
+LiteraryEvent:
+  $ref: 'event.yaml#/Event'

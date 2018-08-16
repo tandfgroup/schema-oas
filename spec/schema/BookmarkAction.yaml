@@ -1,0 +1,2 @@
+BookmarkAction:
+  $ref: 'organizeaction.yaml#/OrganizeAction'

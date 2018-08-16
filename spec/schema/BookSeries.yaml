@@ -1,0 +1,2 @@
+BookSeries:
+  $ref: 'creativeworkseries.yaml#/CreativeWorkSeries'

@@ -1,0 +1,2 @@
+PawnShop:
+  $ref: 'store.yaml#/Store'

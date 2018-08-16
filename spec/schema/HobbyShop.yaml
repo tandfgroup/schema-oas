@@ -1,0 +1,2 @@
+HobbyShop:
+  $ref: 'store.yaml#/Store'

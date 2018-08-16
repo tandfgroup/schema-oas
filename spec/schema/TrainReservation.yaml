@@ -1,0 +1,2 @@
+TrainReservation:
+  $ref: 'reservation.yaml#/Reservation'

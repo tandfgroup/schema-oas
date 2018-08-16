@@ -1,0 +1,2 @@
+ResumeAction:
+  $ref: 'controlaction.yaml#/ControlAction'

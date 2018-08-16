@@ -1,0 +1,2 @@
+GroceryStore:
+  $ref: 'store.yaml#/Store'

@@ -1,0 +1,2 @@
+TheaterGroup:
+  $ref: 'performinggroup.yaml#/PerformingGroup'

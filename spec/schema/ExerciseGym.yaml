@@ -1,0 +1,2 @@
+ExerciseGym:
+  $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'

@@ -1,0 +1,2 @@
+CollectionPage:
+  $ref: 'webpage.yaml#/WebPage'

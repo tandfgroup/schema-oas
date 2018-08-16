@@ -1,0 +1,2 @@
+CheckoutPage:
+  $ref: 'webpage.yaml#/WebPage'

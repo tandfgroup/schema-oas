@@ -1,0 +1,2 @@
+OnDemandEvent:
+  $ref: 'publicationevent.yaml#/PublicationEvent'

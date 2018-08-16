@@ -1,0 +1,2 @@
+ArtGallery:
+  $ref: 'EntertainmentBusiness.yaml#/EntertainmentBusiness'

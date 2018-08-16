@@ -1,0 +1,20 @@
+DigitalDocumentPermission:
+  description: A permission for a particular person or group to access a particular file.
+  allOf:
+    - $ref: 'intangible.yaml#/Intangible'
+    - type: object
+      properties:
+        grantee:
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'audience.yaml#/Audience'
+            - $ref: 'contactpoint.yaml#/ContactPoint'
+            - $ref: 'organization.yaml#/Organization'
+          description: >-
+            The person, organization, contact point, or audience that has been
+            granted this permission.
+        permissionType:
+          $ref: 'digitaldocumentpermissiontype.yaml#/DigitalDocumentPermissionType'
+          description: >-
+            The type of permission granted the person, organization, or
+            audience.

@@ -1,0 +1,2 @@
+NoteDigitalDocument:
+  $ref: 'digitaldocument.yaml#/DigitalDocument'

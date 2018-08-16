@@ -1,0 +1,2 @@
+OutletStore:
+  $ref: 'store.yaml#/Store'

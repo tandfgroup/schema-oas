@@ -1,0 +1,2 @@
+AmusementPark:
+  $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'

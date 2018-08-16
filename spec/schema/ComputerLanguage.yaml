@@ -1,0 +1,2 @@
+ComputerLanguage:
+  $ref: 'intangible.yaml#/Intangible'

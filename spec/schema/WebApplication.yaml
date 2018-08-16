@@ -1,0 +1,11 @@
+WebApplication:
+  description: Web applications.
+  allOf:
+    - $ref: 'softwareapplication.yaml#/SoftwareApplication'
+    - type: object
+      properties:
+        browserRequirements:
+          type: string
+          description: >-
+            Specifies browser requirements in human-readable text. For example,
+            'requires HTML5 support'.

@@ -1,0 +1,2 @@
+PostOffice:
+  $ref: 'GovernmentOffice.yaml#/GovernmentOffice'

@@ -1,0 +1,2 @@
+MovingCompany:
+  $ref: 'homeandconstructionbusiness.yaml#/HomeAndConstructionBusiness'

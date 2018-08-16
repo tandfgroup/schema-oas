@@ -1,0 +1,2 @@
+GovernmentBuilding:
+  $ref: 'CivicStructure.yaml#/CivicStructure'

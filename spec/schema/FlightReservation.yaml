@@ -1,0 +1,29 @@
+FlightReservation:
+  description: >-
+    A reservation for air travel.<br/><br/>
+
+
+    Note: This type is for information about actual reservations, e.g. in
+    confirmation emails or HTML pages with individual confirmations of
+    reservations. For offers of tickets, use <a class="localLink"
+    href="http://schema.org/Offer">Offer</a>.
+  allOf:
+    - $ref: 'reservation.yaml#/Reservation'
+    - type: object
+      properties:
+        passengerSequenceNumber:
+          type: string
+          description: The passenger's sequence number as assigned by the airline.
+        boardingGroup:
+          type: string
+          description: The airline-specific indicator of boarding order / preference.
+        passengerPriorityStatus:
+          oneOf:
+            - type: string
+            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+          description: >-
+            The priority status assigned to a passenger for security or boarding
+            (e.g. FastTrack or Priority).
+        securityScreening:
+          type: string
+          description: The type of security screening the passenger is subject to.

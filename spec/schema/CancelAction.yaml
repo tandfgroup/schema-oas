@@ -1,0 +1,2 @@
+CancelAction:
+  $ref: 'planaction.yaml#/PlanAction'

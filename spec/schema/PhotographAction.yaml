@@ -1,0 +1,2 @@
+PhotographAction:
+  $ref: 'createaction.yaml#/CreateAction'

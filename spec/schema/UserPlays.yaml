@@ -1,0 +1,2 @@
+UserPlays:
+  $ref: 'userinteraction.yaml#/UserInteraction'

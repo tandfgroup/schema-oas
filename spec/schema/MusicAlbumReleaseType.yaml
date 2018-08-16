@@ -1,0 +1,2 @@
+MusicAlbumReleaseType:
+  $ref: 'enumeration.yaml#/Enumeration'

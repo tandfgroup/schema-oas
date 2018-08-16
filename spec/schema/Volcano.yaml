@@ -1,0 +1,2 @@
+Volcano:
+  $ref: 'landform.yaml#/Landform'

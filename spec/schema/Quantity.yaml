@@ -1,5 +1,2 @@
 Quantity:
-  allOf:
-    - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      description: Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 Kg' or '4 milligrams'.
+  $ref: 'intangible.yaml#/Intangible'

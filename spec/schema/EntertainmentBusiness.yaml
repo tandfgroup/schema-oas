@@ -1,0 +1,2 @@
+EntertainmentBusiness:
+  $ref: 'LocalBusiness.yaml#/LocalBusiness'

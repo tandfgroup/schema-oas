@@ -1,0 +1,2 @@
+Bakery:
+  $ref: 'foodestablishment.yaml#/FoodEstablishment'

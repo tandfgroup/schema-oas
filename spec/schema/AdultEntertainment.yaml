@@ -1,0 +1,2 @@
+AdultEntertainment:
+  $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'

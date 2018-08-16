@@ -1,0 +1,2 @@
+GovernmentOffice:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

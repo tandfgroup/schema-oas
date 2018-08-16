@@ -1,0 +1,2 @@
+RVPark:
+  $ref: 'civicstructure.yaml#/CivicStructure'

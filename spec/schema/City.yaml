@@ -1,0 +1,2 @@
+City:
+  $ref: 'administrativearea.yaml#/AdministrativeArea'

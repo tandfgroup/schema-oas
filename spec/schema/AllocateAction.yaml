@@ -1,0 +1,14 @@
+AllocateAction:
+  description: The act of organizing tasks/objects/events by associating resources to it.
+  allOf:
+    - $ref: 'organizeaction.yaml#/OrganizeAction'
+    - type: object
+      properties:
+        purpose:
+          oneOf:
+            - type: object
+              description: >-
+                Type: MedicalDevicePurpose This type is not published yet in
+                schema.org.
+            - $ref: 'thing.yaml#/Thing'
+          description: A goal towards an action is taken. Can be concrete or abstract.

@@ -1,0 +1,2 @@
+AcceptAction:
+  $ref: 'allocateaction.yaml#/AllocateAction'

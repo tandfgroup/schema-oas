@@ -1,0 +1,2 @@
+Periodical:
+  $ref: 'creativeworkseries.yaml#/CreativeWorkSeries'

@@ -1,0 +1,2 @@
+BusinessEvent:
+  $ref: 'Event.yaml#/Event'

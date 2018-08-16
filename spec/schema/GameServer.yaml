@@ -1,0 +1,15 @@
+GameServer:
+  description: Server that provides game interaction in a multiplayer game.
+  allOf:
+    - $ref: 'intangible.yaml#/Intangible'
+    - type: object
+      properties:
+        game:
+          $ref: 'videogame.yaml#/VideoGame'
+          description: Video game which is played on this server.
+        playersOnline:
+          type: integer
+          description: Number of players on the server.
+        serverStatus:
+          $ref: 'gameserverstatus.yaml#/GameServerStatus'
+          description: Status of a game server.

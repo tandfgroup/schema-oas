@@ -1,0 +1,2 @@
+RiverBodyOfWater:
+  $ref: 'bodyofwater.yaml#/BodyOfWater'

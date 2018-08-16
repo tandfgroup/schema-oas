@@ -1,0 +1,2 @@
+BusReservation:
+  $ref: 'reservation.yaml#/Reservation'

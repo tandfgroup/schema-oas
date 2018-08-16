@@ -1,0 +1,71 @@
+Flight:
+  description: An airline flight.
+  allOf:
+    - $ref: 'Trip.yaml#/Trip'
+    - type: object
+      properties:
+        departureAirport:
+          $ref: 'Airport.yaml#/Airport'
+          description: The airport where the flight originates.
+        boardingPolicy:
+          $ref: 'BoardingPolicyType.yaml#/BoardingPolicyType'
+          description: >-
+            The type of boarding policy used by the airline (e.g. zone-based or
+            group-based).
+        mealService:
+          type: string
+          description: >-
+            Description of the meals that will be provided or available for
+            purchase.
+        aircraft:
+          oneOf:
+            - type: string
+            - $ref: 'Vehicle.yaml#/Vehicle'
+          description: 'The kind of aircraft (e.g., "Boeing 747").'
+        webCheckinTime:
+          type: string
+          format: date-time
+          description: The time when a passenger can check into the flight online.
+        arrivalTerminal:
+          type: string
+          description: Identifier of the flight's arrival terminal.
+        arrivalAirport:
+          $ref: 'Airport.yaml#/Airport'
+          description: The airport where the flight terminates.
+        carrier:
+          $ref: 'Organization.yaml#/Organization'
+          description: >-
+            'carrier' is an out-dated term indicating the 'provider' for parcel
+            delivery and flights.
+        seller:
+          oneOf:
+            - $ref: 'Person.yaml#/Person'
+            - $ref: 'Organization.yaml#/Organization'
+          description: >-
+            An entity which offers (sells / leases / lends / loans) the services
+            / goods.  A seller may also be a provider.
+        flightDistance:
+          oneOf:
+            - $ref: 'Distance.yaml#/Distance'
+            - type: string
+          description: The distance of the flight.
+        departureTerminal:
+          type: string
+          description: Identifier of the flight's departure terminal.
+        departureGate:
+          type: string
+          description: Identifier of the flight's departure gate.
+        flightNumber:
+          type: string
+          description: >-
+            The unique identifier for a flight including the airline IATA code.
+            For example, if describing United flight 110, where the IATA code
+            for United is 'UA', the flightNumber is 'UA110'.
+        estimatedFlightDuration:
+          oneOf:
+            - type: string
+            - $ref: 'Duration.yaml#/Duration'
+          description: The estimated time the flight will take.
+        arrivalGate:
+          type: string
+          description: Identifier of the flight's arrival gate.

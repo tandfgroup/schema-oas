@@ -1,0 +1,2 @@
+Residence:
+  $ref: 'place.yaml#/Place'

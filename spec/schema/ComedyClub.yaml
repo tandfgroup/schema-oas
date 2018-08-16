@@ -1,0 +1,2 @@
+ComedyClub:
+  $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'

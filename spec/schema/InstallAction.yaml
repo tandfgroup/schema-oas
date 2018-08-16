@@ -1,0 +1,2 @@
+InstallAction:
+  $ref: 'consumeaction.yaml#/ConsumeAction'

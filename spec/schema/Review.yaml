@@ -1,8 +1,25 @@
 Review:
+  description: 'A review of an item - for example, of a restaurant, movie, or store.'
   allOf:
-    - $ref: 'creative_work.yaml#/CreativeWork'
+    - $ref: 'creativework.yaml#/CreativeWork'
     - type: object
-      description: A review of an item - for example, of a restaurant, movie, or store.
       properties:
-        author:
-          $ref: 'person.yaml#/Person'
+        reviewRating:
+          $ref: 'rating.yaml#/Rating'
+          description: >-
+            The rating given in this review. Note that reviews can themselves be
+            rated. The <code>reviewRating</code> applies to rating given by the
+            review. The <a class="localLink"
+            href="http://schema.org/aggregateRating">aggregateRating</a>
+            property applies to the review itself, as a creative work.
+        itemReviewed:
+          $ref: 'thing.yaml#/Thing'
+          description: The item that is being reviewed/rated.
+        reviewBody:
+          type: string
+          description: The actual body of the review.
+        reviewAspect:
+          type: string
+          description: >-
+            This Review or Rating is relevant to this part or facet of the
+            itemReviewed.

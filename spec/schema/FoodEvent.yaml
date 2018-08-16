@@ -1,0 +1,2 @@
+FoodEvent:
+  $ref: 'event.yaml#/Event'

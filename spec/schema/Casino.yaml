@@ -1,0 +1,2 @@
+Casino:
+  $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'

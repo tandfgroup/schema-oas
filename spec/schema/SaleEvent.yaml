@@ -1,0 +1,2 @@
+SaleEvent:
+  $ref: 'event.yaml#/Event'

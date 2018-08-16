@@ -1,0 +1,2 @@
+DayOfWeek:
+  $ref: 'enumeration.yaml#/Enumeration'

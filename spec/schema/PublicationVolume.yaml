@@ -1,0 +1,38 @@
+PublicationVolume:
+  description: >
+    A part of a successively published publication such as a periodical or
+    multi-volume work, often numbered. It may represent a time span, such as a
+    year.<br/><br/>
+
+
+    <pre><code>  &lt;br/&gt;&lt;br/&gt;See also &lt;a
+    href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html"&gt;blog
+    post&lt;/a&gt;.
+
+    </code></pre>
+  allOf:
+    - $ref: 'creativework.yaml#/CreativeWork'
+    - type: object
+      properties:
+        volumeNumber:
+          oneOf:
+            - type: integer
+            - type: string
+          description: >-
+            Identifies the volume of publication or multi-part work; for
+            example, "iii" or "2".
+        pageStart:
+          oneOf:
+            - type: string
+            - type: integer
+          description: The page on which the work starts; for example "135" or "xiii".
+        pageEnd:
+          oneOf:
+            - type: string
+            - type: integer
+          description: The page on which the work ends; for example "138" or "xvi".
+        pagination:
+          type: string
+          description: >-
+            Any description of pages that is not separated into pageStart and
+            pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".

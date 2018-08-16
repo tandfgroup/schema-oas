@@ -1,0 +1,2 @@
+ProfessionalService:
+  $ref: 'localbusiness.yaml#/LocalBusiness'

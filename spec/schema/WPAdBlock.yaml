@@ -1,0 +1,2 @@
+WPAdBlock:
+  $ref: 'WebPageElement.yaml#/WebPageElement'

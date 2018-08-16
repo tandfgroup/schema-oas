@@ -1,0 +1,65 @@
+RadioSeries:
+  description: >-
+    CreativeWorkSeries dedicated to radio broadcast and associated online
+    delivery.
+  allOf:
+    - $ref: 'creativeworkseries.yaml#/CreativeWorkSeries'
+    - type: object
+      properties:
+        seasons:
+          $ref: 'creativeworkseason.yaml#/CreativeWorkSeason'
+          description: A season in a media series.
+        episodes:
+          $ref: 'episode.yaml#/Episode'
+          description: An episode of a TV/radio series or season.
+        episode:
+          $ref: 'episode.yaml#/Episode'
+          description: 'An episode of a tv, radio or game media within a series or season.'
+        trailer:
+          $ref: 'videoobject.yaml#/VideoObject'
+          description: 'The trailer of a movie or tv/radio series, season, episode, etc.'
+        directors:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            A director of e.g. tv, radio, movie, video games etc. content.
+            Directors can be associated with individual items or with a series,
+            episode, clip.
+        containsSeason:
+          $ref: 'creativeworkseason.yaml#/CreativeWorkSeason'
+          description: A season that is part of the media series.
+        musicBy:
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'musicgroup.yaml#/MusicGroup'
+          description: The composer of the soundtrack.
+        numberOfSeasons:
+          type: integer
+          description: The number of seasons in this series.
+        actors:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+            associated with individual items or with a series, episode, clip.
+        actor:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            An actor, e.g. in tv, radio, movie, video games etc., or in an
+            event. Actors can be associated with individual items or with a
+            series, episode, clip.
+        director:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            A director of e.g. tv, radio, movie, video gaming etc. content, or
+            of an event. Directors can be associated with individual items or
+            with a series, episode, clip.
+        season:
+          $ref: 'creativeworkseason.yaml#/CreativeWorkSeason'
+          description: A season in a media series.
+        productionCompany:
+          $ref: 'organization.yaml#/Organization'
+          description: >-
+            The production company or studio responsible for the item e.g.
+            series, video game, episode etc.
+        numberOfEpisodes:
+          type: integer
+          description: The number of episodes in this season or series.

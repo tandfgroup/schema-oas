@@ -1,0 +1,2 @@
+BusStation:
+  $ref: 'civicstructure.yaml#/CivicStructure'

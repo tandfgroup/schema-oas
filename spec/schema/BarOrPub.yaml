@@ -1,0 +1,2 @@
+BarOrPub:
+  $ref: 'foodestablishment.yaml#/FoodEstablishment'
