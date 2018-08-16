@@ -696,7 +696,7 @@ elif ( $RUN_BUILD ); then sh_heading "BUILD script started"
     cat "$SPEC_DIR/schema.yaml" | sed 's/^/    /';
   } >> "$SPEC_DIR/swagger.yaml"
   # search/replace $ref file references with local-object references
-  sed -i -E "s/[a-z\\_]+\\.yaml\\#\\//\\#\\/components\\/schemas\\//g" "$SPEC_DIR/swagger.yaml"
+  sed -i -E "s/[^']+\\.yaml\\#\\//\\#\\/components\\/schemas\\//g" "$SPEC_DIR/swagger.yaml"
 
 # --------------------------------------------------------------------------------------------------
 sh_success "BUILD script completed successfully"; fi
