@@ -1,18 +1,18 @@
 ChooseAction:
+  allOf:
+    - $ref: 'assessaction.yaml#/AssessAction'
+    - properties:
+        actionOption:
+          description: A sub property of object. The options subject to this action.
+          oneOf:
+            - type: string
+            - $ref: 'thing.yaml#/Thing'
+        option:
+          description: A sub property of object. The options subject to this action.
+          oneOf:
+            - type: string
+            - $ref: 'thing.yaml#/Thing'
+      type: object
   description: >-
     The act of expressing a preference from a set of options or a large or
     unbounded set of choices/options.
-  allOf:
-    - $ref: 'assessaction.yaml#/AssessAction'
-    - type: object
-      properties:
-        actionOption:
-          oneOf:
-            - $ref: 'thing.yaml#/Thing'
-            - type: string
-          description: A sub property of object. The options subject to this action.
-        option:
-          oneOf:
-            - $ref: 'thing.yaml#/Thing'
-            - type: string
-          description: A sub property of object. The options subject to this action.

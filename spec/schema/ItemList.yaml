@@ -1,17 +1,8 @@
 ItemList:
-  description: >-
-    A list of items of any sort&#x2014;for example, Top 10 Movies About
-    Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists,
-    which are often used only for formatting.
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
+    - properties:
         itemListElement:
-          oneOf:
-            - $ref: 'listitem.yaml#/ListItem'
-            - $ref: 'thing.yaml#/Thing'
-            - type: string
           description: >-
             For itemListElement values, you can use simple strings (e.g.
             "Peter", "Paul", "Mary"), existing entities, or use
@@ -29,15 +20,24 @@ ItemList:
             Note: The order of elements in your mark-up is not sufficient for
             indicating the order or elements.  Use ListItem with a 'position'
             property in such cases.
+          oneOf:
+            - type: string
+            - $ref: 'listitem.yaml#/ListItem'
+            - $ref: 'thing.yaml#/Thing'
+        itemListOrder:
+          description: 'Type of ordering (e.g. Ascending, Descending, Unordered).'
+          oneOf:
+            - $ref: 'itemlistordertype.yaml#/ItemListOrderType'
+            - type: string
         numberOfItems:
-          type: integer
           description: >-
             The number of items in an ItemList. Note that some descriptions
             might not fully describe all items in a list (e.g., multi-page
             pagination); in such cases, the numberOfItems would be for the
             entire list.
-        itemListOrder:
-          oneOf:
-            - $ref: 'itemlistordertype.yaml#/ItemListOrderType'
-            - type: string
-          description: 'Type of ordering (e.g. Ascending, Descending, Unordered).'
+          type: integer
+      type: object
+  description: >-
+    A list of items of any sort&#x2014;for example, Top 10 Movies About
+    Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists,
+    which are often used only for formatting.

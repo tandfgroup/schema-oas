@@ -1,2 +1,2 @@
 State:
-  $ref: 'AdministrativeArea.yaml#/AdministrativeArea'
+  $ref: 'administrativearea.yaml#/AdministrativeArea'

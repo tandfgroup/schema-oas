@@ -1,28 +1,28 @@
 AggregateOffer:
-  description: >-
-    When a single product is associated with multiple offers (for example, the
-    same pair of shoes is offered by different merchants), then AggregateOffer
-    can be used.
   allOf:
     - $ref: 'offer.yaml#/Offer'
-    - type: object
-      properties:
-        offerCount:
-          type: integer
-          description: The number of offers for the product.
+    - properties:
         highPrice:
+          description: The highest price of all offers available.
           oneOf:
             - type: number
             - type: string
-          description: The highest price of all offers available.
+        lowPrice:
+          description: The lowest price of all offers available.
+          oneOf:
+            - type: string
+            - type: number
+        offerCount:
+          description: The number of offers for the product.
+          type: integer
         offers:
           $ref: 'offer.yaml#/Offer'
           description: >-
             An offer to provide this item&#x2014;for example, an offer to sell a
             product, rent the DVD of a movie, perform a service, or give away
             tickets to an event.
-        lowPrice:
-          oneOf:
-            - type: string
-            - type: number
-          description: The lowest price of all offers available.
+      type: object
+  description: >-
+    When a single product is associated with multiple offers (for example, the
+    same pair of shoes is offered by different merchants), then AggregateOffer
+    can be used.

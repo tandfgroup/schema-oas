@@ -1,2 +1,2 @@
 Canal:
-  $ref: 'BodyOfWater.yaml#/BodyOfWater'
+  $ref: 'bodyofwater.yaml#/BodyOfWater'

@@ -1,36 +1,36 @@
 Question:
-  description: >-
-    A specific question - e.g. from a user seeking answers online, or collected
-    in a Frequently Asked Questions (FAQ) document.
   allOf:
     - $ref: 'creativework.yaml#/CreativeWork'
-    - type: object
-      properties:
-        upvoteCount:
-          type: integer
-          description: >-
-            The number of upvotes this question, answer or comment has received
-            from the community.
-        answerCount:
-          type: integer
-          description: The number of answers this question has received.
+    - properties:
         acceptedAnswer:
-          oneOf:
-            - $ref: 'itemlist.yaml#/ItemList'
-            - $ref: 'answer.yaml#/Answer'
           description: >-
             The answer(s) that has been accepted as best, typically on a
             Question/Answer site. Sites vary in their selection mechanisms, e.g.
             drawing on community opinion and/or the view of the Question author.
-        suggestedAnswer:
           oneOf:
             - $ref: 'answer.yaml#/Answer'
             - $ref: 'itemlist.yaml#/ItemList'
-          description: >-
-            An answer (possibly one of several, possibly incorrect) to a
-            Question, e.g. on a Question/Answer site.
-        downvoteCount:
+        answerCount:
+          description: The number of answers this question has received.
           type: integer
+        downvoteCount:
           description: >-
             The number of downvotes this question, answer or comment has
             received from the community.
+          type: integer
+        suggestedAnswer:
+          description: >-
+            An answer (possibly one of several, possibly incorrect) to a
+            Question, e.g. on a Question/Answer site.
+          oneOf:
+            - $ref: 'itemlist.yaml#/ItemList'
+            - $ref: 'answer.yaml#/Answer'
+        upvoteCount:
+          description: >-
+            The number of upvotes this question, answer or comment has received
+            from the community.
+          type: integer
+      type: object
+  description: >-
+    A specific question - e.g. from a user seeking answers online, or collected
+    in a Frequently Asked Questions (FAQ) document.

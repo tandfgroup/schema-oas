@@ -1,2 +1,2 @@
 UserCheckins:
-  $ref: 'UserInteraction.yaml#/UserInteraction'
+  $ref: 'userinteraction.yaml#/UserInteraction'

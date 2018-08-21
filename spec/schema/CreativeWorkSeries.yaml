@@ -1,26 +1,26 @@
 CreativeWorkSeries:
   properties:
+    endDate:
+      description: >-
+        The end date and time of the item (in <a
+        href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>).
+      oneOf:
+        - format: date-time
+          type: string
+        - format: date
+          type: string
     issn:
-      type: string
       description: >-
         The International Standard Serial Number (ISSN) that identifies this
         serial publication. You can repeat this property to identify different
         formats of, or the linking ISSN (ISSN-L) for, this serial publication.
-    endDate:
-      oneOf:
-        - type: string
-          format: date
-        - type: string
-          format: date-time
-      description: >-
-        The end date and time of the item (in <a
-        href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>).
+      type: string
     startDate:
-      oneOf:
-        - type: string
-          format: date-time
-        - type: string
-          format: date
       description: >-
         The start date and time of the item (in <a
         href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>).
+      oneOf:
+        - format: date-time
+          type: string
+        - format: date
+          type: string

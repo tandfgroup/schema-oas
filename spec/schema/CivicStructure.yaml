@@ -1,11 +1,8 @@
 CivicStructure:
-  description: 'A public structure, such as a town hall or concert hall.'
   allOf:
     - $ref: 'place.yaml#/Place'
-    - type: object
-      properties:
+    - properties:
         openingHours:
-          type: string
           description: >
             The general opening hours for a business. Opening hours can be
             specified as a weekly time range, starting with days, then times per
@@ -32,3 +29,6 @@ CivicStructure:
             day&lt;/time&gt;</code>.</li>
 
             </ul>
+          type: string
+      type: object
+  description: 'A public structure, such as a town hall or concert hall.'

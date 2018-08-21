@@ -1,2 +1,2 @@
 BusinessEvent:
-  $ref: 'Event.yaml#/Event'
+  $ref: 'event.yaml#/Event'

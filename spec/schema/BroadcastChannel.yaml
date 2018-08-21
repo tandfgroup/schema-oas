@@ -1,38 +1,38 @@
 BroadcastChannel:
-  description: A unique instance of a BroadcastService on a CableOrSatelliteService lineup.
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
+    - properties:
         broadcastChannelId:
-          type: string
           description: >-
             The unique address by which the BroadcastService can be identified
             in a provider lineup. In US, this is typically a number.
-        providesBroadcastService:
-          $ref: 'broadcastservice.yaml#/BroadcastService'
-          description: The BroadcastService offered on this channel.
-        inBroadcastLineup:
-          $ref: 'cableorsatelliteservice.yaml#/CableOrSatelliteService'
-          description: The CableOrSatelliteService offering the channel.
+          type: string
         broadcastFrequency:
-          oneOf:
-            - type: string
-            - type: object
-              description: >-
-                Type: BroadcastFrequencySpecification This type is not published
-                yet in schema.org.
           description: >-
             The frequency used for over-the-air broadcasts. Numeric values or
             simple ranges e.g. 87-99. In addition a shortcut idiom is supported
             for frequences of AM and FM radio channels, e.g. "87 FM".
+          oneOf:
+            - type: string
+            - description: >-
+                Type: BroadcastFrequencySpecification This type is not published
+                yet in schema.org.
+              type: object
         broadcastServiceTier:
-          type: string
           description: >-
             The type of service required to have access to the channel (e.g.
             Standard or Premium).
+          type: string
         genre:
-          oneOf:
-            - type: string
-            - $ref: 'url.yaml#/URL'
           description: 'Genre of the creative work, broadcast channel or group.'
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        inBroadcastLineup:
+          $ref: 'cableorsatelliteservice.yaml#/CableOrSatelliteService'
+          description: The CableOrSatelliteService offering the channel.
+        providesBroadcastService:
+          $ref: 'broadcastservice.yaml#/BroadcastService'
+          description: The BroadcastService offered on this channel.
+      type: object
+  description: A unique instance of a BroadcastService on a CableOrSatelliteService lineup.

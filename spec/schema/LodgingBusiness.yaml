@@ -1,25 +1,7 @@
 LodgingBusiness:
-  description: 'A lodging business, such as a motel, hotel, or inn.'
   allOf:
     - $ref: 'localbusiness.yaml#/LocalBusiness'
-    - type: object
-      properties:
-        checkinTime:
-          type: string
-          format: date-time
-          description: The earliest someone may check into a lodging establishment.
-        checkoutTime:
-          type: string
-          format: date-time
-          description: The latest someone may check out of a lodging establishment.
-        petsAllowed:
-          oneOf:
-            - type: string
-            - type: boolean
-          description: >-
-            Indicates whether pets are allowed to enter the accommodation or
-            lodging business. More detailed information can be put in a text
-            value.
+    - properties:
         amenityFeature:
           $ref: 'locationfeaturespecification.yaml#/LocationFeatureSpecification'
           description: >-
@@ -27,19 +9,35 @@ LodgingBusiness:
             Accommodation. This generic property does not make a statement about
             whether the feature is included in an offer for the main
             accommodation or available at extra costs.
+        audience:
+          $ref: 'audience.yaml#/Audience'
+          description: 'An intended audience, i.e. a group for whom something was created.'
         availableLanguage:
-          oneOf:
-            - type: string
-            - $ref: 'language.yaml#/Language'
           description: >-
             A language someone may use with or at the item, service or place.
             Please use one of the language codes from the <a
             href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>.
             See also <a class="localLink"
             href="http://schema.org/inLanguage">inLanguage</a>
-        audience:
-          $ref: 'audience.yaml#/Audience'
-          description: 'An intended audience, i.e. a group for whom something was created.'
+          oneOf:
+            - $ref: 'language.yaml#/Language'
+            - type: string
+        checkinTime:
+          description: The earliest someone may check into a lodging establishment.
+          format: date-time
+          type: string
+        checkoutTime:
+          description: The latest someone may check out of a lodging establishment.
+          format: date-time
+          type: string
+        petsAllowed:
+          description: >-
+            Indicates whether pets are allowed to enter the accommodation or
+            lodging business. More detailed information can be put in a text
+            value.
+          oneOf:
+            - type: string
+            - type: boolean
         starRating:
           $ref: 'rating.yaml#/Rating'
           description: >-
@@ -48,3 +46,5 @@ LodgingBusiness:
             property to indicate the rating organization, e.g. as an
             Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or
             Hotelstars).
+      type: object
+  description: 'A lodging business, such as a motel, hotel, or inn.'

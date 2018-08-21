@@ -1,14 +1,14 @@
 HowToItem:
+  allOf:
+    - $ref: 'listitem.yaml#/ListItem'
+    - properties:
+        requiredQuantity:
+          description: The required quantity of the item(s).
+          oneOf:
+            - type: string
+            - type: number
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+      type: object
   description: >-
     An item used as either a tool or supply when performing the instructions for
     how to to achieve a result.
-  allOf:
-    - $ref: 'listitem.yaml#/ListItem'
-    - type: object
-      properties:
-        requiredQuantity:
-          oneOf:
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - type: string
-            - type: number
-          description: The required quantity of the item(s).

@@ -1,11 +1,7 @@
 TransferAction:
-  description: >-
-    The act of transferring/moving (abstract or concrete) animate or inanimate
-    objects from one place to another.
   allOf:
     - $ref: 'action.yaml#/Action'
-    - type: object
-      properties:
+    - properties:
         fromLocation:
           $ref: 'place.yaml#/Place'
           description: >-
@@ -16,3 +12,7 @@ TransferAction:
           description: >-
             A sub property of location. The final location of the object or the
             agent after the action.
+      type: object
+  description: >-
+    The act of transferring/moving (abstract or concrete) animate or inanimate
+    objects from one place to another.

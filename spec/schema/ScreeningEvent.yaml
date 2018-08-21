@@ -1,22 +1,22 @@
 ScreeningEvent:
-  description: A screening of a movie or other video.
   allOf:
     - $ref: 'event.yaml#/Event'
-    - type: object
-      properties:
+    - properties:
         subtitleLanguage:
-          oneOf:
-            - type: string
-            - $ref: 'language.yaml#/Language'
           description: >-
             Languages in which subtitles/captions are available, in <a
             href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard
             format</a>.
-        workPresented:
-          $ref: 'movie.yaml#/Movie'
-          description: The movie presented during this event.
+          oneOf:
+            - type: string
+            - $ref: 'language.yaml#/Language'
         videoFormat:
-          type: string
           description: >-
             The type of screening or video broadcast used (e.g. IMAX, 3D, SD,
             HD, etc.).
+          type: string
+        workPresented:
+          $ref: 'movie.yaml#/Movie'
+          description: The movie presented during this event.
+      type: object
+  description: A screening of a movie or other video.

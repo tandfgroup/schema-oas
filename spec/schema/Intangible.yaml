@@ -1,2 +1,2 @@
 Intangible:
-  $ref: 'Thing.yaml#/Thing'
+  $ref: 'thing.yaml#/Thing'

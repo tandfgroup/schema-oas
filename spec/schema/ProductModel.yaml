@@ -1,11 +1,7 @@
 ProductModel:
-  description: >-
-    A datasheet or vendor specification of a product (in the sense of a
-    prototypical description).
   allOf:
     - $ref: 'product.yaml#/Product'
-    - type: object
-      properties:
+    - properties:
         isVariantOf:
           $ref: 'productmodel.yaml#/ProductModel'
           description: >-
@@ -22,3 +18,7 @@ ProductModel:
           description: >-
             A pointer from a newer variant of a product  to its previous, often
             discontinued predecessor.
+      type: object
+  description: >-
+    A datasheet or vendor specification of a product (in the sense of a
+    prototypical description).

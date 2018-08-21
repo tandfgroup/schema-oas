@@ -1,14 +1,14 @@
 Audience:
-  description: 'Intended audience for an item, i.e. the group for whom the item was created.'
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
+    - properties:
         audienceType:
-          type: string
           description: >-
             The target group associated with a given audience (e.g. veterans,
             car owners, musicians, etc.).
+          type: string
         geographicArea:
           $ref: 'administrativearea.yaml#/AdministrativeArea'
           description: The geographic area associated with the audience.
+      type: object
+  description: 'Intended audience for an item, i.e. the group for whom the item was created.'

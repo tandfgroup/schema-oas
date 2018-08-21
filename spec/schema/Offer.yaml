@@ -1,115 +1,118 @@
 Offer:
-  description: >-
-    An offer to transfer some rights to an item or to provide a service — for
-    example, an offer to sell tickets to an event, to rent the DVD of a movie,
-    to stream a TV show over the internet, to repair a motorcycle, or to loan a
-    book.<br/><br/>
-
-
-    For <a
-    href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GTIN</a>-related
-    fields, see <a
-    href="http://www.gs1.org/barcodes/support/check_digit_calculator">Check
-    Digit calculator</a> and <a
-    href="http://www.gs1us.org/resources/standards/gtin-validation-guide">validation
-    guide</a> from <a href="http://www.gs1.org/">GS1</a>.
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
-        inventoryLevel:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-          description: The current approximate inventory level for the item or items.
-        gtin8:
-          type: string
-          description: >-
-            The <a
-            href="http://apps.gs1.org/GDD/glossary/Pages/GTIN-8.aspx">GTIN-8</a>
-            code of the product, or the product to which the offer refers. This
-            code is also known as EAN/UCC-8 or 8-digit EAN. See <a
-            href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN
-            Summary</a> for more details.
+    - properties:
+        acceptedPaymentMethod:
+          description: The payment method(s) accepted by seller for this offer.
+          oneOf:
+            - $ref: 'paymentmethod.yaml#/PaymentMethod'
+            - $ref: 'loanorcredit.yaml#/LoanOrCredit'
         addOn:
           $ref: 'offer.yaml#/Offer'
           description: >-
             An additional offer that can only be obtained in combination with
             the first base offer (e.g. supplements and extensions that are
             available for a surcharge).
-        validThrough:
-          type: string
-          format: date-time
+        advanceBookingRequirement:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
-            The date after when the item is not valid. For example the end of an
-            offer, salary period, or a period of opening hours.
-        includesObject:
-          $ref: 'typeandquantitynode.yaml#/TypeAndQuantityNode'
+            The amount of time that is required between accepting the offer and
+            the actual usage of the resource or service.
+        aggregateRating:
+          $ref: 'aggregaterating.yaml#/AggregateRating'
           description: >-
-            This links to a node or nodes indicating the exact quantity of the
-            products included in the offer.
-        category:
+            The overall rating, based on a collection of reviews or ratings, of
+            the item.
+        areaServed:
+          description: The geographic area where a service or offered item is provided.
           oneOf:
-            - type: object
-              description: >-
-                Type: PhysicalActivityCategory This type is not published yet in
-                schema.org.
-            - $ref: 'thing.yaml#/Thing'
+            - $ref: 'place.yaml#/Place'
+            - $ref: 'geoshape.yaml#/GeoShape'
+            - $ref: 'administrativearea.yaml#/AdministrativeArea'
             - type: string
+        availability:
+          $ref: 'itemavailability.yaml#/ItemAvailability'
           description: >-
-            A category for the item. Greater signs or slashes can be used to
-            informally indicate a category hierarchy.
-        warranty:
-          $ref: 'warrantypromise.yaml#/WarrantyPromise'
-          description: The warranty promise(s) included in the offer.
-        itemCondition:
-          $ref: 'offeritemcondition.yaml#/OfferItemCondition'
-          description: >-
-            A predefined value from OfferItemCondition or a textual description
-            of the condition of the product or service, or the products or
-            services included in the offer.
+            The availability of this item&#x2014;for example In stock, Out of
+            stock, Pre-order, etc.
         availabilityEnds:
-          type: string
-          format: date-time
           description: >-
             The end of the availability of the product or service included in
             the offer.
-        review:
-          $ref: 'review.yaml#/Review'
-          description: A review of the item.
-        priceCurrency:
+          format: date-time
           type: string
+        availabilityStarts:
           description: >-
-            The currency of the price, or a price component when attached to <a
-            class="localLink"
-            href="http://schema.org/PriceSpecification">PriceSpecification</a>
-            and its subtypes.<br/><br/>
+            The beginning of the availability of the product or service included
+            in the offer.
+          format: date-time
+          type: string
+        availableAtOrFrom:
+          $ref: 'place.yaml#/Place'
+          description: >-
+            The place(s) from which the offer can be obtained (e.g. store
+            locations).
+        availableDeliveryMethod:
+          $ref: 'deliverymethod.yaml#/DeliveryMethod'
+          description: The delivery method(s) available for this offer.
+        businessFunction:
+          $ref: 'businessfunction.yaml#/BusinessFunction'
+          description: >-
+            The business function (e.g. sell, lease, repair, dispose) of the
+            offer or component of a bundle (TypeAndQuantityNode). The default is
+            http://purl.org/goodrelations/v1#Sell.
+        category:
+          description: >-
+            A category for the item. Greater signs or slashes can be used to
+            informally indicate a category hierarchy.
+          oneOf:
+            - description: >-
+                Type: PhysicalActivityCategory This type is not published yet in
+                schema.org.
+              type: object
+            - type: string
+            - $ref: 'thing.yaml#/Thing'
+        deliveryLeadTime:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          description: >-
+            The typical delay between the receipt of the order and the goods
+            either leaving the warehouse or being prepared for pickup, in case
+            the delivery method is on site pickup.
+        eligibleCustomerType:
+          $ref: 'businessentitytype.yaml#/BusinessEntityType'
+          description: The type(s) of customers for which the given offer is valid.
+        eligibleDuration:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          description: The duration for which the given offer is valid.
+        eligibleQuantity:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          description: >-
+            The interval and unit of measurement of ordering quantities for
+            which the offer or price specification is valid. This allows e.g.
+            specifying that a certain freight charge is valid only for a certain
+            quantity.
+        eligibleRegion:
+          description: >-
+            The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place,
+            or the GeoShape for the geo-political region(s) for which the offer
+            or delivery charge specification is valid.<br/><br/>
 
 
-            Use standard formats: <a
-            href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency
-            format</a> e.g. "USD"; <a
-            href="https://en.wikipedia.org/wiki/List_of_cryptocurrencies">Ticker
-            symbol</a> for cryptocurrencies e.g. "BTC"; well known names for <a
-            href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
-            Exchange Tradings Systems</a> (LETS) and other currency types e.g.
-            "Ithaca HOUR".
-        gtin14:
-          type: string
+            See also <a class="localLink"
+            href="http://schema.org/ineligibleRegion">ineligibleRegion</a>.
+          oneOf:
+            - type: string
+            - $ref: 'place.yaml#/Place'
+            - $ref: 'geoshape.yaml#/GeoShape'
+        eligibleTransactionVolume:
+          $ref: 'pricespecification.yaml#/PriceSpecification'
           description: >-
-            The GTIN-14 code of the product, or the product to which the offer
-            refers. See <a
-            href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN
-            Summary</a> for more details.
-        gtin13:
-          type: string
-          description: >-
-            The GTIN-13 code of the product, or the product to which the offer
-            refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13.
-            Former 12-digit UPC codes can be converted into a GTIN-13 code by
-            simply adding a preceeding zero. See <a
-            href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN
-            Summary</a> for more details.
+            The transaction volume, in a monetary unit, for which the offer or
+            price specification is valid, e.g. for indicating a minimal
+            purchasing volume, to express free shipping above a certain order
+            volume, or to limit the acceptance of credit cards to purchases to a
+            certain minimal amount.
         gtin12:
-          type: string
           description: >-
             The GTIN-12 code of the product, or the product to which the offer
             refers. The GTIN-12 is the 12-digit GS1 Identification Key composed
@@ -117,16 +120,38 @@ Offer:
             identify trade items. See <a
             href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN
             Summary</a> for more details.
-        advanceBookingRequirement:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          type: string
+        gtin13:
           description: >-
-            The amount of time that is required between accepting the offer and
-            the actual usage of the resource or service.
+            The GTIN-13 code of the product, or the product to which the offer
+            refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13.
+            Former 12-digit UPC codes can be converted into a GTIN-13 code by
+            simply adding a preceeding zero. See <a
+            href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN
+            Summary</a> for more details.
+          type: string
+        gtin14:
+          description: >-
+            The GTIN-14 code of the product, or the product to which the offer
+            refers. See <a
+            href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN
+            Summary</a> for more details.
+          type: string
+        gtin8:
+          description: >-
+            The <a
+            href="http://apps.gs1.org/GDD/glossary/Pages/GTIN-8.aspx">GTIN-8</a>
+            code of the product, or the product to which the offer refers. This
+            code is also known as EAN/UCC-8 or 8-digit EAN. See <a
+            href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1 GTIN
+            Summary</a> for more details.
+          type: string
+        includesObject:
+          $ref: 'typeandquantitynode.yaml#/TypeAndQuantityNode'
+          description: >-
+            This links to a node or nodes indicating the exact quantity of the
+            products included in the offer.
         ineligibleRegion:
-          oneOf:
-            - $ref: 'place.yaml#/Place'
-            - $ref: 'geoshape.yaml#/GeoShape'
-            - type: string
           description: >-
             The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place,
             or the GeoShape for the geo-political region(s) for which the offer
@@ -136,106 +161,35 @@ Offer:
 
             See also <a class="localLink"
             href="http://schema.org/eligibleRegion">eligibleRegion</a>.
-        areaServed:
-          oneOf:
-            - $ref: 'geoshape.yaml#/GeoShape'
-            - $ref: 'place.yaml#/Place'
-            - type: string
-            - $ref: 'administrativearea.yaml#/AdministrativeArea'
-          description: The geographic area where a service or offered item is provided.
-        availabilityStarts:
-          type: string
-          format: date-time
-          description: >-
-            The beginning of the availability of the product or service included
-            in the offer.
-        eligibleTransactionVolume:
-          $ref: 'pricespecification.yaml#/PriceSpecification'
-          description: >-
-            The transaction volume, in a monetary unit, for which the offer or
-            price specification is valid, e.g. for indicating a minimal
-            purchasing volume, to express free shipping above a certain order
-            volume, or to limit the acceptance of credit cards to purchases to a
-            certain minimal amount.
-        sku:
-          type: string
-          description: >-
-            The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier
-            for a product or service, or the product to which the offer refers.
-        eligibleCustomerType:
-          $ref: 'businessentitytype.yaml#/BusinessEntityType'
-          description: The type(s) of customers for which the given offer is valid.
-        reviews:
-          $ref: 'review.yaml#/Review'
-          description: Review of the item.
-        aggregateRating:
-          $ref: 'aggregaterating.yaml#/AggregateRating'
-          description: >-
-            The overall rating, based on a collection of reviews or ratings, of
-            the item.
-        businessFunction:
-          $ref: 'businessfunction.yaml#/BusinessFunction'
-          description: >-
-            The business function (e.g. sell, lease, repair, dispose) of the
-            offer or component of a bundle (TypeAndQuantityNode). The default is
-            http://purl.org/goodrelations/v1#Sell.
-        priceValidUntil:
-          type: string
-          format: date
-          description: The date after which the price is no longer available.
-        priceSpecification:
-          $ref: 'pricespecification.yaml#/PriceSpecification'
-          description: >-
-            One or more detailed price specifications, indicating the unit price
-            and delivery or payment charges.
-        eligibleRegion:
           oneOf:
             - type: string
-            - $ref: 'place.yaml#/Place'
             - $ref: 'geoshape.yaml#/GeoShape'
+            - $ref: 'place.yaml#/Place'
+        inventoryLevel:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          description: The current approximate inventory level for the item or items.
+        itemCondition:
+          $ref: 'offeritemcondition.yaml#/OfferItemCondition'
           description: >-
-            The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place,
-            or the GeoShape for the geo-political region(s) for which the offer
-            or delivery charge specification is valid.<br/><br/>
-
-
-            See also <a class="localLink"
-            href="http://schema.org/ineligibleRegion">ineligibleRegion</a>.
+            A predefined value from OfferItemCondition or a textual description
+            of the condition of the product or service, or the products or
+            services included in the offer.
+        itemOffered:
+          description: The item being offered.
+          oneOf:
+            - $ref: 'product.yaml#/Product'
+            - $ref: 'service.yaml#/Service'
         mpn:
-          type: string
           description: >-
             The Manufacturer Part Number (MPN) of the product, or the product to
             which the offer refers.
-        validFrom:
           type: string
-          format: date-time
-          description: The date when the item becomes valid.
-        availableAtOrFrom:
-          $ref: 'place.yaml#/Place'
-          description: >-
-            The place(s) from which the offer can be obtained (e.g. store
-            locations).
-        seller:
-          oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
-          description: >-
-            An entity which offers (sells / leases / lends / loans) the services
-            / goods.  A seller may also be a provider.
-        acceptedPaymentMethod:
-          oneOf:
-            - $ref: 'loanorcredit.yaml#/LoanOrCredit'
-            - $ref: 'paymentmethod.yaml#/PaymentMethod'
-          description: The payment method(s) accepted by seller for this offer.
         offeredBy:
+          description: A pointer to the organization or person making the offer.
           oneOf:
             - $ref: 'organization.yaml#/Organization'
             - $ref: 'person.yaml#/Person'
-          description: A pointer to the organization or person making the offer.
         price:
-          oneOf:
-            - type: number
-            - type: string
           description: >
             The offer price of a product, or of a price component when attached
             to PriceSpecification and its subtypes.<br/><br/>
@@ -274,38 +228,84 @@ Offer:
             symbols.</li>
 
             </ul>
-        eligibleDuration:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-          description: The duration for which the given offer is valid.
-        availability:
-          $ref: 'itemavailability.yaml#/ItemAvailability'
+          oneOf:
+            - type: string
+            - type: number
+        priceCurrency:
           description: >-
-            The availability of this item&#x2014;for example In stock, Out of
-            stock, Pre-order, etc.
-        serialNumber:
+            The currency of the price, or a price component when attached to <a
+            class="localLink"
+            href="http://schema.org/PriceSpecification">PriceSpecification</a>
+            and its subtypes.<br/><br/>
+
+
+            Use standard formats: <a
+            href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency
+            format</a> e.g. "USD"; <a
+            href="https://en.wikipedia.org/wiki/List_of_cryptocurrencies">Ticker
+            symbol</a> for cryptocurrencies e.g. "BTC"; well known names for <a
+            href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
+            Exchange Tradings Systems</a> (LETS) and other currency types e.g.
+            "Ithaca HOUR".
           type: string
+        priceSpecification:
+          $ref: 'pricespecification.yaml#/PriceSpecification'
+          description: >-
+            One or more detailed price specifications, indicating the unit price
+            and delivery or payment charges.
+        priceValidUntil:
+          description: The date after which the price is no longer available.
+          format: date
+          type: string
+        review:
+          $ref: 'review.yaml#/Review'
+          description: A review of the item.
+        reviews:
+          $ref: 'review.yaml#/Review'
+          description: Review of the item.
+        seller:
+          description: >-
+            An entity which offers (sells / leases / lends / loans) the services
+            / goods.  A seller may also be a provider.
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+        serialNumber:
           description: >-
             The serial number or any alphanumeric identifier of a particular
             product. When attached to an offer, it is a shortcut for the serial
             number of the product included in the offer.
-        eligibleQuantity:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          type: string
+        sku:
           description: >-
-            The interval and unit of measurement of ordering quantities for
-            which the offer or price specification is valid. This allows e.g.
-            specifying that a certain freight charge is valid only for a certain
-            quantity.
-        itemOffered:
-          oneOf:
-            - $ref: 'product.yaml#/Product'
-            - $ref: 'service.yaml#/Service'
-          description: The item being offered.
-        deliveryLeadTime:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier
+            for a product or service, or the product to which the offer refers.
+          type: string
+        validFrom:
+          description: The date when the item becomes valid.
+          format: date-time
+          type: string
+        validThrough:
           description: >-
-            The typical delay between the receipt of the order and the goods
-            either leaving the warehouse or being prepared for pickup, in case
-            the delivery method is on site pickup.
-        availableDeliveryMethod:
-          $ref: 'deliverymethod.yaml#/DeliveryMethod'
-          description: The delivery method(s) available for this offer.
+            The date after when the item is not valid. For example the end of an
+            offer, salary period, or a period of opening hours.
+          format: date-time
+          type: string
+        warranty:
+          $ref: 'warrantypromise.yaml#/WarrantyPromise'
+          description: The warranty promise(s) included in the offer.
+      type: object
+  description: >-
+    An offer to transfer some rights to an item or to provide a service — for
+    example, an offer to sell tickets to an event, to rent the DVD of a movie,
+    to stream a TV show over the internet, to repair a motorcycle, or to loan a
+    book.<br/><br/>
+
+
+    For <a
+    href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GTIN</a>-related
+    fields, see <a
+    href="http://www.gs1.org/barcodes/support/check_digit_calculator">Check
+    Digit calculator</a> and <a
+    href="http://www.gs1us.org/resources/standards/gtin-validation-guide">validation
+    guide</a> from <a href="http://www.gs1.org/">GS1</a>.

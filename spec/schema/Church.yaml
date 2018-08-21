@@ -1,2 +1,2 @@
 Church:
-  $ref: 'PlaceOfWorship.yaml#/PlaceOfWorship'
+  $ref: 'placeofworship.yaml#/PlaceOfWorship'

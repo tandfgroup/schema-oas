@@ -1,2 +1,2 @@
 BusinessEntityType:
-  $ref: 'Enumeration.yaml#/Enumeration'
+  $ref: 'enumeration.yaml#/Enumeration'

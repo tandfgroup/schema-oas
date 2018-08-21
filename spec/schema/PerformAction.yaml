@@ -1,11 +1,11 @@
 PerformAction:
-  description: The act of participating in performance arts.
   allOf:
     - $ref: 'playaction.yaml#/PlayAction'
-    - type: object
-      properties:
+    - properties:
         entertainmentBusiness:
           $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'
           description: >-
             A sub property of location. The entertainment business where the
             action occurred.
+      type: object
+  description: The act of participating in performance arts.

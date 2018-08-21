@@ -1,42 +1,42 @@
 NutritionInformation:
-  description: Nutritional information about the recipe.
   allOf:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
-    - type: object
-      properties:
+    - properties:
         calories:
           $ref: 'energy.yaml#/Energy'
           description: The number of calories.
-        sugarContent:
+        carbohydrateContent:
           $ref: 'mass.yaml#/Mass'
-          description: The number of grams of sugar.
+          description: The number of grams of carbohydrates.
+        cholesterolContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of milligrams of cholesterol.
+        fatContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of fat.
+        fiberContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of fiber.
         proteinContent:
           $ref: 'mass.yaml#/Mass'
           description: The number of grams of protein.
         saturatedFatContent:
           $ref: 'mass.yaml#/Mass'
           description: The number of grams of saturated fat.
-        cholesterolContent:
-          $ref: 'mass.yaml#/Mass'
-          description: The number of milligrams of cholesterol.
+        servingSize:
+          description: 'The serving size, in terms of the number of volume or mass.'
+          type: string
         sodiumContent:
           $ref: 'mass.yaml#/Mass'
           description: The number of milligrams of sodium.
-        carbohydrateContent:
+        sugarContent:
           $ref: 'mass.yaml#/Mass'
-          description: The number of grams of carbohydrates.
-        fatContent:
-          $ref: 'mass.yaml#/Mass'
-          description: The number of grams of fat.
-        unsaturatedFatContent:
-          $ref: 'mass.yaml#/Mass'
-          description: The number of grams of unsaturated fat.
-        fiberContent:
-          $ref: 'mass.yaml#/Mass'
-          description: The number of grams of fiber.
-        servingSize:
-          type: string
-          description: 'The serving size, in terms of the number of volume or mass.'
+          description: The number of grams of sugar.
         transFatContent:
           $ref: 'mass.yaml#/Mass'
           description: The number of grams of trans fat.
+        unsaturatedFatContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of unsaturated fat.
+      type: object
+  description: Nutritional information about the recipe.

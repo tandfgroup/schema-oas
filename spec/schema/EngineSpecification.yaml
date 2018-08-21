@@ -1,26 +1,25 @@
 EngineSpecification:
-  description: >-
-    Information about the engine of the vehicle. A vehicle can have multiple
-    engines represented by multiple engine specification entities.
   allOf:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
-    - type: object
-      properties:
-        fuelType:
-          oneOf:
-            - $ref: 'url.yaml#/URL'
-            - type: string
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+    - properties:
+        engineDisplacement:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
-            The type of fuel suitable for the engine or engines of the vehicle.
-            If the vehicle has only one engine, this property can be attached
-            directly to the vehicle.
-        engineType:
-          oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
-            - type: string
-          description: The type of engine or engines powering the vehicle.
+            The volume swept by all of the pistons inside the cylinders of an
+            internal combustion engine in a single movement. <br/><br/>
+
+
+            Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ
+            for cubic inches
+
+            * Note 1: You can link to information about how the given value has
+            been determined using the <a class="localLink"
+            href="http://schema.org/valueReference">valueReference</a> property.
+
+            * Note 2: You can use <a class="localLink"
+            href="http://schema.org/minValue">minValue</a> and <a
+            class="localLink" href="http://schema.org/maxValue">maxValue</a> to
+            indicate ranges.
         enginePower:
           $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >
@@ -44,24 +43,21 @@ EngineSpecification:
             indicate ranges.</li>
 
             </ul>
-        engineDisplacement:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+        engineType:
+          description: The type of engine or engines powering the vehicle.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+            - type: string
+        fuelType:
           description: >-
-            The volume swept by all of the pistons inside the cylinders of an
-            internal combustion engine in a single movement. <br/><br/>
-
-
-            Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ
-            for cubic inches
-
-            * Note 1: You can link to information about how the given value has
-            been determined using the <a class="localLink"
-            href="http://schema.org/valueReference">valueReference</a> property.
-
-            * Note 2: You can use <a class="localLink"
-            href="http://schema.org/minValue">minValue</a> and <a
-            class="localLink" href="http://schema.org/maxValue">maxValue</a> to
-            indicate ranges.
+            The type of fuel suitable for the engine or engines of the vehicle.
+            If the vehicle has only one engine, this property can be attached
+            directly to the vehicle.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+            - type: string
         torque:
           $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >
@@ -86,3 +82,7 @@ EngineSpecification:
             indicate ranges.</li>
 
             </ul>
+      type: object
+  description: >-
+    Information about the engine of the vehicle. A vehicle can have multiple
+    engines represented by multiple engine specification entities.

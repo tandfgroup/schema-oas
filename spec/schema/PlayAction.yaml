@@ -1,4 +1,16 @@
 PlayAction:
+  allOf:
+    - $ref: 'action.yaml#/Action'
+    - properties:
+        audience:
+          $ref: 'audience.yaml#/Audience'
+          description: 'An intended audience, i.e. a group for whom something was created.'
+        event:
+          $ref: 'event.yaml#/Event'
+          description: >-
+            Upcoming or past event associated with this place, organization, or
+            action.
+      type: object
   description: >
     The act of playing/exercising/training/performing for enjoyment, leisure,
     recreation, Competition or exercise.<br/><br/>
@@ -20,15 +32,3 @@ PlayAction:
     an audience or at an event, rather than consuming visual content.</li>
 
     </ul>
-  allOf:
-    - $ref: 'Action.yaml#/Action'
-    - type: object
-      properties:
-        event:
-          $ref: 'Event.yaml#/Event'
-          description: >-
-            Upcoming or past event associated with this place, organization, or
-            action.
-        audience:
-          $ref: 'Audience.yaml#/Audience'
-          description: 'An intended audience, i.e. a group for whom something was created.'

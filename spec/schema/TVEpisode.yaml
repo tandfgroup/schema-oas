@@ -1,22 +1,22 @@
 TVEpisode:
-  description: A TV episode which can be part of a series or season.
   allOf:
     - $ref: 'episode.yaml#/Episode'
-    - type: object
-      properties:
-        subtitleLanguage:
-          oneOf:
-            - type: string
-            - $ref: 'language.yaml#/Language'
-          description: >-
-            Languages in which subtitles/captions are available, in <a
-            href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard
-            format</a>.
-        partOfTVSeries:
-          $ref: 'tvseries.yaml#/TVSeries'
-          description: The TV series to which this episode or season belongs.
+    - properties:
         countryOfOrigin:
           $ref: 'country.yaml#/Country'
           description: >-
             The country of the principal offices of the production company or
             individual responsible for the movie or program.
+        partOfTVSeries:
+          $ref: 'tvseries.yaml#/TVSeries'
+          description: The TV series to which this episode or season belongs.
+        subtitleLanguage:
+          description: >-
+            Languages in which subtitles/captions are available, in <a
+            href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard
+            format</a>.
+          oneOf:
+            - type: string
+            - $ref: 'language.yaml#/Language'
+      type: object
+  description: A TV episode which can be part of a series or season.

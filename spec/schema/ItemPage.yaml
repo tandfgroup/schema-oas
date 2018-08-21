@@ -1,2 +1,2 @@
 ItemPage:
-  $ref: 'WebPage.yaml#/WebPage'
+  $ref: 'webpage.yaml#/WebPage'

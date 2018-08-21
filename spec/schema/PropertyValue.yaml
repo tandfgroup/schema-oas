@@ -1,87 +1,11 @@
 PropertyValue:
-  description: >-
-    A property-value pair, e.g. representing a feature of a product or place.
-    Use the 'name' property for the name of the property. If there is an
-    additional human-readable version of the value, put that into the
-    'description' property.<br/><br/>
-
-
-    Always use specific schema.org properties when a) they exist and b) you can
-    populate them. Using PropertyValue as a substitute will typically not
-    trigger the same effect as using the original, specific property.
   allOf:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
-    - type: object
-      properties:
-        unitCode:
-          oneOf:
-            - $ref: 'url.yaml#/URL'
-            - type: string
-          description: >-
-            The unit of measurement given using the UN/CEFACT Common Code (3
-            characters) or a URL. Other codes than the UN/CEFACT Common Code may
-            be used with a prefix followed by a colon.
-        value:
-          oneOf:
-            - type: boolean
-            - type: number
-            - type: string
-            - $ref: 'structuredvalue.yaml#/StructuredValue'
-          description: >
-            The value of the quantitative value or property value
-            node.<br/><br/>
-
-
-            <ul>
-
-            <li>For <a class="localLink"
-            href="http://schema.org/QuantitativeValue">QuantitativeValue</a> and
-            <a class="localLink"
-            href="http://schema.org/MonetaryAmount">MonetaryAmount</a>, the
-            recommended type for values is 'Number'.</li>
-
-            <li>For <a class="localLink"
-            href="http://schema.org/PropertyValue">PropertyValue</a>, it can be
-            'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
-
-            </ul>
-        minValue:
-          type: number
-          description: The lower value of some characteristic or property.
+    - properties:
         maxValue:
-          type: number
           description: The upper value of some characteristic or property.
-        unitText:
-          type: string
-          description: >-
-            A string or text indicating the unit of measurement. Useful if you
-            cannot provide a standard unit code for
-
-            <a href='unitCode'>unitCode</a>.
-        propertyID:
-          oneOf:
-            - $ref: 'url.yaml#/URL'
-            - type: string
-          description: >-
-            A commonly used identifier for the characteristic represented by the
-            property, e.g. a manufacturer or a standard code for a property.
-            propertyID can be
-
-            (1) a prefixed string, mainly meant to be used with standards for
-            product properties; (2) a site-specific, non-prefixed string (e.g.
-            the primary key of the property or the vendor-specific id of the
-            property), or (3)
-
-            a URL indicating the type of the property, either pointing to an
-            external vocabulary, or a Web resource that describes the property
-            (e.g. a glossary entry).
-
-            Standards bodies should promote a standard prefix for the
-            identifiers of properties from their standards.
+          type: number
         measurementTechnique:
-          oneOf:
-            - type: string
-            - $ref: 'url.yaml#/URL'
           description: >-
             A technique or technology used in a <a class="localLink"
             href="http://schema.org/Dataset">Dataset</a> (or <a
@@ -124,13 +48,89 @@ PropertyValue:
             href="http://schema.org/variableMeasured">variableMeasured</a> and
             attach the corresponding <a class="localLink"
             href="http://schema.org/measurementTechnique">measurementTechnique</a>.
-        valueReference:
           oneOf:
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        minValue:
+          description: The lower value of some characteristic or property.
+          type: number
+        propertyID:
+          description: >-
+            A commonly used identifier for the characteristic represented by the
+            property, e.g. a manufacturer or a standard code for a property.
+            propertyID can be
+
+            (1) a prefixed string, mainly meant to be used with standards for
+            product properties; (2) a site-specific, non-prefixed string (e.g.
+            the primary key of the property or the vendor-specific id of the
+            property), or (3)
+
+            a URL indicating the type of the property, either pointing to an
+            external vocabulary, or a Web resource that describes the property
+            (e.g. a glossary entry).
+
+            Standards bodies should promote a standard prefix for the
+            identifiers of properties from their standards.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        unitCode:
+          description: >-
+            The unit of measurement given using the UN/CEFACT Common Code (3
+            characters) or a URL. Other codes than the UN/CEFACT Common Code may
+            be used with a prefix followed by a colon.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        unitText:
+          description: >-
+            A string or text indicating the unit of measurement. Useful if you
+            cannot provide a standard unit code for
+
+            <a href='unitCode'>unitCode</a>.
+          type: string
+        value:
+          description: >
+            The value of the quantitative value or property value
+            node.<br/><br/>
+
+
+            <ul>
+
+            <li>For <a class="localLink"
+            href="http://schema.org/QuantitativeValue">QuantitativeValue</a> and
+            <a class="localLink"
+            href="http://schema.org/MonetaryAmount">MonetaryAmount</a>, the
+            recommended type for values is 'Number'.</li>
+
+            <li>For <a class="localLink"
+            href="http://schema.org/PropertyValue">PropertyValue</a>, it can be
+            'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
+
+            </ul>
+          oneOf:
+            - type: number
+            - type: boolean
+            - type: string
             - $ref: 'structuredvalue.yaml#/StructuredValue'
-            - $ref: 'enumeration.yaml#/Enumeration'
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - $ref: 'propertyvalue.yaml#/PropertyValue'
+        valueReference:
           description: >-
             A pointer to a secondary value that provides additional information
             on the original value, e.g. a reference temperature.
+          oneOf:
+            - $ref: 'propertyvalue.yaml#/PropertyValue'
+            - $ref: 'structuredvalue.yaml#/StructuredValue'
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - $ref: 'enumeration.yaml#/Enumeration'
+            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+      type: object
+  description: >-
+    A property-value pair, e.g. representing a feature of a product or place.
+    Use the 'name' property for the name of the property. If there is an
+    additional human-readable version of the value, put that into the
+    'description' property.<br/><br/>
+
+
+    Always use specific schema.org properties when a) they exist and b) you can
+    populate them. Using PropertyValue as a substitute will typically not
+    trigger the same effect as using the original, specific property.

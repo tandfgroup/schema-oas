@@ -1,4 +1,17 @@
 GiveAction:
+  allOf:
+    - $ref: 'transferaction.yaml#/TransferAction'
+    - properties:
+        recipient:
+          description: >-
+            A sub property of participant. The participant who is at the
+            receiving end of the action.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'contactpoint.yaml#/ContactPoint'
+            - $ref: 'audience.yaml#/Audience'
+      type: object
   description: >
     The act of transferring ownership of an object to a destination. Reciprocal
     of TakeAction.<br/><br/>
@@ -18,16 +31,3 @@ GiveAction:
     you).</li>
 
     </ul>
-  allOf:
-    - $ref: 'transferaction.yaml#/TransferAction'
-    - type: object
-      properties:
-        recipient:
-          oneOf:
-            - $ref: 'contactpoint.yaml#/ContactPoint'
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'audience.yaml#/Audience'
-            - $ref: 'person.yaml#/Person'
-          description: >-
-            A sub property of participant. The participant who is at the
-            receiving end of the action.

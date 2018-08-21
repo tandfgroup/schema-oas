@@ -1,46 +1,46 @@
 GeoCoordinates:
-  description: The geographic coordinates of a place or event.
   allOf:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
-    - type: object
-      properties:
-        addressCountry:
+    - properties:
+        address:
+          description: Physical address of the item.
           oneOf:
+            - $ref: 'postaladdress.yaml#/PostalAddress'
             - type: string
-            - $ref: 'country.yaml#/Country'
+        addressCountry:
           description: >-
             The country. For example, USA. You can also provide the two-letter
             <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1 alpha-2
             country code</a>.
-        latitude:
           oneOf:
+            - $ref: 'country.yaml#/Country'
             - type: string
-            - type: number
-          description: >-
-            The latitude of a location. For example <code>37.42242</code> (<a
-            href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS
-            84</a>).
         elevation:
-          oneOf:
-            - type: number
-            - type: string
           description: >-
             The elevation of a location (<a
             href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS
             84</a>).
-        postalCode:
-          type: string
-          description: 'The postal code. For example, 94043.'
-        address:
-          oneOf:
-            - type: string
-            - $ref: 'postaladdress.yaml#/PostalAddress'
-          description: Physical address of the item.
-        longitude:
           oneOf:
             - type: string
             - type: number
+        latitude:
+          description: >-
+            The latitude of a location. For example <code>37.42242</code> (<a
+            href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS
+            84</a>).
+          oneOf:
+            - type: string
+            - type: number
+        longitude:
           description: >-
             The longitude of a location. For example <code>-122.08585</code> (<a
             href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS
             84</a>).
+          oneOf:
+            - type: string
+            - type: number
+        postalCode:
+          description: 'The postal code. For example, 94043.'
+          type: string
+      type: object
+  description: The geographic coordinates of a place or event.

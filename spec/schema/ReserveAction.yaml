@@ -1,2 +1,2 @@
 ReserveAction:
-  $ref: 'PlanAction.yaml#/PlanAction'
+  $ref: 'planaction.yaml#/PlanAction'

@@ -1,18 +1,8 @@
 FoodEstablishmentReservation:
-  description: >-
-    A reservation to dine at a food-related business.<br/><br/>
-
-
-    Note: This type is for information about actual reservations, e.g. in
-    confirmation emails or HTML pages with individual confirmations of
-    reservations.
   allOf:
     - $ref: 'reservation.yaml#/Reservation'
-    - type: object
-      properties:
+    - properties:
         endTime:
-          type: string
-          format: date-time
           description: >-
             The endTime of something. For a reserved event or service (e.g.
             FoodEstablishmentReservation), the time that it is expected to end.
@@ -24,9 +14,14 @@ FoodEstablishmentReservation:
             Note that Event uses startDate/endDate instead of startTime/endTime,
             even when describing dates with times. This situation may be
             clarified in future revisions.
-        startTime:
-          type: string
           format: date-time
+          type: string
+        partySize:
+          description: Number of people the reservation should accommodate.
+          oneOf:
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: integer
+        startTime:
           description: >-
             The startTime of something. For a reserved event or service (e.g.
             FoodEstablishmentReservation), the time that it is expected to
@@ -38,8 +33,13 @@ FoodEstablishmentReservation:
             Note that Event uses startDate/endDate instead of startTime/endTime,
             even when describing dates with times. This situation may be
             clarified in future revisions.
-        partySize:
-          oneOf:
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - type: integer
-          description: Number of people the reservation should accommodate.
+          format: date-time
+          type: string
+      type: object
+  description: >-
+    A reservation to dine at a food-related business.<br/><br/>
+
+
+    Note: This type is for information about actual reservations, e.g. in
+    confirmation emails or HTML pages with individual confirmations of
+    reservations.

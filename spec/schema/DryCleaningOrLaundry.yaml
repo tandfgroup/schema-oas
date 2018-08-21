@@ -1,2 +1,2 @@
 DryCleaningOrLaundry:
-  $ref: 'LocalBusiness.yaml#/LocalBusiness'
+  $ref: 'localbusiness.yaml#/LocalBusiness'

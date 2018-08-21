@@ -1,24 +1,24 @@
 Book:
-  description: A book.
   allOf:
     - $ref: 'creativework.yaml#/CreativeWork'
-    - type: object
-      properties:
-        illustrator:
-          $ref: 'person.yaml#/Person'
-          description: The illustrator of the book.
+    - properties:
         abridged:
-          type: boolean
           description: Indicates whether the book is an abridged edition.
+          type: boolean
         bookEdition:
-          type: string
           description: The edition of the book.
+          type: string
         bookFormat:
           $ref: 'bookformattype.yaml#/BookFormatType'
           description: The format of the book.
+        illustrator:
+          $ref: 'person.yaml#/Person'
+          description: The illustrator of the book.
         isbn:
-          type: string
           description: The ISBN of the book.
+          type: string
         numberOfPages:
-          type: integer
           description: The number of pages in the book.
+          type: integer
+      type: object
+  description: A book.

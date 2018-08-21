@@ -1,53 +1,8 @@
 MonetaryAmount:
-  description: >-
-    A monetary value or range. This type can be used to describe an amount of
-    money such as $50 USD, or a range as in describing a bank account being
-    suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a
-    salary, etc. It is recommended to use <a class="localLink"
-    href="http://schema.org/PriceSpecification">PriceSpecification</a> Types to
-    describe the price of an Offer, Invoice, etc.
   allOf:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
-    - type: object
-      properties:
-        validThrough:
-          type: string
-          format: date-time
-          description: >-
-            The date after when the item is not valid. For example the end of an
-            offer, salary period, or a period of opening hours.
-        value:
-          oneOf:
-            - type: string
-            - type: number
-            - $ref: 'structuredvalue.yaml#/StructuredValue'
-            - type: boolean
-          description: >
-            The value of the quantitative value or property value
-            node.<br/><br/>
-
-
-            <ul>
-
-            <li>For <a class="localLink"
-            href="http://schema.org/QuantitativeValue">QuantitativeValue</a> and
-            <a class="localLink"
-            href="http://schema.org/MonetaryAmount">MonetaryAmount</a>, the
-            recommended type for values is 'Number'.</li>
-
-            <li>For <a class="localLink"
-            href="http://schema.org/PropertyValue">PropertyValue</a>, it can be
-            'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
-
-            </ul>
-        minValue:
-          type: number
-          description: The lower value of some characteristic or property.
-        maxValue:
-          type: number
-          description: The upper value of some characteristic or property.
+    - properties:
         currency:
-          type: string
           description:
             - >-
               The currency in which the monetary amount is expressed (in
@@ -66,7 +21,52 @@ MonetaryAmount:
               href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
               Exchange Tradings Systems</a> (LETS) and other currency types e.g.
               "Ithaca HOUR".
-        validFrom:
           type: string
-          format: date-time
+        maxValue:
+          description: The upper value of some characteristic or property.
+          type: number
+        minValue:
+          description: The lower value of some characteristic or property.
+          type: number
+        validFrom:
           description: The date when the item becomes valid.
+          format: date-time
+          type: string
+        validThrough:
+          description: >-
+            The date after when the item is not valid. For example the end of an
+            offer, salary period, or a period of opening hours.
+          format: date-time
+          type: string
+        value:
+          description: >
+            The value of the quantitative value or property value
+            node.<br/><br/>
+
+
+            <ul>
+
+            <li>For <a class="localLink"
+            href="http://schema.org/QuantitativeValue">QuantitativeValue</a> and
+            <a class="localLink"
+            href="http://schema.org/MonetaryAmount">MonetaryAmount</a>, the
+            recommended type for values is 'Number'.</li>
+
+            <li>For <a class="localLink"
+            href="http://schema.org/PropertyValue">PropertyValue</a>, it can be
+            'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
+
+            </ul>
+          oneOf:
+            - type: number
+            - type: string
+            - $ref: 'structuredvalue.yaml#/StructuredValue'
+            - type: boolean
+      type: object
+  description: >-
+    A monetary value or range. This type can be used to describe an amount of
+    money such as $50 USD, or a range as in describing a bank account being
+    suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a
+    salary, etc. It is recommended to use <a class="localLink"
+    href="http://schema.org/PriceSpecification">PriceSpecification</a> Types to
+    describe the price of an Offer, Invoice, etc.

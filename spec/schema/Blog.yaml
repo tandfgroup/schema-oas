@@ -1,19 +1,19 @@
 Blog:
-  description: A blog.
   allOf:
     - $ref: 'creativework.yaml#/CreativeWork'
-    - type: object
-      properties:
+    - properties:
+        blogPost:
+          $ref: 'blogposting.yaml#/BlogPosting'
+          description: A posting that is part of this blog.
         blogPosts:
           $ref: 'blogposting.yaml#/BlogPosting'
           description: The postings that are part of this blog.
         issn:
-          type: string
           description: >-
             The International Standard Serial Number (ISSN) that identifies this
             serial publication. You can repeat this property to identify
             different formats of, or the linking ISSN (ISSN-L) for, this serial
             publication.
-        blogPost:
-          $ref: 'blogposting.yaml#/BlogPosting'
-          description: A posting that is part of this blog.
+          type: string
+      type: object
+  description: A blog.

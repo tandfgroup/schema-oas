@@ -1,12 +1,7 @@
 SellAction:
-  description: >-
-    The act of taking money from a buyer in exchange for goods or services
-    rendered. An agent sells an object, product, or service to a buyer for a
-    price. Reciprocal of BuyAction.
   allOf:
     - $ref: 'tradeaction.yaml#/TradeAction'
-    - type: object
-      properties:
+    - properties:
         buyer:
           $ref: 'person.yaml#/Person'
           description: >-
@@ -15,3 +10,8 @@ SellAction:
         warrantyPromise:
           $ref: 'warrantypromise.yaml#/WarrantyPromise'
           description: The warranty promise(s) included in the offer.
+      type: object
+  description: >-
+    The act of taking money from a buyer in exchange for goods or services
+    rendered. An agent sells an object, product, or service to a buyer for a
+    price. Reciprocal of BuyAction.

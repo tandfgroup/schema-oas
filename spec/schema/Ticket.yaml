@@ -1,44 +1,15 @@
 Ticket:
-  description: 'Used to describe a ticket to an event, a flight, a bus ride, etc.'
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
+    - properties:
+        dateIssued:
+          description: The date the ticket was issued.
+          format: date-time
+          type: string
         issuedBy:
           $ref: 'organization.yaml#/Organization'
           description: The organization issuing the ticket or permit.
-        underName:
-          oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
-          description: The person or organization the reservation or ticket is for.
-        totalPrice:
-          oneOf:
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
-            - type: number
-            - type: string
-          description: >-
-            The total price for the reservation or ticket, including applicable
-            taxes, shipping, etc.
-        ticketedSeat:
-          $ref: 'seat.yaml#/Seat'
-          description: The seat associated with the ticket.
-        dateIssued:
-          type: string
-          format: date-time
-          description: The date the ticket was issued.
-        ticketToken:
-          oneOf:
-            - type: string
-            - $ref: 'url.yaml#/URL'
-          description: >-
-            Reference to an asset (e.g., Barcode, QR code image or PDF) usable
-            for entrance.
-        ticketNumber:
-          type: string
-          description: The unique identifier for the ticket.
         priceCurrency:
-          type: string
           description: >-
             The currency of the price, or a price component when attached to <a
             class="localLink"
@@ -54,3 +25,32 @@ Ticket:
             href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
             Exchange Tradings Systems</a> (LETS) and other currency types e.g.
             "Ithaca HOUR".
+          type: string
+        ticketNumber:
+          description: The unique identifier for the ticket.
+          type: string
+        ticketToken:
+          description: >-
+            Reference to an asset (e.g., Barcode, QR code image or PDF) usable
+            for entrance.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        ticketedSeat:
+          $ref: 'seat.yaml#/Seat'
+          description: The seat associated with the ticket.
+        totalPrice:
+          description: >-
+            The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          oneOf:
+            - $ref: 'pricespecification.yaml#/PriceSpecification'
+            - type: string
+            - type: number
+        underName:
+          description: The person or organization the reservation or ticket is for.
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+      type: object
+  description: 'Used to describe a ticket to an event, a flight, a bus ride, etc.'

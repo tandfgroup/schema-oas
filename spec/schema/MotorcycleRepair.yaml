@@ -1,2 +1,2 @@
 MotorcycleRepair:
-  $ref: 'AutomotiveBusiness.yaml#/AutomotiveBusiness'
+  $ref: 'automotivebusiness.yaml#/AutomotiveBusiness'

@@ -1,51 +1,51 @@
 VideoObject:
-  description: A video file.
   allOf:
     - $ref: 'mediaobject.yaml#/MediaObject'
-    - type: object
-      properties:
-        transcript:
-          type: string
-          description: >-
-            If this MediaObject is an AudioObject or VideoObject, the transcript
-            of that object.
-        caption:
-          type: string
-          description: The caption for this object.
-        directors:
-          $ref: 'person.yaml#/Person'
-          description: >-
-            A director of e.g. tv, radio, movie, video games etc. content.
-            Directors can be associated with individual items or with a series,
-            episode, clip.
-        thumbnail:
-          $ref: 'imageobject.yaml#/ImageObject'
-          description: Thumbnail image for an image or video.
-        musicBy:
-          oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'musicgroup.yaml#/MusicGroup'
-          description: The composer of the soundtrack.
-        actors:
-          $ref: 'person.yaml#/Person'
-          description: >-
-            An actor, e.g. in tv, radio, movie, video games etc. Actors can be
-            associated with individual items or with a series, episode, clip.
+    - properties:
         actor:
           $ref: 'person.yaml#/Person'
           description: >-
             An actor, e.g. in tv, radio, movie, video games etc., or in an
             event. Actors can be associated with individual items or with a
             series, episode, clip.
+        actors:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+            associated with individual items or with a series, episode, clip.
+        caption:
+          description: The caption for this object.
+          type: string
         director:
           $ref: 'person.yaml#/Person'
           description: >-
             A director of e.g. tv, radio, movie, video gaming etc. content, or
             of an event. Directors can be associated with individual items or
             with a series, episode, clip.
-        videoQuality:
+        directors:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            A director of e.g. tv, radio, movie, video games etc. content.
+            Directors can be associated with individual items or with a series,
+            episode, clip.
+        musicBy:
+          description: The composer of the soundtrack.
+          oneOf:
+            - $ref: 'musicgroup.yaml#/MusicGroup'
+            - $ref: 'person.yaml#/Person'
+        thumbnail:
+          $ref: 'imageobject.yaml#/ImageObject'
+          description: Thumbnail image for an image or video.
+        transcript:
+          description: >-
+            If this MediaObject is an AudioObject or VideoObject, the transcript
+            of that object.
           type: string
-          description: The quality of the video.
         videoFrameSize:
-          type: string
           description: The frame size of the video.
+          type: string
+        videoQuality:
+          description: The quality of the video.
+          type: string
+      type: object
+  description: A video file.

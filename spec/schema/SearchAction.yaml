@@ -1,4 +1,11 @@
 SearchAction:
+  allOf:
+    - $ref: 'action.yaml#/Action'
+    - properties:
+        query:
+          description: A sub property of instrument. The query used on this action.
+          type: string
+      type: object
   description: >
     The act of searching for an object.<br/><br/>
 
@@ -12,10 +19,3 @@ SearchAction:
     SearchAction generally leads to a FindAction, but not necessarily.</li>
 
     </ul>
-  allOf:
-    - $ref: 'Action.yaml#/Action'
-    - type: object
-      properties:
-        query:
-          type: string
-          description: A sub property of instrument. The query used on this action.

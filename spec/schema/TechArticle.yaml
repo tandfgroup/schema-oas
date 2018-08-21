@@ -1,16 +1,16 @@
 TechArticle:
-  description: >-
-    A technical article - Example: How-to (task) topics, step-by-step,
-    procedural troubleshooting, specifications, etc.
   allOf:
     - $ref: 'article.yaml#/Article'
-    - type: object
-      properties:
+    - properties:
         dependencies:
-          type: string
           description: Prerequisites needed to fulfill steps in article.
-        proficiencyLevel:
           type: string
+        proficiencyLevel:
           description: >-
             Proficiency needed for this content; expected values: 'Beginner',
             'Expert'.
+          type: string
+      type: object
+  description: >-
+    A technical article - Example: How-to (task) topics, step-by-step,
+    procedural troubleshooting, specifications, etc.

@@ -1,14 +1,14 @@
 Hospital:
   properties:
-    medicalSpecialty:
-      type: object
-      description: A medical specialty of the provider.
     availableService:
-      oneOf:
-        - type: object
-          description: 'Type: MedicalProcedure This type is not published yet in schema.org.'
-        - type: object
-          description: 'Type: MedicalTest This type is not published yet in schema.org.'
-        - type: object
-          description: 'Type: MedicalTherapy This type is not published yet in schema.org.'
       description: A medical service available from this provider.
+      oneOf:
+        - description: 'Type: MedicalProcedure This type is not published yet in schema.org.'
+          type: object
+        - description: 'Type: MedicalTherapy This type is not published yet in schema.org.'
+          type: object
+        - description: 'Type: MedicalTest This type is not published yet in schema.org.'
+          type: object
+    medicalSpecialty:
+      description: A medical specialty of the provider.
+      type: object

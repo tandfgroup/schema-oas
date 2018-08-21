@@ -1,4 +1,19 @@
 ReceiveAction:
+  allOf:
+    - $ref: 'transferaction.yaml#/TransferAction'
+    - properties:
+        deliveryMethod:
+          $ref: 'deliverymethod.yaml#/DeliveryMethod'
+          description: A sub property of instrument. The method of delivery.
+        sender:
+          description: >-
+            A sub property of participant. The participant who is at the sending
+            end of the action.
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'audience.yaml#/Audience'
+      type: object
   description: >
     The act of physically/electronically taking delivery of an object thathas
     been transferred from an origin to a destination. Reciprocal of
@@ -19,18 +34,3 @@ ReceiveAction:
     is now mine).</li>
 
     </ul>
-  allOf:
-    - $ref: 'transferaction.yaml#/TransferAction'
-    - type: object
-      properties:
-        deliveryMethod:
-          $ref: 'deliverymethod.yaml#/DeliveryMethod'
-          description: A sub property of instrument. The method of delivery.
-        sender:
-          oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'audience.yaml#/Audience'
-          description: >-
-            A sub property of participant. The participant who is at the sending
-            end of the action.

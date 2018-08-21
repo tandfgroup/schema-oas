@@ -1,11 +1,11 @@
 AudioObject:
-  description: An audio file.
   allOf:
-    - $ref: 'MediaObject.yaml#/MediaObject'
-    - type: object
-      properties:
+    - $ref: 'mediaobject.yaml#/MediaObject'
+    - properties:
         transcript:
-          type: string
           description: >-
             If this MediaObject is an AudioObject or VideoObject, the transcript
             of that object.
+          type: string
+      type: object
+  description: An audio file.

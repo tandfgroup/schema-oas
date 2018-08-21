@@ -1,21 +1,8 @@
 TradeAction:
-  description: >-
-    The act of participating in an exchange of goods and services for monetary
-    compensation. An agent trades an object, product or service with a
-    participant in exchange for a one time or periodic payment.
   allOf:
-    - $ref: 'Action.yaml#/Action'
-    - type: object
-      properties:
-        priceSpecification:
-          $ref: 'PriceSpecification.yaml#/PriceSpecification'
-          description: >-
-            One or more detailed price specifications, indicating the unit price
-            and delivery or payment charges.
+    - $ref: 'action.yaml#/Action'
+    - properties:
         price:
-          oneOf:
-            - type: string
-            - type: number
           description: >
             The offer price of a product, or of a price component when attached
             to PriceSpecification and its subtypes.<br/><br/>
@@ -54,3 +41,16 @@ TradeAction:
             symbols.</li>
 
             </ul>
+          oneOf:
+            - type: string
+            - type: number
+        priceSpecification:
+          $ref: 'pricespecification.yaml#/PriceSpecification'
+          description: >-
+            One or more detailed price specifications, indicating the unit price
+            and delivery or payment charges.
+      type: object
+  description: >-
+    The act of participating in an exchange of goods and services for monetary
+    compensation. An agent trades an object, product or service with a
+    participant in exchange for a one time or periodic payment.

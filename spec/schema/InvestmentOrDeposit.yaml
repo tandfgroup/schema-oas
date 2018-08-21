@@ -1,14 +1,14 @@
 InvestmentOrDeposit:
+  allOf:
+    - $ref: 'financialproduct.yaml#/FinancialProduct'
+    - properties:
+        amount:
+          description: The amount of money.
+          oneOf:
+            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: number
+      type: object
   description: >-
     A type of financial product that typically requires the client to transfer
     funds to a financial service in return for potential beneficial financial
     return.
-  allOf:
-    - $ref: 'financialproduct.yaml#/FinancialProduct'
-    - type: object
-      properties:
-        amount:
-          oneOf:
-            - type: number
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
-          description: The amount of money.

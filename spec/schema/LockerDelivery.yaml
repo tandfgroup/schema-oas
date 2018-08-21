@@ -1,2 +1,2 @@
 LockerDelivery:
-  $ref: 'DeliveryMethod.yaml#/DeliveryMethod'
+  $ref: 'deliverymethod.yaml#/DeliveryMethod'

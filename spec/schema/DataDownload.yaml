@@ -1,13 +1,8 @@
 DataDownload:
-  description: A dataset in downloadable form.
   allOf:
     - $ref: 'mediaobject.yaml#/MediaObject'
-    - type: object
-      properties:
+    - properties:
         measurementTechnique:
-          oneOf:
-            - $ref: 'url.yaml#/URL'
-            - type: string
           description: >-
             A technique or technology used in a <a class="localLink"
             href="http://schema.org/Dataset">Dataset</a> (or <a
@@ -50,3 +45,8 @@ DataDownload:
             href="http://schema.org/variableMeasured">variableMeasured</a> and
             attach the corresponding <a class="localLink"
             href="http://schema.org/measurementTechnique">measurementTechnique</a>.
+          oneOf:
+            - type: string
+            - $ref: 'url.yaml#/URL'
+      type: object
+  description: A dataset in downloadable form.

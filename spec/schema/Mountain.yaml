@@ -1,2 +1,2 @@
 Mountain:
-  $ref: 'Landform.yaml#/Landform'
+  $ref: 'landform.yaml#/Landform'

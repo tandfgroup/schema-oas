@@ -1,2 +1,2 @@
 Winery:
-  $ref: 'FoodEstablishment.yaml#/FoodEstablishment'
+  $ref: 'foodestablishment.yaml#/FoodEstablishment'

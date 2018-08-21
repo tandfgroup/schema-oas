@@ -1,33 +1,33 @@
 UserComments:
+  allOf:
+    - $ref: 'userinteraction.yaml#/UserInteraction'
+    - properties:
+        commentText:
+          description: The text of the UserComment.
+          type: string
+        commentTime:
+          description: The time at which the UserComment was made.
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        creator:
+          description: >-
+            The creator/author of this CreativeWork. This is the same as the
+            Author property for CreativeWork.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+        discusses:
+          $ref: 'creativework.yaml#/CreativeWork'
+          description: Specifies the CreativeWork associated with the UserComment.
+        replyToUrl:
+          $ref: 'url.yaml#/URL'
+          description: The URL at which a reply may be posted to the specified UserComment.
+      type: object
   description: >-
     UserInteraction and its subtypes is an old way of talking about users
     interacting with pages. It is generally better to use <a class="localLink"
     href="http://schema.org/Action">Action</a>-based vocabulary, alongside types
     such as <a class="localLink" href="http://schema.org/Comment">Comment</a>.
-  allOf:
-    - $ref: 'userinteraction.yaml#/UserInteraction'
-    - type: object
-      properties:
-        commentText:
-          type: string
-          description: The text of the UserComment.
-        discusses:
-          $ref: 'creativework.yaml#/CreativeWork'
-          description: Specifies the CreativeWork associated with the UserComment.
-        creator:
-          oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
-          description: >-
-            The creator/author of this CreativeWork. This is the same as the
-            Author property for CreativeWork.
-        replyToUrl:
-          $ref: 'url.yaml#/URL'
-          description: The URL at which a reply may be posted to the specified UserComment.
-        commentTime:
-          oneOf:
-            - type: string
-              format: date-time
-            - type: string
-              format: date
-          description: The time at which the UserComment was made.

@@ -1,37 +1,37 @@
 TypeAndQuantityNode:
-  description: >-
-    A structured value indicating the quantity, unit of measurement, and
-    business function of goods included in a bundle offer.
   allOf:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
-    - type: object
-      properties:
+    - properties:
+        amountOfThisGood:
+          description: The quantity of the goods included in the offer.
+          type: number
         businessFunction:
           $ref: 'businessfunction.yaml#/BusinessFunction'
           description: >-
             The business function (e.g. sell, lease, repair, dispose) of the
             offer or component of a bundle (TypeAndQuantityNode). The default is
             http://purl.org/goodrelations/v1#Sell.
-        unitCode:
+        typeOfGood:
+          description: The product that this structured value is referring to.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - type: string
+            - $ref: 'service.yaml#/Service'
+            - $ref: 'product.yaml#/Product'
+        unitCode:
           description: >-
             The unit of measurement given using the UN/CEFACT Common Code (3
             characters) or a URL. Other codes than the UN/CEFACT Common Code may
             be used with a prefix followed by a colon.
+          oneOf:
+            - type: string
+            - $ref: 'url.yaml#/URL'
         unitText:
-          type: string
           description: >-
             A string or text indicating the unit of measurement. Useful if you
             cannot provide a standard unit code for
 
             <a href='unitCode'>unitCode</a>.
-        amountOfThisGood:
-          type: number
-          description: The quantity of the goods included in the offer.
-        typeOfGood:
-          oneOf:
-            - $ref: 'product.yaml#/Product'
-            - $ref: 'service.yaml#/Service'
-          description: The product that this structured value is referring to.
+          type: string
+      type: object
+  description: >-
+    A structured value indicating the quantity, unit of measurement, and
+    business function of goods included in a bundle offer.

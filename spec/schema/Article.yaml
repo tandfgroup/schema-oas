@@ -1,24 +1,44 @@
 Article:
-  description: >-
-    An article, such as a news article or piece of investigative report.
-    Newspapers and magazines have articles of many different types and this is
-    intended to cover them all.<br/><br/>
-
-
-    See also <a
-    href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog
-    post</a>.
   allOf:
     - $ref: 'creativework.yaml#/CreativeWork'
-    - type: object
-      properties:
-        speakable:
+    - properties:
+        articleBody:
+          description: The actual body of the article.
+          type: string
+        articleSection:
+          description: >-
+            Articles may belong to one or more 'sections' in a magazine or
+            newspaper, such as Sports, Lifestyle, etc.
+          type: string
+        backstory:
+          description: >-
+            For an <a class="localLink"
+            href="http://schema.org/Article">Article</a>, typically a <a
+            class="localLink"
+            href="http://schema.org/NewsArticle">NewsArticle</a>, the backstory
+            property provides a textual summary giving a brief explanation of
+            why and how an article was created. In a journalistic setting this
+            could include information about reporting process, methods,
+            interviews, data sources, etc.
           oneOf:
-            - type: object
-              description: >-
-                Type: SpeakableSpecification This type is not published yet in
-                schema.org.
-            - $ref: 'url.yaml#/URL'
+            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: string
+        pageEnd:
+          description: The page on which the work ends; for example "138" or "xvi".
+          oneOf:
+            - type: string
+            - type: integer
+        pageStart:
+          description: The page on which the work starts; for example "135" or "xiii".
+          oneOf:
+            - type: string
+            - type: integer
+        pagination:
+          description: >-
+            Any description of pages that is not separated into pageStart and
+            pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+          type: string
+        speakable:
           description: >-
             Indicates sections of a Web page that are particularly 'speakable'
             in the sense of being highlighted as being especially appropriate
@@ -58,42 +78,22 @@ Article:
             href="http://schema.org/SpeakableSpecification">SpeakableSpecification</a> 
             which is defined to be a possible value of the <em>speakable</em>
             property.
-        backstory:
           oneOf:
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - type: string
-          description: >-
-            For an <a class="localLink"
-            href="http://schema.org/Article">Article</a>, typically a <a
-            class="localLink"
-            href="http://schema.org/NewsArticle">NewsArticle</a>, the backstory
-            property provides a textual summary giving a brief explanation of
-            why and how an article was created. In a journalistic setting this
-            could include information about reporting process, methods,
-            interviews, data sources, etc.
-        articleSection:
-          type: string
-          description: >-
-            Articles may belong to one or more 'sections' in a magazine or
-            newspaper, such as Sports, Lifestyle, etc.
-        pageStart:
-          oneOf:
-            - type: string
-            - type: integer
-          description: The page on which the work starts; for example "135" or "xiii".
-        articleBody:
-          type: string
-          description: The actual body of the article.
-        pageEnd:
-          oneOf:
-            - type: integer
-            - type: string
-          description: The page on which the work ends; for example "138" or "xvi".
+            - $ref: 'url.yaml#/URL'
+            - description: >-
+                Type: SpeakableSpecification This type is not published yet in
+                schema.org.
+              type: object
         wordCount:
-          type: integer
           description: The number of words in the text of the Article.
-        pagination:
-          type: string
-          description: >-
-            Any description of pages that is not separated into pageStart and
-            pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+          type: integer
+      type: object
+  description: >-
+    An article, such as a news article or piece of investigative report.
+    Newspapers and magazines have articles of many different types and this is
+    intended to cover them all.<br/><br/>
+
+
+    See also <a
+    href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog
+    post</a>.

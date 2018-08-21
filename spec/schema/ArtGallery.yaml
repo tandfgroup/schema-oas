@@ -1,2 +1,2 @@
 ArtGallery:
-  $ref: 'EntertainmentBusiness.yaml#/EntertainmentBusiness'
+  $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'

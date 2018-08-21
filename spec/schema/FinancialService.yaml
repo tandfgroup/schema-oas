@@ -1,14 +1,14 @@
 FinancialService:
-  description: Financial services business.
   allOf:
     - $ref: 'localbusiness.yaml#/LocalBusiness'
-    - type: object
-      properties:
+    - properties:
         feesAndCommissionsSpecification:
-          oneOf:
-            - type: string
-            - $ref: 'url.yaml#/URL'
           description: >-
             Description of fees, commissions, and other terms applied either to
             a class of financial product, or by a financial service
             organization.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+      type: object
+  description: Financial services business.

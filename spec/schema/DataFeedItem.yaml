@@ -1,33 +1,33 @@
 DataFeedItem:
-  description: A single item within a larger data feed.
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
+    - properties:
+        dateCreated:
+          description: >-
+            The date on which the CreativeWork was created or the item was added
+            to a DataFeed.
+          oneOf:
+            - format: date-time
+              type: string
+            - format: date
+              type: string
+        dateDeleted:
+          description: The datetime the item was removed from the DataFeed.
+          format: date-time
+          type: string
+        dateModified:
+          description: >-
+            The date on which the CreativeWork was most recently modified or
+            when the item's entry was modified within a DataFeed.
+          oneOf:
+            - format: date
+              type: string
+            - format: date-time
+              type: string
         item:
           $ref: 'thing.yaml#/Thing'
           description: >-
             An entity represented by an entry in a list or data feed (e.g. an
             'artist' in a list of 'artists')’.
-        dateDeleted:
-          type: string
-          format: date-time
-          description: The datetime the item was removed from the DataFeed.
-        dateModified:
-          oneOf:
-            - type: string
-              format: date
-            - type: string
-              format: date-time
-          description: >-
-            The date on which the CreativeWork was most recently modified or
-            when the item's entry was modified within a DataFeed.
-        dateCreated:
-          oneOf:
-            - type: string
-              format: date-time
-            - type: string
-              format: date
-          description: >-
-            The date on which the CreativeWork was created or the item was added
-            to a DataFeed.
+      type: object
+  description: A single item within a larger data feed.

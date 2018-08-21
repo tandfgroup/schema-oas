@@ -1,41 +1,41 @@
 ServiceChannel:
-  description: >-
-    A means for accessing a service, e.g. a government office location, web
-    site, or phone number.
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
-        serviceSmsNumber:
-          $ref: 'contactpoint.yaml#/ContactPoint'
-          description: The number to access the service by text message.
-        servicePhone:
-          $ref: 'contactpoint.yaml#/ContactPoint'
-          description: The phone number to use to access the service.
-        processingTime:
-          $ref: 'duration.yaml#/Duration'
-          description: Estimated processing time for the service using this channel.
+    - properties:
         availableLanguage:
-          oneOf:
-            - type: string
-            - $ref: 'language.yaml#/Language'
           description: >-
             A language someone may use with or at the item, service or place.
             Please use one of the language codes from the <a
             href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>.
             See also <a class="localLink"
             href="http://schema.org/inLanguage">inLanguage</a>
-        servicePostalAddress:
-          $ref: 'postaladdress.yaml#/PostalAddress'
-          description: The address for accessing the service by mail.
+          oneOf:
+            - $ref: 'language.yaml#/Language'
+            - type: string
+        processingTime:
+          $ref: 'duration.yaml#/Duration'
+          description: Estimated processing time for the service using this channel.
+        providesService:
+          $ref: 'service.yaml#/Service'
+          description: The service provided by this channel.
         serviceLocation:
           $ref: 'place.yaml#/Place'
           description: >-
             The location (e.g. civic structure, local business, etc.) where a
             person can go to access the service.
-        providesService:
-          $ref: 'service.yaml#/Service'
-          description: The service provided by this channel.
+        servicePhone:
+          $ref: 'contactpoint.yaml#/ContactPoint'
+          description: The phone number to use to access the service.
+        servicePostalAddress:
+          $ref: 'postaladdress.yaml#/PostalAddress'
+          description: The address for accessing the service by mail.
+        serviceSmsNumber:
+          $ref: 'contactpoint.yaml#/ContactPoint'
+          description: The number to access the service by text message.
         serviceUrl:
           $ref: 'url.yaml#/URL'
           description: The website to access the service.
+      type: object
+  description: >-
+    A means for accessing a service, e.g. a government office location, web
+    site, or phone number.

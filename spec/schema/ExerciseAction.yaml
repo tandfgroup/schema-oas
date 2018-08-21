@@ -1,59 +1,59 @@
 ExerciseAction:
-  description: >-
-    The act of participating in exertive activity for the purposes of improving
-    health and fitness.
   allOf:
-    - $ref: 'PlayAction.yaml#/PlayAction'
-    - type: object
-      properties:
-        fromLocation:
-          $ref: 'Place.yaml#/Place'
-          description: >-
-            A sub property of location. The original location of the object or
-            the agent before the action.
-        diet:
-          type: object
-          description: A sub property of instrument. The diet used in this action.
-        exerciseCourse:
-          $ref: 'Place.yaml#/Place'
-          description: A sub property of location. The course where this action was taken.
-        sportsActivityLocation:
-          $ref: 'SportsActivityLocation.yaml#/SportsActivityLocation'
-          description: >-
-            A sub property of location. The sports activity location where this
-            action occurred.
-        opponent:
-          $ref: 'Person.yaml#/Person'
-          description: A sub property of participant. The opponent on this action.
-        distance:
-          $ref: 'Distance.yaml#/Distance'
-          description: 'The distance travelled, e.g. exercising or travelling.'
+    - $ref: 'playaction.yaml#/PlayAction'
+    - properties:
         course:
-          $ref: 'Place.yaml#/Place'
+          $ref: 'place.yaml#/Place'
           description: A sub property of location. The course where this action was taken.
+        diet:
+          description: A sub property of instrument. The diet used in this action.
+          type: object
+        distance:
+          $ref: 'distance.yaml#/Distance'
+          description: 'The distance travelled, e.g. exercising or travelling.'
+        exerciseCourse:
+          $ref: 'place.yaml#/Place'
+          description: A sub property of location. The course where this action was taken.
+        exercisePlan:
+          description: A sub property of instrument. The exercise plan used on this action.
+          type: object
+        exerciseRelatedDiet:
+          description: A sub property of instrument. The diet used in this action.
+          type: object
         exerciseType:
-          type: string
           description: >-
             Type(s) of exercise or activity, such as strength training,
             flexibility training, aerobics, cardiac rehabilitation, etc.
+          type: string
+        fromLocation:
+          $ref: 'place.yaml#/Place'
+          description: >-
+            A sub property of location. The original location of the object or
+            the agent before the action.
+        opponent:
+          $ref: 'person.yaml#/Person'
+          description: A sub property of participant. The opponent on this action.
+        sportsActivityLocation:
+          $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'
+          description: >-
+            A sub property of location. The sports activity location where this
+            action occurred.
         sportsEvent:
-          $ref: 'SportsEvent.yaml#/SportsEvent'
+          $ref: 'sportsevent.yaml#/SportsEvent'
           description: >-
             A sub property of location. The sports event where this action
             occurred.
-        exerciseRelatedDiet:
-          type: object
-          description: A sub property of instrument. The diet used in this action.
         sportsTeam:
-          $ref: 'SportsTeam.yaml#/SportsTeam'
+          $ref: 'sportsteam.yaml#/SportsTeam'
           description: >-
             A sub property of participant. The sports team that participated on
             this action.
-        exercisePlan:
-          type: object
-          description: A sub property of instrument. The exercise plan used on this action.
         toLocation:
-          $ref: 'Place.yaml#/Place'
+          $ref: 'place.yaml#/Place'
           description: >-
             A sub property of location. The final location of the object or the
             agent after the action.
+      type: object
+  description: >-
+    The act of participating in exertive activity for the purposes of improving
+    health and fitness.

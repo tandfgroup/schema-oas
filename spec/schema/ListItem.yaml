@@ -1,9 +1,7 @@
 ListItem:
-  description: 'An list item, e.g. a step in a checklist or how-to description.'
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
+    - properties:
         item:
           $ref: 'thing.yaml#/Thing'
           description: >-
@@ -12,11 +10,13 @@ ListItem:
         nextItem:
           $ref: 'listitem.yaml#/ListItem'
           description: A link to the ListItem that follows the current one.
-        previousItem:
-          $ref: 'listitem.yaml#/ListItem'
-          description: A link to the ListItem that preceeds the current one.
         position:
+          description: The position of an item in a series or sequence of items.
           oneOf:
             - type: integer
             - type: string
-          description: The position of an item in a series or sequence of items.
+        previousItem:
+          $ref: 'listitem.yaml#/ListItem'
+          description: A link to the ListItem that preceeds the current one.
+      type: object
+  description: 'An list item, e.g. a step in a checklist or how-to description.'

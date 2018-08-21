@@ -1,24 +1,24 @@
 LiveBlogPosting:
-  description: >-
-    A blog post intended to provide a rolling textual coverage of an ongoing
-    event through continuous updates.
   allOf:
     - $ref: 'blogposting.yaml#/BlogPosting'
-    - type: object
-      properties:
+    - properties:
         coverageEndTime:
-          type: string
-          format: date-time
           description: >-
             The time when the live blog will stop covering the Event. Note that
             coverage may continue after the Event concludes.
-        liveBlogUpdate:
-          $ref: 'blogposting.yaml#/BlogPosting'
-          description: An update to the LiveBlog.
-        coverageStartTime:
-          type: string
           format: date-time
+          type: string
+        coverageStartTime:
           description: >-
             The time when the live blog will begin covering the Event. Note that
             coverage may begin before the Event's start time. The
             LiveBlogPosting may also be created before coverage begins.
+          format: date-time
+          type: string
+        liveBlogUpdate:
+          $ref: 'blogposting.yaml#/BlogPosting'
+          description: An update to the LiveBlog.
+      type: object
+  description: >-
+    A blog post intended to provide a rolling textual coverage of an ongoing
+    event through continuous updates.

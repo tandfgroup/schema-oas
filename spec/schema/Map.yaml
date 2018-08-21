@@ -1,9 +1,9 @@
 Map:
-  description: A map.
   allOf:
     - $ref: 'creativework.yaml#/CreativeWork'
-    - type: object
-      properties:
+    - properties:
         mapType:
           $ref: 'mapcategorytype.yaml#/MapCategoryType'
           description: 'Indicates the kind of Map, from the MapCategoryType Enumeration.'
+      type: object
+  description: A map.

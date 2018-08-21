@@ -1,4 +1,15 @@
 BorrowAction:
+  allOf:
+    - $ref: 'transferaction.yaml#/TransferAction'
+    - properties:
+        lender:
+          description: >-
+            A sub property of participant. The person that lends the object
+            being borrowed.
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+      type: object
   description: >
     The act of obtaining an object under an agreement to return it at a later
     date. Reciprocal of LendAction.<br/><br/>
@@ -13,14 +24,3 @@ BorrowAction:
     Reciprocal of BorrowAction.</li>
 
     </ul>
-  allOf:
-    - $ref: 'TransferAction.yaml#/TransferAction'
-    - type: object
-      properties:
-        lender:
-          oneOf:
-            - $ref: 'Organization.yaml#/Organization'
-            - $ref: 'Person.yaml#/Person'
-          description: >-
-            A sub property of participant. The person that lends the object
-            being borrowed.

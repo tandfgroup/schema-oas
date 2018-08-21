@@ -1,2 +1,2 @@
 PostOffice:
-  $ref: 'GovernmentOffice.yaml#/GovernmentOffice'
+  $ref: 'governmentoffice.yaml#/GovernmentOffice'

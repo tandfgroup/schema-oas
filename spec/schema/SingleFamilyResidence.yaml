@@ -1,9 +1,17 @@
 SingleFamilyResidence:
-  description: 'Residence type: Single-family home.'
   allOf:
     - $ref: 'house.yaml#/House'
-    - type: object
-      properties:
+    - properties:
+        numberOfRooms:
+          description: >-
+            The number of rooms (excluding bathrooms and closets) of the
+            accommodation or lodging business.
+
+            Typical unit code(s): ROM for room or C62 for no unit. The type of
+            room can be put in the unitText property of the QuantitativeValue.
+          oneOf:
+            - type: number
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
         occupancy:
           $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
@@ -14,13 +22,5 @@ SingleFamilyResidence:
             person).
 
             Typical unit code(s): C62 for person
-        numberOfRooms:
-          oneOf:
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - type: number
-          description: >-
-            The number of rooms (excluding bathrooms and closets) of the
-            accommodation or lodging business.
-
-            Typical unit code(s): ROM for room or C62 for no unit. The type of
-            room can be put in the unitText property of the QuantitativeValue.
+      type: object
+  description: 'Residence type: Single-family home.'

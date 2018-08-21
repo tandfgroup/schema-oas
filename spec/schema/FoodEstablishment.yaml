@@ -1,38 +1,36 @@
 FoodEstablishment:
-  description: A food-related business.
   allOf:
     - $ref: 'localbusiness.yaml#/LocalBusiness'
-    - type: object
-      properties:
-        servesCuisine:
-          type: string
-          description: The cuisine of the restaurant.
-        hasMenu:
-          oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'menu.yaml#/Menu'
-            - type: string
-          description: >-
-            Either the actual menu as a structured representation, as text, or a
-            URL of the menu.
-        menu:
-          oneOf:
-            - $ref: 'menu.yaml#/Menu'
-            - type: string
-            - $ref: 'url.yaml#/URL'
-          description: >-
-            Either the actual menu as a structured representation, as text, or a
-            URL of the menu.
+    - properties:
         acceptsReservations:
-          oneOf:
-            - type: string
-            - type: boolean
-            - $ref: 'url.yaml#/URL'
           description: >-
             Indicates whether a FoodEstablishment accepts reservations. Values
             can be Boolean, an URL at which reservations can be made or (for
             backwards compatibility) the strings <code>Yes</code> or
             <code>No</code>.
+          oneOf:
+            - type: boolean
+            - type: string
+            - $ref: 'url.yaml#/URL'
+        hasMenu:
+          description: >-
+            Either the actual menu as a structured representation, as text, or a
+            URL of the menu.
+          oneOf:
+            - $ref: 'menu.yaml#/Menu'
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        menu:
+          description: >-
+            Either the actual menu as a structured representation, as text, or a
+            URL of the menu.
+          oneOf:
+            - type: string
+            - $ref: 'url.yaml#/URL'
+            - $ref: 'menu.yaml#/Menu'
+        servesCuisine:
+          description: The cuisine of the restaurant.
+          type: string
         starRating:
           $ref: 'rating.yaml#/Rating'
           description: >-
@@ -41,3 +39,5 @@ FoodEstablishment:
             property to indicate the rating organization, e.g. as an
             Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or
             Hotelstars).
+      type: object
+  description: A food-related business.

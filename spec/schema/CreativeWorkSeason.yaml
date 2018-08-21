@@ -1,18 +1,7 @@
 CreativeWorkSeason:
-  description: 'A media season e.g. tv, radio, video game etc.'
   allOf:
     - $ref: 'creativework.yaml#/CreativeWork'
-    - type: object
-      properties:
-        episodes:
-          $ref: 'episode.yaml#/Episode'
-          description: An episode of a TV/radio series or season.
-        episode:
-          $ref: 'episode.yaml#/Episode'
-          description: 'An episode of a tv, radio or game media within a series or season.'
-        trailer:
-          $ref: 'videoobject.yaml#/VideoObject'
-          description: 'The trailer of a movie or tv/radio series, season, episode, etc.'
+    - properties:
         actor:
           $ref: 'person.yaml#/Person'
           description: >-
@@ -25,39 +14,50 @@ CreativeWorkSeason:
             A director of e.g. tv, radio, movie, video gaming etc. content, or
             of an event. Directors can be associated with individual items or
             with a series, episode, clip.
-        partOfSeries:
-          $ref: 'creativeworkseries.yaml#/CreativeWorkSeries'
-          description: The series to which this episode or season belongs.
         endDate:
-          oneOf:
-            - type: string
-              format: date
-            - type: string
-              format: date-time
           description: >-
             The end date and time of the item (in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date
             format</a>).
-        seasonNumber:
           oneOf:
-            - type: integer
-            - type: string
-          description: Position of the season within an ordered group of seasons.
+            - format: date
+              type: string
+            - format: date-time
+              type: string
+        episode:
+          $ref: 'episode.yaml#/Episode'
+          description: 'An episode of a tv, radio or game media within a series or season.'
+        episodes:
+          $ref: 'episode.yaml#/Episode'
+          description: An episode of a TV/radio series or season.
+        numberOfEpisodes:
+          description: The number of episodes in this season or series.
+          type: integer
+        partOfSeries:
+          $ref: 'creativeworkseries.yaml#/CreativeWorkSeries'
+          description: The series to which this episode or season belongs.
         productionCompany:
           $ref: 'organization.yaml#/Organization'
           description: >-
             The production company or studio responsible for the item e.g.
             series, video game, episode etc.
-        startDate:
+        seasonNumber:
+          description: Position of the season within an ordered group of seasons.
           oneOf:
+            - type: integer
             - type: string
-              format: date-time
-            - type: string
-              format: date
+        startDate:
           description: >-
             The start date and time of the item (in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date
             format</a>).
-        numberOfEpisodes:
-          type: integer
-          description: The number of episodes in this season or series.
+          oneOf:
+            - format: date-time
+              type: string
+            - format: date
+              type: string
+        trailer:
+          $ref: 'videoobject.yaml#/VideoObject'
+          description: 'The trailer of a movie or tv/radio series, season, episode, etc.'
+      type: object
+  description: 'A media season e.g. tv, radio, video game etc.'

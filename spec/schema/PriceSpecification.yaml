@@ -1,32 +1,14 @@
 PriceSpecification:
-  description: >-
-    A structured value representing a price or price range. Typically, only the
-    subclasses of this type are used for markup. It is recommended to use <a
-    class="localLink" href="http://schema.org/MonetaryAmount">MonetaryAmount</a>
-    to describe independent amounts of money such as a salary, credit card
-    limits, etc.
   allOf:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
-    - type: object
-      properties:
-        validThrough:
-          type: string
-          format: date-time
+    - properties:
+        eligibleQuantity:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
-            The date after when the item is not valid. For example the end of an
-            offer, salary period, or a period of opening hours.
-        maxPrice:
-          type: number
-          description: The highest price if the price is a range.
-        validFrom:
-          type: string
-          format: date-time
-          description: The date when the item becomes valid.
-        valueAddedTaxIncluded:
-          type: boolean
-          description: >-
-            Specifies whether the applicable value-added tax (VAT) is included
-            in the price specification or not.
+            The interval and unit of measurement of ordering quantities for
+            which the offer or price specification is valid. This allows e.g.
+            specifying that a certain freight charge is valid only for a certain
+            quantity.
         eligibleTransactionVolume:
           $ref: 'pricespecification.yaml#/PriceSpecification'
           description: >-
@@ -35,13 +17,13 @@ PriceSpecification:
             purchasing volume, to express free shipping above a certain order
             volume, or to limit the acceptance of credit cards to purchases to a
             certain minimal amount.
-        minPrice:
+        maxPrice:
+          description: The highest price if the price is a range.
           type: number
+        minPrice:
           description: The lowest price if the price is a range.
+          type: number
         price:
-          oneOf:
-            - type: string
-            - type: number
           description: >
             The offer price of a product, or of a price component when attached
             to PriceSpecification and its subtypes.<br/><br/>
@@ -80,8 +62,10 @@ PriceSpecification:
             symbols.</li>
 
             </ul>
+          oneOf:
+            - type: number
+            - type: string
         priceCurrency:
-          type: string
           description: >-
             The currency of the price, or a price component when attached to <a
             class="localLink"
@@ -97,10 +81,26 @@ PriceSpecification:
             href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
             Exchange Tradings Systems</a> (LETS) and other currency types e.g.
             "Ithaca HOUR".
-        eligibleQuantity:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          type: string
+        validFrom:
+          description: The date when the item becomes valid.
+          format: date-time
+          type: string
+        validThrough:
           description: >-
-            The interval and unit of measurement of ordering quantities for
-            which the offer or price specification is valid. This allows e.g.
-            specifying that a certain freight charge is valid only for a certain
-            quantity.
+            The date after when the item is not valid. For example the end of an
+            offer, salary period, or a period of opening hours.
+          format: date-time
+          type: string
+        valueAddedTaxIncluded:
+          description: >-
+            Specifies whether the applicable value-added tax (VAT) is included
+            in the price specification or not.
+          type: boolean
+      type: object
+  description: >-
+    A structured value representing a price or price range. Typically, only the
+    subclasses of this type are used for markup. It is recommended to use <a
+    class="localLink" href="http://schema.org/MonetaryAmount">MonetaryAmount</a>
+    to describe independent amounts of money such as a salary, credit card
+    limits, etc.

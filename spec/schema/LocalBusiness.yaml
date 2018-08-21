@@ -1,13 +1,12 @@
 LocalBusiness:
   properties:
-    paymentAccepted:
-      type: string
-      description: 'Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.'
-    priceRange:
-      type: string
-      description: 'The price range of the business, for example <code>$$$</code>.'
+    branchOf:
+      $ref: 'organization.yaml#/Organization'
+      description: >-
+        The larger organization that this local business is a branch of, if any.
+        Not to be confused with (anatomical)<a class="localLink"
+        href="http://schema.org/branch">branch</a>.
     currenciesAccepted:
-      type: string
       description: >-
         The currency accepted.<br/><br/>
 
@@ -20,8 +19,8 @@ LocalBusiness:
         href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
         Exchange Tradings Systems</a> (LETS) and other currency types e.g.
         "Ithaca HOUR".
-    openingHours:
       type: string
+    openingHours:
       description: >
         The general opening hours for a business. Opening hours can be specified
         as a weekly time range, starting with days, then times per day. Multiple
@@ -48,9 +47,10 @@ LocalBusiness:
         day&lt;/time&gt;</code>.</li>
 
         </ul>
-    branchOf:
-      $ref: 'organization.yaml#/Organization'
-      description: >-
-        The larger organization that this local business is a branch of, if any.
-        Not to be confused with (anatomical)<a class="localLink"
-        href="http://schema.org/branch">branch</a>.
+      type: string
+    paymentAccepted:
+      description: 'Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.'
+      type: string
+    priceRange:
+      description: 'The price range of the business, for example <code>$$$</code>.'
+      type: string

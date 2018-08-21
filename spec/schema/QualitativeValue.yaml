@@ -1,26 +1,7 @@
 QualitativeValue:
-  description: >-
-    A predefined value for a product characteristic, e.g. the power cord plug
-    type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
   allOf:
     - $ref: 'enumeration.yaml#/Enumeration'
-    - type: object
-      properties:
-        greater:
-          $ref: 'qualitativevalue.yaml#/QualitativeValue'
-          description: >-
-            This ordering relation for qualitative values indicates that the
-            subject is greater than the object.
-        lesserOrEqual:
-          $ref: 'qualitativevalue.yaml#/QualitativeValue'
-          description: >-
-            This ordering relation for qualitative values indicates that the
-            subject is lesser than or equal to the object.
-        lesser:
-          $ref: 'qualitativevalue.yaml#/QualitativeValue'
-          description: >-
-            This ordering relation for qualitative values indicates that the
-            subject is lesser than the object.
+    - properties:
         additionalProperty:
           $ref: 'propertyvalue.yaml#/PropertyValue'
           description: >-
@@ -39,23 +20,42 @@ QualitativeValue:
           description: >-
             This ordering relation for qualitative values indicates that the
             subject is equal to the object.
+        greater:
+          $ref: 'qualitativevalue.yaml#/QualitativeValue'
+          description: >-
+            This ordering relation for qualitative values indicates that the
+            subject is greater than the object.
         greaterOrEqual:
           $ref: 'qualitativevalue.yaml#/QualitativeValue'
           description: >-
             This ordering relation for qualitative values indicates that the
             subject is greater than or equal to the object.
-        valueReference:
-          oneOf:
-            - $ref: 'propertyvalue.yaml#/PropertyValue'
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
-            - $ref: 'enumeration.yaml#/Enumeration'
-            - $ref: 'structuredvalue.yaml#/StructuredValue'
+        lesser:
+          $ref: 'qualitativevalue.yaml#/QualitativeValue'
           description: >-
-            A pointer to a secondary value that provides additional information
-            on the original value, e.g. a reference temperature.
+            This ordering relation for qualitative values indicates that the
+            subject is lesser than the object.
+        lesserOrEqual:
+          $ref: 'qualitativevalue.yaml#/QualitativeValue'
+          description: >-
+            This ordering relation for qualitative values indicates that the
+            subject is lesser than or equal to the object.
         nonEqual:
           $ref: 'qualitativevalue.yaml#/QualitativeValue'
           description: >-
             This ordering relation for qualitative values indicates that the
             subject is not equal to the object.
+        valueReference:
+          description: >-
+            A pointer to a secondary value that provides additional information
+            on the original value, e.g. a reference temperature.
+          oneOf:
+            - $ref: 'propertyvalue.yaml#/PropertyValue'
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - $ref: 'structuredvalue.yaml#/StructuredValue'
+            - $ref: 'enumeration.yaml#/Enumeration'
+            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+      type: object
+  description: >-
+    A predefined value for a product characteristic, e.g. the power cord plug
+    type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.

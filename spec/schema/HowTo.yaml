@@ -1,33 +1,14 @@
 HowTo:
-  description: >-
-    Instructions that explain how to achieve a result by performing a sequence
-    of steps.
   allOf:
     - $ref: 'creativework.yaml#/CreativeWork'
-    - type: object
-      properties:
+    - properties:
         estimatedCost:
-          oneOf:
-            - type: string
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
           description: >-
             The estimated cost of the supply or supplies consumed when
             performing instructions.
-        yield:
           oneOf:
+            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
             - type: string
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-          description: >-
-            The quantity that results by performing instructions. For example, a
-            paper airplane, 10 personalized candles.
-        steps:
-          oneOf:
-            - $ref: 'itemlist.yaml#/ItemList'
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - type: string
-          description: >-
-            A single step item (as HowToStep, text, document, video, etc.) or a
-            HowToSection (originally misnamed 'steps'; 'step' is preferred).
         performTime:
           $ref: 'duration.yaml#/Duration'
           description: >-
@@ -35,36 +16,6 @@ HowTo:
             (not including time to prepare the supplies), in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration
             format</a>.
-        totalTime:
-          $ref: 'duration.yaml#/Duration'
-          description: >-
-            The total time required to perform instructions or a direction
-            (including time to prepare the supplies), in <a
-            href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration
-            format</a>.
-        step:
-          oneOf:
-            - $ref: 'howtostep.yaml#/HowToStep'
-            - $ref: 'howtosection.yaml#/HowToSection'
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - type: string
-          description: >-
-            A single step item (as HowToStep, text, document, video, etc.) or a
-            HowToSection.
-        supply:
-          oneOf:
-            - $ref: 'howtosupply.yaml#/HowToSupply'
-            - type: string
-          description: >-
-            A sub-property of instrument. A supply consumed when performing
-            instructions or a direction.
-        tool:
-          oneOf:
-            - type: string
-            - $ref: 'howtotool.yaml#/HowToTool'
-          description: >-
-            A sub property of instrument. An object used (but not consumed) when
-            performing instructions or a direction.
         prepTime:
           $ref: 'duration.yaml#/Duration'
           description: >-
@@ -72,3 +23,52 @@ HowTo:
             instructions or a direction, in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration
             format</a>.
+        step:
+          description: >-
+            A single step item (as HowToStep, text, document, video, etc.) or a
+            HowToSection.
+          oneOf:
+            - $ref: 'howtostep.yaml#/HowToStep'
+            - type: string
+            - $ref: 'howtosection.yaml#/HowToSection'
+            - $ref: 'creativework.yaml#/CreativeWork'
+        steps:
+          description: >-
+            A single step item (as HowToStep, text, document, video, etc.) or a
+            HowToSection (originally misnamed 'steps'; 'step' is preferred).
+          oneOf:
+            - $ref: 'creativework.yaml#/CreativeWork'
+            - $ref: 'itemlist.yaml#/ItemList'
+            - type: string
+        supply:
+          description: >-
+            A sub-property of instrument. A supply consumed when performing
+            instructions or a direction.
+          oneOf:
+            - $ref: 'howtosupply.yaml#/HowToSupply'
+            - type: string
+        tool:
+          description: >-
+            A sub property of instrument. An object used (but not consumed) when
+            performing instructions or a direction.
+          oneOf:
+            - $ref: 'howtotool.yaml#/HowToTool'
+            - type: string
+        totalTime:
+          $ref: 'duration.yaml#/Duration'
+          description: >-
+            The total time required to perform instructions or a direction
+            (including time to prepare the supplies), in <a
+            href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration
+            format</a>.
+        yield:
+          description: >-
+            The quantity that results by performing instructions. For example, a
+            paper airplane, 10 personalized candles.
+          oneOf:
+            - type: string
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+      type: object
+  description: >-
+    Instructions that explain how to achieve a result by performing a sequence
+    of steps.

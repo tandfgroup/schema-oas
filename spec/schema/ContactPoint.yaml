@@ -1,62 +1,62 @@
 ContactPoint:
-  description: 'A contact point&#x2014;for example, a Customer Complaints department.'
   allOf:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
-    - type: object
-      properties:
-        productSupported:
+    - properties:
+        areaServed:
+          description: The geographic area where a service or offered item is provided.
           oneOf:
             - type: string
-            - $ref: 'product.yaml#/Product'
-          description: >-
-            The product or service this support contact point is related to
-            (such as product support for a particular product line). This can be
-            a specific product or product line (e.g. "iPhone") or a general
-            category of products or services (e.g. "smartphones").
-        serviceArea:
-          oneOf:
-            - $ref: 'geoshape.yaml#/GeoShape'
             - $ref: 'place.yaml#/Place'
             - $ref: 'administrativearea.yaml#/AdministrativeArea'
-          description: The geographic area where the service is provided.
-        email:
-          type: string
-          description: Email address.
-        telephone:
-          type: string
-          description: The telephone number.
-        contactType:
-          type: string
-          description: >-
-            A person or organization can have different contact points, for
-            different purposes. For example, a sales contact point, a PR contact
-            point and so on. This property is used to specify the kind of
-            contact point.
+            - $ref: 'geoshape.yaml#/GeoShape'
         availableLanguage:
-          oneOf:
-            - type: string
-            - $ref: 'language.yaml#/Language'
           description: >-
             A language someone may use with or at the item, service or place.
             Please use one of the language codes from the <a
             href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>.
             See also <a class="localLink"
             href="http://schema.org/inLanguage">inLanguage</a>
-        areaServed:
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - $ref: 'administrativearea.yaml#/AdministrativeArea'
+            - $ref: 'language.yaml#/Language'
             - type: string
-            - $ref: 'geoshape.yaml#/GeoShape'
-          description: The geographic area where a service or offered item is provided.
-        hoursAvailable:
-          $ref: 'openinghoursspecification.yaml#/OpeningHoursSpecification'
-          description: The hours during which this service or contact is available.
         contactOption:
           $ref: 'contactpointoption.yaml#/ContactPointOption'
           description: >-
             An option available on this contact point (e.g. a toll-free number
             or support for hearing-impaired callers).
-        faxNumber:
+        contactType:
+          description: >-
+            A person or organization can have different contact points, for
+            different purposes. For example, a sales contact point, a PR contact
+            point and so on. This property is used to specify the kind of
+            contact point.
           type: string
+        email:
+          description: Email address.
+          type: string
+        faxNumber:
           description: The fax number.
+          type: string
+        hoursAvailable:
+          $ref: 'openinghoursspecification.yaml#/OpeningHoursSpecification'
+          description: The hours during which this service or contact is available.
+        productSupported:
+          description: >-
+            The product or service this support contact point is related to
+            (such as product support for a particular product line). This can be
+            a specific product or product line (e.g. "iPhone") or a general
+            category of products or services (e.g. "smartphones").
+          oneOf:
+            - type: string
+            - $ref: 'product.yaml#/Product'
+        serviceArea:
+          description: The geographic area where the service is provided.
+          oneOf:
+            - $ref: 'geoshape.yaml#/GeoShape'
+            - $ref: 'place.yaml#/Place'
+            - $ref: 'administrativearea.yaml#/AdministrativeArea'
+        telephone:
+          description: The telephone number.
+          type: string
+      type: object
+  description: 'A contact point&#x2014;for example, a Customer Complaints department.'

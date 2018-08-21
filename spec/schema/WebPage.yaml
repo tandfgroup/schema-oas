@@ -1,43 +1,49 @@
 WebPage:
-  description: >-
-    A web page. Every web page is implicitly assumed to be declared to be of
-    type WebPage, so the various properties about that webpage, such as
-    <code>breadcrumb</code> may be used. We recommend explicit declaration if
-    these properties are specified, but if they are found outside of an
-    itemscope, they will be assumed to be about the page.
   allOf:
     - $ref: 'creativework.yaml#/CreativeWork'
-    - type: object
-      properties:
+    - properties:
+        breadcrumb:
+          description: >-
+            A set of links that can help a user understand and navigate a
+            website hierarchy.
+          oneOf:
+            - $ref: 'breadcrumblist.yaml#/BreadcrumbList'
+            - type: string
+        lastReviewed:
+          description: >-
+            Date on which the content on this web page was last reviewed for
+            accuracy and/or completeness.
+          format: date
+          type: string
         mainContentOfPage:
           $ref: 'webpageelement.yaml#/WebPageElement'
           description: Indicates if this web page element is the main subject of the page.
+        primaryImageOfPage:
+          $ref: 'imageobject.yaml#/ImageObject'
+          description: Indicates the main image on the page.
+        relatedLink:
+          $ref: 'url.yaml#/URL'
+          description: >-
+            A link related to this web page, for example to other related web
+            pages.
         reviewedBy:
-          oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
           description: >-
             People or organizations that have reviewed the content on this web
             page for accuracy and/or completeness.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
         significantLink:
           $ref: 'url.yaml#/URL'
           description: >-
             One of the more significant URLs on the page. Typically, these are
             the non-navigation links that are clicked on the most.
-        breadcrumb:
-          oneOf:
-            - $ref: 'breadcrumblist.yaml#/BreadcrumbList'
-            - type: string
+        significantLinks:
+          $ref: 'url.yaml#/URL'
           description: >-
-            A set of links that can help a user understand and navigate a
-            website hierarchy.
+            The most significant URLs on the page. Typically, these are the
+            non-navigation links that are clicked on the most.
         speakable:
-          oneOf:
-            - type: object
-              description: >-
-                Type: SpeakableSpecification This type is not published yet in
-                schema.org.
-            - $ref: 'url.yaml#/URL'
           description: >-
             Indicates sections of a Web page that are particularly 'speakable'
             in the sense of being highlighted as being especially appropriate
@@ -77,27 +83,21 @@ WebPage:
             href="http://schema.org/SpeakableSpecification">SpeakableSpecification</a> 
             which is defined to be a possible value of the <em>speakable</em>
             property.
-        significantLinks:
-          $ref: 'url.yaml#/URL'
-          description: >-
-            The most significant URLs on the page. Typically, these are the
-            non-navigation links that are clicked on the most.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - description: >-
+                Type: SpeakableSpecification This type is not published yet in
+                schema.org.
+              type: object
         specialty:
           $ref: 'specialty.yaml#/Specialty'
           description: >-
             One of the domain specialities to which this web page's content
             applies.
-        relatedLink:
-          $ref: 'url.yaml#/URL'
-          description: >-
-            A link related to this web page, for example to other related web
-            pages.
-        primaryImageOfPage:
-          $ref: 'imageobject.yaml#/ImageObject'
-          description: Indicates the main image on the page.
-        lastReviewed:
-          type: string
-          format: date
-          description: >-
-            Date on which the content on this web page was last reviewed for
-            accuracy and/or completeness.
+      type: object
+  description: >-
+    A web page. Every web page is implicitly assumed to be declared to be of
+    type WebPage, so the various properties about that webpage, such as
+    <code>breadcrumb</code> may be used. We recommend explicit declaration if
+    these properties are specified, but if they are found outside of an
+    itemscope, they will be assumed to be about the page.

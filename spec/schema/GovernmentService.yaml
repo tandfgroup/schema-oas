@@ -1,11 +1,7 @@
 GovernmentService:
-  description: >-
-    A service provided by a government organization, e.g. food stamps, veterans
-    benefits, etc.
   allOf:
     - $ref: 'service.yaml#/Service'
-    - type: object
-      properties:
+    - properties:
         serviceOperator:
           $ref: 'organization.yaml#/Organization'
           description: >-
@@ -13,3 +9,7 @@ GovernmentService:
             enables the representation of services that are provided by an
             organization, but operated by another organization like a
             subcontractor.
+      type: object
+  description: >-
+    A service provided by a government organization, e.g. food stamps, veterans
+    benefits, etc.

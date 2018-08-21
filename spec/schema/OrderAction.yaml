@@ -1,9 +1,9 @@
 OrderAction:
-  description: An agent orders an object/product/service to be delivered/sent.
   allOf:
-    - $ref: 'TradeAction.yaml#/TradeAction'
-    - type: object
-      properties:
+    - $ref: 'tradeaction.yaml#/TradeAction'
+    - properties:
         deliveryMethod:
-          $ref: 'DeliveryMethod.yaml#/DeliveryMethod'
+          $ref: 'deliverymethod.yaml#/DeliveryMethod'
           description: A sub property of instrument. The method of delivery.
+      type: object
+  description: An agent orders an object/product/service to be delivered/sent.

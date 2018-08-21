@@ -1,9 +1,7 @@
 SportsTeam:
-  description: 'Organization: Sports team.'
   allOf:
     - $ref: 'sportsorganization.yaml#/SportsOrganization'
-    - type: object
-      properties:
+    - properties:
         athlete:
           $ref: 'person.yaml#/Person'
           description: >-
@@ -12,3 +10,5 @@ SportsTeam:
         coach:
           $ref: 'person.yaml#/Person'
           description: A person that acts in a coaching role for a sports team.
+      type: object
+  description: 'Organization: Sports team.'

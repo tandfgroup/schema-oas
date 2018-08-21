@@ -1,54 +1,14 @@
 LoanOrCredit:
-  description: >-
-    A financial product for the loaning of an amount of money under agreed terms
-    and charges.
   allOf:
     - $ref: 'financialproduct.yaml#/FinancialProduct'
-    - type: object
-      properties:
-        gracePeriod:
-          $ref: 'duration.yaml#/Duration'
-          description: >-
-            The period of time after any due date that the borrower has to
-            fulfil its obligations before a default (failure to pay) is deemed
-            to have occurred.
-        renegotiableLoan:
-          type: boolean
-          description: >-
-            Whether the terms for payment of interest can be renegotiated during
-            the life of the loan.
-        loanType:
-          oneOf:
-            - $ref: 'url.yaml#/URL'
-            - type: string
-          description: The type of a loan or credit.
+    - properties:
         amount:
-          oneOf:
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
-            - type: number
           description: The amount of money.
-        loanTerm:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-          description: The duration of the loan or credit agreement.
-        loanRepaymentForm:
-          type: object
-          description: >-
-            A form of paying back money previously borrowed from a lender.
-            Repayment usually takes the form of periodic payments that normally
-            include part principal plus interest in each payment.
-        recourseLoan:
-          type: boolean
-          description: >-
-            The only way you get the money back in the event of default is the
-            security. Recourse is where you still have the opportunity to go
-            back to the borrower for the rest of the money.
+          oneOf:
+            - type: number
+            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
         currency:
-          type: string
           description:
-            - >-
-              The currency in which the monetary amount is expressed (in
-              3-letter <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO
-              4217</a> format).
             - >-
               The currency in which the monetary amount is expressed.<br/><br/>
 
@@ -62,11 +22,51 @@ LoanOrCredit:
               href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
               Exchange Tradings Systems</a> (LETS) and other currency types e.g.
               "Ithaca HOUR".
-        requiredCollateral:
+            - >-
+              The currency in which the monetary amount is expressed (in
+              3-letter <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO
+              4217</a> format).
+          type: string
+        gracePeriod:
+          $ref: 'duration.yaml#/Duration'
+          description: >-
+            The period of time after any due date that the borrower has to
+            fulfil its obligations before a default (failure to pay) is deemed
+            to have occurred.
+        loanRepaymentForm:
+          description: >-
+            A form of paying back money previously borrowed from a lender.
+            Repayment usually takes the form of periodic payments that normally
+            include part principal plus interest in each payment.
+          type: object
+        loanTerm:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          description: The duration of the loan or credit agreement.
+        loanType:
+          description: The type of a loan or credit.
           oneOf:
-            - $ref: 'thing.yaml#/Thing'
             - type: string
+            - $ref: 'url.yaml#/URL'
+        recourseLoan:
+          description: >-
+            The only way you get the money back in the event of default is the
+            security. Recourse is where you still have the opportunity to go
+            back to the borrower for the rest of the money.
+          type: boolean
+        renegotiableLoan:
+          description: >-
+            Whether the terms for payment of interest can be renegotiated during
+            the life of the loan.
+          type: boolean
+        requiredCollateral:
           description: >-
             Assets required to secure loan or credit repayments. It may take
             form of third party pledge, goods, financial instruments (cash,
             securities, etc.)
+          oneOf:
+            - type: string
+            - $ref: 'thing.yaml#/Thing'
+      type: object
+  description: >-
+    A financial product for the loaning of an amount of money under agreed terms
+    and charges.

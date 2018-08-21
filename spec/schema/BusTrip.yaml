@@ -1,22 +1,22 @@
 BusTrip:
-  description: A trip on a commercial bus line.
   allOf:
     - $ref: 'trip.yaml#/Trip'
-    - type: object
-      properties:
+    - properties:
         arrivalBusStop:
-          oneOf:
-            - $ref: 'busstop.yaml#/BusStop'
-            - $ref: 'busstation.yaml#/BusStation'
           description: The stop or station from which the bus arrives.
-        busNumber:
-          type: string
-          description: The unique identifier for the bus.
-        busName:
-          type: string
-          description: The name of the bus (e.g. Bolt Express).
-        departureBusStop:
           oneOf:
             - $ref: 'busstop.yaml#/BusStop'
             - $ref: 'busstation.yaml#/BusStation'
+        busName:
+          description: The name of the bus (e.g. Bolt Express).
+          type: string
+        busNumber:
+          description: The unique identifier for the bus.
+          type: string
+        departureBusStop:
           description: The stop or station from which the bus departs.
+          oneOf:
+            - $ref: 'busstation.yaml#/BusStation'
+            - $ref: 'busstop.yaml#/BusStop'
+      type: object
+  description: A trip on a commercial bus line.

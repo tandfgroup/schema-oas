@@ -1,4 +1,30 @@
 PublicationVolume:
+  allOf:
+    - $ref: 'creativework.yaml#/CreativeWork'
+    - properties:
+        pageEnd:
+          description: The page on which the work ends; for example "138" or "xvi".
+          oneOf:
+            - type: string
+            - type: integer
+        pageStart:
+          description: The page on which the work starts; for example "135" or "xiii".
+          oneOf:
+            - type: string
+            - type: integer
+        pagination:
+          description: >-
+            Any description of pages that is not separated into pageStart and
+            pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".
+          type: string
+        volumeNumber:
+          description: >-
+            Identifies the volume of publication or multi-part work; for
+            example, "iii" or "2".
+          oneOf:
+            - type: integer
+            - type: string
+      type: object
   description: >
     A part of a successively published publication such as a periodical or
     multi-volume work, often numbered. It may represent a time span, such as a
@@ -10,29 +36,3 @@ PublicationVolume:
     post&lt;/a&gt;.
 
     </code></pre>
-  allOf:
-    - $ref: 'creativework.yaml#/CreativeWork'
-    - type: object
-      properties:
-        volumeNumber:
-          oneOf:
-            - type: integer
-            - type: string
-          description: >-
-            Identifies the volume of publication or multi-part work; for
-            example, "iii" or "2".
-        pageStart:
-          oneOf:
-            - type: string
-            - type: integer
-          description: The page on which the work starts; for example "135" or "xiii".
-        pageEnd:
-          oneOf:
-            - type: string
-            - type: integer
-          description: The page on which the work ends; for example "138" or "xvi".
-        pagination:
-          type: string
-          description: >-
-            Any description of pages that is not separated into pageStart and
-            pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".

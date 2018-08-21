@@ -1,57 +1,38 @@
 Dataset:
-  description: A body of structured information describing some topic(s) of interest.
   allOf:
-    - $ref: 'CreativeWork.yaml#/CreativeWork'
-    - type: object
-      properties:
+    - $ref: 'creativework.yaml#/CreativeWork'
+    - properties:
         catalog:
-          $ref: 'DataCatalog.yaml#/DataCatalog'
+          $ref: 'datacatalog.yaml#/DataCatalog'
           description: A data catalog which contains this dataset.
         datasetTimeInterval:
-          type: string
-          format: date-time
           description: >-
             The range of temporal applicability of a dataset, e.g. for a 2011
             census dataset, the year 2011 (in ISO 8601 time interval format).
-        variableMeasured:
-          oneOf:
-            - $ref: 'PropertyValue.yaml#/PropertyValue'
-            - type: string
-          description: >-
-            The variableMeasured property can indicate (repeated as necessary)
-            the  variables that are measured in some dataset, either described
-            as text or as pairs of identifier and description using
-            PropertyValue.
-        issn:
+          format: date-time
           type: string
-          description: >-
-            The International Standard Serial Number (ISSN) that identifies this
-            serial publication. You can repeat this property to identify
-            different formats of, or the linking ISSN (ISSN-L) for, this serial
-            publication.
         distribution:
-          $ref: 'DataDownload.yaml#/DataDownload'
+          $ref: 'datadownload.yaml#/DataDownload'
           description: >-
             A downloadable form of this dataset, at a specific location, in a
             specific format.
-        spatial:
-          $ref: 'Place.yaml#/Place'
-          description: >-
-            The range of spatial applicability of a dataset, e.g. for a dataset
-            of New York weather, the state of New York.
         includedDataCatalog:
-          $ref: 'DataCatalog.yaml#/DataCatalog'
+          $ref: 'datacatalog.yaml#/DataCatalog'
           description: >-
             A data catalog which contains this dataset (this property was
             previously 'catalog', preferred name is now
             'includedInDataCatalog').
         includedInDataCatalog:
-          $ref: 'DataCatalog.yaml#/DataCatalog'
+          $ref: 'datacatalog.yaml#/DataCatalog'
           description: A data catalog which contains this dataset.
+        issn:
+          description: >-
+            The International Standard Serial Number (ISSN) that identifies this
+            serial publication. You can repeat this property to identify
+            different formats of, or the linking ISSN (ISSN-L) for, this serial
+            publication.
+          type: string
         measurementTechnique:
-          oneOf:
-            - $ref: 'URL.yaml#/URL'
-            - type: string
           description: >-
             A technique or technology used in a <a class="localLink"
             href="http://schema.org/Dataset">Dataset</a> (or <a
@@ -94,9 +75,28 @@ Dataset:
             href="http://schema.org/variableMeasured">variableMeasured</a> and
             attach the corresponding <a class="localLink"
             href="http://schema.org/measurementTechnique">measurementTechnique</a>.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        spatial:
+          $ref: 'place.yaml#/Place'
+          description: >-
+            The range of spatial applicability of a dataset, e.g. for a dataset
+            of New York weather, the state of New York.
         temporal:
-          type: string
-          format: date-time
           description: >-
             The range of temporal applicability of a dataset, e.g. for a 2011
             census dataset, the year 2011 (in ISO 8601 time interval format).
+          format: date-time
+          type: string
+        variableMeasured:
+          description: >-
+            The variableMeasured property can indicate (repeated as necessary)
+            the  variables that are measured in some dataset, either described
+            as text or as pairs of identifier and description using
+            PropertyValue.
+          oneOf:
+            - $ref: 'propertyvalue.yaml#/PropertyValue'
+            - type: string
+      type: object
+  description: A body of structured information describing some topic(s) of interest.

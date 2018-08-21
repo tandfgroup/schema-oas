@@ -1,28 +1,18 @@
 DatedMoneySpecification:
-  description: >-
-    A DatedMoneySpecification represents monetary values with optional start and
-    end dates. For example, this could represent an employee's salary over a
-    specific period of time. <strong>Note:</strong> This type has been
-    superseded by <a class="localLink"
-    href="http://schema.org/MonetaryAmount">MonetaryAmount</a> use of that type
-    is recommended
   allOf:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
-    - type: object
-      properties:
-        endDate:
+    - properties:
+        amount:
+          description: The amount of money.
           oneOf:
-            - type: string
-              format: date
-            - type: string
-              format: date-time
-          description: >-
-            The end date and time of the item (in <a
-            href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date
-            format</a>).
+            - type: number
+            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
         currency:
-          type: string
           description:
+            - >-
+              The currency in which the monetary amount is expressed (in
+              3-letter <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO
+              4217</a> format).
             - >-
               The currency in which the monetary amount is expressed.<br/><br/>
 
@@ -36,22 +26,32 @@ DatedMoneySpecification:
               href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
               Exchange Tradings Systems</a> (LETS) and other currency types e.g.
               "Ithaca HOUR".
-            - >-
-              The currency in which the monetary amount is expressed (in
-              3-letter <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO
-              4217</a> format).
-        amount:
+          type: string
+        endDate:
+          description: >-
+            The end date and time of the item (in <a
+            href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date
+            format</a>).
           oneOf:
-            - type: number
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
-          description: The amount of money.
+            - format: date-time
+              type: string
+            - format: date
+              type: string
         startDate:
-          oneOf:
-            - type: string
-              format: date
-            - type: string
-              format: date-time
           description: >-
             The start date and time of the item (in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date
             format</a>).
+          oneOf:
+            - format: date-time
+              type: string
+            - format: date
+              type: string
+      type: object
+  description: >-
+    A DatedMoneySpecification represents monetary values with optional start and
+    end dates. For example, this could represent an employee's salary over a
+    specific period of time. <strong>Note:</strong> This type has been
+    superseded by <a class="localLink"
+    href="http://schema.org/MonetaryAmount">MonetaryAmount</a> use of that type
+    is recommended

@@ -1,56 +1,56 @@
 Recipe:
-  description: >-
-    A recipe. For dietary restrictions covered by the recipe, a few common
-    restrictions are enumerated via <a class="localLink"
-    href="http://schema.org/suitableForDiet">suitableForDiet</a>. The <a
-    class="localLink" href="http://schema.org/keywords">keywords</a> property
-    can also be used to add more detail.
   allOf:
     - $ref: 'howto.yaml#/HowTo'
-    - type: object
-      properties:
-        recipeCuisine:
-          type: string
-          description: 'The cuisine of the recipe (for example, French or Ethiopian).'
-        suitableForDiet:
-          $ref: 'restricteddiet.yaml#/RestrictedDiet'
-          description: >-
-            Indicates a dietary restriction or guideline for which this recipe
-            or menu item is suitable, e.g. diabetic, halal etc.
+    - properties:
         cookTime:
           $ref: 'duration.yaml#/Duration'
           description: >-
             The time it takes to actually cook the dish, in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration
             format</a>.
-        recipeIngredient:
-          type: string
-          description: 'A single ingredient used in the recipe, e.g. sugar, flour or garlic.'
-        recipeInstructions:
-          oneOf:
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - $ref: 'itemlist.yaml#/ItemList'
-            - type: string
-          description: >-
-            A step in making the recipe, in the form of a single item (document,
-            video, etc.) or an ordered list with HowToStep and/or HowToSection
-            items.
         cookingMethod:
-          type: string
           description: 'The method of cooking, such as Frying, Steaming, ...'
-        ingredients:
           type: string
+        ingredients:
           description: 'A single ingredient used in the recipe, e.g. sugar, flour or garlic.'
-        recipeYield:
-          oneOf:
-            - type: string
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-          description: >-
-            The quantity produced by the recipe (for example, number of people
-            served, number of servings, etc).
+          type: string
         nutrition:
           $ref: 'nutritioninformation.yaml#/NutritionInformation'
           description: Nutrition information about the recipe or menu item.
         recipeCategory:
-          type: string
           description: 'The category of the recipe—for example, appetizer, entree, etc.'
+          type: string
+        recipeCuisine:
+          description: 'The cuisine of the recipe (for example, French or Ethiopian).'
+          type: string
+        recipeIngredient:
+          description: 'A single ingredient used in the recipe, e.g. sugar, flour or garlic.'
+          type: string
+        recipeInstructions:
+          description: >-
+            A step in making the recipe, in the form of a single item (document,
+            video, etc.) or an ordered list with HowToStep and/or HowToSection
+            items.
+          oneOf:
+            - $ref: 'itemlist.yaml#/ItemList'
+            - type: string
+            - $ref: 'creativework.yaml#/CreativeWork'
+        recipeYield:
+          description: >-
+            The quantity produced by the recipe (for example, number of people
+            served, number of servings, etc).
+          oneOf:
+            - type: string
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+        suitableForDiet:
+          $ref: 'restricteddiet.yaml#/RestrictedDiet'
+          description: >-
+            Indicates a dietary restriction or guideline for which this recipe
+            or menu item is suitable, e.g. diabetic, halal etc.
+      type: object
+  description: >-
+    A recipe. For dietary restrictions covered by the recipe, a few common
+    restrictions are enumerated via <a class="localLink"
+    href="http://schema.org/suitableForDiet">suitableForDiet</a>. The <a
+    class="localLink" href="http://schema.org/keywords">keywords</a> property
+    can also be used to add more detail.

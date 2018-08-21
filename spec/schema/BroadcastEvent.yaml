@@ -1,19 +1,19 @@
 BroadcastEvent:
-  description: An over the air or online broadcast event.
   allOf:
     - $ref: 'publicationevent.yaml#/PublicationEvent'
-    - type: object
-      properties:
+    - properties:
         broadcastOfEvent:
           $ref: 'event.yaml#/Event'
           description: >-
             The event being broadcast such as a sporting event or awards
             ceremony.
         isLiveBroadcast:
-          type: boolean
           description: True is the broadcast is of a live event.
+          type: boolean
         videoFormat:
-          type: string
           description: >-
             The type of screening or video broadcast used (e.g. IMAX, 3D, SD,
             HD, etc.).
+          type: string
+      type: object
+  description: An over the air or online broadcast event.

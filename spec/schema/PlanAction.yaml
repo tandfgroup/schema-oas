@@ -1,12 +1,12 @@
 PlanAction:
+  allOf:
+    - $ref: 'organizeaction.yaml#/OrganizeAction'
+    - properties:
+        scheduledTime:
+          description: The time the object is scheduled to.
+          format: date-time
+          type: string
+      type: object
   description: >-
     The act of planning the execution of an event/task/action/reservation/plan
     to a future date.
-  allOf:
-    - $ref: 'organizeaction.yaml#/OrganizeAction'
-    - type: object
-      properties:
-        scheduledTime:
-          type: string
-          format: date-time
-          description: The time the object is scheduled to.

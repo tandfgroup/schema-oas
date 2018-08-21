@@ -1,2 +1,2 @@
 Aquarium:
-  $ref: 'CivicStructure.yaml#/CivicStructure'
+  $ref: 'civicstructure.yaml#/CivicStructure'

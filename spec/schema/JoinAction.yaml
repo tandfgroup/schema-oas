@@ -1,4 +1,13 @@
 JoinAction:
+  allOf:
+    - $ref: 'interactaction.yaml#/InteractAction'
+    - properties:
+        event:
+          $ref: 'event.yaml#/Event'
+          description: >-
+            Upcoming or past event associated with this place, organization, or
+            action.
+      type: object
   description: >
     An agent joins an event/group with participants/friends at a
     location.<br/><br/>
@@ -23,12 +32,3 @@ JoinAction:
     JoinAction does not imply that you'll be polling for updates.</li>
 
     </ul>
-  allOf:
-    - $ref: 'interactaction.yaml#/InteractAction'
-    - type: object
-      properties:
-        event:
-          $ref: 'event.yaml#/Event'
-          description: >-
-            Upcoming or past event associated with this place, organization, or
-            action.

@@ -1,13 +1,13 @@
 InformAction:
-  description: >-
-    The act of notifying someone of information pertinent to them, with no
-    expectation of a response.
   allOf:
     - $ref: 'communicateaction.yaml#/CommunicateAction'
-    - type: object
-      properties:
+    - properties:
         event:
           $ref: 'event.yaml#/Event'
           description: >-
             Upcoming or past event associated with this place, organization, or
             action.
+      type: object
+  description: >-
+    The act of notifying someone of information pertinent to them, with no
+    expectation of a response.

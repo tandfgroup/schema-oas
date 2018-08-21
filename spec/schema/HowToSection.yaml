@@ -1,10 +1,10 @@
 HowToSection:
   properties:
     steps:
-      oneOf:
-        - $ref: 'CreativeWork.yaml#/CreativeWork'
-        - $ref: 'ItemList.yaml#/ItemList'
-        - type: string
       description: >-
         A single step item (as HowToStep, text, document, video, etc.) or a
         HowToSection (originally misnamed 'steps'; 'step' is preferred).
+      oneOf:
+        - $ref: 'creativework.yaml#/CreativeWork'
+        - $ref: 'itemlist.yaml#/ItemList'
+        - type: string

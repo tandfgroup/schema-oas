@@ -1,9 +1,9 @@
 TVClip:
-  description: A short TV program or a segment/part of a TV program.
   allOf:
     - $ref: 'clip.yaml#/Clip'
-    - type: object
-      properties:
+    - properties:
         partOfTVSeries:
           $ref: 'tvseries.yaml#/TVSeries'
           description: The TV series to which this episode or season belongs.
+      type: object
+  description: A short TV program or a segment/part of a TV program.

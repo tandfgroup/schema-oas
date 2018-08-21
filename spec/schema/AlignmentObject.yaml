@@ -1,27 +1,27 @@
 AlignmentObject:
-  description: >-
-    An intangible item that describes an alignment between a learning resource
-    and a node in an educational framework.
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
-        targetName:
-          type: string
-          description: The name of a node in an established educational framework.
-        targetUrl:
-          $ref: 'url.yaml#/URL'
-          description: The URL of a node in an established educational framework.
-        educationalFramework:
-          type: string
-          description: The framework to which the resource being described is aligned.
+    - properties:
         alignmentType:
-          type: string
           description: >-
             A category of alignment between the learning resource and the
             framework node. Recommended values include: 'assesses', 'teaches',
             'requires', 'textComplexity', 'readingLevel', 'educationalSubject',
             and 'educationalLevel'.
-        targetDescription:
           type: string
+        educationalFramework:
+          description: The framework to which the resource being described is aligned.
+          type: string
+        targetDescription:
           description: The description of a node in an established educational framework.
+          type: string
+        targetName:
+          description: The name of a node in an established educational framework.
+          type: string
+        targetUrl:
+          $ref: 'url.yaml#/URL'
+          description: The URL of a node in an established educational framework.
+      type: object
+  description: >-
+    An intangible item that describes an alignment between a learning resource
+    and a node in an educational framework.

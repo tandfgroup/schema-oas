@@ -1,17 +1,17 @@
 BusinessAudience:
-  description: >-
-    A set of characteristics belonging to businesses, e.g. who compose an item's
-    target audience.
   allOf:
     - $ref: 'audience.yaml#/Audience'
-    - type: object
-      properties:
-        yearsInOperation:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-          description: The age of the business.
+    - properties:
         numberOfEmployees:
           $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The number of employees in an organization e.g. business.
         yearlyRevenue:
           $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The size of the business in annual revenue.
+        yearsInOperation:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          description: The age of the business.
+      type: object
+  description: >-
+    A set of characteristics belonging to businesses, e.g. who compose an item's
+    target audience.

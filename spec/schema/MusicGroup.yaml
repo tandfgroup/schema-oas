@@ -1,35 +1,35 @@
 MusicGroup:
-  description: >-
-    A musical group, such as a band, an orchestra, or a choir. Can also be a
-    solo musician.
   allOf:
     - $ref: 'performinggroup.yaml#/PerformingGroup'
-    - type: object
-      properties:
+    - properties:
+        album:
+          $ref: 'musicalbum.yaml#/MusicAlbum'
+          description: A music album.
         albums:
           $ref: 'musicalbum.yaml#/MusicAlbum'
           description: A collection of music albums.
+        genre:
+          description: 'Genre of the creative work, broadcast channel or group.'
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
         musicGroupMember:
           $ref: 'person.yaml#/Person'
           description: >-
             A member of a music group&#x2014;for example, John, Paul, George, or
             Ringo.
-        album:
-          $ref: 'musicalbum.yaml#/MusicAlbum'
-          description: A music album.
         track:
-          oneOf:
-            - $ref: 'musicrecording.yaml#/MusicRecording'
-            - $ref: 'itemlist.yaml#/ItemList'
           description: >-
             A music recording (track)&#x2014;usually a single song. If an
             ItemList is given, the list should contain items of type
             MusicRecording.
+          oneOf:
+            - $ref: 'itemlist.yaml#/ItemList'
+            - $ref: 'musicrecording.yaml#/MusicRecording'
         tracks:
           $ref: 'musicrecording.yaml#/MusicRecording'
           description: 'A music recording (track)&#x2014;usually a single song.'
-        genre:
-          oneOf:
-            - type: string
-            - $ref: 'url.yaml#/URL'
-          description: 'Genre of the creative work, broadcast channel or group.'
+      type: object
+  description: >-
+    A musical group, such as a band, an orchestra, or a choir. Can also be a
+    solo musician.

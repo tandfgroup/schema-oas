@@ -1,11 +1,11 @@
 CommentAction:
-  description: The act of generating a comment about a subject.
   allOf:
     - $ref: 'communicateaction.yaml#/CommunicateAction'
-    - type: object
-      properties:
+    - properties:
         resultComment:
           $ref: 'comment.yaml#/Comment'
           description: >-
             A sub property of result. The Comment created or sent as a result of
             this action.
+      type: object
+  description: The act of generating a comment about a subject.

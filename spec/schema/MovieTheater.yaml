@@ -1,5 +1,5 @@
 MovieTheater:
   properties:
     screenCount:
-      type: number
       description: The number of screens in the movie theater.
+      type: number

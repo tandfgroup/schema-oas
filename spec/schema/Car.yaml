@@ -1,9 +1,13 @@
 Car:
-  description: 'A car is a wheeled, self-powered motor vehicle used for transportation.'
   allOf:
     - $ref: 'vehicle.yaml#/Vehicle'
-    - type: object
-      properties:
+    - properties:
+        acrissCode:
+          description: >-
+            The ACRISS Car Classification Code is a code used by many car rental
+            companies, for classifying vehicles. ACRISS stands for Association
+            of Car Rental Industry Systems and Standards.
+          type: string
         roofLoad:
           $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >
@@ -33,9 +37,5 @@ Car:
             indicate ranges.</li>
 
             </ul>
-        acrissCode:
-          type: string
-          description: >-
-            The ACRISS Car Classification Code is a code used by many car rental
-            companies, for classifying vehicles. ACRISS stands for Association
-            of Car Rental Industry Systems and Standards.
+      type: object
+  description: 'A car is a wheeled, self-powered motor vehicle used for transportation.'

@@ -1,4 +1,25 @@
 TouristAttraction:
+  allOf:
+    - $ref: 'place.yaml#/Place'
+    - properties:
+        availableLanguage:
+          description: >-
+            A language someone may use with or at the item, service or place.
+            Please use one of the language codes from the <a
+            href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>.
+            See also <a class="localLink"
+            href="http://schema.org/inLanguage">inLanguage</a>
+          oneOf:
+            - $ref: 'language.yaml#/Language'
+            - type: string
+        touristType:
+          description: >-
+            Attraction suitable for type(s) of tourist. eg. Children, visitors
+            from a particular country, etc.
+          oneOf:
+            - type: string
+            - $ref: 'audience.yaml#/Audience'
+      type: object
   description: >-
     A tourist attraction.  In principle any Thing can be a <a class="localLink"
     href="http://schema.org/TouristAttraction">TouristAttraction</a>, from a <a
@@ -12,24 +33,3 @@ TouristAttraction:
     as an <a class="localLink"
     href="http://schema.org/additionalType">additionalType</a> to add tourist
     attraction properties to any other type.  (See examples below)
-  allOf:
-    - $ref: 'place.yaml#/Place'
-    - type: object
-      properties:
-        availableLanguage:
-          oneOf:
-            - type: string
-            - $ref: 'language.yaml#/Language'
-          description: >-
-            A language someone may use with or at the item, service or place.
-            Please use one of the language codes from the <a
-            href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>.
-            See also <a class="localLink"
-            href="http://schema.org/inLanguage">inLanguage</a>
-        touristType:
-          oneOf:
-            - type: string
-            - $ref: 'audience.yaml#/Audience'
-          description: >-
-            Attraction suitable for type(s) of tourist. eg. Children, visitors
-            from a particular country, etc.

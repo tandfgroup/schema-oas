@@ -1,13 +1,13 @@
 EndorseAction:
-  description: An agent approves/certifies/likes/supports/sanction an object.
   allOf:
     - $ref: 'reactaction.yaml#/ReactAction'
-    - type: object
-      properties:
+    - properties:
         endorsee:
-          oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
           description: >-
             A sub property of participant. The person/organization being
             supported.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+      type: object
+  description: An agent approves/certifies/likes/supports/sanction an object.

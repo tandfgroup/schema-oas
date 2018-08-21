@@ -1,2 +1,2 @@
 Locksmith:
-  $ref: 'HomeAndConstructionBusiness.yaml#/HomeAndConstructionBusiness'
+  $ref: 'homeandconstructionbusiness.yaml#/HomeAndConstructionBusiness'

@@ -1,2 +1,2 @@
 RadioEpisode:
-  $ref: 'Episode.yaml#/Episode'
+  $ref: 'episode.yaml#/Episode'

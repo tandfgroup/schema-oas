@@ -1,32 +1,8 @@
 NewsArticle:
-  description: >-
-    A NewsArticle is an article whose content reports news, or provides
-    background context and supporting materials for understanding the
-    news.<br/><br/>
-
-
-    A more detailed overview of <a href="/docs/news.html">schema.org News
-    markup</a> is also available.
   allOf:
     - $ref: 'article.yaml#/Article'
-    - type: object
-      properties:
-        printPage:
-          type: string
-          description: >-
-            If this NewsArticle appears in print, this field indicates the name
-            of the page on which the article is found. Please note that this
-            field is intended for the exact page name (e.g. A5, B18).
-        printColumn:
-          type: string
-          description: >-
-            The number of the column in which the NewsArticle appears in the
-            print edition.
-        printEdition:
-          type: string
-          description: The edition of the print product in which the NewsArticle appears.
+    - properties:
         dateline:
-          type: string
           description: >-
             A <a href="https://en.wikipedia.org/wiki/Dateline">dateline</a> is a
             brief piece of text included in news articles that describes where
@@ -48,8 +24,32 @@ NewsArticle:
             examples: "BEIRUT, Lebanon, June 2.", "Paris, France", "December 19,
             2017 11:43AM Reporting from Washington", "Beijing/Moscow", "QUEZON
             CITY, Philippines".
-        printSection:
           type: string
+        printColumn:
+          description: >-
+            The number of the column in which the NewsArticle appears in the
+            print edition.
+          type: string
+        printEdition:
+          description: The edition of the print product in which the NewsArticle appears.
+          type: string
+        printPage:
+          description: >-
+            If this NewsArticle appears in print, this field indicates the name
+            of the page on which the article is found. Please note that this
+            field is intended for the exact page name (e.g. A5, B18).
+          type: string
+        printSection:
           description: >-
             If this NewsArticle appears in print, this field indicates the print
             section in which the article appeared.
+          type: string
+      type: object
+  description: >-
+    A NewsArticle is an article whose content reports news, or provides
+    background context and supporting materials for understanding the
+    news.<br/><br/>
+
+
+    A more detailed overview of <a href="/docs/news.html">schema.org News
+    markup</a> is also available.

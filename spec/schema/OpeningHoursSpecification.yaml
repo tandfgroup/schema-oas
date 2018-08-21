@@ -1,4 +1,31 @@
 OpeningHoursSpecification:
+  allOf:
+    - $ref: 'structuredvalue.yaml#/StructuredValue'
+    - properties:
+        closes:
+          description: >-
+            The closing hour of the place or service on the given day(s) of the
+            week.
+          type: object
+        dayOfWeek:
+          $ref: 'dayofweek.yaml#/DayOfWeek'
+          description: The day of the week for which these opening hours are valid.
+        opens:
+          description: >-
+            The opening hour of the place or service on the given day(s) of the
+            week.
+          type: object
+        validFrom:
+          description: The date when the item becomes valid.
+          format: date-time
+          type: string
+        validThrough:
+          description: >-
+            The date after when the item is not valid. For example the end of an
+            offer, salary period, or a period of opening hours.
+          format: date-time
+          type: string
+      type: object
   description: >-
     A structured value providing information about the opening hours of a place
     or a certain service inside a place.<br/><br/>
@@ -13,30 +40,3 @@ OpeningHoursSpecification:
     href="http://schema.org/closes">closes</a> property is less than the value
     for the <a class="localLink" href="http://schema.org/opens">opens</a>
     property then the hour range is assumed to span over the next day.
-  allOf:
-    - $ref: 'structuredvalue.yaml#/StructuredValue'
-    - type: object
-      properties:
-        validThrough:
-          type: string
-          format: date-time
-          description: >-
-            The date after when the item is not valid. For example the end of an
-            offer, salary period, or a period of opening hours.
-        closes:
-          type: object
-          description: >-
-            The closing hour of the place or service on the given day(s) of the
-            week.
-        dayOfWeek:
-          $ref: 'dayofweek.yaml#/DayOfWeek'
-          description: The day of the week for which these opening hours are valid.
-        opens:
-          type: object
-          description: >-
-            The opening hour of the place or service on the given day(s) of the
-            week.
-        validFrom:
-          type: string
-          format: date-time
-          description: The date when the item becomes valid.

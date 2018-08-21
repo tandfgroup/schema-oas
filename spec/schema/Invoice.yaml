@@ -1,92 +1,92 @@
 Invoice:
-  description: A statement of the money due for goods or services; a bill.
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
+    - properties:
+        accountId:
+          description: The identifier for the account the payment will be applied to.
+          type: string
+        billingPeriod:
+          $ref: 'duration.yaml#/Duration'
+          description: The time interval used to compute the invoice.
         broker:
-          oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
           description: >-
             An entity that arranges for an exchange between a buyer and a
             seller.  In most cases a broker never acquires or releases ownership
             of a product or service involved in an exchange.  If it is not clear
             whether an entity is a broker, seller, or buyer, the latter two
             terms are preferred.
-        paymentDueDate:
-          type: string
-          format: date-time
-          description: The date that payment is due.
-        accountId:
-          type: string
-          description: The identifier for the account the payment will be applied to.
-        provider:
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
             - $ref: 'person.yaml#/Person'
-          description: >-
-            The service provider, service operator, or service performer; the
-            goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the
-            seller.
-        confirmationNumber:
-          type: string
-          description: A number that confirms the given order or payment has been received.
-        referencesOrder:
-          $ref: 'order.yaml#/Order'
-          description: >-
-            The Order(s) related to this Invoice. One or more Orders may be
-            combined into a single Invoice.
-        customer:
-          oneOf:
             - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
-          description: Party placing the order or paying the invoice.
-        paymentMethodId:
-          type: string
+        category:
           description: >-
-            An identifier for the method of payment used (e.g. the last 4 digits
-            of the credit card).
-        paymentStatus:
+            A category for the item. Greater signs or slashes can be used to
+            informally indicate a category hierarchy.
           oneOf:
-            - $ref: 'paymentstatustype.yaml#/PaymentStatusType'
+            - $ref: 'thing.yaml#/Thing'
+            - description: >-
+                Type: PhysicalActivityCategory This type is not published yet in
+                schema.org.
+              type: object
             - type: string
-          description: The status of payment; whether the invoice has been paid or not.
-        paymentDue:
+        confirmationNumber:
+          description: A number that confirms the given order or payment has been received.
           type: string
-          format: date-time
-          description: The date that payment is due.
+        customer:
+          description: Party placing the order or paying the invoice.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
         minimumPaymentDue:
-          oneOf:
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
           description: The minimum payment required at this time.
-        billingPeriod:
-          $ref: 'duration.yaml#/Duration'
-          description: The time interval used to compute the invoice.
-        totalPaymentDue:
           oneOf:
             - $ref: 'pricespecification.yaml#/PriceSpecification'
             - $ref: 'monetaryamount.yaml#/MonetaryAmount'
-          description: The total amount due.
-        scheduledPaymentDate:
+        paymentDue:
+          description: The date that payment is due.
+          format: date-time
           type: string
-          format: date
-          description: The date the invoice is scheduled to be paid.
+        paymentDueDate:
+          description: The date that payment is due.
+          format: date-time
+          type: string
         paymentMethod:
           $ref: 'paymentmethod.yaml#/PaymentMethod'
           description: >-
             The name of the credit card or other method of payment for the
             order.
-        category:
+        paymentMethodId:
+          description: >-
+            An identifier for the method of payment used (e.g. the last 4 digits
+            of the credit card).
+          type: string
+        paymentStatus:
+          description: The status of payment; whether the invoice has been paid or not.
           oneOf:
             - type: string
-            - $ref: 'thing.yaml#/Thing'
-            - type: object
-              description: >-
-                Type: PhysicalActivityCategory This type is not published yet in
-                schema.org.
+            - $ref: 'paymentstatustype.yaml#/PaymentStatusType'
+        provider:
           description: >-
-            A category for the item. Greater signs or slashes can be used to
-            informally indicate a category hierarchy.
+            The service provider, service operator, or service performer; the
+            goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the
+            seller.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+        referencesOrder:
+          $ref: 'order.yaml#/Order'
+          description: >-
+            The Order(s) related to this Invoice. One or more Orders may be
+            combined into a single Invoice.
+        scheduledPaymentDate:
+          description: The date the invoice is scheduled to be paid.
+          format: date
+          type: string
+        totalPaymentDue:
+          description: The total amount due.
+          oneOf:
+            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - $ref: 'pricespecification.yaml#/PriceSpecification'
+      type: object
+  description: A statement of the money due for goods or services; a bill.

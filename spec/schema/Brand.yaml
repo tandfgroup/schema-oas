@@ -1,21 +1,21 @@
 Brand:
-  description: >-
-    A brand is a name used by an organization or business person for labeling a
-    product, product group, or similar.
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
-        review:
-          $ref: 'review.yaml#/Review'
-          description: A review of the item.
+    - properties:
         aggregateRating:
           $ref: 'aggregaterating.yaml#/AggregateRating'
           description: >-
             The overall rating, based on a collection of reviews or ratings, of
             the item.
         logo:
-          oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'imageobject.yaml#/ImageObject'
           description: An associated logo.
+          oneOf:
+            - $ref: 'imageobject.yaml#/ImageObject'
+            - $ref: 'url.yaml#/URL'
+        review:
+          $ref: 'review.yaml#/Review'
+          description: A review of the item.
+      type: object
+  description: >-
+    A brand is a name used by an organization or business person for labeling a
+    product, product group, or similar.

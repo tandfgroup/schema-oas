@@ -1,81 +1,33 @@
 Reservation:
-  description: >-
-    Describes a reservation for travel, dining or an event. Some reservations
-    require tickets. <br/><br/>
-
-
-    Note: This type is for information about actual reservations, e.g. in
-    confirmation emails or HTML pages with individual confirmations of
-    reservations. For offers of tickets, restaurant reservations, flights, or
-    rental cars, use <a class="localLink"
-    href="http://schema.org/Offer">Offer</a>.
   allOf:
     - $ref: 'intangible.yaml#/Intangible'
-    - type: object
-      properties:
-        broker:
+    - properties:
+        bookingAgent:
+          description: >-
+            'bookingAgent' is an out-dated term indicating a 'broker' that
+            serves as a booking agent.
           oneOf:
             - $ref: 'person.yaml#/Person'
             - $ref: 'organization.yaml#/Organization'
+        bookingTime:
+          description: The date and time the reservation was booked.
+          format: date-time
+          type: string
+        broker:
           description: >-
             An entity that arranges for an exchange between a buyer and a
             seller.  In most cases a broker never acquires or releases ownership
             of a product or service involved in an exchange.  If it is not clear
             whether an entity is a broker, seller, or buyer, the latter two
             terms are preferred.
-        bookingTime:
-          type: string
-          format: date-time
-          description: The date and time the reservation was booked.
-        reservationFor:
-          $ref: 'thing.yaml#/Thing'
-          description: 'The thing -- flight, event, restaurant,etc. being reserved.'
-        programMembershipUsed:
-          $ref: 'programmembership.yaml#/ProgramMembership'
-          description: >-
-            Any membership in a frequent flyer, hotel loyalty program, etc.
-            being applied to the reservation.
-        provider:
           oneOf:
             - $ref: 'person.yaml#/Person'
             - $ref: 'organization.yaml#/Organization'
-          description: >-
-            The service provider, service operator, or service performer; the
-            goods producer. Another party (a seller) may offer those services or
-            goods on behalf of the provider. A provider may also serve as the
-            seller.
-        totalPrice:
-          oneOf:
-            - type: number
-            - type: string
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
-          description: >-
-            The total price for the reservation or ticket, including applicable
-            taxes, shipping, etc.
-        reservationStatus:
-          $ref: 'reservationstatustype.yaml#/ReservationStatusType'
-          description: The current status of the reservation.
-        underName:
-          oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
-          description: The person or organization the reservation or ticket is for.
-        reservedTicket:
-          $ref: 'ticket.yaml#/Ticket'
-          description: A ticket associated with the reservation.
-        bookingAgent:
-          oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
-          description: >-
-            'bookingAgent' is an out-dated term indicating a 'broker' that
-            serves as a booking agent.
         modifiedTime:
-          type: string
-          format: date-time
           description: The date and time the reservation was modified.
-        priceCurrency:
+          format: date-time
           type: string
+        priceCurrency:
           description: >-
             The currency of the price, or a price component when attached to <a
             class="localLink"
@@ -91,6 +43,54 @@ Reservation:
             href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
             Exchange Tradings Systems</a> (LETS) and other currency types e.g.
             "Ithaca HOUR".
-        reservationId:
           type: string
+        programMembershipUsed:
+          $ref: 'programmembership.yaml#/ProgramMembership'
+          description: >-
+            Any membership in a frequent flyer, hotel loyalty program, etc.
+            being applied to the reservation.
+        provider:
+          description: >-
+            The service provider, service operator, or service performer; the
+            goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the
+            seller.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+        reservationFor:
+          $ref: 'thing.yaml#/Thing'
+          description: 'The thing -- flight, event, restaurant,etc. being reserved.'
+        reservationId:
           description: A unique identifier for the reservation.
+          type: string
+        reservationStatus:
+          $ref: 'reservationstatustype.yaml#/ReservationStatusType'
+          description: The current status of the reservation.
+        reservedTicket:
+          $ref: 'ticket.yaml#/Ticket'
+          description: A ticket associated with the reservation.
+        totalPrice:
+          description: >-
+            The total price for the reservation or ticket, including applicable
+            taxes, shipping, etc.
+          oneOf:
+            - $ref: 'pricespecification.yaml#/PriceSpecification'
+            - type: string
+            - type: number
+        underName:
+          description: The person or organization the reservation or ticket is for.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+      type: object
+  description: >-
+    Describes a reservation for travel, dining or an event. Some reservations
+    require tickets. <br/><br/>
+
+
+    Note: This type is for information about actual reservations, e.g. in
+    confirmation emails or HTML pages with individual confirmations of
+    reservations. For offers of tickets, restaurant reservations, flights, or
+    rental cars, use <a class="localLink"
+    href="http://schema.org/Offer">Offer</a>.

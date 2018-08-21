@@ -1,16 +1,16 @@
 Menu:
-  description: >-
-    A structured representation of food or drink items available from a
-    FoodEstablishment.
   allOf:
     - $ref: 'creativework.yaml#/CreativeWork'
-    - type: object
-      properties:
+    - properties:
+        hasMenuItem:
+          $ref: 'menuitem.yaml#/MenuItem'
+          description: A food or drink item contained in a menu or menu section.
         hasMenuSection:
           $ref: 'menusection.yaml#/MenuSection'
           description: >-
             A subgrouping of the menu (by dishes, course, serving time period,
             etc.).
-        hasMenuItem:
-          $ref: 'menuitem.yaml#/MenuItem'
-          description: A food or drink item contained in a menu or menu section.
+      type: object
+  description: >-
+    A structured representation of food or drink items available from a
+    FoodEstablishment.
