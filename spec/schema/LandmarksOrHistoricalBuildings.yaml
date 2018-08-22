@@ -1,2 +1,3 @@
 LandmarksOrHistoricalBuildings:
   $ref: 'place.yaml#/Place'
+  description: An historical landmark or building.

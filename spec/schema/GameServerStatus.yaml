@@ -1,2 +1,3 @@
 GameServerStatus:
   $ref: 'enumeration.yaml#/Enumeration'
+  description: Status of a game server.

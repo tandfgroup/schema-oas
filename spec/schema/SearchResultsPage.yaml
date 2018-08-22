@@ -1,2 +1,3 @@
 SearchResultsPage:
   $ref: 'webpage.yaml#/WebPage'
+  description: 'Web page type: Search results page.'

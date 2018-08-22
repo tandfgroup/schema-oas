@@ -1,2 +1,3 @@
 TireShop:
   $ref: 'store.yaml#/Store'
+  description: A tire shop.

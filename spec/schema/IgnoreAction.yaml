@@ -1,2 +1,5 @@
 IgnoreAction:
   $ref: 'assessaction.yaml#/AssessAction'
+  description: >-
+    The act of intentionally disregarding the object. An agent ignores an
+    object.

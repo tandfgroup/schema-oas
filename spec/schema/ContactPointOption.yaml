@@ -1,2 +1,3 @@
 ContactPointOption:
   $ref: 'enumeration.yaml#/Enumeration'
+  description: Enumerated options related to a ContactPoint.

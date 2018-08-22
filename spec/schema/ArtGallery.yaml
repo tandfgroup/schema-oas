@@ -1,2 +1,3 @@
 ArtGallery:
   $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'
+  description: An art gallery.

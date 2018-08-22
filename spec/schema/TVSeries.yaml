@@ -1,4 +1,5 @@
 TVSeries:
+  description: CreativeWorkSeries dedicated to TV broadcast and associated online delivery.
   properties:
     actor:
       $ref: 'person.yaml#/Person'

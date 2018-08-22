@@ -1,2 +1,3 @@
 State:
   $ref: 'administrativearea.yaml#/AdministrativeArea'
+  description: A state or province of a country.

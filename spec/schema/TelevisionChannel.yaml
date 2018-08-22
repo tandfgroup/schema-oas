@@ -1,2 +1,5 @@
 TelevisionChannel:
   $ref: 'broadcastchannel.yaml#/BroadcastChannel'
+  description: >-
+    A unique instance of a television BroadcastService on a
+    CableOrSatelliteService lineup.

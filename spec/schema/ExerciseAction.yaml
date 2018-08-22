@@ -6,7 +6,9 @@ ExerciseAction:
           $ref: 'place.yaml#/Place'
           description: A sub property of location. The course where this action was taken.
         diet:
-          description: A sub property of instrument. The diet used in this action.
+          description: >-
+            A sub property of instrument. The diet used in this action. Note:
+            Diet type is not published yet in schema.org.
           type: object
         distance:
           $ref: 'distance.yaml#/Distance'
@@ -15,10 +17,14 @@ ExerciseAction:
           $ref: 'place.yaml#/Place'
           description: A sub property of location. The course where this action was taken.
         exercisePlan:
-          description: A sub property of instrument. The exercise plan used on this action.
+          description: >-
+            A sub property of instrument. The exercise plan used on this action.
+            Note: ExercisePlan type is not published yet in schema.org.
           type: object
         exerciseRelatedDiet:
-          description: A sub property of instrument. The diet used in this action.
+          description: >-
+            A sub property of instrument. The diet used in this action. Note:
+            Diet type is not published yet in schema.org.
           type: object
         exerciseType:
           description: >-

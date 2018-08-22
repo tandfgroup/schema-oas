@@ -1,2 +1,3 @@
 DownloadAction:
   $ref: 'transferaction.yaml#/TransferAction'
+  description: The act of downloading an object.

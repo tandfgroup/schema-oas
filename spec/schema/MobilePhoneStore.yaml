@@ -1,2 +1,3 @@
 MobilePhoneStore:
   $ref: 'store.yaml#/Store'
+  description: A store that sells mobile phones and related accessories.

@@ -83,9 +83,7 @@ Place:
             defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - description: >-
-                Type: GeospatialGeometry This type is not published yet in
-                schema.org.
+            - description: GeospatialGeometry type is not published yet in schema.org.
               type: object
             - $ref: 'place.yaml#/Place'
         geospatiallyCoveredBy:
@@ -95,9 +93,7 @@ Place:
             defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - description: >-
-                Type: GeospatialGeometry This type is not published yet in
-                schema.org.
+            - description: GeospatialGeometry type is not published yet in schema.org.
               type: object
             - $ref: 'place.yaml#/Place'
         geospatiallyCovers:
@@ -109,9 +105,7 @@ Place:
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
             - $ref: 'place.yaml#/Place'
-            - description: >-
-                Type: GeospatialGeometry This type is not published yet in
-                schema.org.
+            - description: GeospatialGeometry type is not published yet in schema.org.
               type: object
         geospatiallyCrosses:
           description: >-
@@ -123,9 +117,7 @@ Place:
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
             - $ref: 'place.yaml#/Place'
-            - description: >-
-                Type: GeospatialGeometry This type is not published yet in
-                schema.org.
+            - description: GeospatialGeometry type is not published yet in schema.org.
               type: object
         geospatiallyDisjoint:
           description: >-
@@ -136,9 +128,7 @@ Place:
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>)
           oneOf:
             - $ref: 'place.yaml#/Place'
-            - description: >-
-                Type: GeospatialGeometry This type is not published yet in
-                schema.org.
+            - description: GeospatialGeometry type is not published yet in schema.org.
               type: object
         geospatiallyEquals:
           description: >-
@@ -150,9 +140,7 @@ Place:
             exterior of the other" (a symmetric relationship)
           oneOf:
             - $ref: 'place.yaml#/Place'
-            - description: >-
-                Type: GeospatialGeometry This type is not published yet in
-                schema.org.
+            - description: GeospatialGeometry type is not published yet in schema.org.
               type: object
         geospatiallyIntersects:
           description: >-
@@ -161,9 +149,7 @@ Place:
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
             - $ref: 'place.yaml#/Place'
-            - description: >-
-                Type: GeospatialGeometry This type is not published yet in
-                schema.org.
+            - description: GeospatialGeometry type is not published yet in schema.org.
               type: object
         geospatiallyOverlaps:
           description: >-
@@ -173,9 +159,7 @@ Place:
             defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - description: >-
-                Type: GeospatialGeometry This type is not published yet in
-                schema.org.
+            - description: GeospatialGeometry type is not published yet in schema.org.
               type: object
             - $ref: 'place.yaml#/Place'
         geospatiallyTouches:
@@ -187,9 +171,7 @@ Place:
             )
           oneOf:
             - $ref: 'place.yaml#/Place'
-            - description: >-
-                Type: GeospatialGeometry This type is not published yet in
-                schema.org.
+            - description: GeospatialGeometry type is not published yet in schema.org.
               type: object
         geospatiallyWithin:
           description: >-
@@ -198,9 +180,7 @@ Place:
             inside (i.e. within) its interior. As defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - description: >-
-                Type: GeospatialGeometry This type is not published yet in
-                schema.org.
+            - description: GeospatialGeometry type is not published yet in schema.org.
               type: object
             - $ref: 'place.yaml#/Place'
         globalLocationNumber:

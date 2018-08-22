@@ -1,2 +1,5 @@
 RadioChannel:
   $ref: 'broadcastchannel.yaml#/BroadcastChannel'
+  description: >-
+    A unique instance of a radio BroadcastService on a CableOrSatelliteService
+    lineup.

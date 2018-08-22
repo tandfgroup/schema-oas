@@ -1,2 +1,3 @@
 HighSchool:
   $ref: 'educationalorganization.yaml#/EducationalOrganization'
+  description: A high school.

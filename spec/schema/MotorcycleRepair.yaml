@@ -1,2 +1,3 @@
 MotorcycleRepair:
   $ref: 'automotivebusiness.yaml#/AutomotiveBusiness'
+  description: A motorcycle repair shop.

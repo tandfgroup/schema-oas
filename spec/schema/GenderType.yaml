@@ -1,2 +1,3 @@
 GenderType:
   $ref: 'enumeration.yaml#/Enumeration'
+  description: An enumeration of genders.

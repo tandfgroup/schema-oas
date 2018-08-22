@@ -1,2 +1,3 @@
 TieAction:
   $ref: 'achieveaction.yaml#/AchieveAction'
+  description: The act of reaching a draw in a competitive activity.

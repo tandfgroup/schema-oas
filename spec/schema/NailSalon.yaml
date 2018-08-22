@@ -1,2 +1,3 @@
 NailSalon:
   $ref: 'healthandbeautybusiness.yaml#/HealthAndBeautyBusiness'
+  description: A nail salon.

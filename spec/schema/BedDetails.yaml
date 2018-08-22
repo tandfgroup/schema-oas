@@ -12,7 +12,7 @@ BedDetails:
             The type of bed to which the BedDetail refers, i.e. the type of bed
             available in the quantity indicated by quantity.
           oneOf:
-            - description: 'Type: BedType This type is not published yet in schema.org.'
+            - description: BedType type is not published yet in schema.org.
               type: object
             - type: string
       type: object

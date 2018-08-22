@@ -1,2 +1,3 @@
 DiscoverAction:
   $ref: 'findaction.yaml#/FindAction'
+  description: The act of discovering/finding an object.

@@ -1,2 +1,3 @@
 RadioEpisode:
   $ref: 'episode.yaml#/Episode'
+  description: A radio episode which can be part of a series or season.

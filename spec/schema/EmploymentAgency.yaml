@@ -1,2 +1,3 @@
 EmploymentAgency:
   $ref: 'localbusiness.yaml#/LocalBusiness'
+  description: An employment agency.

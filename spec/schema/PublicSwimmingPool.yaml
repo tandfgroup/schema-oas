@@ -1,2 +1,3 @@
 PublicSwimmingPool:
   $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'
+  description: A public swimming pool.

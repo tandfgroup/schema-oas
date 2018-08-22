@@ -1,2 +1,3 @@
 MusicVenue:
   $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A music venue.

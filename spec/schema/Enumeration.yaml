@@ -7,10 +7,10 @@ Enumeration:
             Relates a term (i.e. a property, class or enumeration) to one that
             supersedes it.
           oneOf:
-            - description: 'Type: Class This type is not published yet in schema.org.'
+            - description: Class type is not published yet in schema.org.
               type: object
             - $ref: 'enumeration.yaml#/Enumeration'
-            - description: 'Type: Property This type is not published yet in schema.org.'
+            - description: Property type is not published yet in schema.org.
               type: object
       type: object
   description: 'Lists or enumerations—for example, a list of cuisines or music genres, etc.'

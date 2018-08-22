@@ -1,2 +1,3 @@
 ImageGallery:
   $ref: 'collectionpage.yaml#/CollectionPage'
+  description: 'Web page type: Image gallery page.'

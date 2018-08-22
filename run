@@ -432,7 +432,7 @@ APP_BRANCH=$(git_branch_name)
 APP_SEMVER_COMMIT="" # .$(git log --oneline -1 | awk '{print $1}')
 APP_BUILD_NUMBER=$(get_env_var "buildNumber" "${__DATE//[^0-9]/}")
 APP_SEMVER_BUILD="${APP_BUILD_NUMBER//[^0-9]/}"
-APP_SEMVER_PRE="$(lowercase ${APP_NAME_ALT}${ENV_LC})"
+APP_SEMVER_PRE="$(lowercase "${APP_NAME_ALT}${ENV_LC}")"
 APP_SEMVER_RELEASE="-${APP_SEMVER_PRE}.${APP_SEMVER_BUILD}"
 
 # ==================================================================================================
@@ -696,7 +696,7 @@ elif ( $RUN_BUILD ); then sh_heading "BUILD script started"
     cat "$SPEC_DIR/schema.yaml" | sed 's/^/    /';
   } >> "$SPEC_DIR/swagger.yaml"
   # search/replace $ref file references with local-object references
-  sed -i -E "s/[a-z\\_]+\\.yaml\\#\\//\\#\\/components\\/schemas\\//g" "$SPEC_DIR/swagger.yaml"
+  sed -i -E "s/[^']+\\.yaml\\#\\//\\#\\/components\\/schemas\\//g" "$SPEC_DIR/swagger.yaml"
 
 # --------------------------------------------------------------------------------------------------
 sh_success "BUILD script completed successfully"; fi
@@ -1061,4 +1061,4 @@ sh_code "$(output_vars_json "__DIR" "__FILE" "__BASE" "${ENV_VARS[@]}")"
 
 sh_success "RUN script completed successfully"
 
-sh_end $start
+sh_end "$start"

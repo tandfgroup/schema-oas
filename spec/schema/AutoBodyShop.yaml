@@ -1,2 +1,3 @@
 AutoBodyShop:
   $ref: 'automotivebusiness.yaml#/AutomotiveBusiness'
+  description: Auto body shop.

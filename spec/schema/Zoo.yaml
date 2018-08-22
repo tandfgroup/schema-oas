@@ -1,2 +1,3 @@
 Zoo:
   $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A zoo.

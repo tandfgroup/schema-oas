@@ -1,2 +1,3 @@
 BusinessEvent:
   $ref: 'event.yaml#/Event'
+  description: 'Event type: Business event.'

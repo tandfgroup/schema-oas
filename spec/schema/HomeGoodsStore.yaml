@@ -1,2 +1,3 @@
 HomeGoodsStore:
   $ref: 'store.yaml#/Store'
+  description: A home goods store.

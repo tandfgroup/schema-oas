@@ -1,2 +1,5 @@
 LiquorStore:
   $ref: 'store.yaml#/Store'
+  description: >-
+    A shop that sells alcoholic drinks such as wine, beer, whisky and other
+    spirits.

@@ -157,9 +157,7 @@ CreativeWork:
             textually or in another document.
           oneOf:
             - type: string
-            - description: >-
-                Type: CorrectionComment This type is not published yet in
-                schema.org.
+            - description: CorrectionComment type is not published yet in schema.org.
               type: object
             - $ref: 'url.yaml#/URL'
         creator:

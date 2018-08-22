@@ -1,2 +1,3 @@
 Playground:
   $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A playground.

@@ -1,2 +1,3 @@
 TrainStation:
   $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A train station.

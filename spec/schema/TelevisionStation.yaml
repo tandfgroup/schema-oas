@@ -1,2 +1,3 @@
 TelevisionStation:
   $ref: 'localbusiness.yaml#/LocalBusiness'
+  description: A television station.

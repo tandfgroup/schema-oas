@@ -1,2 +1,3 @@
 RiverBodyOfWater:
   $ref: 'bodyofwater.yaml#/BodyOfWater'
+  description: 'A river (for example, the broad majestic Shannon).'

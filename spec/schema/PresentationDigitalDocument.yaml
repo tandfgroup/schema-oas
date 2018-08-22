@@ -1,2 +1,3 @@
 PresentationDigitalDocument:
   $ref: 'digitaldocument.yaml#/DigitalDocument'
+  description: A file containing slides or used for a presentation.

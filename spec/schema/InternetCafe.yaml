@@ -1,2 +1,3 @@
 InternetCafe:
   $ref: 'localbusiness.yaml#/LocalBusiness'
+  description: An internet cafe.

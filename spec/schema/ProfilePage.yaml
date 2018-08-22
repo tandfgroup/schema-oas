@@ -1,2 +1,3 @@
 ProfilePage:
   $ref: 'webpage.yaml#/WebPage'
+  description: 'Web page type: Profile page.'

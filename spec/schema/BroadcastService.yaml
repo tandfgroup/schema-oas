@@ -23,8 +23,8 @@ BroadcastService:
           oneOf:
             - type: string
             - description: >-
-                Type: BroadcastFrequencySpecification This type is not published
-                yet in schema.org.
+                BroadcastFrequencySpecification type is not published yet in
+                schema.org.
               type: object
         broadcastTimezone:
           description: >-

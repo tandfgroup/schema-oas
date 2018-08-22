@@ -1,2 +1,3 @@
 Aquarium:
   $ref: 'civicstructure.yaml#/CivicStructure'
+  description: Aquarium.

@@ -1,2 +1,3 @@
 DepartmentStore:
   $ref: 'store.yaml#/Store'
+  description: A department store.

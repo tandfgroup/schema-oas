@@ -1,4 +1,5 @@
 TVSeason:
+  description: Season dedicated to TV broadcast and associated online delivery.
   properties:
     countryOfOrigin:
       $ref: 'country.yaml#/Country'

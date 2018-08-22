@@ -1,2 +1,5 @@
 BookSeries:
   $ref: 'creativeworkseries.yaml#/CreativeWorkSeries'
+  description: >-
+    A series of books. Included books can be indicated with the hasPart
+    property.

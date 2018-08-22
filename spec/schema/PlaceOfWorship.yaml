@@ -1,2 +1,3 @@
 PlaceOfWorship:
   $ref: 'civicstructure.yaml#/CivicStructure'
+  description: 'Place of worship, such as a church, synagogue, or mosque.'

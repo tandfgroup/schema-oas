@@ -1,2 +1,3 @@
 Courthouse:
   $ref: 'governmentbuilding.yaml#/GovernmentBuilding'
+  description: A courthouse.

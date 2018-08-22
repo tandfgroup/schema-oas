@@ -84,9 +84,7 @@ MediaObject:
             or free). Allowed values are <code>true</code> or <code>false</code>
             (note that an earlier version had 'yes', 'no').
           oneOf:
-            - description: >-
-                Type: MediaSubscription This type is not published yet in
-                schema.org.
+            - description: MediaSubscription type is not published yet in schema.org.
               type: object
             - type: boolean
         uploadDate:

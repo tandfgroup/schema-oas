@@ -1,2 +1,3 @@
 WatchAction:
   $ref: 'consumeaction.yaml#/ConsumeAction'
+  description: The act of consuming dynamic/moving visual content.

@@ -1,2 +1,3 @@
 ComputerStore:
   $ref: 'store.yaml#/Store'
+  description: A computer store.

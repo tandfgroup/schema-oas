@@ -1,2 +1,3 @@
 BusStation:
   $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A bus station.

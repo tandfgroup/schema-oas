@@ -1,2 +1,3 @@
 Beach:
   $ref: 'civicstructure.yaml#/CivicStructure'
+  description: Beach.

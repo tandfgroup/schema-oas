@@ -1,2 +1,3 @@
 Electrician:
   $ref: 'homeandconstructionbusiness.yaml#/HomeAndConstructionBusiness'
+  description: An electrician.

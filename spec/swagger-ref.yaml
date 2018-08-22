@@ -1044,8 +1044,6 @@ components:
       $ref: ./schema/Store.yaml
     StructuredValue:
       $ref: ./schema/StructuredValue.yaml
-    Submission:
-      $ref: ./schema/Submission.yaml
     SubscribeAction:
       $ref: ./schema/SubscribeAction.yaml
     SubwayStation:

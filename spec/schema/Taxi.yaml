@@ -1,2 +1,3 @@
 Taxi:
   $ref: 'service.yaml#/Service'
+  description: A taxi.

@@ -5,7 +5,8 @@ PeopleAudience:
         healthCondition:
           description: >-
             Specifying the health condition(s) of a patient, medical study, or
-            other target audience.
+            other target audience. Note: MedicalCondition type is not published
+            yet in schema.org.
           type: object
         requiredGender:
           description: Audiences defined by a person's gender.

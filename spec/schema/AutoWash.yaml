@@ -1,2 +1,3 @@
 AutoWash:
   $ref: 'automotivebusiness.yaml#/AutomotiveBusiness'
+  description: A car wash business.

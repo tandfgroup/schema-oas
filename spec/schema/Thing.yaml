@@ -1,2 +1,63 @@
 Thing:
   description: The most generic type of item.
+  properties:
+    additionalType:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    alternateName:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    description:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    disambiguatingDescription:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    identifier:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    image:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    mainEntityOfPage:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    name:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    potentialAction:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    sameAs:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    subjectOf:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string
+    url:
+      description: >-
+        Description not found. Note: Type is set by OAS generator, schema.org
+        has not provided any type.
+      type: string

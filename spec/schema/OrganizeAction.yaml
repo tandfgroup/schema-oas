@@ -1,2 +1,5 @@
 OrganizeAction:
   $ref: 'action.yaml#/Action'
+  description: >-
+    The act of manipulating/administering/supervising/controlling one or more
+    objects.

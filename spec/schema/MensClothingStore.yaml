@@ -1,2 +1,3 @@
 MensClothingStore:
   $ref: 'store.yaml#/Store'
+  description: A men's clothing store.

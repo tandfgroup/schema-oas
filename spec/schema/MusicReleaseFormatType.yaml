@@ -1,2 +1,5 @@
 MusicReleaseFormatType:
   $ref: 'enumeration.yaml#/Enumeration'
+  description: >-
+    Format of this release (the type of recording media used, ie. compact disc,
+    digital media, LP, etc.).

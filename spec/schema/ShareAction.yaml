@@ -1,2 +1,5 @@
 ShareAction:
   $ref: 'communicateaction.yaml#/CommunicateAction'
+  description: >-
+    The act of distributing content to people for their amusement or
+    edification.

@@ -1,2 +1,3 @@
 GolfCourse:
   $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'
+  description: A golf course.

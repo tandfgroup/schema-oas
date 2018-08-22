@@ -1,2 +1,3 @@
 EmailMessage:
   $ref: 'message.yaml#/Message'
+  description: An email message.

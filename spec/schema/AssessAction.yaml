@@ -1,2 +1,3 @@
 AssessAction:
   $ref: 'action.yaml#/Action'
+  description: 'The act of forming one''s opinion, reaction or sentiment.'

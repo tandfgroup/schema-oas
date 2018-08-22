@@ -1,2 +1,3 @@
 GovernmentPermit:
   $ref: 'permit.yaml#/Permit'
+  description: A permit issued by a government agency.

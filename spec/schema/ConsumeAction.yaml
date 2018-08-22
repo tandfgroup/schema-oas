@@ -6,7 +6,8 @@ ConsumeAction:
           description: >-
             A set of requirements that a must be fulfilled in order to perform
             an Action. If more than one value is specied, fulfilling one set of
-            requirements will allow the Action to be performed.
+            requirements will allow the Action to be performed. Note:
+            ActionAccessSpecification type is not published yet in schema.org.
           type: object
         expectsAcceptanceOf:
           $ref: 'offer.yaml#/Offer'

@@ -1,2 +1,3 @@
 MusicAlbumReleaseType:
   $ref: 'enumeration.yaml#/Enumeration'
+  description: 'The kind of release which this album is: single, EP or album.'

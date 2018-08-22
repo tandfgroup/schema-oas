@@ -1,2 +1,5 @@
 HowToTool:
   $ref: 'howtoitem.yaml#/HowToItem'
+  description: >-
+    A tool used (but not consumed) when performing instructions for how to
+    achieve a result.

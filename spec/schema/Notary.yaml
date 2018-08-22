@@ -1,2 +1,3 @@
 Notary:
   $ref: 'legalservice.yaml#/LegalService'
+  description: A notary.

@@ -1,2 +1,3 @@
 PerformingGroup:
   $ref: 'organization.yaml#/Organization'
+  description: 'A performance group, such as a band, an orchestra, or a circus.'

@@ -1,2 +1,3 @@
 SkiResort:
   $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'
+  description: A ski resort.

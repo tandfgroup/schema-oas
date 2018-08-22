@@ -1,2 +1,3 @@
 Mountain:
   $ref: 'landform.yaml#/Landform'
+  description: 'A mountain, like Mount Whitney or Mount Everest.'

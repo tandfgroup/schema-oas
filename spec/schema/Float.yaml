@@ -1,2 +1,3 @@
 Float:
+  description: 'Data type: Floating number.'
   type: number

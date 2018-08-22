@@ -1,2 +1,5 @@
 PaymentService:
   $ref: 'financialproduct.yaml#/FinancialProduct'
+  description: >-
+    A Service to transfer funds from a person or organization to a beneficiary
+    person or organization.

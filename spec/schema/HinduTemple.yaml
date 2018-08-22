@@ -1,2 +1,3 @@
 HinduTemple:
   $ref: 'placeofworship.yaml#/PlaceOfWorship'
+  description: A Hindu temple.

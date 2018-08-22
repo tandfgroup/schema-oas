@@ -41,8 +41,8 @@ JobPosting:
             - $ref: 'monetaryamount.yaml#/MonetaryAmount'
             - type: number
             - description: >-
-                Type: MonetaryAmountDistribution This type is not published yet
-                in schema.org.
+                MonetaryAmountDistribution type is not published yet in
+                schema.org.
               type: object
         experienceRequirements:
           description:
@@ -84,7 +84,9 @@ JobPosting:
             - Specific qualifications required for this role.
           type: string
         relevantOccupation:
-          description: The Occupation for the JobPosting.
+          description: >-
+            The Occupation for the JobPosting. Note: Occupation type is not
+            published yet in schema.org.
           type: object
         responsibilities:
           description:

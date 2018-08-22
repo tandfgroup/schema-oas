@@ -1,2 +1,3 @@
 Mosque:
   $ref: 'placeofworship.yaml#/PlaceOfWorship'
+  description: A mosque.

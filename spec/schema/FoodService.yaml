@@ -1,2 +1,3 @@
 FoodService:
   $ref: 'service.yaml#/Service'
+  description: 'A food service, like breakfast, lunch, or dinner.'

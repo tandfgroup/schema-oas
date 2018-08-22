@@ -1,2 +1,3 @@
 Store:
   $ref: 'localbusiness.yaml#/LocalBusiness'
+  description: A retail good store.

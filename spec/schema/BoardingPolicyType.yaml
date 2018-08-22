@@ -1,2 +1,3 @@
 BoardingPolicyType:
   $ref: 'enumeration.yaml#/Enumeration'
+  description: A type of boarding policy used by an airline.

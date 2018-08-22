@@ -1,2 +1,3 @@
 Crematorium:
   $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A crematorium.

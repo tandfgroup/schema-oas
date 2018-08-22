@@ -9,7 +9,7 @@ HotelRoom:
             with a text.
                   If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.
           oneOf:
-            - description: 'Type: BedType This type is not published yet in schema.org.'
+            - description: BedType type is not published yet in schema.org.
               type: object
             - $ref: 'beddetails.yaml#/BedDetails'
             - type: string

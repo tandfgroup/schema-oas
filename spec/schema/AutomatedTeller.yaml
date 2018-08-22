@@ -1,2 +1,3 @@
 AutomatedTeller:
   $ref: 'financialservice.yaml#/FinancialService'
+  description: ATM/cash machine.

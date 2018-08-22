@@ -1,2 +1,3 @@
 Continent:
   $ref: 'landform.yaml#/Landform'
+  description: 'One of the continents (for example, Europe or Africa).'

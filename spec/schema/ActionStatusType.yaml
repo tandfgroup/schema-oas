@@ -1,2 +1,3 @@
 ActionStatusType:
   $ref: 'enumeration.yaml#/Enumeration'
+  description: The status of an Action.

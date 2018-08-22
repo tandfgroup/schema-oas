@@ -1,2 +1,3 @@
 BankOrCreditUnion:
   $ref: 'financialservice.yaml#/FinancialService'
+  description: Bank or credit union.

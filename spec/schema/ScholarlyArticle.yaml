@@ -1,2 +1,3 @@
 ScholarlyArticle:
   $ref: 'article.yaml#/Article'
+  description: A scholarly article.

@@ -37,7 +37,8 @@ LoanOrCredit:
           description: >-
             A form of paying back money previously borrowed from a lender.
             Repayment usually takes the form of periodic payments that normally
-            include part principal plus interest in each payment.
+            include part principal plus interest in each payment. Note:
+            RepaymentSpecification type is not published yet in schema.org.
           type: object
         loanTerm:
           $ref: 'quantitativevalue.yaml#/QuantitativeValue'

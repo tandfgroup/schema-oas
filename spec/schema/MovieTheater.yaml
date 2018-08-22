@@ -1,4 +1,5 @@
 MovieTheater:
+  description: A movie theater.
   properties:
     screenCount:
       description: The number of screens in the movie theater.

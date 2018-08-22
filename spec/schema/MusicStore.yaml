@@ -1,2 +1,3 @@
 MusicStore:
   $ref: 'store.yaml#/Store'
+  description: A music store.

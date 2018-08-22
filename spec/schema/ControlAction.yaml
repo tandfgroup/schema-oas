@@ -1,2 +1,3 @@
 ControlAction:
   $ref: 'action.yaml#/Action'
+  description: An agent controls a device or application.

@@ -1,2 +1,3 @@
 ContactPage:
   $ref: 'webpage.yaml#/WebPage'
+  description: 'Web page type: Contact page.'

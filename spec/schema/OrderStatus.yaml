@@ -1,2 +1,3 @@
 OrderStatus:
   $ref: 'enumeration.yaml#/Enumeration'
+  description: Enumerated status values for Order.

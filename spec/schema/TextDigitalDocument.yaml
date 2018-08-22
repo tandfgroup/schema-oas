@@ -1,2 +1,3 @@
 TextDigitalDocument:
   $ref: 'digitaldocument.yaml#/DigitalDocument'
+  description: A file composed primarily of text.

@@ -25,7 +25,7 @@ Invoice:
           oneOf:
             - $ref: 'thing.yaml#/Thing'
             - description: >-
-                Type: PhysicalActivityCategory This type is not published yet in
+                PhysicalActivityCategory type is not published yet in
                 schema.org.
               type: object
             - type: string

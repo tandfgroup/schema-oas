@@ -1,2 +1,3 @@
 BuddhistTemple:
   $ref: 'placeofworship.yaml#/PlaceOfWorship'
+  description: A Buddhist temple.

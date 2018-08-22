@@ -1,2 +1,3 @@
 AutoDealer:
   $ref: 'automotivebusiness.yaml#/AutomotiveBusiness'
+  description: An car dealership.

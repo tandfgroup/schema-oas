@@ -6,9 +6,7 @@ PayAction:
           description: A goal towards an action is taken. Can be concrete or abstract.
           oneOf:
             - $ref: 'thing.yaml#/Thing'
-            - description: >-
-                Type: MedicalDevicePurpose This type is not published yet in
-                schema.org.
+            - description: MedicalDevicePurpose type is not published yet in schema.org.
               type: object
         recipient:
           description: >-

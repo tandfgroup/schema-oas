@@ -80,9 +80,7 @@ Article:
             property.
           oneOf:
             - $ref: 'url.yaml#/URL'
-            - description: >-
-                Type: SpeakableSpecification This type is not published yet in
-                schema.org.
+            - description: SpeakableSpecification type is not published yet in schema.org.
               type: object
         wordCount:
           description: The number of words in the text of the Article.

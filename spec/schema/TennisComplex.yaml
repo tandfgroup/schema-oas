@@ -1,2 +1,3 @@
 TennisComplex:
   $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'
+  description: A tennis complex.

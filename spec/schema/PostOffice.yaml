@@ -1,2 +1,3 @@
 PostOffice:
   $ref: 'governmentoffice.yaml#/GovernmentOffice'
+  description: A post office.

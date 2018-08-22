@@ -1,2 +1,3 @@
 DiscussionForumPosting:
   $ref: 'socialmediaposting.yaml#/SocialMediaPosting'
+  description: A posting to a discussion forum.

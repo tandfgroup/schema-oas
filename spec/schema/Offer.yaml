@@ -67,7 +67,7 @@ Offer:
             informally indicate a category hierarchy.
           oneOf:
             - description: >-
-                Type: PhysicalActivityCategory This type is not published yet in
+                PhysicalActivityCategory type is not published yet in
                 schema.org.
               type: object
             - type: string

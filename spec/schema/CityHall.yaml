@@ -1,2 +1,3 @@
 CityHall:
   $ref: 'governmentbuilding.yaml#/GovernmentBuilding'
+  description: A city hall.

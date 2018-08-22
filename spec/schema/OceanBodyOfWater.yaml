@@ -1,2 +1,3 @@
 OceanBodyOfWater:
   $ref: 'bodyofwater.yaml#/BodyOfWater'
+  description: 'An ocean (for example, the Pacific).'

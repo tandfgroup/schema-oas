@@ -1,2 +1,3 @@
 Canal:
   $ref: 'bodyofwater.yaml#/BodyOfWater'
+  description: 'A canal, like the Panama Canal.'

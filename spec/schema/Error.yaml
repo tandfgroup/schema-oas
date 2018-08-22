@@ -1,5 +1,5 @@
 Error:
   allOf:
-    - $ref: 'thing.yaml#/Thing'
+    - $ref: 'Thing.yaml#/Thing'
     - type: object
       description: For failed actions, more information on the cause of the failure.

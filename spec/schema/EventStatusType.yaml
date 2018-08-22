@@ -1,2 +1,5 @@
 EventStatusType:
   $ref: 'enumeration.yaml#/Enumeration'
+  description: >-
+    EventStatusType is an enumeration type whose instances represent several
+    states that an Event may be in.

@@ -1,2 +1,3 @@
 MovingCompany:
   $ref: 'homeandconstructionbusiness.yaml#/HomeAndConstructionBusiness'
+  description: A moving company.

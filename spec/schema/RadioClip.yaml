@@ -1,2 +1,3 @@
 RadioClip:
   $ref: 'clip.yaml#/Clip'
+  description: A short radio program or a segment/part of a radio program.

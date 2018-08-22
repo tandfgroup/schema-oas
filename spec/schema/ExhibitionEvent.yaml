@@ -1,2 +1,5 @@
 ExhibitionEvent:
   $ref: 'event.yaml#/Event'
+  description: >-
+    Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow,
+    ...

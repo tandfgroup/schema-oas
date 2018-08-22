@@ -1,2 +1,3 @@
 SelfStorage:
   $ref: 'localbusiness.yaml#/LocalBusiness'
+  description: A self-storage facility.

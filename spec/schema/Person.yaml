@@ -113,7 +113,8 @@ Person:
         hasOccupation:
           description: >-
             The Person's occupation. For past professions, use Role for
-            expressing dates.
+            expressing dates. Note: Occupation type is not published yet in
+            schema.org.
           type: object
         hasOfferCatalog:
           $ref: 'offercatalog.yaml#/OfferCatalog'

@@ -1,2 +1,3 @@
 Brewery:
   $ref: 'foodestablishment.yaml#/FoodEstablishment'
+  description: Brewery.
