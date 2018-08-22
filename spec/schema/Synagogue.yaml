@@ -1,0 +1,3 @@
+Synagogue:
+  $ref: 'placeofworship.yaml#/PlaceOfWorship'
+  description: A synagogue.

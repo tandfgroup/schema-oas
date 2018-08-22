@@ -1,0 +1,3 @@
+ConvenienceStore:
+  $ref: 'store.yaml#/Store'
+  description: A convenience store.

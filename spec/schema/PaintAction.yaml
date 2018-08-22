@@ -1,0 +1,5 @@
+PaintAction:
+  $ref: 'createaction.yaml#/CreateAction'
+  description: >-
+    The act of producing a painting, typically with paint and canvas as
+    instruments.

@@ -1,0 +1,3 @@
+ReadAction:
+  $ref: 'consumeaction.yaml#/ConsumeAction'
+  description: The act of consuming written content.

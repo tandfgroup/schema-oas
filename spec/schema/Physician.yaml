@@ -1,0 +1,23 @@
+Physician:
+  allOf:
+    - $ref: 'medicalorganization.yaml#/MedicalOrganization'
+    - properties:
+        availableService:
+          description: A medical service available from this provider.
+          oneOf:
+            - description: MedicalTherapy type is not published yet in schema.org.
+              type: object
+            - description: MedicalProcedure type is not published yet in schema.org.
+              type: object
+            - description: MedicalTest type is not published yet in schema.org.
+              type: object
+        hospitalAffiliation:
+          $ref: 'hospital.yaml#/Hospital'
+          description: A hospital with which the physician or office is affiliated.
+        medicalSpecialty:
+          description: >-
+            A medical specialty of the provider. Note: MedicalSpecialty type is
+            not published yet in schema.org.
+          type: object
+      type: object
+  description: A doctor's office.

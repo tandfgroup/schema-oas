@@ -1,0 +1,3 @@
+VideoGameClip:
+  $ref: 'clip.yaml#/Clip'
+  description: A short segment/part of a video game.

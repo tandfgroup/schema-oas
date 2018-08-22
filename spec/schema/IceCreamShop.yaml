@@ -1,0 +1,3 @@
+IceCreamShop:
+  $ref: 'foodestablishment.yaml#/FoodEstablishment'
+  description: An ice cream shop.

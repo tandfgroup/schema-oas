@@ -1,0 +1,5 @@
+Answer:
+  $ref: 'comment.yaml#/Comment'
+  description: >-
+    An answer offered to a question; perhaps correct, perhaps opinionated or
+    wrong.

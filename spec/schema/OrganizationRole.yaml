@@ -1,0 +1,11 @@
+OrganizationRole:
+  allOf:
+    - $ref: 'role.yaml#/Role'
+    - properties:
+        numberedPosition:
+          description: >-
+            A number associated with a role in an organization, for example, the
+            number on an athlete's jersey.
+          type: number
+      type: object
+  description: A subclass of Role used to describe roles within organizations.

@@ -1,0 +1,3 @@
+SaleEvent:
+  $ref: 'event.yaml#/Event'
+  description: 'Event type: Sales event.'

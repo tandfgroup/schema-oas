@@ -1,0 +1,24 @@
+TrainTrip:
+  allOf:
+    - $ref: 'trip.yaml#/Trip'
+    - properties:
+        arrivalPlatform:
+          description: The platform where the train arrives.
+          type: string
+        arrivalStation:
+          $ref: 'trainstation.yaml#/TrainStation'
+          description: The station where the train trip ends.
+        departurePlatform:
+          description: The platform from which the train departs.
+          type: string
+        departureStation:
+          $ref: 'trainstation.yaml#/TrainStation'
+          description: The station from which the train departs.
+        trainName:
+          description: The name of the train (e.g. The Orient Express).
+          type: string
+        trainNumber:
+          description: The unique identifier for the train.
+          type: string
+      type: object
+  description: A trip on a commercial train line.

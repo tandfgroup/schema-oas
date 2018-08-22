@@ -1,0 +1,56 @@
+ParcelDelivery:
+  allOf:
+    - $ref: 'intangible.yaml#/Intangible'
+    - properties:
+        carrier:
+          $ref: 'organization.yaml#/Organization'
+          description: >-
+            'carrier' is an out-dated term indicating the 'provider' for parcel
+            delivery and flights.
+        deliveryAddress:
+          $ref: 'postaladdress.yaml#/PostalAddress'
+          description: Destination address.
+        deliveryStatus:
+          $ref: 'deliveryevent.yaml#/DeliveryEvent'
+          description: >-
+            New entry added as the package passes through each leg of its
+            journey (from shipment to final delivery).
+        expectedArrivalFrom:
+          description: The earliest date the package may arrive.
+          format: date-time
+          type: string
+        expectedArrivalUntil:
+          description: The latest date the package may arrive.
+          format: date-time
+          type: string
+        hasDeliveryMethod:
+          $ref: 'deliverymethod.yaml#/DeliveryMethod'
+          description: Method used for delivery or shipping.
+        itemShipped:
+          $ref: 'product.yaml#/Product'
+          description: Item(s) being shipped.
+        originAddress:
+          $ref: 'postaladdress.yaml#/PostalAddress'
+          description: Shipper's address.
+        partOfOrder:
+          $ref: 'order.yaml#/Order'
+          description: The overall order the items in this delivery were included in.
+        provider:
+          description: >-
+            The service provider, service operator, or service performer; the
+            goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the
+            seller.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+        trackingNumber:
+          description: Shipper tracking number.
+          type: string
+        trackingUrl:
+          $ref: 'url.yaml#/URL'
+          description: Tracking url for the parcel delivery.
+      type: object
+  description: >-
+    The delivery of a parcel either via the postal service or a commercial
+    service.

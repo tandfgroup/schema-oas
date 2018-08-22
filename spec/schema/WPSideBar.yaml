@@ -1,0 +1,3 @@
+WPSideBar:
+  $ref: 'webpageelement.yaml#/WebPageElement'
+  description: A sidebar section of the page.

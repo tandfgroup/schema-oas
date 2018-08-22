@@ -1,0 +1,20 @@
+Seat:
+  allOf:
+    - $ref: 'intangible.yaml#/Intangible'
+    - properties:
+        seatNumber:
+          description: 'The location of the reserved seat (e.g., 27).'
+          type: string
+        seatRow:
+          description: 'The row location of the reserved seat (e.g., B).'
+          type: string
+        seatSection:
+          description: The section location of the reserved seat (e.g. Orchestra).
+          type: string
+        seatingType:
+          description: The type/class of the seat.
+          oneOf:
+            - type: string
+            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+      type: object
+  description: 'Used to describe a seat, such as a reserved seat in an event reservation.'

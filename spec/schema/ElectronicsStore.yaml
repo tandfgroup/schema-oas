@@ -1,0 +1,3 @@
+ElectronicsStore:
+  $ref: 'store.yaml#/Store'
+  description: An electronics store.

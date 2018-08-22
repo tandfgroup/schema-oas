@@ -1,0 +1,19 @@
+RsvpAction:
+  allOf:
+    - $ref: 'informaction.yaml#/InformAction'
+    - properties:
+        additionalNumberOfGuests:
+          description: >-
+            If responding yes, the number of guests who will attend in addition
+            to the invitee.
+          type: number
+        comment:
+          $ref: 'comment.yaml#/Comment'
+          description: 'Comments, typically from users.'
+        rsvpResponse:
+          $ref: 'rsvpresponsetype.yaml#/RsvpResponseType'
+          description: 'The response (yes, no, maybe) to the RSVP.'
+      type: object
+  description: >-
+    The act of notifying an event organizer as to whether you expect to attend
+    the event.

@@ -1,0 +1,3 @@
+AutoRepair:
+  $ref: 'automotivebusiness.yaml#/AutomotiveBusiness'
+  description: Car repair business.

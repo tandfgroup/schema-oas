@@ -1,0 +1,3 @@
+OfferItemCondition:
+  $ref: 'enumeration.yaml#/Enumeration'
+  description: A list of possible conditions for the item.

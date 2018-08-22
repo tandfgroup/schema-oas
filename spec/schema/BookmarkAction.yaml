@@ -1,0 +1,3 @@
+BookmarkAction:
+  $ref: 'organizeaction.yaml#/OrganizeAction'
+  description: An agent bookmarks/flags/labels/tags/marks an object.

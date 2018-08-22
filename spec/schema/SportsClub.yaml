@@ -1,0 +1,3 @@
+SportsClub:
+  $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'
+  description: A sports club.

@@ -1,0 +1,3 @@
+GovernmentOrganization:
+  $ref: 'organization.yaml#/Organization'
+  description: A governmental organization or agency.

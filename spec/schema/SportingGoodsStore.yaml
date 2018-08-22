@@ -1,0 +1,3 @@
+SportingGoodsStore:
+  $ref: 'store.yaml#/Store'
+  description: A sporting goods store.

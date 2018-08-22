@@ -1,0 +1,3 @@
+DeleteAction:
+  $ref: 'updateaction.yaml#/UpdateAction'
+  description: The act of editing a recipient by removing one of its objects.

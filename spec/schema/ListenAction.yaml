@@ -1,0 +1,3 @@
+ListenAction:
+  $ref: 'consumeaction.yaml#/ConsumeAction'
+  description: The act of consuming audio content.

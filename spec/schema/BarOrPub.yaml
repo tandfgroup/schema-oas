@@ -1,0 +1,3 @@
+BarOrPub:
+  $ref: 'foodestablishment.yaml#/FoodEstablishment'
+  description: A bar or pub.

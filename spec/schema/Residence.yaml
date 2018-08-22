@@ -1,0 +1,3 @@
+Residence:
+  $ref: 'place.yaml#/Place'
+  description: The place where a person lives.

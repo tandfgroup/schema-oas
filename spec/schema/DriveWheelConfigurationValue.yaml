@@ -1,0 +1,3 @@
+DriveWheelConfigurationValue:
+  $ref: 'qualitativevalue.yaml#/QualitativeValue'
+  description: A value indicating which roadwheels will receive torque.

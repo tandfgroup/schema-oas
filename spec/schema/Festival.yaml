@@ -1,0 +1,3 @@
+Festival:
+  $ref: 'event.yaml#/Event'
+  description: 'Event type: Festival.'

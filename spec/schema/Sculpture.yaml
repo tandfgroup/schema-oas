@@ -1,0 +1,3 @@
+Sculpture:
+  $ref: 'creativework.yaml#/CreativeWork'
+  description: A piece of sculpture.

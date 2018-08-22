@@ -1,0 +1,3 @@
+DefenceEstablishment:
+  $ref: 'governmentbuilding.yaml#/GovernmentBuilding'
+  description: 'A defence establishment, such as an army or navy base.'

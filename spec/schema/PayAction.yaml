@@ -1,0 +1,21 @@
+PayAction:
+  allOf:
+    - $ref: 'tradeaction.yaml#/TradeAction'
+    - properties:
+        purpose:
+          description: A goal towards an action is taken. Can be concrete or abstract.
+          oneOf:
+            - $ref: 'thing.yaml#/Thing'
+            - description: MedicalDevicePurpose type is not published yet in schema.org.
+              type: object
+        recipient:
+          description: >-
+            A sub property of participant. The participant who is at the
+            receiving end of the action.
+          oneOf:
+            - $ref: 'audience.yaml#/Audience'
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'contactpoint.yaml#/ContactPoint'
+      type: object
+  description: An agent pays a price to a participant.

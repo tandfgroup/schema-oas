@@ -1,0 +1,3 @@
+GardenStore:
+  $ref: 'store.yaml#/Store'
+  description: A garden store.

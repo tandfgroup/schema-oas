@@ -1,0 +1,3 @@
+ComedyClub:
+  $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'
+  description: A comedy club.

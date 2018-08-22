@@ -1,0 +1,29 @@
+TaxiReservation:
+  allOf:
+    - $ref: 'reservation.yaml#/Reservation'
+    - properties:
+        partySize:
+          description: Number of people the reservation should accommodate.
+          oneOf:
+            - type: integer
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+        pickupLocation:
+          $ref: 'place.yaml#/Place'
+          description: >-
+            Where a taxi will pick up a passenger or a rental car can be picked
+            up.
+        pickupTime:
+          description: >-
+            When a taxi will pickup a passenger or a rental car can be picked
+            up.
+          format: date-time
+          type: string
+      type: object
+  description: >-
+    A reservation for a taxi.<br/><br/>
+
+
+    Note: This type is for information about actual reservations, e.g. in
+    confirmation emails or HTML pages with individual confirmations of
+    reservations. For offers of tickets, use <a class="localLink"
+    href="http://schema.org/Offer">Offer</a>.

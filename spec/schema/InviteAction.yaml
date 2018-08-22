@@ -1,0 +1,11 @@
+InviteAction:
+  allOf:
+    - $ref: 'communicateaction.yaml#/CommunicateAction'
+    - properties:
+        event:
+          $ref: 'event.yaml#/Event'
+          description: >-
+            Upcoming or past event associated with this place, organization, or
+            action.
+      type: object
+  description: The act of asking someone to attend an event. Reciprocal of RsvpAction.

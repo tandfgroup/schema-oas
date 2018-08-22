@@ -1,0 +1,3 @@
+MovieRentalStore:
+  $ref: 'store.yaml#/Store'
+  description: A movie rental store.

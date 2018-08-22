@@ -1,0 +1,3 @@
+PerformingArtsTheater:
+  $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A theater or other performing art center.

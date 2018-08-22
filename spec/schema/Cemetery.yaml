@@ -1,0 +1,3 @@
+Cemetery:
+  $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A graveyard.

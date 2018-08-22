@@ -1,0 +1,44 @@
+MovieSeries:
+  allOf:
+    - $ref: 'creativeworkseries.yaml#/CreativeWorkSeries'
+    - properties:
+        actor:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            An actor, e.g. in tv, radio, movie, video games etc., or in an
+            event. Actors can be associated with individual items or with a
+            series, episode, clip.
+        actors:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+            associated with individual items or with a series, episode, clip.
+        director:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            A director of e.g. tv, radio, movie, video gaming etc. content, or
+            of an event. Directors can be associated with individual items or
+            with a series, episode, clip.
+        directors:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            A director of e.g. tv, radio, movie, video games etc. content.
+            Directors can be associated with individual items or with a series,
+            episode, clip.
+        musicBy:
+          description: The composer of the soundtrack.
+          oneOf:
+            - $ref: 'musicgroup.yaml#/MusicGroup'
+            - $ref: 'person.yaml#/Person'
+        productionCompany:
+          $ref: 'organization.yaml#/Organization'
+          description: >-
+            The production company or studio responsible for the item e.g.
+            series, video game, episode etc.
+        trailer:
+          $ref: 'videoobject.yaml#/VideoObject'
+          description: 'The trailer of a movie or tv/radio series, season, episode, etc.'
+      type: object
+  description: >-
+    A series of movies. Included movies can be indicated with the hasPart
+    property.

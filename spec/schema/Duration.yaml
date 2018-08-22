@@ -1,5 +1,5 @@
 Duration:
-  allOf:
-    - $ref: 'Quantity.yaml#/Quantity'
-    - type: object
-      description: Quantity; Duration (use ISO 8601 duration format).
+  $ref: 'quantity.yaml#/Quantity'
+  description: >-
+    Quantity: Duration (use <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO
+    8601 duration format</a>).

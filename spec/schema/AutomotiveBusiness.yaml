@@ -1,0 +1,3 @@
+AutomotiveBusiness:
+  $ref: 'localbusiness.yaml#/LocalBusiness'
+  description: 'Car repair, sales, or parts.'

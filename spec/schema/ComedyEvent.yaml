@@ -1,0 +1,3 @@
+ComedyEvent:
+  $ref: 'event.yaml#/Event'
+  description: 'Event type: Comedy event.'

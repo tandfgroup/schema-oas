@@ -1,0 +1,3 @@
+BookFormatType:
+  $ref: 'enumeration.yaml#/Enumeration'
+  description: The publication format of the book.

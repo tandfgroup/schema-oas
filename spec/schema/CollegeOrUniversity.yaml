@@ -1,0 +1,3 @@
+CollegeOrUniversity:
+  $ref: 'educationalorganization.yaml#/EducationalOrganization'
+  description: 'A college, university, or other third-level educational institution.'

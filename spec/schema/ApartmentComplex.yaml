@@ -1,0 +1,3 @@
+ApartmentComplex:
+  $ref: 'residence.yaml#/Residence'
+  description: 'Residence type: Apartment complex.'

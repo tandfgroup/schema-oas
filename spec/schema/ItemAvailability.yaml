@@ -1,0 +1,3 @@
+ItemAvailability:
+  $ref: 'enumeration.yaml#/Enumeration'
+  description: A list of possible product availability options.

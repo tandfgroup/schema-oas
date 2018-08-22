@@ -1,0 +1,3 @@
+Volcano:
+  $ref: 'landform.yaml#/Landform'
+  description: 'A volcano, like Fuji san.'

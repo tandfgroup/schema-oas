@@ -1,0 +1,53 @@
+BroadcastService:
+  allOf:
+    - $ref: 'service.yaml#/Service'
+    - properties:
+        area:
+          $ref: 'place.yaml#/Place'
+          description: >-
+            The area within which users can expect to reach the broadcast
+            service.
+        broadcastAffiliateOf:
+          $ref: 'organization.yaml#/Organization'
+          description: The media network(s) whose content is broadcast on this station.
+        broadcastDisplayName:
+          description: >-
+            The name displayed in the channel guide. For many US affiliates, it
+            is the network name.
+          type: string
+        broadcastFrequency:
+          description: >-
+            The frequency used for over-the-air broadcasts. Numeric values or
+            simple ranges e.g. 87-99. In addition a shortcut idiom is supported
+            for frequences of AM and FM radio channels, e.g. "87 FM".
+          oneOf:
+            - type: string
+            - description: >-
+                BroadcastFrequencySpecification type is not published yet in
+                schema.org.
+              type: object
+        broadcastTimezone:
+          description: >-
+            The timezone in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO
+            8601 format</a> for which the service bases its broadcasts
+          type: string
+        broadcaster:
+          $ref: 'organization.yaml#/Organization'
+          description: The organization owning or operating the broadcast service.
+        hasBroadcastChannel:
+          $ref: 'broadcastchannel.yaml#/BroadcastChannel'
+          description: A broadcast channel of a broadcast service.
+        parentService:
+          $ref: 'broadcastservice.yaml#/BroadcastService'
+          description: >-
+            A broadcast service to which the broadcast service may belong to
+            such as regional variations of a national channel.
+        videoFormat:
+          description: >-
+            The type of screening or video broadcast used (e.g. IMAX, 3D, SD,
+            HD, etc.).
+          type: string
+      type: object
+  description: >-
+    A delivery service through which content is provided via broadcast over the
+    air or online.

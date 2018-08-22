@@ -1,0 +1,3 @@
+Painting:
+  $ref: 'creativework.yaml#/CreativeWork'
+  description: A painting.

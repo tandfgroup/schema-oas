@@ -1,0 +1,3 @@
+ReservationStatusType:
+  $ref: 'enumeration.yaml#/Enumeration'
+  description: Enumerated status values for Reservation.

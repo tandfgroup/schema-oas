@@ -1,0 +1,3 @@
+InsuranceAgency:
+  $ref: 'financialservice.yaml#/FinancialService'
+  description: An Insurance agency.

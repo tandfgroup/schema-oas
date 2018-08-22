@@ -1,0 +1,3 @@
+MarryAction:
+  $ref: 'interactaction.yaml#/InteractAction'
+  description: The act of marrying a person.

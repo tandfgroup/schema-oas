@@ -1,0 +1,3 @@
+SeaBodyOfWater:
+  $ref: 'bodyofwater.yaml#/BodyOfWater'
+  description: 'A sea (for example, the Caspian sea).'

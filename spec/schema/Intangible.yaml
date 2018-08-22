@@ -1,5 +1,5 @@
 Intangible:
-  allOf:
-    - $ref: 'Thing.yaml#/Thing'
-    - type: object
-      description: A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.
+  $ref: 'thing.yaml#/Thing'
+  description: >-
+    A utility class that serves as the umbrella for a number of 'intangible'
+    things such as quantities, structured values, etc.

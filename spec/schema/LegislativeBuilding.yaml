@@ -1,0 +1,3 @@
+LegislativeBuilding:
+  $ref: 'governmentbuilding.yaml#/GovernmentBuilding'
+  description: 'A legislative building&#x2014;for example, the state capitol.'

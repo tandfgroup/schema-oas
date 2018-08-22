@@ -1,0 +1,3 @@
+GovernmentBuilding:
+  $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A government building.

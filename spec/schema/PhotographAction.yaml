@@ -1,0 +1,3 @@
+PhotographAction:
+  $ref: 'createaction.yaml#/CreateAction'
+  description: The act of capturing still images of objects using a camera.

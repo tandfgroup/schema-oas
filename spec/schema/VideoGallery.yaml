@@ -1,0 +1,3 @@
+VideoGallery:
+  $ref: 'collectionpage.yaml#/CollectionPage'
+  description: 'Web page type: Video gallery page.'

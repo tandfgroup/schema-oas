@@ -1,0 +1,3 @@
+CafeOrCoffeeShop:
+  $ref: 'foodestablishment.yaml#/FoodEstablishment'
+  description: A cafe or coffee shop.

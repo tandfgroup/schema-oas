@@ -1,0 +1,3 @@
+Pharmacy:
+  $ref: 'medicalorganization.yaml#/MedicalOrganization'
+  description: A pharmacy or drugstore.

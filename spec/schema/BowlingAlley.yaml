@@ -1,0 +1,3 @@
+BowlingAlley:
+  $ref: 'sportsactivitylocation.yaml#/SportsActivityLocation'
+  description: A bowling alley.

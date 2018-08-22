@@ -1,0 +1,3 @@
+Casino:
+  $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'
+  description: A casino.

@@ -1,0 +1,14 @@
+DataFeed:
+  allOf:
+    - $ref: 'dataset.yaml#/Dataset'
+    - properties:
+        dataFeedElement:
+          description: An item within in a data feed. Data feeds may have many elements.
+          oneOf:
+            - $ref: 'thing.yaml#/Thing'
+            - $ref: 'datafeeditem.yaml#/DataFeedItem'
+            - type: string
+      type: object
+  description: >-
+    A single feed providing structured information about one or more entities or
+    topics.

@@ -1,0 +1,3 @@
+RadioSeason:
+  $ref: 'creativeworkseason.yaml#/CreativeWorkSeason'
+  description: Season dedicated to radio broadcast and associated online delivery.

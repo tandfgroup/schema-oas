@@ -1,0 +1,3 @@
+HobbyShop:
+  $ref: 'store.yaml#/Store'
+  description: A store that sells materials useful or necessary for various hobbies.

@@ -1,0 +1,71 @@
+Flight:
+  allOf:
+    - $ref: 'trip.yaml#/Trip'
+    - properties:
+        aircraft:
+          description: 'The kind of aircraft (e.g., "Boeing 747").'
+          oneOf:
+            - $ref: 'vehicle.yaml#/Vehicle'
+            - type: string
+        arrivalAirport:
+          $ref: 'airport.yaml#/Airport'
+          description: The airport where the flight terminates.
+        arrivalGate:
+          description: Identifier of the flight's arrival gate.
+          type: string
+        arrivalTerminal:
+          description: Identifier of the flight's arrival terminal.
+          type: string
+        boardingPolicy:
+          $ref: 'boardingpolicytype.yaml#/BoardingPolicyType'
+          description: >-
+            The type of boarding policy used by the airline (e.g. zone-based or
+            group-based).
+        carrier:
+          $ref: 'organization.yaml#/Organization'
+          description: >-
+            'carrier' is an out-dated term indicating the 'provider' for parcel
+            delivery and flights.
+        departureAirport:
+          $ref: 'airport.yaml#/Airport'
+          description: The airport where the flight originates.
+        departureGate:
+          description: Identifier of the flight's departure gate.
+          type: string
+        departureTerminal:
+          description: Identifier of the flight's departure terminal.
+          type: string
+        estimatedFlightDuration:
+          description: The estimated time the flight will take.
+          oneOf:
+            - $ref: 'duration.yaml#/Duration'
+            - type: string
+        flightDistance:
+          description: The distance of the flight.
+          oneOf:
+            - $ref: 'distance.yaml#/Distance'
+            - type: string
+        flightNumber:
+          description: >-
+            The unique identifier for a flight including the airline IATA code.
+            For example, if describing United flight 110, where the IATA code
+            for United is 'UA', the flightNumber is 'UA110'.
+          type: string
+        mealService:
+          description: >-
+            Description of the meals that will be provided or available for
+            purchase.
+          type: string
+        seller:
+          description: >-
+            An entity which offers (sells / leases / lends / loans) the services
+            / goods.  A seller may also be a provider.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+        webCheckinTime:
+          description: The time when a passenger can check into the flight online.
+          format: date-time
+          type: string
+      type: object
+  description: An airline flight.

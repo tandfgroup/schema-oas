@@ -1,0 +1,9 @@
+EducationalOrganization:
+  allOf:
+    - $ref: 'organization.yaml#/Organization'
+    - properties:
+        alumni:
+          $ref: 'person.yaml#/Person'
+          description: Alumni of an organization.
+      type: object
+  description: An educational organization.

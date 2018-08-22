@@ -1,20 +1,22 @@
 ImageObject:
   allOf:
-    - $ref: 'MediaObject.yaml#/MediaObject'
-    - type: object
-      description: An image file.
-      properties:
+    - $ref: 'mediaobject.yaml#/MediaObject'
+    - properties:
         caption:
-          type: string
           description: The caption for this object.
+          type: string
         exifData:
+          description: exif data for this object.
           oneOf:
             - type: string
-            - $ref: 'PropertyValue.yaml#/PropertyValue'
-          description: exif data for this object.
+            - $ref: 'propertyvalue.yaml#/PropertyValue'
         representativeOfPage:
+          description: >-
+            Indicates whether this image is representative of the content of the
+            page.
           type: boolean
-          description: Indicates whether this image is representative of the content of the page.
         thumbnail:
-          $ref: 'ImageObject.yaml#/ImageObject'
+          $ref: 'imageobject.yaml#/ImageObject'
           description: Thumbnail image for an image or video.
+      type: object
+  description: An image file.

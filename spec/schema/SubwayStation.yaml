@@ -1,0 +1,3 @@
+SubwayStation:
+  $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A subway station.

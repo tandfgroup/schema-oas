@@ -1,0 +1,72 @@
+MonetaryAmount:
+  allOf:
+    - $ref: 'structuredvalue.yaml#/StructuredValue'
+    - properties:
+        currency:
+          description:
+            - >-
+              The currency in which the monetary amount is expressed (in
+              3-letter <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO
+              4217</a> format).
+            - >-
+              The currency in which the monetary amount is expressed.<br/><br/>
+
+
+              Use standard formats: <a
+              href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency
+              format</a> e.g. "USD"; <a
+              href="https://en.wikipedia.org/wiki/List_of_cryptocurrencies">Ticker
+              symbol</a> for cryptocurrencies e.g. "BTC"; well known names for
+              <a
+              href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local
+              Exchange Tradings Systems</a> (LETS) and other currency types e.g.
+              "Ithaca HOUR".
+          type: string
+        maxValue:
+          description: The upper value of some characteristic or property.
+          type: number
+        minValue:
+          description: The lower value of some characteristic or property.
+          type: number
+        validFrom:
+          description: The date when the item becomes valid.
+          format: date-time
+          type: string
+        validThrough:
+          description: >-
+            The date after when the item is not valid. For example the end of an
+            offer, salary period, or a period of opening hours.
+          format: date-time
+          type: string
+        value:
+          description: >
+            The value of the quantitative value or property value
+            node.<br/><br/>
+
+
+            <ul>
+
+            <li>For <a class="localLink"
+            href="http://schema.org/QuantitativeValue">QuantitativeValue</a> and
+            <a class="localLink"
+            href="http://schema.org/MonetaryAmount">MonetaryAmount</a>, the
+            recommended type for values is 'Number'.</li>
+
+            <li>For <a class="localLink"
+            href="http://schema.org/PropertyValue">PropertyValue</a>, it can be
+            'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
+
+            </ul>
+          oneOf:
+            - type: number
+            - type: string
+            - $ref: 'structuredvalue.yaml#/StructuredValue'
+            - type: boolean
+      type: object
+  description: >-
+    A monetary value or range. This type can be used to describe an amount of
+    money such as $50 USD, or a range as in describing a bank account being
+    suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a
+    salary, etc. It is recommended to use <a class="localLink"
+    href="http://schema.org/PriceSpecification">PriceSpecification</a> Types to
+    describe the price of an Offer, Invoice, etc.

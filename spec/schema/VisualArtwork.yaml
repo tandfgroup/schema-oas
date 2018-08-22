@@ -1,0 +1,80 @@
+VisualArtwork:
+  allOf:
+    - $ref: 'creativework.yaml#/CreativeWork'
+    - properties:
+        artEdition:
+          description: >-
+            The number of copies when multiple copies of a piece of artwork are
+            produced - e.g. for a limited edition of 20 prints, 'artEdition'
+            refers to the total number of copies (in this example "20").
+          oneOf:
+            - type: string
+            - type: integer
+        artMedium:
+          description: >-
+            The material used. (e.g. Oil, Watercolour, Acrylic, Linoprint,
+            Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel,
+            Woodcut, Pencil, Mixed Media, etc.)
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        artform:
+          description: >-
+            e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage,
+            Collage, etc.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        artist:
+          $ref: 'person.yaml#/Person'
+          description: |-
+            The primary artist for a work
+                in a medium other than pencils or digital line art--for example, if the
+                primary artwork is done in watercolors or digital paints.
+        artworkSurface:
+          description: >-
+            The supporting materials for the artwork, e.g. Canvas, Paper, Wood,
+            Board, etc.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        colorist:
+          $ref: 'person.yaml#/Person'
+          description: The individual who adds color to inked drawings.
+        depth:
+          description: The depth of the item.
+          oneOf:
+            - $ref: 'distance.yaml#/Distance'
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+        height:
+          description: The height of the item.
+          oneOf:
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - $ref: 'distance.yaml#/Distance'
+        inker:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            The individual who traces over the pencil drawings in ink after
+            pencils are complete.
+        letterer:
+          $ref: 'person.yaml#/Person'
+          description: >-
+            The individual who adds lettering, including speech balloons and
+            sound effects, to artwork.
+        penciler:
+          $ref: 'person.yaml#/Person'
+          description: The individual who draws the primary narrative artwork.
+        surface:
+          description: >-
+            A material used as a surface in some artwork, e.g. Canvas, Paper,
+            Wood, Board, etc.
+          oneOf:
+            - $ref: 'url.yaml#/URL'
+            - type: string
+        width:
+          description: The width of the item.
+          oneOf:
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - $ref: 'distance.yaml#/Distance'
+      type: object
+  description: A work of art that is primarily visual in character.

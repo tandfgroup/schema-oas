@@ -1,0 +1,63 @@
+Message:
+  allOf:
+    - $ref: 'creativework.yaml#/CreativeWork'
+    - properties:
+        bccRecipient:
+          description: >-
+            A sub property of recipient. The recipient blind copied on a
+            message.
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'contactpoint.yaml#/ContactPoint'
+            - $ref: 'organization.yaml#/Organization'
+        ccRecipient:
+          description: A sub property of recipient. The recipient copied on a message.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'contactpoint.yaml#/ContactPoint'
+            - $ref: 'person.yaml#/Person'
+        dateRead:
+          description: >-
+            The date/time at which the message has been read by the recipient if
+            a single recipient exists.
+          format: date-time
+          type: string
+        dateReceived:
+          description: The date/time the message was received if a single recipient exists.
+          format: date-time
+          type: string
+        dateSent:
+          description: The date/time at which the message was sent.
+          format: date-time
+          type: string
+        messageAttachment:
+          $ref: 'creativework.yaml#/CreativeWork'
+          description: A CreativeWork attached to the message.
+        recipient:
+          description: >-
+            A sub property of participant. The participant who is at the
+            receiving end of the action.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'audience.yaml#/Audience'
+            - $ref: 'contactpoint.yaml#/ContactPoint'
+            - $ref: 'person.yaml#/Person'
+        sender:
+          description: >-
+            A sub property of participant. The participant who is at the sending
+            end of the action.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'audience.yaml#/Audience'
+            - $ref: 'person.yaml#/Person'
+        toRecipient:
+          description: >-
+            A sub property of recipient. The recipient who was directly sent the
+            message.
+          oneOf:
+            - $ref: 'audience.yaml#/Audience'
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'contactpoint.yaml#/ContactPoint'
+            - $ref: 'organization.yaml#/Organization'
+      type: object
+  description: A single message from a sender to one or more organizations or people.

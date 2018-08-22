@@ -1,0 +1,3 @@
+Photograph:
+  $ref: 'creativework.yaml#/CreativeWork'
+  description: A photograph.

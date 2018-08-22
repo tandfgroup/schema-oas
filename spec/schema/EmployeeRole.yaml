@@ -1,0 +1,19 @@
+EmployeeRole:
+  allOf:
+    - $ref: 'organizationrole.yaml#/OrganizationRole'
+    - properties:
+        baseSalary:
+          description: The base salary of the job or of an employee in an EmployeeRole.
+          oneOf:
+            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: number
+            - $ref: 'pricespecification.yaml#/PriceSpecification'
+        salaryCurrency:
+          description: >-
+            The currency (coded using <a
+            href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a> ) used for
+            the main salary information in this job posting or for this
+            employee.
+          type: string
+      type: object
+  description: A subclass of OrganizationRole used to describe employee relationships.

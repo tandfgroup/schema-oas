@@ -1,0 +1,17 @@
+DonateAction:
+  allOf:
+    - $ref: 'tradeaction.yaml#/TradeAction'
+    - properties:
+        recipient:
+          description: >-
+            A sub property of participant. The participant who is at the
+            receiving end of the action.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'contactpoint.yaml#/ContactPoint'
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'audience.yaml#/Audience'
+      type: object
+  description: >-
+    The act of providing goods, services, or money without compensation, often
+    for philanthropic reasons.

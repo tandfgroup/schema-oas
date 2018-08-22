@@ -1,0 +1,14 @@
+ParentAudience:
+  allOf:
+    - $ref: 'peopleaudience.yaml#/PeopleAudience'
+    - properties:
+        childMaxAge:
+          description: Maximal age of the child.
+          type: number
+        childMinAge:
+          description: Minimal age of the child.
+          type: number
+      type: object
+  description: >-
+    A set of characteristics describing parents, who can be interested in
+    viewing some content.

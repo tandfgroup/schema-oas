@@ -1,0 +1,12 @@
+UpdateAction:
+  allOf:
+    - $ref: 'action.yaml#/Action'
+    - properties:
+        collection:
+          $ref: 'thing.yaml#/Thing'
+          description: A sub property of object. The collection target of the action.
+        targetCollection:
+          $ref: 'thing.yaml#/Thing'
+          description: A sub property of object. The collection target of the action.
+      type: object
+  description: The act of managing by changing/editing the state of the object.

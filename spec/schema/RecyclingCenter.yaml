@@ -1,0 +1,3 @@
+RecyclingCenter:
+  $ref: 'localbusiness.yaml#/LocalBusiness'
+  description: A recycling center.

@@ -1,0 +1,3 @@
+DataType:
+  description: 'rdfs:Class type is not published yet in schema.org.'
+  type: object

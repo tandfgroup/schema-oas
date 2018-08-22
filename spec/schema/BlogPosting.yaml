@@ -1,0 +1,3 @@
+BlogPosting:
+  $ref: 'socialmediaposting.yaml#/SocialMediaPosting'
+  description: A blog post.

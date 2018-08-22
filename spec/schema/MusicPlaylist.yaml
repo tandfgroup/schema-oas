@@ -1,0 +1,20 @@
+MusicPlaylist:
+  allOf:
+    - $ref: 'creativework.yaml#/CreativeWork'
+    - properties:
+        numTracks:
+          description: The number of tracks in this album or playlist.
+          type: integer
+        track:
+          description: >-
+            A music recording (track)&#x2014;usually a single song. If an
+            ItemList is given, the list should contain items of type
+            MusicRecording.
+          oneOf:
+            - $ref: 'musicrecording.yaml#/MusicRecording'
+            - $ref: 'itemlist.yaml#/ItemList'
+        tracks:
+          $ref: 'musicrecording.yaml#/MusicRecording'
+          description: 'A music recording (track)&#x2014;usually a single song.'
+      type: object
+  description: A collection of music tracks in playlist form.

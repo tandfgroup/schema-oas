@@ -1,0 +1,32 @@
+ProgramMembership:
+  allOf:
+    - $ref: 'intangible.yaml#/Intangible'
+    - properties:
+        hostingOrganization:
+          $ref: 'organization.yaml#/Organization'
+          description: >-
+            The organization (airline, travelers' club, etc.) the membership is
+            made with.
+        member:
+          description: >-
+            A member of an Organization or a ProgramMembership. Organizations
+            can be members of organizations; ProgramMembership is typically for
+            individuals.
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+        members:
+          description: A member of this organization.
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+        membershipNumber:
+          description: A unique identifier for the membership.
+          type: string
+        programName:
+          description: The program providing the membership.
+          type: string
+      type: object
+  description: >-
+    Used to describe membership in a loyalty programs (e.g. "StarAliance"),
+    traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.

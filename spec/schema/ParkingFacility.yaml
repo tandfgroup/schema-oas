@@ -1,0 +1,3 @@
+ParkingFacility:
+  $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A parking lot or other parking facility.

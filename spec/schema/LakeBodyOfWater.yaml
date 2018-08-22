@@ -1,0 +1,3 @@
+LakeBodyOfWater:
+  $ref: 'bodyofwater.yaml#/BodyOfWater'
+  description: 'A lake (for example, Lake Pontrachain).'

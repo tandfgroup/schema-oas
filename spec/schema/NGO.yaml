@@ -1,0 +1,3 @@
+NGO:
+  $ref: 'organization.yaml#/Organization'
+  description: 'Organization: Non-governmental Organization.'

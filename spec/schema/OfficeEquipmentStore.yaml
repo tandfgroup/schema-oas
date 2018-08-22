@@ -1,0 +1,3 @@
+OfficeEquipmentStore:
+  $ref: 'store.yaml#/Store'
+  description: An office equipment store.

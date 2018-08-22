@@ -1,0 +1,27 @@
+PublicationEvent:
+  allOf:
+    - $ref: 'event.yaml#/Event'
+    - properties:
+        free:
+          description: >-
+            A flag to signal that the item, event, or place is accessible for
+            free.
+          type: boolean
+        isAccessibleForFree:
+          description: >-
+            A flag to signal that the item, event, or place is accessible for
+            free.
+          type: boolean
+        publishedBy:
+          description: An agent associated with the publication event.
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+        publishedOn:
+          $ref: 'broadcastservice.yaml#/BroadcastService'
+          description: A broadcast service associated with the publication event.
+      type: object
+  description: >-
+    A PublicationEvent corresponds indifferently to the event of publication for
+    a CreativeWork of any type e.g. a broadcast event, an on-demand event, a
+    book/journal publication via a variety of delivery media.

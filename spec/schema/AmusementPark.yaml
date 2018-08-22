@@ -1,0 +1,3 @@
+AmusementPark:
+  $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'
+  description: An amusement park.

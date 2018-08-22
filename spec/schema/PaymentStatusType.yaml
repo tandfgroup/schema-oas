@@ -1,0 +1,3 @@
+PaymentStatusType:
+  $ref: 'enumeration.yaml#/Enumeration'
+  description: 'A specific payment status. For example, PaymentDue, PaymentComplete, etc.'

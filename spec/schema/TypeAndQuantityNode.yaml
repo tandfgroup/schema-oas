@@ -1,0 +1,37 @@
+TypeAndQuantityNode:
+  allOf:
+    - $ref: 'structuredvalue.yaml#/StructuredValue'
+    - properties:
+        amountOfThisGood:
+          description: The quantity of the goods included in the offer.
+          type: number
+        businessFunction:
+          $ref: 'businessfunction.yaml#/BusinessFunction'
+          description: >-
+            The business function (e.g. sell, lease, repair, dispose) of the
+            offer or component of a bundle (TypeAndQuantityNode). The default is
+            http://purl.org/goodrelations/v1#Sell.
+        typeOfGood:
+          description: The product that this structured value is referring to.
+          oneOf:
+            - $ref: 'service.yaml#/Service'
+            - $ref: 'product.yaml#/Product'
+        unitCode:
+          description: >-
+            The unit of measurement given using the UN/CEFACT Common Code (3
+            characters) or a URL. Other codes than the UN/CEFACT Common Code may
+            be used with a prefix followed by a colon.
+          oneOf:
+            - type: string
+            - $ref: 'url.yaml#/URL'
+        unitText:
+          description: >-
+            A string or text indicating the unit of measurement. Useful if you
+            cannot provide a standard unit code for
+
+            <a href='unitCode'>unitCode</a>.
+          type: string
+      type: object
+  description: >-
+    A structured value indicating the quantity, unit of measurement, and
+    business function of goods included in a bundle offer.

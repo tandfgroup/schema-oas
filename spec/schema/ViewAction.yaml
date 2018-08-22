@@ -1,0 +1,3 @@
+ViewAction:
+  $ref: 'consumeaction.yaml#/ConsumeAction'
+  description: The act of consuming static visual content.

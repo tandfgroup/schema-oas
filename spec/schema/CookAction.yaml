@@ -1,0 +1,23 @@
+CookAction:
+  allOf:
+    - $ref: 'createaction.yaml#/CreateAction'
+    - properties:
+        foodEstablishment:
+          description: >-
+            A sub property of location. The specific food establishment where
+            the action occurred.
+          oneOf:
+            - $ref: 'place.yaml#/Place'
+            - $ref: 'foodestablishment.yaml#/FoodEstablishment'
+        foodEvent:
+          $ref: 'foodevent.yaml#/FoodEvent'
+          description: >-
+            A sub property of location. The specific food event where the action
+            occurred.
+        recipe:
+          $ref: 'recipe.yaml#/Recipe'
+          description: >-
+            A sub property of instrument. The recipe/instructions used to
+            perform the action.
+      type: object
+  description: The act of producing/preparing food.

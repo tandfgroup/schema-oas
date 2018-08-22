@@ -1,0 +1,22 @@
+PaymentCard:
+  description: >-
+    A payment method using a credit, debit, store or other card to associate the
+    payment with an account.
+  properties:
+    cashBack:
+      description: >-
+        A cardholder benefit that pays the cardholder a small percentage of
+        their net expenditures.
+      oneOf:
+        - type: number
+        - type: boolean
+    contactlessPayment:
+      description: >-
+        A secure method for consumers to purchase products or services via
+        debit, credit or smartcards by using RFID or NFC technology.
+      type: boolean
+    floorLimit:
+      $ref: 'monetaryamount.yaml#/MonetaryAmount'
+      description: >-
+        A floor limit is the amount of money above which credit card
+        transactions must be authorized.

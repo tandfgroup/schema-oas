@@ -1,0 +1,3 @@
+EatAction:
+  $ref: 'consumeaction.yaml#/ConsumeAction'
+  description: The act of swallowing solid objects.

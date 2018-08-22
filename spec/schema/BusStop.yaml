@@ -1,0 +1,3 @@
+BusStop:
+  $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A bus stop.

@@ -1,0 +1,3 @@
+FurnitureStore:
+  $ref: 'store.yaml#/Store'
+  description: A furniture store.

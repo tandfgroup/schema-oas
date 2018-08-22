@@ -1,0 +1,9 @@
+WinAction:
+  allOf:
+    - $ref: 'achieveaction.yaml#/AchieveAction'
+    - properties:
+        loser:
+          $ref: 'person.yaml#/Person'
+          description: A sub property of participant. The loser of the action.
+      type: object
+  description: The act of achieving victory in a competitive activity.

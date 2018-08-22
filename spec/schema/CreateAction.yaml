@@ -1,0 +1,5 @@
+CreateAction:
+  $ref: 'action.yaml#/Action'
+  description: >-
+    The act of deliberately creating/producing/generating/building a result out
+    of the agent.

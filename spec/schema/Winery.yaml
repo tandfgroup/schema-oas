@@ -1,0 +1,3 @@
+Winery:
+  $ref: 'foodestablishment.yaml#/FoodEstablishment'
+  description: A winery.

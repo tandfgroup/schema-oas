@@ -1,0 +1,22 @@
+LocationFeatureSpecification:
+  allOf:
+    - $ref: 'propertyvalue.yaml#/PropertyValue'
+    - properties:
+        hoursAvailable:
+          $ref: 'openinghoursspecification.yaml#/OpeningHoursSpecification'
+          description: The hours during which this service or contact is available.
+        validFrom:
+          description: The date when the item becomes valid.
+          format: date-time
+          type: string
+        validThrough:
+          description: >-
+            The date after when the item is not valid. For example the end of an
+            offer, salary period, or a period of opening hours.
+          format: date-time
+          type: string
+      type: object
+  description: >-
+    Specifies a location feature by providing a structured value representing a
+    feature of an accommodation as a property-value pair of varying degrees of
+    formality.

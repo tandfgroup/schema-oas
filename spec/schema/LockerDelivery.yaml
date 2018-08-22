@@ -1,0 +1,3 @@
+LockerDelivery:
+  $ref: 'deliverymethod.yaml#/DeliveryMethod'
+  description: A DeliveryMethod in which an item is made available via locker.

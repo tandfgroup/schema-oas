@@ -1,0 +1,3 @@
+Embassy:
+  $ref: 'governmentbuilding.yaml#/GovernmentBuilding'
+  description: An embassy.

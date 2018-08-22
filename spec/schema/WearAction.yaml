@@ -1,0 +1,3 @@
+WearAction:
+  $ref: 'useaction.yaml#/UseAction'
+  description: The act of dressing oneself in clothing.

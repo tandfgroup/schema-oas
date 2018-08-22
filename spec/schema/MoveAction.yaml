@@ -1,0 +1,30 @@
+MoveAction:
+  allOf:
+    - $ref: 'action.yaml#/Action'
+    - properties:
+        fromLocation:
+          $ref: 'place.yaml#/Place'
+          description: >-
+            A sub property of location. The original location of the object or
+            the agent before the action.
+        toLocation:
+          $ref: 'place.yaml#/Place'
+          description: >-
+            A sub property of location. The final location of the object or the
+            agent after the action.
+      type: object
+  description: >
+    The act of an agent relocating to a place.<br/><br/>
+
+
+    Related actions:<br/><br/>
+
+
+    <ul>
+
+    <li><a class="localLink"
+    href="http://schema.org/TransferAction">TransferAction</a>: Unlike
+    TransferAction, the subject of the move is a living Person or Organization
+    rather than an inanimate object.</li>
+
+    </ul>

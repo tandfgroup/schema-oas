@@ -1,0 +1,3 @@
+Florist:
+  $ref: 'store.yaml#/Store'
+  description: A florist.

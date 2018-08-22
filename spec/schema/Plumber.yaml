@@ -1,0 +1,3 @@
+Plumber:
+  $ref: 'homeandconstructionbusiness.yaml#/HomeAndConstructionBusiness'
+  description: A plumbing service.

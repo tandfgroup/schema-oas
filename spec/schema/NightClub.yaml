@@ -1,0 +1,3 @@
+NightClub:
+  $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'
+  description: A nightclub or discotheque.

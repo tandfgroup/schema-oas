@@ -1,0 +1,3 @@
+SteeringPositionValue:
+  $ref: 'qualitativevalue.yaml#/QualitativeValue'
+  description: A value indicating a steering position.

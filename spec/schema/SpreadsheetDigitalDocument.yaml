@@ -1,0 +1,3 @@
+SpreadsheetDigitalDocument:
+  $ref: 'digitaldocument.yaml#/DigitalDocument'
+  description: A spreadsheet file.

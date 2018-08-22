@@ -1,0 +1,35 @@
+Game:
+  allOf:
+    - $ref: 'creativework.yaml#/CreativeWork'
+    - properties:
+        characterAttribute:
+          $ref: 'thing.yaml#/Thing'
+          description: >-
+            A piece of data that represents a particular aspect of a fictional
+            character (skill, power, character points, advantage, disadvantage).
+        gameItem:
+          $ref: 'thing.yaml#/Thing'
+          description: >-
+            An item is an object within the game world that can be collected by
+            a player or, occasionally, a non-player character.
+        gameLocation:
+          description: Real or fictional location of the game (or part of game).
+          oneOf:
+            - $ref: 'place.yaml#/Place'
+            - $ref: 'url.yaml#/URL'
+            - $ref: 'postaladdress.yaml#/PostalAddress'
+        numberOfPlayers:
+          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+          description: >-
+            Indicate how many people can play this game (minimum, maximum, or
+            range).
+        quest:
+          $ref: 'thing.yaml#/Thing'
+          description: >-
+            The task that a player-controlled character, or group of characters
+            may complete in order to gain a reward.
+      type: object
+  description: >-
+    The Game type represents things which are games. These are typically
+    rule-governed recreational activities, e.g. role-playing games in which
+    players assume the role of characters in a fictional setting.

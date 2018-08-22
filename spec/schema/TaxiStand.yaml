@@ -1,0 +1,3 @@
+TaxiStand:
+  $ref: 'civicstructure.yaml#/CivicStructure'
+  description: A taxi stand.

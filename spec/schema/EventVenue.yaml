@@ -1,0 +1,3 @@
+EventVenue:
+  $ref: 'civicstructure.yaml#/CivicStructure'
+  description: An event venue.

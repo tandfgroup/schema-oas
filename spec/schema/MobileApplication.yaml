@@ -1,0 +1,13 @@
+MobileApplication:
+  allOf:
+    - $ref: 'softwareapplication.yaml#/SoftwareApplication'
+    - properties:
+        carrierRequirements:
+          description: >-
+            Specifies specific carrier(s) requirements for the application (e.g.
+            an application may only work on a specific carrier network).
+          type: string
+      type: object
+  description: >-
+    A software application designed specifically to work well on a mobile device
+    such as a telephone.

@@ -1,0 +1,16 @@
+PaymentChargeSpecification:
+  allOf:
+    - $ref: 'pricespecification.yaml#/PriceSpecification'
+    - properties:
+        appliesToDeliveryMethod:
+          $ref: 'deliverymethod.yaml#/DeliveryMethod'
+          description: >-
+            The delivery method(s) to which the delivery charge or payment
+            charge specification applies.
+        appliesToPaymentMethod:
+          $ref: 'paymentmethod.yaml#/PaymentMethod'
+          description: >-
+            The payment method(s) to which the payment charge specification
+            applies.
+      type: object
+  description: The costs of settling the payment using a particular payment method.

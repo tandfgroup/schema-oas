@@ -1,0 +1,26 @@
+OwnershipInfo:
+  allOf:
+    - $ref: 'structuredvalue.yaml#/StructuredValue'
+    - properties:
+        acquiredFrom:
+          description: The organization or person from which the product was acquired.
+          oneOf:
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'person.yaml#/Person'
+        ownedFrom:
+          description: The date and time of obtaining the product.
+          format: date-time
+          type: string
+        ownedThrough:
+          description: The date and time of giving up ownership on the product.
+          format: date-time
+          type: string
+        typeOfGood:
+          description: The product that this structured value is referring to.
+          oneOf:
+            - $ref: 'service.yaml#/Service'
+            - $ref: 'product.yaml#/Product'
+      type: object
+  description: >-
+    A structured value providing information about when a certain organization
+    or person owned a certain product.

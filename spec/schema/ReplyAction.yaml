@@ -1,0 +1,25 @@
+ReplyAction:
+  allOf:
+    - $ref: 'communicateaction.yaml#/CommunicateAction'
+    - properties:
+        resultComment:
+          $ref: 'comment.yaml#/Comment'
+          description: >-
+            A sub property of result. The Comment created or sent as a result of
+            this action.
+      type: object
+  description: >
+    The act of responding to a question/message asked/sent by the object.
+    Related to <a class="localLink"
+    href="http://schema.org/AskAction">AskAction</a><br/><br/>
+
+
+    Related actions:<br/><br/>
+
+
+    <ul>
+
+    <li><a class="localLink" href="http://schema.org/AskAction">AskAction</a>:
+    Appears generally as an origin of a ReplyAction.</li>
+
+    </ul>

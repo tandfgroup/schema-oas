@@ -1,0 +1,40 @@
+LodgingReservation:
+  allOf:
+    - $ref: 'reservation.yaml#/Reservation'
+    - properties:
+        checkinTime:
+          description: The earliest someone may check into a lodging establishment.
+          format: date-time
+          type: string
+        checkoutTime:
+          description: The latest someone may check out of a lodging establishment.
+          format: date-time
+          type: string
+        lodgingUnitDescription:
+          description: A full description of the lodging unit.
+          type: string
+        lodgingUnitType:
+          description: >-
+            Textual description of the unit type (including suite vs. room, size
+            of bed, etc.).
+          oneOf:
+            - type: string
+            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+        numAdults:
+          description: The number of adults staying in the unit.
+          oneOf:
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: integer
+        numChildren:
+          description: The number of children staying in the unit.
+          oneOf:
+            - type: integer
+            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+      type: object
+  description: >-
+    A reservation for lodging at a hotel, motel, inn, etc.<br/><br/>
+
+
+    Note: This type is for information about actual reservations, e.g. in
+    confirmation emails or HTML pages with individual confirmations of
+    reservations.

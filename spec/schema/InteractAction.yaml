@@ -1,0 +1,3 @@
+InteractAction:
+  $ref: 'action.yaml#/Action'
+  description: The act of interacting with another person or organization.

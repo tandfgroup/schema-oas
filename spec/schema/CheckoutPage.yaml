@@ -1,0 +1,3 @@
+CheckoutPage:
+  $ref: 'webpage.yaml#/WebPage'
+  description: 'Web page type: Checkout page.'

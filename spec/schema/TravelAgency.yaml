@@ -1,0 +1,3 @@
+TravelAgency:
+  $ref: 'localbusiness.yaml#/LocalBusiness'
+  description: A travel agency.

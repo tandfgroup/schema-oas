@@ -1,0 +1,3 @@
+DrinkAction:
+  $ref: 'consumeaction.yaml#/ConsumeAction'
+  description: The act of swallowing liquids.

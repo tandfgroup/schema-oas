@@ -1,0 +1,3 @@
+JewelryStore:
+  $ref: 'store.yaml#/Store'
+  description: A jewelry store.

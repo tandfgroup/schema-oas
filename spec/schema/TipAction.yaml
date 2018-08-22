@@ -1,0 +1,17 @@
+TipAction:
+  allOf:
+    - $ref: 'tradeaction.yaml#/TradeAction'
+    - properties:
+        recipient:
+          description: >-
+            A sub property of participant. The participant who is at the
+            receiving end of the action.
+          oneOf:
+            - $ref: 'audience.yaml#/Audience'
+            - $ref: 'organization.yaml#/Organization'
+            - $ref: 'contactpoint.yaml#/ContactPoint'
+            - $ref: 'person.yaml#/Person'
+      type: object
+  description: >-
+    The act of giving money voluntarily to a beneficiary in recognition of
+    services rendered.

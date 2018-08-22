@@ -1,0 +1,3 @@
+Integer:
+  description: 'Data type: Integer.'
+  type: number

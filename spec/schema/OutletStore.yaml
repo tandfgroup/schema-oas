@@ -1,0 +1,3 @@
+OutletStore:
+  $ref: 'store.yaml#/Store'
+  description: An outlet store.

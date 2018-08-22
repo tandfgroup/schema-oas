@@ -1,0 +1,12 @@
+ReplaceAction:
+  allOf:
+    - $ref: 'updateaction.yaml#/UpdateAction'
+    - properties:
+        replacee:
+          $ref: 'thing.yaml#/Thing'
+          description: A sub property of object. The object that is being replaced.
+        replacer:
+          $ref: 'thing.yaml#/Thing'
+          description: A sub property of object. The object that replaces.
+      type: object
+  description: The act of editing a recipient by replacing an old object with a new object.

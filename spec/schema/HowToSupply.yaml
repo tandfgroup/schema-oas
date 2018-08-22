@@ -1,0 +1,15 @@
+HowToSupply:
+  allOf:
+    - $ref: 'howtoitem.yaml#/HowToItem'
+    - properties:
+        estimatedCost:
+          description: >-
+            The estimated cost of the supply or supplies consumed when
+            performing instructions.
+          oneOf:
+            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: string
+      type: object
+  description: >-
+    A supply consumed when performing the instructions for how to achieve a
+    result.

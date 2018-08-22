@@ -1,0 +1,3 @@
+AutoRental:
+  $ref: 'automotivebusiness.yaml#/AutomotiveBusiness'
+  description: A car rental business.

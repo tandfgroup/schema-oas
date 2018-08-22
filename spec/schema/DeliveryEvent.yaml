@@ -1,0 +1,22 @@
+DeliveryEvent:
+  allOf:
+    - $ref: 'event.yaml#/Event'
+    - properties:
+        accessCode:
+          description: >-
+            Password, PIN, or access code needed for delivery (e.g. from a
+            locker).
+          type: string
+        availableFrom:
+          description: 'When the item is available for pickup from the store, locker, etc.'
+          format: date-time
+          type: string
+        availableThrough:
+          description: 'After this date, the item will no longer be available for pickup.'
+          format: date-time
+          type: string
+        hasDeliveryMethod:
+          $ref: 'deliverymethod.yaml#/DeliveryMethod'
+          description: Method used for delivery or shipping.
+      type: object
+  description: An event involving the delivery of an item.

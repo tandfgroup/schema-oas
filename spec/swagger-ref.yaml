@@ -8,57 +8,1211 @@ paths: {}
 components:
   schemas:
     # this file is auto-generated. do not change.
+    AboutPage:
+      $ref: ./schema/AboutPage.yaml
+    AcceptAction:
+      $ref: ./schema/AcceptAction.yaml
+    Accommodation:
+      $ref: ./schema/Accommodation.yaml
+    AccountingService:
+      $ref: ./schema/AccountingService.yaml
+    AchieveAction:
+      $ref: ./schema/AchieveAction.yaml
     Action:
       $ref: ./schema/Action.yaml
     ActionStatusType:
       $ref: ./schema/ActionStatusType.yaml
+    ActivateAction:
+      $ref: ./schema/ActivateAction.yaml
+    AddAction:
+      $ref: ./schema/AddAction.yaml
+    AdministrativeArea:
+      $ref: ./schema/AdministrativeArea.yaml
+    AdultEntertainment:
+      $ref: ./schema/AdultEntertainment.yaml
+    AggregateOffer:
+      $ref: ./schema/AggregateOffer.yaml
     AggregateRating:
       $ref: ./schema/AggregateRating.yaml
+    AgreeAction:
+      $ref: ./schema/AgreeAction.yaml
+    Airline:
+      $ref: ./schema/Airline.yaml
+    Airport:
+      $ref: ./schema/Airport.yaml
+    AlignmentObject:
+      $ref: ./schema/AlignmentObject.yaml
+    AllocateAction:
+      $ref: ./schema/AllocateAction.yaml
+    AmusementPark:
+      $ref: ./schema/AmusementPark.yaml
+    AnimalShelter:
+      $ref: ./schema/AnimalShelter.yaml
+    Answer:
+      $ref: ./schema/Answer.yaml
+    Apartment:
+      $ref: ./schema/Apartment.yaml
+    ApartmentComplex:
+      $ref: ./schema/ApartmentComplex.yaml
+    APIReference:
+      $ref: ./schema/APIReference.yaml
+    AppendAction:
+      $ref: ./schema/AppendAction.yaml
+    ApplyAction:
+      $ref: ./schema/ApplyAction.yaml
+    Aquarium:
+      $ref: ./schema/Aquarium.yaml
+    ArriveAction:
+      $ref: ./schema/ArriveAction.yaml
+    ArtGallery:
+      $ref: ./schema/ArtGallery.yaml
     Article:
       $ref: ./schema/Article.yaml
+    AskAction:
+      $ref: ./schema/AskAction.yaml
+    AssessAction:
+      $ref: ./schema/AssessAction.yaml
+    AssignAction:
+      $ref: ./schema/AssignAction.yaml
+    Attorney:
+      $ref: ./schema/Attorney.yaml
+    Audience:
+      $ref: ./schema/Audience.yaml
+    AudioObject:
+      $ref: ./schema/AudioObject.yaml
+    AuthorizeAction:
+      $ref: ./schema/AuthorizeAction.yaml
+    AutoBodyShop:
+      $ref: ./schema/AutoBodyShop.yaml
+    AutoDealer:
+      $ref: ./schema/AutoDealer.yaml
+    AutomatedTeller:
+      $ref: ./schema/AutomatedTeller.yaml
+    AutomotiveBusiness:
+      $ref: ./schema/AutomotiveBusiness.yaml
+    AutoPartsStore:
+      $ref: ./schema/AutoPartsStore.yaml
+    AutoRental:
+      $ref: ./schema/AutoRental.yaml
+    AutoRepair:
+      $ref: ./schema/AutoRepair.yaml
+    AutoWash:
+      $ref: ./schema/AutoWash.yaml
+    Bakery:
+      $ref: ./schema/Bakery.yaml
+    BankAccount:
+      $ref: ./schema/BankAccount.yaml
+    BankOrCreditUnion:
+      $ref: ./schema/BankOrCreditUnion.yaml
+    Barcode:
+      $ref: ./schema/Barcode.yaml
+    BarOrPub:
+      $ref: ./schema/BarOrPub.yaml
+    Beach:
+      $ref: ./schema/Beach.yaml
+    BeautySalon:
+      $ref: ./schema/BeautySalon.yaml
+    BedAndBreakfast:
+      $ref: ./schema/BedAndBreakfast.yaml
+    BedDetails:
+      $ref: ./schema/BedDetails.yaml
+    BefriendAction:
+      $ref: ./schema/BefriendAction.yaml
+    BikeStore:
+      $ref: ./schema/BikeStore.yaml
+    Blog:
+      $ref: ./schema/Blog.yaml
+    BlogPosting:
+      $ref: ./schema/BlogPosting.yaml
+    BoardingPolicyType:
+      $ref: ./schema/BoardingPolicyType.yaml
+    BodyOfWater:
+      $ref: ./schema/BodyOfWater.yaml
+    Book:
+      $ref: ./schema/Book.yaml
+    BookFormatType:
+      $ref: ./schema/BookFormatType.yaml
+    BookmarkAction:
+      $ref: ./schema/BookmarkAction.yaml
+    BookSeries:
+      $ref: ./schema/BookSeries.yaml
+    BookStore:
+      $ref: ./schema/BookStore.yaml
+    BorrowAction:
+      $ref: ./schema/BorrowAction.yaml
+    BowlingAlley:
+      $ref: ./schema/BowlingAlley.yaml
+    Brand:
+      $ref: ./schema/Brand.yaml
+    BreadcrumbList:
+      $ref: ./schema/BreadcrumbList.yaml
+    Brewery:
+      $ref: ./schema/Brewery.yaml
+    Bridge:
+      $ref: ./schema/Bridge.yaml
+    BroadcastChannel:
+      $ref: ./schema/BroadcastChannel.yaml
+    BroadcastEvent:
+      $ref: ./schema/BroadcastEvent.yaml
+    BroadcastService:
+      $ref: ./schema/BroadcastService.yaml
+    BuddhistTemple:
+      $ref: ./schema/BuddhistTemple.yaml
+    BusinessAudience:
+      $ref: ./schema/BusinessAudience.yaml
+    BusinessEntityType:
+      $ref: ./schema/BusinessEntityType.yaml
+    BusinessEvent:
+      $ref: ./schema/BusinessEvent.yaml
+    BusinessFunction:
+      $ref: ./schema/BusinessFunction.yaml
+    BusReservation:
+      $ref: ./schema/BusReservation.yaml
+    BusStation:
+      $ref: ./schema/BusStation.yaml
+    BusStop:
+      $ref: ./schema/BusStop.yaml
+    BusTrip:
+      $ref: ./schema/BusTrip.yaml
+    BuyAction:
+      $ref: ./schema/BuyAction.yaml
+    CableOrSatelliteService:
+      $ref: ./schema/CableOrSatelliteService.yaml
+    CafeOrCoffeeShop:
+      $ref: ./schema/CafeOrCoffeeShop.yaml
+    Campground:
+      $ref: ./schema/Campground.yaml
+    CampingPitch:
+      $ref: ./schema/CampingPitch.yaml
+    Canal:
+      $ref: ./schema/Canal.yaml
+    CancelAction:
+      $ref: ./schema/CancelAction.yaml
+    Car:
+      $ref: ./schema/Car.yaml
+    Casino:
+      $ref: ./schema/Casino.yaml
+    CatholicChurch:
+      $ref: ./schema/CatholicChurch.yaml
+    Cemetery:
+      $ref: ./schema/Cemetery.yaml
+    CheckAction:
+      $ref: ./schema/CheckAction.yaml
+    CheckInAction:
+      $ref: ./schema/CheckInAction.yaml
+    CheckOutAction:
+      $ref: ./schema/CheckOutAction.yaml
+    CheckoutPage:
+      $ref: ./schema/CheckoutPage.yaml
+    ChildCare:
+      $ref: ./schema/ChildCare.yaml
+    ChildrensEvent:
+      $ref: ./schema/ChildrensEvent.yaml
+    ChooseAction:
+      $ref: ./schema/ChooseAction.yaml
+    Church:
+      $ref: ./schema/Church.yaml
+    City:
+      $ref: ./schema/City.yaml
+    CityHall:
+      $ref: ./schema/CityHall.yaml
+    CivicStructure:
+      $ref: ./schema/CivicStructure.yaml
+    ClaimReview:
+      $ref: ./schema/ClaimReview.yaml
+    Clip:
+      $ref: ./schema/Clip.yaml
+    ClothingStore:
+      $ref: ./schema/ClothingStore.yaml
+    Code:
+      $ref: ./schema/Code.yaml
+    CollectionPage:
+      $ref: ./schema/CollectionPage.yaml
+    CollegeOrUniversity:
+      $ref: ./schema/CollegeOrUniversity.yaml
+    ComedyClub:
+      $ref: ./schema/ComedyClub.yaml
+    ComedyEvent:
+      $ref: ./schema/ComedyEvent.yaml
+    Comment:
+      $ref: ./schema/Comment.yaml
+    CommentAction:
+      $ref: ./schema/CommentAction.yaml
+    CommunicateAction:
+      $ref: ./schema/CommunicateAction.yaml
+    CompoundPriceSpecification:
+      $ref: ./schema/CompoundPriceSpecification.yaml
+    ComputerLanguage:
+      $ref: ./schema/ComputerLanguage.yaml
+    ComputerStore:
+      $ref: ./schema/ComputerStore.yaml
+    ConfirmAction:
+      $ref: ./schema/ConfirmAction.yaml
+    ConsumeAction:
+      $ref: ./schema/ConsumeAction.yaml
+    ContactPage:
+      $ref: ./schema/ContactPage.yaml
     ContactPoint:
       $ref: ./schema/ContactPoint.yaml
+    ContactPointOption:
+      $ref: ./schema/ContactPointOption.yaml
+    Continent:
+      $ref: ./schema/Continent.yaml
+    ControlAction:
+      $ref: ./schema/ControlAction.yaml
+    ConvenienceStore:
+      $ref: ./schema/ConvenienceStore.yaml
+    Conversation:
+      $ref: ./schema/Conversation.yaml
+    CookAction:
+      $ref: ./schema/CookAction.yaml
+    Corporation:
+      $ref: ./schema/Corporation.yaml
+    Country:
+      $ref: ./schema/Country.yaml
+    Course:
+      $ref: ./schema/Course.yaml
+    CourseInstance:
+      $ref: ./schema/CourseInstance.yaml
+    Courthouse:
+      $ref: ./schema/Courthouse.yaml
+    CreateAction:
+      $ref: ./schema/CreateAction.yaml
     CreativeWork:
       $ref: ./schema/CreativeWork.yaml
+    CreativeWorkSeason:
+      $ref: ./schema/CreativeWorkSeason.yaml
+    CreativeWorkSeries:
+      $ref: ./schema/CreativeWorkSeries.yaml
+    CreditCard:
+      $ref: ./schema/CreditCard.yaml
+    Crematorium:
+      $ref: ./schema/Crematorium.yaml
+    CurrencyConversionService:
+      $ref: ./schema/CurrencyConversionService.yaml
+    DanceEvent:
+      $ref: ./schema/DanceEvent.yaml
+    DanceGroup:
+      $ref: ./schema/DanceGroup.yaml
+    DataCatalog:
+      $ref: ./schema/DataCatalog.yaml
+    DataDownload:
+      $ref: ./schema/DataDownload.yaml
+    DataFeed:
+      $ref: ./schema/DataFeed.yaml
+    DataFeedItem:
+      $ref: ./schema/DataFeedItem.yaml
+    Dataset:
+      $ref: ./schema/Dataset.yaml
+    DataType:
+      $ref: ./schema/DataType.yaml
+    DatedMoneySpecification:
+      $ref: ./schema/DatedMoneySpecification.yaml
+    DayOfWeek:
+      $ref: ./schema/DayOfWeek.yaml
+    DaySpa:
+      $ref: ./schema/DaySpa.yaml
+    DeactivateAction:
+      $ref: ./schema/DeactivateAction.yaml
+    DefenceEstablishment:
+      $ref: ./schema/DefenceEstablishment.yaml
+    DeleteAction:
+      $ref: ./schema/DeleteAction.yaml
+    DeliveryChargeSpecification:
+      $ref: ./schema/DeliveryChargeSpecification.yaml
+    DeliveryEvent:
+      $ref: ./schema/DeliveryEvent.yaml
+    DeliveryMethod:
+      $ref: ./schema/DeliveryMethod.yaml
+    Demand:
+      $ref: ./schema/Demand.yaml
+    Dentist:
+      $ref: ./schema/Dentist.yaml
+    DepartAction:
+      $ref: ./schema/DepartAction.yaml
+    DepartmentStore:
+      $ref: ./schema/DepartmentStore.yaml
+    DepositAccount:
+      $ref: ./schema/DepositAccount.yaml
+    DigitalDocument:
+      $ref: ./schema/DigitalDocument.yaml
+    DigitalDocumentPermission:
+      $ref: ./schema/DigitalDocumentPermission.yaml
+    DigitalDocumentPermissionType:
+      $ref: ./schema/DigitalDocumentPermissionType.yaml
+    DisagreeAction:
+      $ref: ./schema/DisagreeAction.yaml
+    DiscoverAction:
+      $ref: ./schema/DiscoverAction.yaml
+    DiscussionForumPosting:
+      $ref: ./schema/DiscussionForumPosting.yaml
+    DislikeAction:
+      $ref: ./schema/DislikeAction.yaml
     Distance:
       $ref: ./schema/Distance.yaml
+    DonateAction:
+      $ref: ./schema/DonateAction.yaml
+    DownloadAction:
+      $ref: ./schema/DownloadAction.yaml
+    DrawAction:
+      $ref: ./schema/DrawAction.yaml
+    DrinkAction:
+      $ref: ./schema/DrinkAction.yaml
+    DriveWheelConfigurationValue:
+      $ref: ./schema/DriveWheelConfigurationValue.yaml
+    DryCleaningOrLaundry:
+      $ref: ./schema/DryCleaningOrLaundry.yaml
     Duration:
       $ref: ./schema/Duration.yaml
+    EatAction:
+      $ref: ./schema/EatAction.yaml
+    EducationalAudience:
+      $ref: ./schema/EducationalAudience.yaml
+    EducationalOrganization:
+      $ref: ./schema/EducationalOrganization.yaml
+    EducationEvent:
+      $ref: ./schema/EducationEvent.yaml
+    Electrician:
+      $ref: ./schema/Electrician.yaml
+    ElectronicsStore:
+      $ref: ./schema/ElectronicsStore.yaml
+    ElementarySchool:
+      $ref: ./schema/ElementarySchool.yaml
+    EmailMessage:
+      $ref: ./schema/EmailMessage.yaml
+    Embassy:
+      $ref: ./schema/Embassy.yaml
+    EmergencyService:
+      $ref: ./schema/EmergencyService.yaml
+    EmployeeRole:
+      $ref: ./schema/EmployeeRole.yaml
+    EmploymentAgency:
+      $ref: ./schema/EmploymentAgency.yaml
+    EndorseAction:
+      $ref: ./schema/EndorseAction.yaml
+    Energy:
+      $ref: ./schema/Energy.yaml
+    EngineSpecification:
+      $ref: ./schema/EngineSpecification.yaml
+    EntertainmentBusiness:
+      $ref: ./schema/EntertainmentBusiness.yaml
+    EntryPoint:
+      $ref: ./schema/EntryPoint.yaml
     Enumeration:
       $ref: ./schema/Enumeration.yaml
+    Episode:
+      $ref: ./schema/Episode.yaml
     Error:
       $ref: ./schema/Error.yaml
+    Event:
+      $ref: ./schema/Event.yaml
+    EventReservation:
+      $ref: ./schema/EventReservation.yaml
+    EventStatusType:
+      $ref: ./schema/EventStatusType.yaml
+    EventVenue:
+      $ref: ./schema/EventVenue.yaml
+    ExerciseAction:
+      $ref: ./schema/ExerciseAction.yaml
+    ExerciseGym:
+      $ref: ./schema/ExerciseGym.yaml
+    ExhibitionEvent:
+      $ref: ./schema/ExhibitionEvent.yaml
+    FastFoodRestaurant:
+      $ref: ./schema/FastFoodRestaurant.yaml
+    Festival:
+      $ref: ./schema/Festival.yaml
+    FilmAction:
+      $ref: ./schema/FilmAction.yaml
+    FinancialProduct:
+      $ref: ./schema/FinancialProduct.yaml
+    FinancialService:
+      $ref: ./schema/FinancialService.yaml
+    FindAction:
+      $ref: ./schema/FindAction.yaml
+    FireStation:
+      $ref: ./schema/FireStation.yaml
+    Flight:
+      $ref: ./schema/Flight.yaml
+    FlightReservation:
+      $ref: ./schema/FlightReservation.yaml
+    Float:
+      $ref: ./schema/Float.yaml
+    Florist:
+      $ref: ./schema/Florist.yaml
+    FollowAction:
+      $ref: ./schema/FollowAction.yaml
+    FoodEstablishment:
+      $ref: ./schema/FoodEstablishment.yaml
+    FoodEstablishmentReservation:
+      $ref: ./schema/FoodEstablishmentReservation.yaml
+    FoodEvent:
+      $ref: ./schema/FoodEvent.yaml
+    FoodService:
+      $ref: ./schema/FoodService.yaml
+    FurnitureStore:
+      $ref: ./schema/FurnitureStore.yaml
+    Game:
+      $ref: ./schema/Game.yaml
+    GamePlayMode:
+      $ref: ./schema/GamePlayMode.yaml
+    GameServer:
+      $ref: ./schema/GameServer.yaml
+    GameServerStatus:
+      $ref: ./schema/GameServerStatus.yaml
+    GardenStore:
+      $ref: ./schema/GardenStore.yaml
+    GasStation:
+      $ref: ./schema/GasStation.yaml
+    GatedResidenceCommunity:
+      $ref: ./schema/GatedResidenceCommunity.yaml
+    GenderType:
+      $ref: ./schema/GenderType.yaml
+    GeneralContractor:
+      $ref: ./schema/GeneralContractor.yaml
+    GeoCircle:
+      $ref: ./schema/GeoCircle.yaml
+    GeoCoordinates:
+      $ref: ./schema/GeoCoordinates.yaml
+    GeoShape:
+      $ref: ./schema/GeoShape.yaml
+    GiveAction:
+      $ref: ./schema/GiveAction.yaml
+    GolfCourse:
+      $ref: ./schema/GolfCourse.yaml
+    GovernmentBuilding:
+      $ref: ./schema/GovernmentBuilding.yaml
+    GovernmentOffice:
+      $ref: ./schema/GovernmentOffice.yaml
+    GovernmentOrganization:
+      $ref: ./schema/GovernmentOrganization.yaml
+    GovernmentPermit:
+      $ref: ./schema/GovernmentPermit.yaml
+    GovernmentService:
+      $ref: ./schema/GovernmentService.yaml
+    GroceryStore:
+      $ref: ./schema/GroceryStore.yaml
+    HairSalon:
+      $ref: ./schema/HairSalon.yaml
+    HardwareStore:
+      $ref: ./schema/HardwareStore.yaml
+    HealthAndBeautyBusiness:
+      $ref: ./schema/HealthAndBeautyBusiness.yaml
+    HealthClub:
+      $ref: ./schema/HealthClub.yaml
+    HighSchool:
+      $ref: ./schema/HighSchool.yaml
+    HinduTemple:
+      $ref: ./schema/HinduTemple.yaml
+    HobbyShop:
+      $ref: ./schema/HobbyShop.yaml
+    HomeAndConstructionBusiness:
+      $ref: ./schema/HomeAndConstructionBusiness.yaml
+    HomeGoodsStore:
+      $ref: ./schema/HomeGoodsStore.yaml
+    Hospital:
+      $ref: ./schema/Hospital.yaml
+    Hostel:
+      $ref: ./schema/Hostel.yaml
+    Hotel:
+      $ref: ./schema/Hotel.yaml
+    HotelRoom:
+      $ref: ./schema/HotelRoom.yaml
+    House:
+      $ref: ./schema/House.yaml
+    HousePainter:
+      $ref: ./schema/HousePainter.yaml
+    HowTo:
+      $ref: ./schema/HowTo.yaml
+    HowToDirection:
+      $ref: ./schema/HowToDirection.yaml
+    HowToItem:
+      $ref: ./schema/HowToItem.yaml
+    HowToSection:
+      $ref: ./schema/HowToSection.yaml
+    HowToStep:
+      $ref: ./schema/HowToStep.yaml
+    HowToSupply:
+      $ref: ./schema/HowToSupply.yaml
+    HowToTip:
+      $ref: ./schema/HowToTip.yaml
+    HowToTool:
+      $ref: ./schema/HowToTool.yaml
+    HVACBusiness:
+      $ref: ./schema/HVACBusiness.yaml
+    IceCreamShop:
+      $ref: ./schema/IceCreamShop.yaml
+    IgnoreAction:
+      $ref: ./schema/IgnoreAction.yaml
+    ImageGallery:
+      $ref: ./schema/ImageGallery.yaml
     ImageObject:
       $ref: ./schema/ImageObject.yaml
+    IndividualProduct:
+      $ref: ./schema/IndividualProduct.yaml
+    InformAction:
+      $ref: ./schema/InformAction.yaml
+    InsertAction:
+      $ref: ./schema/InsertAction.yaml
+    InstallAction:
+      $ref: ./schema/InstallAction.yaml
+    InsuranceAgency:
+      $ref: ./schema/InsuranceAgency.yaml
     Intangible:
       $ref: ./schema/Intangible.yaml
+    Integer:
+      $ref: ./schema/Integer.yaml
+    InteractAction:
+      $ref: ./schema/InteractAction.yaml
+    InteractionCounter:
+      $ref: ./schema/InteractionCounter.yaml
+    InternetCafe:
+      $ref: ./schema/InternetCafe.yaml
+    InvestmentOrDeposit:
+      $ref: ./schema/InvestmentOrDeposit.yaml
+    InviteAction:
+      $ref: ./schema/InviteAction.yaml
+    Invoice:
+      $ref: ./schema/Invoice.yaml
+    ItemAvailability:
+      $ref: ./schema/ItemAvailability.yaml
+    ItemList:
+      $ref: ./schema/ItemList.yaml
+    ItemListOrderType:
+      $ref: ./schema/ItemListOrderType.yaml
+    ItemPage:
+      $ref: ./schema/ItemPage.yaml
+    JewelryStore:
+      $ref: ./schema/JewelryStore.yaml
+    JobPosting:
+      $ref: ./schema/JobPosting.yaml
+    JoinAction:
+      $ref: ./schema/JoinAction.yaml
+    LakeBodyOfWater:
+      $ref: ./schema/LakeBodyOfWater.yaml
+    Landform:
+      $ref: ./schema/Landform.yaml
+    LandmarksOrHistoricalBuildings:
+      $ref: ./schema/LandmarksOrHistoricalBuildings.yaml
+    Language:
+      $ref: ./schema/Language.yaml
+    LeaveAction:
+      $ref: ./schema/LeaveAction.yaml
+    LegalService:
+      $ref: ./schema/LegalService.yaml
+    LegislativeBuilding:
+      $ref: ./schema/LegislativeBuilding.yaml
+    LendAction:
+      $ref: ./schema/LendAction.yaml
+    Library:
+      $ref: ./schema/Library.yaml
+    LikeAction:
+      $ref: ./schema/LikeAction.yaml
+    LiquorStore:
+      $ref: ./schema/LiquorStore.yaml
+    ListenAction:
+      $ref: ./schema/ListenAction.yaml
+    ListItem:
+      $ref: ./schema/ListItem.yaml
+    LiteraryEvent:
+      $ref: ./schema/LiteraryEvent.yaml
+    LiveBlogPosting:
+      $ref: ./schema/LiveBlogPosting.yaml
+    LoanOrCredit:
+      $ref: ./schema/LoanOrCredit.yaml
+    LocalBusiness:
+      $ref: ./schema/LocalBusiness.yaml
+    LocationFeatureSpecification:
+      $ref: ./schema/LocationFeatureSpecification.yaml
+    LockerDelivery:
+      $ref: ./schema/LockerDelivery.yaml
+    Locksmith:
+      $ref: ./schema/Locksmith.yaml
+    LodgingBusiness:
+      $ref: ./schema/LodgingBusiness.yaml
+    LodgingReservation:
+      $ref: ./schema/LodgingReservation.yaml
+    LoseAction:
+      $ref: ./schema/LoseAction.yaml
+    Map:
+      $ref: ./schema/Map.yaml
+    MapCategoryType:
+      $ref: ./schema/MapCategoryType.yaml
+    MarryAction:
+      $ref: ./schema/MarryAction.yaml
+    Mass:
+      $ref: ./schema/Mass.yaml
     MediaObject:
       $ref: ./schema/MediaObject.yaml
+    MedicalOrganization:
+      $ref: ./schema/MedicalOrganization.yaml
+    MeetingRoom:
+      $ref: ./schema/MeetingRoom.yaml
+    MensClothingStore:
+      $ref: ./schema/MensClothingStore.yaml
+    Menu:
+      $ref: ./schema/Menu.yaml
+    MenuItem:
+      $ref: ./schema/MenuItem.yaml
+    MenuSection:
+      $ref: ./schema/MenuSection.yaml
+    Message:
+      $ref: ./schema/Message.yaml
+    MiddleSchool:
+      $ref: ./schema/MiddleSchool.yaml
+    MobileApplication:
+      $ref: ./schema/MobileApplication.yaml
+    MobilePhoneStore:
+      $ref: ./schema/MobilePhoneStore.yaml
+    MonetaryAmount:
+      $ref: ./schema/MonetaryAmount.yaml
+    Mosque:
+      $ref: ./schema/Mosque.yaml
+    Motel:
+      $ref: ./schema/Motel.yaml
+    MotorcycleDealer:
+      $ref: ./schema/MotorcycleDealer.yaml
+    MotorcycleRepair:
+      $ref: ./schema/MotorcycleRepair.yaml
+    Mountain:
+      $ref: ./schema/Mountain.yaml
+    MoveAction:
+      $ref: ./schema/MoveAction.yaml
+    Movie:
+      $ref: ./schema/Movie.yaml
+    MovieClip:
+      $ref: ./schema/MovieClip.yaml
+    MovieRentalStore:
+      $ref: ./schema/MovieRentalStore.yaml
+    MovieSeries:
+      $ref: ./schema/MovieSeries.yaml
+    MovieTheater:
+      $ref: ./schema/MovieTheater.yaml
+    MovingCompany:
+      $ref: ./schema/MovingCompany.yaml
+    Museum:
+      $ref: ./schema/Museum.yaml
+    MusicAlbum:
+      $ref: ./schema/MusicAlbum.yaml
+    MusicAlbumProductionType:
+      $ref: ./schema/MusicAlbumProductionType.yaml
+    MusicAlbumReleaseType:
+      $ref: ./schema/MusicAlbumReleaseType.yaml
+    MusicComposition:
+      $ref: ./schema/MusicComposition.yaml
+    MusicEvent:
+      $ref: ./schema/MusicEvent.yaml
+    MusicGroup:
+      $ref: ./schema/MusicGroup.yaml
+    MusicPlaylist:
+      $ref: ./schema/MusicPlaylist.yaml
+    MusicRecording:
+      $ref: ./schema/MusicRecording.yaml
+    MusicRelease:
+      $ref: ./schema/MusicRelease.yaml
+    MusicReleaseFormatType:
+      $ref: ./schema/MusicReleaseFormatType.yaml
+    MusicStore:
+      $ref: ./schema/MusicStore.yaml
+    MusicVenue:
+      $ref: ./schema/MusicVenue.yaml
+    MusicVideoObject:
+      $ref: ./schema/MusicVideoObject.yaml
+    NailSalon:
+      $ref: ./schema/NailSalon.yaml
     NewsArticle:
       $ref: ./schema/NewsArticle.yaml
+    NGO:
+      $ref: ./schema/NGO.yaml
+    NightClub:
+      $ref: ./schema/NightClub.yaml
+    Notary:
+      $ref: ./schema/Notary.yaml
+    NoteDigitalDocument:
+      $ref: ./schema/NoteDigitalDocument.yaml
+    NutritionInformation:
+      $ref: ./schema/NutritionInformation.yaml
+    OceanBodyOfWater:
+      $ref: ./schema/OceanBodyOfWater.yaml
+    Offer:
+      $ref: ./schema/Offer.yaml
+    OfferCatalog:
+      $ref: ./schema/OfferCatalog.yaml
+    OfferItemCondition:
+      $ref: ./schema/OfferItemCondition.yaml
+    OfficeEquipmentStore:
+      $ref: ./schema/OfficeEquipmentStore.yaml
+    OnDemandEvent:
+      $ref: ./schema/OnDemandEvent.yaml
+    OpeningHoursSpecification:
+      $ref: ./schema/OpeningHoursSpecification.yaml
+    Order:
+      $ref: ./schema/Order.yaml
+    OrderAction:
+      $ref: ./schema/OrderAction.yaml
+    OrderItem:
+      $ref: ./schema/OrderItem.yaml
+    OrderStatus:
+      $ref: ./schema/OrderStatus.yaml
     Organization:
       $ref: ./schema/Organization.yaml
+    OrganizationRole:
+      $ref: ./schema/OrganizationRole.yaml
+    OrganizeAction:
+      $ref: ./schema/OrganizeAction.yaml
+    OutletStore:
+      $ref: ./schema/OutletStore.yaml
+    OwnershipInfo:
+      $ref: ./schema/OwnershipInfo.yaml
+    PaintAction:
+      $ref: ./schema/PaintAction.yaml
+    Painting:
+      $ref: ./schema/Painting.yaml
+    ParcelDelivery:
+      $ref: ./schema/ParcelDelivery.yaml
+    ParcelService:
+      $ref: ./schema/ParcelService.yaml
+    ParentAudience:
+      $ref: ./schema/ParentAudience.yaml
+    Park:
+      $ref: ./schema/Park.yaml
+    ParkingFacility:
+      $ref: ./schema/ParkingFacility.yaml
+    PawnShop:
+      $ref: ./schema/PawnShop.yaml
+    PayAction:
+      $ref: ./schema/PayAction.yaml
+    PaymentCard:
+      $ref: ./schema/PaymentCard.yaml
+    PaymentChargeSpecification:
+      $ref: ./schema/PaymentChargeSpecification.yaml
+    PaymentMethod:
+      $ref: ./schema/PaymentMethod.yaml
+    PaymentService:
+      $ref: ./schema/PaymentService.yaml
+    PaymentStatusType:
+      $ref: ./schema/PaymentStatusType.yaml
+    PeopleAudience:
+      $ref: ./schema/PeopleAudience.yaml
+    PerformAction:
+      $ref: ./schema/PerformAction.yaml
+    PerformanceRole:
+      $ref: ./schema/PerformanceRole.yaml
+    PerformingArtsTheater:
+      $ref: ./schema/PerformingArtsTheater.yaml
+    PerformingGroup:
+      $ref: ./schema/PerformingGroup.yaml
+    Periodical:
+      $ref: ./schema/Periodical.yaml
+    Permit:
+      $ref: ./schema/Permit.yaml
     Person:
       $ref: ./schema/Person.yaml
+    PetStore:
+      $ref: ./schema/PetStore.yaml
+    Pharmacy:
+      $ref: ./schema/Pharmacy.yaml
+    Photograph:
+      $ref: ./schema/Photograph.yaml
+    PhotographAction:
+      $ref: ./schema/PhotographAction.yaml
+    Physician:
+      $ref: ./schema/Physician.yaml
     Place:
       $ref: ./schema/Place.yaml
+    PlaceOfWorship:
+      $ref: ./schema/PlaceOfWorship.yaml
+    PlanAction:
+      $ref: ./schema/PlanAction.yaml
+    PlayAction:
+      $ref: ./schema/PlayAction.yaml
+    Playground:
+      $ref: ./schema/Playground.yaml
+    Plumber:
+      $ref: ./schema/Plumber.yaml
+    PoliceStation:
+      $ref: ./schema/PoliceStation.yaml
+    Pond:
+      $ref: ./schema/Pond.yaml
     PostalAddress:
       $ref: ./schema/PostalAddress.yaml
+    PostOffice:
+      $ref: ./schema/PostOffice.yaml
+    PrependAction:
+      $ref: ./schema/PrependAction.yaml
+    Preschool:
+      $ref: ./schema/Preschool.yaml
+    PresentationDigitalDocument:
+      $ref: ./schema/PresentationDigitalDocument.yaml
+    PriceSpecification:
+      $ref: ./schema/PriceSpecification.yaml
+    Product:
+      $ref: ./schema/Product.yaml
+    ProductModel:
+      $ref: ./schema/ProductModel.yaml
+    ProfessionalService:
+      $ref: ./schema/ProfessionalService.yaml
+    ProfilePage:
+      $ref: ./schema/ProfilePage.yaml
+    ProgramMembership:
+      $ref: ./schema/ProgramMembership.yaml
     Property:
       $ref: ./schema/Property.yaml
     PropertyValue:
       $ref: ./schema/PropertyValue.yaml
+    PropertyValueSpecification:
+      $ref: ./schema/PropertyValueSpecification.yaml
+    PublicationEvent:
+      $ref: ./schema/PublicationEvent.yaml
+    PublicationIssue:
+      $ref: ./schema/PublicationIssue.yaml
+    PublicationVolume:
+      $ref: ./schema/PublicationVolume.yaml
+    PublicSwimmingPool:
+      $ref: ./schema/PublicSwimmingPool.yaml
+    QAPage:
+      $ref: ./schema/QAPage.yaml
     QualitativeValue:
       $ref: ./schema/QualitativeValue.yaml
     QuantitativeValue:
       $ref: ./schema/QuantitativeValue.yaml
     Quantity:
       $ref: ./schema/Quantity.yaml
+    Question:
+      $ref: ./schema/Question.yaml
+    QuoteAction:
+      $ref: ./schema/QuoteAction.yaml
+    RadioChannel:
+      $ref: ./schema/RadioChannel.yaml
+    RadioClip:
+      $ref: ./schema/RadioClip.yaml
+    RadioEpisode:
+      $ref: ./schema/RadioEpisode.yaml
+    RadioSeason:
+      $ref: ./schema/RadioSeason.yaml
+    RadioSeries:
+      $ref: ./schema/RadioSeries.yaml
+    RadioStation:
+      $ref: ./schema/RadioStation.yaml
+    Rating:
+      $ref: ./schema/Rating.yaml
+    ReactAction:
+      $ref: ./schema/ReactAction.yaml
+    ReadAction:
+      $ref: ./schema/ReadAction.yaml
+    RealEstateAgent:
+      $ref: ./schema/RealEstateAgent.yaml
+    ReceiveAction:
+      $ref: ./schema/ReceiveAction.yaml
+    Recipe:
+      $ref: ./schema/Recipe.yaml
+    RecyclingCenter:
+      $ref: ./schema/RecyclingCenter.yaml
+    RegisterAction:
+      $ref: ./schema/RegisterAction.yaml
+    RejectAction:
+      $ref: ./schema/RejectAction.yaml
+    RentAction:
+      $ref: ./schema/RentAction.yaml
+    RentalCarReservation:
+      $ref: ./schema/RentalCarReservation.yaml
+    ReplaceAction:
+      $ref: ./schema/ReplaceAction.yaml
+    ReplyAction:
+      $ref: ./schema/ReplyAction.yaml
+    Report:
+      $ref: ./schema/Report.yaml
+    Reservation:
+      $ref: ./schema/Reservation.yaml
+    ReservationPackage:
+      $ref: ./schema/ReservationPackage.yaml
+    ReservationStatusType:
+      $ref: ./schema/ReservationStatusType.yaml
+    ReserveAction:
+      $ref: ./schema/ReserveAction.yaml
+    Reservoir:
+      $ref: ./schema/Reservoir.yaml
+    Residence:
+      $ref: ./schema/Residence.yaml
+    Resort:
+      $ref: ./schema/Resort.yaml
+    Restaurant:
+      $ref: ./schema/Restaurant.yaml
+    RestrictedDiet:
+      $ref: ./schema/RestrictedDiet.yaml
+    ResumeAction:
+      $ref: ./schema/ResumeAction.yaml
+    ReturnAction:
+      $ref: ./schema/ReturnAction.yaml
     Review:
       $ref: ./schema/Review.yaml
+    ReviewAction:
+      $ref: ./schema/ReviewAction.yaml
+    RiverBodyOfWater:
+      $ref: ./schema/RiverBodyOfWater.yaml
+    Role:
+      $ref: ./schema/Role.yaml
+    RoofingContractor:
+      $ref: ./schema/RoofingContractor.yaml
+    Room:
+      $ref: ./schema/Room.yaml
+    RsvpAction:
+      $ref: ./schema/RsvpAction.yaml
+    RsvpResponseType:
+      $ref: ./schema/RsvpResponseType.yaml
+    RVPark:
+      $ref: ./schema/RVPark.yaml
+    SaleEvent:
+      $ref: ./schema/SaleEvent.yaml
+    ScheduleAction:
+      $ref: ./schema/ScheduleAction.yaml
     ScholarlyArticle:
       $ref: ./schema/ScholarlyArticle.yaml
+    School:
+      $ref: ./schema/School.yaml
+    ScreeningEvent:
+      $ref: ./schema/ScreeningEvent.yaml
+    Sculpture:
+      $ref: ./schema/Sculpture.yaml
+    SeaBodyOfWater:
+      $ref: ./schema/SeaBodyOfWater.yaml
+    SearchAction:
+      $ref: ./schema/SearchAction.yaml
+    SearchResultsPage:
+      $ref: ./schema/SearchResultsPage.yaml
+    Season:
+      $ref: ./schema/Season.yaml
+    Seat:
+      $ref: ./schema/Seat.yaml
+    SelfStorage:
+      $ref: ./schema/SelfStorage.yaml
+    SellAction:
+      $ref: ./schema/SellAction.yaml
+    SendAction:
+      $ref: ./schema/SendAction.yaml
+    Series:
+      $ref: ./schema/Series.yaml
+    Service:
+      $ref: ./schema/Service.yaml
+    ServiceChannel:
+      $ref: ./schema/ServiceChannel.yaml
+    ShareAction:
+      $ref: ./schema/ShareAction.yaml
+    ShoeStore:
+      $ref: ./schema/ShoeStore.yaml
+    ShoppingCenter:
+      $ref: ./schema/ShoppingCenter.yaml
+    SingleFamilyResidence:
+      $ref: ./schema/SingleFamilyResidence.yaml
+    SiteNavigationElement:
+      $ref: ./schema/SiteNavigationElement.yaml
+    SkiResort:
+      $ref: ./schema/SkiResort.yaml
+    SocialEvent:
+      $ref: ./schema/SocialEvent.yaml
+    SocialMediaPosting:
+      $ref: ./schema/SocialMediaPosting.yaml
+    SoftwareApplication:
+      $ref: ./schema/SoftwareApplication.yaml
+    SoftwareSourceCode:
+      $ref: ./schema/SoftwareSourceCode.yaml
+    SomeProducts:
+      $ref: ./schema/SomeProducts.yaml
+    Specialty:
+      $ref: ./schema/Specialty.yaml
+    SportingGoodsStore:
+      $ref: ./schema/SportingGoodsStore.yaml
+    SportsActivityLocation:
+      $ref: ./schema/SportsActivityLocation.yaml
+    SportsClub:
+      $ref: ./schema/SportsClub.yaml
+    SportsEvent:
+      $ref: ./schema/SportsEvent.yaml
+    SportsOrganization:
+      $ref: ./schema/SportsOrganization.yaml
+    SportsTeam:
+      $ref: ./schema/SportsTeam.yaml
+    SpreadsheetDigitalDocument:
+      $ref: ./schema/SpreadsheetDigitalDocument.yaml
+    StadiumOrArena:
+      $ref: ./schema/StadiumOrArena.yaml
+    State:
+      $ref: ./schema/State.yaml
+    SteeringPositionValue:
+      $ref: ./schema/SteeringPositionValue.yaml
+    Store:
+      $ref: ./schema/Store.yaml
     StructuredValue:
       $ref: ./schema/StructuredValue.yaml
+    SubscribeAction:
+      $ref: ./schema/SubscribeAction.yaml
+    SubwayStation:
+      $ref: ./schema/SubwayStation.yaml
+    Suite:
+      $ref: ./schema/Suite.yaml
+    SuspendAction:
+      $ref: ./schema/SuspendAction.yaml
+    Synagogue:
+      $ref: ./schema/Synagogue.yaml
+    Table:
+      $ref: ./schema/Table.yaml
+    TakeAction:
+      $ref: ./schema/TakeAction.yaml
+    TattooParlor:
+      $ref: ./schema/TattooParlor.yaml
+    Taxi:
+      $ref: ./schema/Taxi.yaml
+    TaxiReservation:
+      $ref: ./schema/TaxiReservation.yaml
+    TaxiService:
+      $ref: ./schema/TaxiService.yaml
+    TaxiStand:
+      $ref: ./schema/TaxiStand.yaml
+    TechArticle:
+      $ref: ./schema/TechArticle.yaml
+    TelevisionChannel:
+      $ref: ./schema/TelevisionChannel.yaml
+    TelevisionStation:
+      $ref: ./schema/TelevisionStation.yaml
+    TennisComplex:
+      $ref: ./schema/TennisComplex.yaml
+    TextDigitalDocument:
+      $ref: ./schema/TextDigitalDocument.yaml
+    TheaterEvent:
+      $ref: ./schema/TheaterEvent.yaml
+    TheaterGroup:
+      $ref: ./schema/TheaterGroup.yaml
     Thing:
       $ref: ./schema/Thing.yaml
+    Ticket:
+      $ref: ./schema/Ticket.yaml
+    TieAction:
+      $ref: ./schema/TieAction.yaml
+    TipAction:
+      $ref: ./schema/TipAction.yaml
+    TireShop:
+      $ref: ./schema/TireShop.yaml
+    TouristAttraction:
+      $ref: ./schema/TouristAttraction.yaml
+    TouristInformationCenter:
+      $ref: ./schema/TouristInformationCenter.yaml
+    ToyStore:
+      $ref: ./schema/ToyStore.yaml
+    TrackAction:
+      $ref: ./schema/TrackAction.yaml
+    TradeAction:
+      $ref: ./schema/TradeAction.yaml
+    TrainReservation:
+      $ref: ./schema/TrainReservation.yaml
+    TrainStation:
+      $ref: ./schema/TrainStation.yaml
+    TrainTrip:
+      $ref: ./schema/TrainTrip.yaml
+    TransferAction:
+      $ref: ./schema/TransferAction.yaml
+    TravelAction:
+      $ref: ./schema/TravelAction.yaml
+    TravelAgency:
+      $ref: ./schema/TravelAgency.yaml
+    Trip:
+      $ref: ./schema/Trip.yaml
+    TVClip:
+      $ref: ./schema/TVClip.yaml
+    TVEpisode:
+      $ref: ./schema/TVEpisode.yaml
+    TVSeason:
+      $ref: ./schema/TVSeason.yaml
+    TVSeries:
+      $ref: ./schema/TVSeries.yaml
+    TypeAndQuantityNode:
+      $ref: ./schema/TypeAndQuantityNode.yaml
+    UnitPriceSpecification:
+      $ref: ./schema/UnitPriceSpecification.yaml
+    UnRegisterAction:
+      $ref: ./schema/UnRegisterAction.yaml
+    UpdateAction:
+      $ref: ./schema/UpdateAction.yaml
+    URL:
+      $ref: ./schema/URL.yaml
+    UseAction:
+      $ref: ./schema/UseAction.yaml
+    UserBlocks:
+      $ref: ./schema/UserBlocks.yaml
+    UserCheckins:
+      $ref: ./schema/UserCheckins.yaml
+    UserComments:
+      $ref: ./schema/UserComments.yaml
+    UserDownloads:
+      $ref: ./schema/UserDownloads.yaml
+    UserInteraction:
+      $ref: ./schema/UserInteraction.yaml
+    UserLikes:
+      $ref: ./schema/UserLikes.yaml
+    UserPageVisits:
+      $ref: ./schema/UserPageVisits.yaml
+    UserPlays:
+      $ref: ./schema/UserPlays.yaml
+    UserPlusOnes:
+      $ref: ./schema/UserPlusOnes.yaml
+    UserTweets:
+      $ref: ./schema/UserTweets.yaml
+    Vehicle:
+      $ref: ./schema/Vehicle.yaml
+    VideoGallery:
+      $ref: ./schema/VideoGallery.yaml
+    VideoGame:
+      $ref: ./schema/VideoGame.yaml
+    VideoGameClip:
+      $ref: ./schema/VideoGameClip.yaml
+    VideoGameSeries:
+      $ref: ./schema/VideoGameSeries.yaml
+    VideoObject:
+      $ref: ./schema/VideoObject.yaml
+    ViewAction:
+      $ref: ./schema/ViewAction.yaml
+    VisualArtsEvent:
+      $ref: ./schema/VisualArtsEvent.yaml
+    VisualArtwork:
+      $ref: ./schema/VisualArtwork.yaml
+    Volcano:
+      $ref: ./schema/Volcano.yaml
+    VoteAction:
+      $ref: ./schema/VoteAction.yaml
+    WantAction:
+      $ref: ./schema/WantAction.yaml
+    WarrantyPromise:
+      $ref: ./schema/WarrantyPromise.yaml
+    WarrantyScope:
+      $ref: ./schema/WarrantyScope.yaml
+    WatchAction:
+      $ref: ./schema/WatchAction.yaml
+    Waterfall:
+      $ref: ./schema/Waterfall.yaml
+    WearAction:
+      $ref: ./schema/WearAction.yaml
+    WebApplication:
+      $ref: ./schema/WebApplication.yaml
+    WebPage:
+      $ref: ./schema/WebPage.yaml
+    WebPageElement:
+      $ref: ./schema/WebPageElement.yaml
+    WebSite:
+      $ref: ./schema/WebSite.yaml
+    WholesaleStore:
+      $ref: ./schema/WholesaleStore.yaml
+    WinAction:
+      $ref: ./schema/WinAction.yaml
+    Winery:
+      $ref: ./schema/Winery.yaml
+    WPAdBlock:
+      $ref: ./schema/WPAdBlock.yaml
+    WPFooter:
+      $ref: ./schema/WPFooter.yaml
+    WPHeader:
+      $ref: ./schema/WPHeader.yaml
+    WPSideBar:
+      $ref: ./schema/WPSideBar.yaml
+    WriteAction:
+      $ref: ./schema/WriteAction.yaml
+    Zoo:
+      $ref: ./schema/Zoo.yaml

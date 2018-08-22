@@ -1,0 +1,3 @@
+HardwareStore:
+  $ref: 'store.yaml#/Store'
+  description: A hardware store.

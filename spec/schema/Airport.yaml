@@ -1,0 +1,12 @@
+Airport:
+  allOf:
+    - $ref: 'civicstructure.yaml#/CivicStructure'
+    - properties:
+        iataCode:
+          description: IATA identifier for an airline or airport.
+          type: string
+        icaoCode:
+          description: ICAO identifier for an airport.
+          type: string
+      type: object
+  description: An airport.

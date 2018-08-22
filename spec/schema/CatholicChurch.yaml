@@ -1,0 +1,3 @@
+CatholicChurch:
+  $ref: 'placeofworship.yaml#/PlaceOfWorship'
+  description: A Catholic church.

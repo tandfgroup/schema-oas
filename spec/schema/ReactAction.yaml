@@ -1,0 +1,5 @@
+ReactAction:
+  $ref: 'assessaction.yaml#/AssessAction'
+  description: >-
+    The act of responding instinctively and emotionally to an object, expressing
+    a sentiment.

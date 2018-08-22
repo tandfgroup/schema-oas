@@ -1,0 +1,42 @@
+NutritionInformation:
+  allOf:
+    - $ref: 'structuredvalue.yaml#/StructuredValue'
+    - properties:
+        calories:
+          $ref: 'energy.yaml#/Energy'
+          description: The number of calories.
+        carbohydrateContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of carbohydrates.
+        cholesterolContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of milligrams of cholesterol.
+        fatContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of fat.
+        fiberContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of fiber.
+        proteinContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of protein.
+        saturatedFatContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of saturated fat.
+        servingSize:
+          description: 'The serving size, in terms of the number of volume or mass.'
+          type: string
+        sodiumContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of milligrams of sodium.
+        sugarContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of sugar.
+        transFatContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of trans fat.
+        unsaturatedFatContent:
+          $ref: 'mass.yaml#/Mass'
+          description: The number of grams of unsaturated fat.
+      type: object
+  description: Nutritional information about the recipe.

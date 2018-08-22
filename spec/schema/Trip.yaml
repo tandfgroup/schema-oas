@@ -1,0 +1,53 @@
+Trip:
+  allOf:
+    - $ref: 'intangible.yaml#/Intangible'
+    - properties:
+        arrivalTime:
+          description: The expected arrival time.
+          format: date-time
+          type: string
+        departureTime:
+          description: The expected departure time.
+          format: date-time
+          type: string
+        hasPart:
+          description: >-
+            Indicates an item or CreativeWork that is part of this item, or
+            CreativeWork (in some sense).
+          oneOf:
+            - $ref: 'trip.yaml#/Trip'
+            - $ref: 'creativework.yaml#/CreativeWork'
+        isPartOf:
+          description: >-
+            Indicates an item or CreativeWork that this item, or CreativeWork
+            (in some sense), is part of.
+          oneOf:
+            - $ref: 'creativework.yaml#/CreativeWork'
+            - $ref: 'trip.yaml#/Trip'
+        itinerary:
+          description: >-
+            Destination(s) ( <a class="localLink"
+            href="http://schema.org/Place">Place</a> ) that make up a trip. For
+            a trip where destination order is important use <a class="localLink"
+            href="http://schema.org/ItemList">ItemList</a> to specify that order
+            (see examples).
+          oneOf:
+            - $ref: 'place.yaml#/Place'
+            - $ref: 'itemlist.yaml#/ItemList'
+        offers:
+          $ref: 'offer.yaml#/Offer'
+          description: >-
+            An offer to provide this item&#x2014;for example, an offer to sell a
+            product, rent the DVD of a movie, perform a service, or give away
+            tickets to an event.
+        provider:
+          description: >-
+            The service provider, service operator, or service performer; the
+            goods producer. Another party (a seller) may offer those services or
+            goods on behalf of the provider. A provider may also serve as the
+            seller.
+          oneOf:
+            - $ref: 'person.yaml#/Person'
+            - $ref: 'organization.yaml#/Organization'
+      type: object
+  description: A trip or journey. An itinerary of visits to one or more places.

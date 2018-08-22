@@ -1,0 +1,3 @@
+DaySpa:
+  $ref: 'healthandbeautybusiness.yaml#/HealthAndBeautyBusiness'
+  description: A day spa.

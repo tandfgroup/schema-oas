@@ -1,5 +1,3 @@
 ActionStatusType:
-  allOf:
-    - $ref: 'Enumeration.yaml#/Enumeration'
-    - type: object
-      description: The status of an Action.
+  $ref: 'enumeration.yaml#/Enumeration'
+  description: The status of an Action.

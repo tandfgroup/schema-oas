@@ -1,0 +1,24 @@
+Comment:
+  allOf:
+    - $ref: 'creativework.yaml#/CreativeWork'
+    - properties:
+        downvoteCount:
+          description: >-
+            The number of downvotes this question, answer or comment has
+            received from the community.
+          type: integer
+        parentItem:
+          $ref: 'question.yaml#/Question'
+          description: 'The parent of a question, answer or item in general.'
+        upvoteCount:
+          description: >-
+            The number of upvotes this question, answer or comment has received
+            from the community.
+          type: integer
+      type: object
+  description: >-
+    A comment on an item - for example, a comment on a blog post. The comment's
+    content is expressed via the <a class="localLink"
+    href="http://schema.org/text">text</a> property, and its topic via <a
+    class="localLink" href="http://schema.org/about">about</a>, properties
+    shared with all CreativeWorks.

@@ -1,0 +1,3 @@
+Season:
+  $ref: 'creativework.yaml#/CreativeWork'
+  description: 'A media season e.g. tv, radio, video game etc.'

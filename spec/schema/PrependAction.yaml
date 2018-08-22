@@ -1,0 +1,3 @@
+PrependAction:
+  $ref: 'insertaction.yaml#/InsertAction'
+  description: The act of inserting at the beginning if an ordered collection.

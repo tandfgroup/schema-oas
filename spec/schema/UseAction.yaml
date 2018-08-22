@@ -1,0 +1,3 @@
+UseAction:
+  $ref: 'consumeaction.yaml#/ConsumeAction'
+  description: The act of applying an object to its intended purpose.

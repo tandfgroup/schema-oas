@@ -1,0 +1,11 @@
+PerformAction:
+  allOf:
+    - $ref: 'playaction.yaml#/PlayAction'
+    - properties:
+        entertainmentBusiness:
+          $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'
+          description: >-
+            A sub property of location. The entertainment business where the
+            action occurred.
+      type: object
+  description: The act of participating in performance arts.

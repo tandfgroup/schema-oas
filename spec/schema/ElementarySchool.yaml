@@ -1,0 +1,3 @@
+ElementarySchool:
+  $ref: 'educationalorganization.yaml#/EducationalOrganization'
+  description: An elementary school.

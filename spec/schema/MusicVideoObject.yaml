@@ -1,0 +1,3 @@
+MusicVideoObject:
+  $ref: 'mediaobject.yaml#/MediaObject'
+  description: A music video file.

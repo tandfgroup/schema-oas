@@ -1,0 +1,3 @@
+AdultEntertainment:
+  $ref: 'entertainmentbusiness.yaml#/EntertainmentBusiness'
+  description: An adult entertainment establishment.

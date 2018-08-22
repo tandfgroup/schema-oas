@@ -1,0 +1,3 @@
+NoteDigitalDocument:
+  $ref: 'digitaldocument.yaml#/DigitalDocument'
+  description: 'A file containing a note, primarily for the author.'

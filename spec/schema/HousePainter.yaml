@@ -1,0 +1,3 @@
+HousePainter:
+  $ref: 'homeandconstructionbusiness.yaml#/HomeAndConstructionBusiness'
+  description: A house painting service.
