@@ -8,8 +8,8 @@ Comment:
             received from the community.
           type: integer
         parentItem:
-          $ref: 'question.yaml#/Question'
           description: 'The parent of a question, answer or item in general.'
+          type: Question
         upvoteCount:
           description: >-
             The number of upvotes this question, answer or comment has received

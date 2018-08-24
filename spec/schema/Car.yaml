@@ -9,7 +9,6 @@ Car:
             of Car Rental Industry Systems and Standards.
           type: string
         roofLoad:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >
             The permitted total weight of cargo and installations (e.g. a roof
             rack) on top of the vehicle.<br/><br/>
@@ -37,5 +36,6 @@ Car:
             indicate ranges.</li>
 
             </ul>
+          type: QuantitativeValue
       type: object
   description: 'A car is a wheeled, self-powered motor vehicle used for transportation.'

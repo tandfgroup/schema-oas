@@ -5,16 +5,16 @@ OpeningHoursSpecification:
         closes:
           description: >-
             The closing hour of the place or service on the given day(s) of the
-            week. Note: Time type is not published yet in schema.org.
-          type: object
+            week.
+          type: Time
         dayOfWeek:
-          $ref: 'dayofweek.yaml#/DayOfWeek'
           description: The day of the week for which these opening hours are valid.
+          type: DayOfWeek
         opens:
           description: >-
             The opening hour of the place or service on the given day(s) of the
-            week. Note: Time type is not published yet in schema.org.
-          type: object
+            week.
+          type: Time
         validFrom:
           description: The date when the item becomes valid.
           format: date-time

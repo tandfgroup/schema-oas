@@ -29,5 +29,5 @@ CreditCard:
         The minimum payment is the lowest amount of money that one is required
         to pay on a credit card statement each month.
       oneOf:
-        - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+        - type: MonetaryAmount
         - type: number

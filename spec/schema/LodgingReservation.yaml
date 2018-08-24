@@ -19,17 +19,17 @@ LodgingReservation:
             of bed, etc.).
           oneOf:
             - type: string
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+            - type: QualitativeValue
         numAdults:
           description: The number of adults staying in the unit.
           oneOf:
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
             - type: integer
         numChildren:
           description: The number of children staying in the unit.
           oneOf:
             - type: integer
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
       type: object
   description: >-
     A reservation for lodging at a hotel, motel, inn, etc.<br/><br/>

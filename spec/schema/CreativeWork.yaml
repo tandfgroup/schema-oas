@@ -3,8 +3,8 @@ CreativeWork:
     - $ref: 'thing.yaml#/Thing'
     - properties:
         about:
-          $ref: 'thing.yaml#/Thing'
           description: The subject matter of the content.
+          type: Thing
         accessMode:
           description: >-
             The human sensory perceptual system or cognitive faculty through
@@ -56,29 +56,29 @@ CreativeWork:
             descriptions are present and no long descriptions are needed."
           type: string
         accountablePerson:
-          $ref: 'person.yaml#/Person'
           description: >-
             Specifies the Person that is legally accountable for the
             CreativeWork.
+          type: Person
         aggregateRating:
-          $ref: 'aggregaterating.yaml#/AggregateRating'
           description: >-
             The overall rating, based on a collection of reviews or ratings, of
             the item.
+          type: AggregateRating
         alternativeHeadline:
           description: A secondary title of the CreativeWork.
           type: string
         associatedMedia:
-          $ref: 'mediaobject.yaml#/MediaObject'
           description: >-
             A media object that encodes this CreativeWork. This property is a
             synonym for encoding.
+          type: MediaObject
         audience:
-          $ref: 'audience.yaml#/Audience'
           description: 'An intended audience, i.e. a group for whom something was created.'
+          type: Audience
         audio:
-          $ref: 'audioobject.yaml#/AudioObject'
           description: An embedded audio object.
+          type: AudioObject
         author:
           description: >-
             The author of this content or rating. Please note that author is
@@ -86,8 +86,8 @@ CreativeWork:
             authorship via the rel tag. That is equivalent to this and may be
             used interchangeably.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         award:
           description: An award won by or for this item.
           type: string
@@ -95,18 +95,18 @@ CreativeWork:
           description: Awards won by or for this item.
           type: string
         character:
-          $ref: 'person.yaml#/Person'
           description: Fictional person connected with a creative work.
+          type: Person
         citation:
           description: >-
             A citation or reference to another creative work, such as another
             publication, web page, scholarly article, etc.
           oneOf:
             - type: string
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: CreativeWork
         comment:
-          $ref: 'comment.yaml#/Comment'
           description: 'Comments, typically from users.'
+          type: Comment
         commentCount:
           description: >-
             The number of comments this CreativeWork (e.g. Article, Question or
@@ -115,16 +115,16 @@ CreativeWork:
             elsewhere.
           type: integer
         contentLocation:
-          $ref: 'place.yaml#/Place'
           description: >-
             The location depicted or described in the content. For example, the
             location in a photograph or painting.
+          type: Place
         contentRating:
           description: >-
             Official rating of a piece of content&#x2014;for example,'MPAA
             PG-13'.
           oneOf:
-            - $ref: 'rating.yaml#/Rating'
+            - type: Rating
             - type: string
         contentReferenceTime:
           description: >-
@@ -136,13 +136,13 @@ CreativeWork:
         contributor:
           description: A secondary contributor to the CreativeWork or Event.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         copyrightHolder:
           description: The party holding the legal copyright to the CreativeWork.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         copyrightYear:
           description: >-
             The year during which the claimed copyright for the CreativeWork was
@@ -157,16 +157,15 @@ CreativeWork:
             textually or in another document.
           oneOf:
             - type: string
-            - description: CorrectionComment type is not published yet in schema.org.
-              type: object
-            - $ref: 'url.yaml#/URL'
+            - type: CorrectionComment
+            - type: URL
         creator:
           description: >-
             The creator/author of this CreativeWork. This is the same as the
             Author property for CreativeWork.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         dateCreated:
           description: >-
             The date on which the CreativeWork was created or the item was added
@@ -190,24 +189,24 @@ CreativeWork:
           format: date
           type: string
         discussionUrl:
-          $ref: 'url.yaml#/URL'
           description: A link to the page containing the comments of the CreativeWork.
+          type: URL
         editor:
-          $ref: 'person.yaml#/Person'
           description: Specifies the Person who edited the CreativeWork.
+          type: Person
         educationalAlignment:
-          $ref: 'alignmentobject.yaml#/AlignmentObject'
           description: An alignment to an established educational framework.
+          type: AlignmentObject
         educationalUse:
           description: >-
             The purpose of a work in the context of education; for example,
             'assignment', 'group work'.
           type: string
         encoding:
-          $ref: 'mediaobject.yaml#/MediaObject'
           description: >-
             A media object that encodes this CreativeWork. This property is a
             synonym for associatedMedia.
+          type: MediaObject
         encodingFormat:
           description: >-
             Media type typically expressed using a MIME format (see <a
@@ -234,15 +233,15 @@ CreativeWork:
             Wikipedia/Wikidata entry.
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         encodings:
-          $ref: 'mediaobject.yaml#/MediaObject'
           description: A media object that encodes this CreativeWork.
+          type: MediaObject
         exampleOfWork:
-          $ref: 'creativework.yaml#/CreativeWork'
           description: >-
             A creative work that this work is an
             example/instance/realization/derivation of.
+          type: CreativeWork
         expires:
           description: >-
             Date the content expires and is no longer useful or available. For
@@ -269,26 +268,26 @@ CreativeWork:
             Wikipedia entry.
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         funder:
           description: >-
             A person or organization that supports (sponsors) something through
             some kind of financial contribution.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         genre:
           description: 'Genre of the creative work, broadcast channel or group.'
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         hasPart:
           description: >-
             Indicates an item or CreativeWork that is part of this item, or
             CreativeWork (in some sense).
           oneOf:
-            - $ref: 'trip.yaml#/Trip'
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: Trip
+            - type: CreativeWork
         headline:
           description: Headline of the article.
           type: string
@@ -300,14 +299,14 @@ CreativeWork:
             See also <a class="localLink"
             href="http://schema.org/availableLanguage">availableLanguage</a>.
           oneOf:
-            - $ref: 'language.yaml#/Language'
+            - type: Language
             - type: string
         interactionStatistic:
-          $ref: 'interactioncounter.yaml#/InteractionCounter'
           description: >-
             The number of interactions for the CreativeWork using the WebSite or
             SoftwareApplication. The most specific child type of
             InteractionCounter should be used.
+          type: InteractionCounter
         interactivityType:
           description: >-
             The predominant mode of learning supported by the learning resource.
@@ -324,18 +323,18 @@ CreativeWork:
             can be repeated for multiple sources. For example,
             http://example.com/great-multiplication-intro.html.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - $ref: 'product.yaml#/Product'
+            - type: URL
+            - type: CreativeWork
+            - type: Product
         isBasedOnUrl:
           description: >-
             A resource that was used in the creation of this resource. This term
             can be repeated for multiple sources. For example,
             http://example.com/great-multiplication-intro.html.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'product.yaml#/Product'
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: URL
+            - type: Product
+            - type: CreativeWork
         isFamilyFriendly:
           description: Indicates whether this content is family friendly.
           type: boolean
@@ -344,8 +343,8 @@ CreativeWork:
             Indicates an item or CreativeWork that this item, or CreativeWork
             (in some sense), is part of.
           oneOf:
-            - $ref: 'trip.yaml#/Trip'
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: Trip
+            - type: CreativeWork
         keywords:
           description: >-
             Keywords or tags used to describe this content. Multiple entries in
@@ -361,37 +360,37 @@ CreativeWork:
             A license document that applies to this content, typically indicated
             by URL.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: URL
+            - type: CreativeWork
         locationCreated:
-          $ref: 'place.yaml#/Place'
           description: >-
             The location where the CreativeWork was created, which may not be
             the same as the location depicted in the CreativeWork.
+          type: Place
         mainEntity:
-          $ref: 'thing.yaml#/Thing'
           description: >-
             Indicates the primary entity described in some page or other
             CreativeWork.
+          type: Thing
         material:
           description: >-
             A material that something is made from, e.g. leather, wool, cotton,
             paper.
           oneOf:
-            - $ref: 'product.yaml#/Product'
+            - type: Product
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         mentions:
-          $ref: 'thing.yaml#/Thing'
           description: >-
             Indicates that the CreativeWork contains a reference to, but is not
             necessarily about a concept.
+          type: Thing
         offers:
-          $ref: 'offer.yaml#/Offer'
           description: >-
             An offer to provide this item&#x2014;for example, an offer to sell a
             product, rent the DVD of a movie, perform a service, or give away
             tickets to an event.
+          type: Offer
         position:
           description: The position of an item in a series or sequence of items.
           oneOf:
@@ -402,8 +401,8 @@ CreativeWork:
             The person or organization who produced the work (e.g. music album,
             movie, tv/radio series etc.).
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         provider:
           description: >-
             The service provider, service operator, or service performer; the
@@ -411,19 +410,19 @@ CreativeWork:
             goods on behalf of the provider. A provider may also serve as the
             seller.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         publication:
-          $ref: 'publicationevent.yaml#/PublicationEvent'
           description: A publication event associated with the item.
+          type: PublicationEvent
         publisher:
           description: The publisher of the creative work.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         publisherImprint:
-          $ref: 'organization.yaml#/Organization'
           description: The publishing division which published the comic.
+          type: Organization
         publishingPrinciples:
           description: >-
             The publishingPrinciples property indicates (typically via <a
@@ -447,24 +446,24 @@ CreativeWork:
             class="localLink" href="http://schema.org/funder">funder</a>) can be
             expressed using schema.org terminology.
           oneOf:
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - $ref: 'url.yaml#/URL'
+            - type: CreativeWork
+            - type: URL
         recordedAt:
-          $ref: 'event.yaml#/Event'
           description: >-
             The Event where the CreativeWork was recorded. The CreativeWork may
             capture all or part of the event.
+          type: Event
         releasedEvent:
-          $ref: 'publicationevent.yaml#/PublicationEvent'
           description: >-
             The place and time the release was issued, expressed as a
             PublicationEvent.
+          type: PublicationEvent
         review:
-          $ref: 'review.yaml#/Review'
           description: A review of the item.
+          type: Review
         reviews:
-          $ref: 'review.yaml#/Review'
           description: Review of the item.
+          type: Review
         schemaVersion:
           description: >-
             Indicates (by URL or string) a particular version of a schema used
@@ -473,7 +472,7 @@ CreativeWork:
             precise indication of schema version was required by some
             application.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         sdDatePublished:
           description: >-
@@ -487,8 +486,8 @@ CreativeWork:
             A license document that applies to this structured data, typically
             indicated by URL.
           oneOf:
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - $ref: 'url.yaml#/URL'
+            - type: CreativeWork
+            - type: URL
         sdPublisher:
           description: >-
             Indicates the party responsible for generating and publishing the
@@ -502,26 +501,26 @@ CreativeWork:
             href="http://schema.org/sdPublisher">sdPublisher</a> property helps
             make such practices more explicit.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         sourceOrganization:
-          $ref: 'organization.yaml#/Organization'
           description: The Organization on whose behalf the creator was working.
+          type: Organization
         spatialCoverage:
-          $ref: 'place.yaml#/Place'
           description: >-
             The spatialCoverage of a CreativeWork indicates the place(s) which
             are the focus of the content. It is a subproperty of
                   contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates
                   areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.
+          type: Place
         sponsor:
           description: >-
             A person or organization that supports a thing through a pledge,
             promise, or financial contribution. e.g. a sponsor of a Medical
             Study or a corporate sponsor of an event.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         temporalCoverage:
           description: >-
             The temporalCoverage of a CreativeWork indicates the period that the
@@ -533,34 +532,34 @@ CreativeWork:
                   Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945".
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - format: date-time
               type: string
         text:
           description: The textual content of this CreativeWork.
           type: string
         thumbnailUrl:
-          $ref: 'url.yaml#/URL'
           description: A thumbnail image relevant to the Thing.
+          type: URL
         timeRequired:
-          $ref: 'duration.yaml#/Duration'
           description: >-
             Approximate or typical time it takes to work with or through this
             learning resource for the typical intended target audience, e.g.
             'P30M', 'P1H25M'.
+          type: Duration
         translationOfWork:
-          $ref: 'creativework.yaml#/CreativeWork'
           description: >-
             The work that this work has been translated from. e.g. 物种起源 is a
             translationOf “On the Origin of Species”
+          type: CreativeWork
         translator:
           description: >-
             Organization or person who adapts a creative work to different
             languages, regional differences and technical requirements of a
             target market, or that translates during some event.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         typicalAgeRange:
           description: 'The typical expected age range, e.g. ''7-9'', ''11-''.'
           type: string
@@ -570,20 +569,20 @@ CreativeWork:
             - type: string
             - type: number
         video:
-          $ref: 'videoobject.yaml#/VideoObject'
           description: An embedded video object.
+          type: VideoObject
         workExample:
-          $ref: 'creativework.yaml#/CreativeWork'
           description: >-
             Example/instance/realization/derivation of the concept of this
             creative work. eg. The paperback edition, first edition, or eBook.
+          type: CreativeWork
         workTranslation:
-          $ref: 'creativework.yaml#/CreativeWork'
           description: >-
             A work that is a translation of the content of this work. e.g. 西遊記
             has an English workTranslation “Journey to the West”,a German
             workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation
             Tây du ký bình khảo.
+          type: CreativeWork
       type: object
   description: >-
     The most generic kind of creative work, including books, movies,

@@ -3,12 +3,12 @@ SportsTeam:
     - $ref: 'sportsorganization.yaml#/SportsOrganization'
     - properties:
         athlete:
-          $ref: 'person.yaml#/Person'
           description: >-
             A person that acts as performing member of a sports team; a player
             as opposed to a coach.
+          type: Person
         coach:
-          $ref: 'person.yaml#/Person'
           description: A person that acts in a coaching role for a sports team.
+          type: Person
       type: object
   description: 'Organization: Sports team.'

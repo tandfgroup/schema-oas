@@ -11,14 +11,14 @@ FinancialProduct:
             transaction.
           oneOf:
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
         feesAndCommissionsSpecification:
           description: >-
             Description of fees, commissions, and other terms applied either to
             a class of financial product, or by a financial service
             organization.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         interestRate:
           description: >-
@@ -27,7 +27,7 @@ FinancialProduct:
             annualPercentageRate.
           oneOf:
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
       type: object
   description: >-
     A product provided to consumers and businesses by financial institutions

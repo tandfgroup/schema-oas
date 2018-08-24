@@ -3,7 +3,7 @@ Map:
     - $ref: 'creativework.yaml#/CreativeWork'
     - properties:
         mapType:
-          $ref: 'mapcategorytype.yaml#/MapCategoryType'
           description: 'Indicates the kind of Map, from the MapCategoryType Enumeration.'
+          type: MapCategoryType
       type: object
   description: A map.

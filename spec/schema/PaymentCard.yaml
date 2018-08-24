@@ -16,7 +16,7 @@ PaymentCard:
         debit, credit or smartcards by using RFID or NFC technology.
       type: boolean
     floorLimit:
-      $ref: 'monetaryamount.yaml#/MonetaryAmount'
       description: >-
         A floor limit is the amount of money above which credit card
         transactions must be authorized.
+      type: MonetaryAmount

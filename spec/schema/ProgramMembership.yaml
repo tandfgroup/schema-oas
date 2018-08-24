@@ -3,23 +3,23 @@ ProgramMembership:
     - $ref: 'intangible.yaml#/Intangible'
     - properties:
         hostingOrganization:
-          $ref: 'organization.yaml#/Organization'
           description: >-
             The organization (airline, travelers' club, etc.) the membership is
             made with.
+          type: Organization
         member:
           description: >-
             A member of an Organization or a ProgramMembership. Organizations
             can be members of organizations; ProgramMembership is typically for
             individuals.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         members:
           description: A member of this organization.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         membershipNumber:
           description: A unique identifier for the membership.
           type: string

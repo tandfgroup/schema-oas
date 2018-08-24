@@ -3,11 +3,11 @@ Blog:
     - $ref: 'creativework.yaml#/CreativeWork'
     - properties:
         blogPost:
-          $ref: 'blogposting.yaml#/BlogPosting'
           description: A posting that is part of this blog.
+          type: BlogPosting
         blogPosts:
-          $ref: 'blogposting.yaml#/BlogPosting'
           description: The postings that are part of this blog.
+          type: BlogPosting
         issn:
           description: >-
             The International Standard Serial Number (ISSN) that identifies this

@@ -3,7 +3,7 @@ SomeProducts:
     - $ref: 'product.yaml#/Product'
     - properties:
         inventoryLevel:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The current approximate inventory level for the item or items.
+          type: QuantitativeValue
       type: object
   description: A placeholder for multiple similar products of the same kind.

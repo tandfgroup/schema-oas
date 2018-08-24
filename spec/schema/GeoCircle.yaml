@@ -3,10 +3,10 @@ GeoCircle:
     - $ref: 'geoshape.yaml#/GeoShape'
     - properties:
         geoMidpoint:
-          $ref: 'geocoordinates.yaml#/GeoCoordinates'
           description: >-
             Indicates the GeoCoordinates at the centre of a GeoShape e.g.
             GeoCircle.
+          type: GeoCoordinates
         geoRadius:
           description: >-
             Indicates the approximate radius of a GeoCircle (metres unless
@@ -14,7 +14,7 @@ GeoCircle:
           oneOf:
             - type: number
             - type: string
-            - $ref: 'distance.yaml#/Distance'
+            - type: Distance
       type: object
   description: >-
     A GeoCircle is a GeoShape representing a circular geographic area. As it is

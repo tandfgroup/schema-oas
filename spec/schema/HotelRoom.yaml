@@ -9,12 +9,10 @@ HotelRoom:
             with a text.
                   If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.
           oneOf:
-            - description: BedType type is not published yet in schema.org.
-              type: object
-            - $ref: 'beddetails.yaml#/BedDetails'
+            - type: BedType
+            - type: BedDetails
             - type: string
         occupancy:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The allowed total occupancy for the accommodation in persons
             (including infants etc). For individual accommodations, this is not
@@ -23,6 +21,7 @@ HotelRoom:
             person).
 
             Typical unit code(s): C62 for person
+          type: QuantitativeValue
       type: object
   description: >-
     A hotel room is a single room in a hotel.

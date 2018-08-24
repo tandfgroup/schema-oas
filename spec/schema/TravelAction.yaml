@@ -3,8 +3,8 @@ TravelAction:
     - $ref: 'moveaction.yaml#/MoveAction'
     - properties:
         distance:
-          $ref: 'distance.yaml#/Distance'
           description: 'The distance travelled, e.g. exercising or travelling.'
+          type: Distance
       type: object
   description: >-
     The act of traveling from an fromLocation to a destination by a specified

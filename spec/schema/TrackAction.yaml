@@ -3,8 +3,8 @@ TrackAction:
     - $ref: 'findaction.yaml#/FindAction'
     - properties:
         deliveryMethod:
-          $ref: 'deliverymethod.yaml#/DeliveryMethod'
           description: A sub property of instrument. The method of delivery.
+          type: DeliveryMethod
       type: object
   description: >
     An agent tracks an object for updates.<br/><br/>

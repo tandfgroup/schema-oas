@@ -3,46 +3,46 @@ Clip:
     - $ref: 'creativework.yaml#/CreativeWork'
     - properties:
         actor:
-          $ref: 'person.yaml#/Person'
           description: >-
             An actor, e.g. in tv, radio, movie, video games etc., or in an
             event. Actors can be associated with individual items or with a
             series, episode, clip.
+          type: Person
         actors:
-          $ref: 'person.yaml#/Person'
           description: >-
             An actor, e.g. in tv, radio, movie, video games etc. Actors can be
             associated with individual items or with a series, episode, clip.
+          type: Person
         clipNumber:
           description: Position of the clip within an ordered group of clips.
           oneOf:
             - type: integer
             - type: string
         director:
-          $ref: 'person.yaml#/Person'
           description: >-
             A director of e.g. tv, radio, movie, video gaming etc. content, or
             of an event. Directors can be associated with individual items or
             with a series, episode, clip.
+          type: Person
         directors:
-          $ref: 'person.yaml#/Person'
           description: >-
             A director of e.g. tv, radio, movie, video games etc. content.
             Directors can be associated with individual items or with a series,
             episode, clip.
+          type: Person
         musicBy:
           description: The composer of the soundtrack.
           oneOf:
-            - $ref: 'musicgroup.yaml#/MusicGroup'
-            - $ref: 'person.yaml#/Person'
+            - type: MusicGroup
+            - type: Person
         partOfEpisode:
-          $ref: 'episode.yaml#/Episode'
           description: The episode to which this clip belongs.
+          type: Episode
         partOfSeason:
-          $ref: 'creativeworkseason.yaml#/CreativeWorkSeason'
           description: The season to which this episode belongs.
+          type: CreativeWorkSeason
         partOfSeries:
-          $ref: 'creativeworkseries.yaml#/CreativeWorkSeries'
           description: The series to which this episode or season belongs.
+          type: CreativeWorkSeries
       type: object
   description: A short TV or radio program or a segment/part of a program.

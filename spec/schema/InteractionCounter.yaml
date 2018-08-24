@@ -7,10 +7,9 @@ InteractionCounter:
             The WebSite or SoftwareApplication where the interactions took
             place.
           oneOf:
-            - $ref: 'website.yaml#/WebSite'
-            - $ref: 'softwareapplication.yaml#/SoftwareApplication'
+            - type: WebSite
+            - type: SoftwareApplication
         interactionType:
-          $ref: 'action.yaml#/Action'
           description: >-
             The Action representing the type of interaction. For up votes, +1s,
             etc. use <a class="localLink"
@@ -18,6 +17,7 @@ InteractionCounter:
             use <a class="localLink"
             href="http://schema.org/DislikeAction">DislikeAction</a>. Otherwise,
             use the most specific Action.
+          type: Action
         userInteractionCount:
           description: >-
             The number of interactions for the CreativeWork using the WebSite or

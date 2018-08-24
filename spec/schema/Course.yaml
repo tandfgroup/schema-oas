@@ -18,8 +18,8 @@ Course:
             class="localLink"
             href="http://schema.org/AlignmentObject">AlignmentObject</a>.
           oneOf:
-            - $ref: 'course.yaml#/Course'
-            - $ref: 'alignmentobject.yaml#/AlignmentObject'
+            - type: Course
+            - type: AlignmentObject
             - type: string
         educationalCredentialAwarded:
           description: >-
@@ -27,14 +27,14 @@ Course:
             other educational credential awarded as a consequence of successful
             completion of this course.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         hasCourseInstance:
-          $ref: 'courseinstance.yaml#/CourseInstance'
           description: >-
             An offering of the course at a specific time and place or through
             specific media or mode of study or to a specific section of
             students.
+          type: CourseInstance
       type: object
   description: >-
     A description of an educational course which may be offered as distinct

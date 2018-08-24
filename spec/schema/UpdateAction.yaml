@@ -3,10 +3,10 @@ UpdateAction:
     - $ref: 'action.yaml#/Action'
     - properties:
         collection:
-          $ref: 'thing.yaml#/Thing'
           description: A sub property of object. The collection target of the action.
+          type: Thing
         targetCollection:
-          $ref: 'thing.yaml#/Thing'
           description: A sub property of object. The collection target of the action.
+          type: Thing
       type: object
   description: The act of managing by changing/editing the state of the object.

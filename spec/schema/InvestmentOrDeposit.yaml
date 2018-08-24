@@ -5,7 +5,7 @@ InvestmentOrDeposit:
         amount:
           description: The amount of money.
           oneOf:
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: MonetaryAmount
             - type: number
       type: object
   description: >-

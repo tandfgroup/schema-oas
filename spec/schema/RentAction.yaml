@@ -7,13 +7,13 @@ RentAction:
             A sub property of participant. The owner of the real estate
             property.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         realEstateAgent:
-          $ref: 'realestateagent.yaml#/RealEstateAgent'
           description: >-
             A sub property of participant. The real estate agent involved in the
             action.
+          type: RealEstateAgent
       type: object
   description: >-
     The act of giving money in return for temporary use, but not ownership, of

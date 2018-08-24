@@ -5,8 +5,7 @@ AllocateAction:
         purpose:
           description: A goal towards an action is taken. Can be concrete or abstract.
           oneOf:
-            - $ref: 'thing.yaml#/Thing'
-            - description: MedicalDevicePurpose type is not published yet in schema.org.
-              type: object
+            - type: Thing
+            - type: MedicalDevicePurpose
       type: object
   description: The act of organizing tasks/objects/events by associating resources to it.

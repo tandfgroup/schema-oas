@@ -6,14 +6,14 @@ GeoShape:
           description: Physical address of the item.
           oneOf:
             - type: string
-            - $ref: 'postaladdress.yaml#/PostalAddress'
+            - type: PostalAddress
         addressCountry:
           description: >-
             The country. For example, USA. You can also provide the two-letter
             <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1 alpha-2
             country code</a>.
           oneOf:
-            - $ref: 'country.yaml#/Country'
+            - type: Country
             - type: string
         box:
           description: >-

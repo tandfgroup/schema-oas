@@ -3,18 +3,18 @@ Brand:
     - $ref: 'intangible.yaml#/Intangible'
     - properties:
         aggregateRating:
-          $ref: 'aggregaterating.yaml#/AggregateRating'
           description: >-
             The overall rating, based on a collection of reviews or ratings, of
             the item.
+          type: AggregateRating
         logo:
           description: An associated logo.
           oneOf:
-            - $ref: 'imageobject.yaml#/ImageObject'
-            - $ref: 'url.yaml#/URL'
+            - type: ImageObject
+            - type: URL
         review:
-          $ref: 'review.yaml#/Review'
           description: A review of the item.
+          type: Review
       type: object
   description: >-
     A brand is a name used by an organization or business person for labeling a

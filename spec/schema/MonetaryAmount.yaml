@@ -60,7 +60,7 @@ MonetaryAmount:
           oneOf:
             - type: number
             - type: string
-            - $ref: 'structuredvalue.yaml#/StructuredValue'
+            - type: StructuredValue
             - type: boolean
       type: object
   description: >-

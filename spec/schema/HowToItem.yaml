@@ -7,7 +7,7 @@ HowToItem:
           oneOf:
             - type: string
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
       type: object
   description: >-
     An item used as either a tool or supply when performing the instructions for

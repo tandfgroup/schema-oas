@@ -3,8 +3,8 @@ LocationFeatureSpecification:
     - $ref: 'propertyvalue.yaml#/PropertyValue'
     - properties:
         hoursAvailable:
-          $ref: 'openinghoursspecification.yaml#/OpeningHoursSpecification'
           description: The hours during which this service or contact is available.
+          type: OpeningHoursSpecification
         validFrom:
           description: The date when the item becomes valid.
           format: date-time

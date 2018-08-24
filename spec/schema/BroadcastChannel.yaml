@@ -14,10 +14,7 @@ BroadcastChannel:
             for frequences of AM and FM radio channels, e.g. "87 FM".
           oneOf:
             - type: string
-            - description: >-
-                BroadcastFrequencySpecification type is not published yet in
-                schema.org.
-              type: object
+            - type: BroadcastFrequencySpecification
         broadcastServiceTier:
           description: >-
             The type of service required to have access to the channel (e.g.
@@ -26,13 +23,13 @@ BroadcastChannel:
         genre:
           description: 'Genre of the creative work, broadcast channel or group.'
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         inBroadcastLineup:
-          $ref: 'cableorsatelliteservice.yaml#/CableOrSatelliteService'
           description: The CableOrSatelliteService offering the channel.
+          type: CableOrSatelliteService
         providesBroadcastService:
-          $ref: 'broadcastservice.yaml#/BroadcastService'
           description: The BroadcastService offered on this channel.
+          type: BroadcastService
       type: object
   description: A unique instance of a BroadcastService on a CableOrSatelliteService lineup.

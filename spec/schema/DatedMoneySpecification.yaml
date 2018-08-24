@@ -6,7 +6,7 @@ DatedMoneySpecification:
           description: The amount of money.
           oneOf:
             - type: number
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: MonetaryAmount
         currency:
           description:
             - >-

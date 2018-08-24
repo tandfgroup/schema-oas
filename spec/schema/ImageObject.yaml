@@ -9,14 +9,14 @@ ImageObject:
           description: exif data for this object.
           oneOf:
             - type: string
-            - $ref: 'propertyvalue.yaml#/PropertyValue'
+            - type: PropertyValue
         representativeOfPage:
           description: >-
             Indicates whether this image is representative of the content of the
             page.
           type: boolean
         thumbnail:
-          $ref: 'imageobject.yaml#/ImageObject'
           description: Thumbnail image for an image or video.
+          type: ImageObject
       type: object
   description: An image file.

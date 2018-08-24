@@ -3,15 +3,15 @@ MoveAction:
     - $ref: 'action.yaml#/Action'
     - properties:
         fromLocation:
-          $ref: 'place.yaml#/Place'
           description: >-
             A sub property of location. The original location of the object or
             the agent before the action.
+          type: Place
         toLocation:
-          $ref: 'place.yaml#/Place'
           description: >-
             A sub property of location. The final location of the object or the
             agent after the action.
+          type: Place
       type: object
   description: >
     The act of an agent relocating to a place.<br/><br/>

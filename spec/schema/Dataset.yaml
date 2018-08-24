@@ -3,8 +3,8 @@ Dataset:
     - $ref: 'creativework.yaml#/CreativeWork'
     - properties:
         catalog:
-          $ref: 'datacatalog.yaml#/DataCatalog'
           description: A data catalog which contains this dataset.
+          type: DataCatalog
         datasetTimeInterval:
           description: >-
             The range of temporal applicability of a dataset, e.g. for a 2011
@@ -12,19 +12,19 @@ Dataset:
           format: date-time
           type: string
         distribution:
-          $ref: 'datadownload.yaml#/DataDownload'
           description: >-
             A downloadable form of this dataset, at a specific location, in a
             specific format.
+          type: DataDownload
         includedDataCatalog:
-          $ref: 'datacatalog.yaml#/DataCatalog'
           description: >-
             A data catalog which contains this dataset (this property was
             previously 'catalog', preferred name is now
             'includedInDataCatalog').
+          type: DataCatalog
         includedInDataCatalog:
-          $ref: 'datacatalog.yaml#/DataCatalog'
           description: A data catalog which contains this dataset.
+          type: DataCatalog
         issn:
           description: >-
             The International Standard Serial Number (ISSN) that identifies this
@@ -76,13 +76,13 @@ Dataset:
             attach the corresponding <a class="localLink"
             href="http://schema.org/measurementTechnique">measurementTechnique</a>.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         spatial:
-          $ref: 'place.yaml#/Place'
           description: >-
             The range of spatial applicability of a dataset, e.g. for a dataset
             of New York weather, the state of New York.
+          type: Place
         temporal:
           description: >-
             The range of temporal applicability of a dataset, e.g. for a 2011
@@ -96,7 +96,7 @@ Dataset:
             as text or as pairs of identifier and description using
             PropertyValue.
           oneOf:
-            - $ref: 'propertyvalue.yaml#/PropertyValue'
+            - type: PropertyValue
             - type: string
       type: object
   description: A body of structured information describing some topic(s) of interest.

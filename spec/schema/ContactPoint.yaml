@@ -6,9 +6,9 @@ ContactPoint:
           description: The geographic area where a service or offered item is provided.
           oneOf:
             - type: string
-            - $ref: 'place.yaml#/Place'
-            - $ref: 'administrativearea.yaml#/AdministrativeArea'
-            - $ref: 'geoshape.yaml#/GeoShape'
+            - type: Place
+            - type: AdministrativeArea
+            - type: GeoShape
         availableLanguage:
           description: >-
             A language someone may use with or at the item, service or place.
@@ -17,13 +17,13 @@ ContactPoint:
             See also <a class="localLink"
             href="http://schema.org/inLanguage">inLanguage</a>
           oneOf:
-            - $ref: 'language.yaml#/Language'
+            - type: Language
             - type: string
         contactOption:
-          $ref: 'contactpointoption.yaml#/ContactPointOption'
           description: >-
             An option available on this contact point (e.g. a toll-free number
             or support for hearing-impaired callers).
+          type: ContactPointOption
         contactType:
           description: >-
             A person or organization can have different contact points, for
@@ -38,8 +38,8 @@ ContactPoint:
           description: The fax number.
           type: string
         hoursAvailable:
-          $ref: 'openinghoursspecification.yaml#/OpeningHoursSpecification'
           description: The hours during which this service or contact is available.
+          type: OpeningHoursSpecification
         productSupported:
           description: >-
             The product or service this support contact point is related to
@@ -48,13 +48,13 @@ ContactPoint:
             category of products or services (e.g. "smartphones").
           oneOf:
             - type: string
-            - $ref: 'product.yaml#/Product'
+            - type: Product
         serviceArea:
           description: The geographic area where the service is provided.
           oneOf:
-            - $ref: 'geoshape.yaml#/GeoShape'
-            - $ref: 'place.yaml#/Place'
-            - $ref: 'administrativearea.yaml#/AdministrativeArea'
+            - type: GeoShape
+            - type: Place
+            - type: AdministrativeArea
         telephone:
           description: The telephone number.
           type: string

@@ -7,8 +7,8 @@ BorrowAction:
             A sub property of participant. The person that lends the object
             being borrowed.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
       type: object
   description: >
     The act of obtaining an object under an agreement to return it at a later

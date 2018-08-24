@@ -3,7 +3,6 @@ QuantitativeValue:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
     - properties:
         additionalProperty:
-          $ref: 'propertyvalue.yaml#/PropertyValue'
           description: >-
             A property-value pair representing an additional characteristics of
             the entitity, e.g. a product feature or another characteristic for
@@ -15,6 +14,7 @@ QuantitativeValue:
             http://schema.org/color, http://schema.org/gtin13, ...) will
             typically expect such data to be provided using those properties,
             rather than using the generic property/value mechanism.
+          type: PropertyValue
         maxValue:
           description: The upper value of some characteristic or property.
           type: number
@@ -28,7 +28,7 @@ QuantitativeValue:
             be used with a prefix followed by a colon.
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         unitText:
           description: >-
             A string or text indicating the unit of measurement. Useful if you
@@ -57,7 +57,7 @@ QuantitativeValue:
             </ul>
           oneOf:
             - type: string
-            - $ref: 'structuredvalue.yaml#/StructuredValue'
+            - type: StructuredValue
             - type: number
             - type: boolean
         valueReference:
@@ -65,10 +65,10 @@ QuantitativeValue:
             A pointer to a secondary value that provides additional information
             on the original value, e.g. a reference temperature.
           oneOf:
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
-            - $ref: 'enumeration.yaml#/Enumeration'
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - $ref: 'propertyvalue.yaml#/PropertyValue'
-            - $ref: 'structuredvalue.yaml#/StructuredValue'
+            - type: QualitativeValue
+            - type: Enumeration
+            - type: QuantitativeValue
+            - type: PropertyValue
+            - type: StructuredValue
       type: object
   description: A point value or interval for product characteristics and other purposes.

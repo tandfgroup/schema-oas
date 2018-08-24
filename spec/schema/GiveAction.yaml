@@ -7,10 +7,10 @@ GiveAction:
             A sub property of participant. The participant who is at the
             receiving end of the action.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'contactpoint.yaml#/ContactPoint'
-            - $ref: 'audience.yaml#/Audience'
+            - type: Organization
+            - type: Person
+            - type: ContactPoint
+            - type: Audience
       type: object
   description: >
     The act of transferring ownership of an object to a destination. Reciprocal

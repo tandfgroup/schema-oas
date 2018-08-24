@@ -6,16 +6,16 @@ TypeAndQuantityNode:
           description: The quantity of the goods included in the offer.
           type: number
         businessFunction:
-          $ref: 'businessfunction.yaml#/BusinessFunction'
           description: >-
             The business function (e.g. sell, lease, repair, dispose) of the
             offer or component of a bundle (TypeAndQuantityNode). The default is
             http://purl.org/goodrelations/v1#Sell.
+          type: BusinessFunction
         typeOfGood:
           description: The product that this structured value is referring to.
           oneOf:
-            - $ref: 'service.yaml#/Service'
-            - $ref: 'product.yaml#/Product'
+            - type: Service
+            - type: Product
         unitCode:
           description: >-
             The unit of measurement given using the UN/CEFACT Common Code (3
@@ -23,7 +23,7 @@ TypeAndQuantityNode:
             be used with a prefix followed by a colon.
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         unitText:
           description: >-
             A string or text indicating the unit of measurement. Useful if you

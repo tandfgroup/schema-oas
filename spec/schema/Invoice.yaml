@@ -6,8 +6,8 @@ Invoice:
           description: The identifier for the account the payment will be applied to.
           type: string
         billingPeriod:
-          $ref: 'duration.yaml#/Duration'
           description: The time interval used to compute the invoice.
+          type: Duration
         broker:
           description: >-
             An entity that arranges for an exchange between a buyer and a
@@ -16,18 +16,15 @@ Invoice:
             whether an entity is a broker, seller, or buyer, the latter two
             terms are preferred.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         category:
           description: >-
             A category for the item. Greater signs or slashes can be used to
             informally indicate a category hierarchy.
           oneOf:
-            - $ref: 'thing.yaml#/Thing'
-            - description: >-
-                PhysicalActivityCategory type is not published yet in
-                schema.org.
-              type: object
+            - type: Thing
+            - type: PhysicalActivityCategory
             - type: string
         confirmationNumber:
           description: A number that confirms the given order or payment has been received.
@@ -35,13 +32,13 @@ Invoice:
         customer:
           description: Party placing the order or paying the invoice.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         minimumPaymentDue:
           description: The minimum payment required at this time.
           oneOf:
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: PriceSpecification
+            - type: MonetaryAmount
         paymentDue:
           description: The date that payment is due.
           format: date-time
@@ -51,10 +48,10 @@ Invoice:
           format: date-time
           type: string
         paymentMethod:
-          $ref: 'paymentmethod.yaml#/PaymentMethod'
           description: >-
             The name of the credit card or other method of payment for the
             order.
+          type: PaymentMethod
         paymentMethodId:
           description: >-
             An identifier for the method of payment used (e.g. the last 4 digits
@@ -64,7 +61,7 @@ Invoice:
           description: The status of payment; whether the invoice has been paid or not.
           oneOf:
             - type: string
-            - $ref: 'paymentstatustype.yaml#/PaymentStatusType'
+            - type: PaymentStatusType
         provider:
           description: >-
             The service provider, service operator, or service performer; the
@@ -72,13 +69,13 @@ Invoice:
             goods on behalf of the provider. A provider may also serve as the
             seller.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         referencesOrder:
-          $ref: 'order.yaml#/Order'
           description: >-
             The Order(s) related to this Invoice. One or more Orders may be
             combined into a single Invoice.
+          type: Order
         scheduledPaymentDate:
           description: The date the invoice is scheduled to be paid.
           format: date
@@ -86,7 +83,7 @@ Invoice:
         totalPaymentDue:
           description: The total amount due.
           oneOf:
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
+            - type: MonetaryAmount
+            - type: PriceSpecification
       type: object
   description: A statement of the money due for goods or services; a bill.

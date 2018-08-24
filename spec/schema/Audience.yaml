@@ -8,7 +8,7 @@ Audience:
             car owners, musicians, etc.).
           type: string
         geographicArea:
-          $ref: 'administrativearea.yaml#/AdministrativeArea'
           description: The geographic area associated with the audience.
+          type: AdministrativeArea
       type: object
   description: 'Intended audience for an item, i.e. the group for whom the item was created.'

@@ -19,7 +19,7 @@ Role:
             might play in the position named 'Quarterback'.
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         roleName:
           description: >-
             A role played, performed or filled by a person or organization. For
@@ -27,7 +27,7 @@ Role:
             named 'inker', 'penciller', and 'letterer'; or an athlete in a
             SportsTeam might play in the position named 'Quarterback'.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         startDate:
           description: >-

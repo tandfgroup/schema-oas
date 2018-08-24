@@ -7,8 +7,8 @@ Reservation:
             'bookingAgent' is an out-dated term indicating a 'broker' that
             serves as a booking agent.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         bookingTime:
           description: The date and time the reservation was booked.
           format: date-time
@@ -21,8 +21,8 @@ Reservation:
             whether an entity is a broker, seller, or buyer, the latter two
             terms are preferred.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         modifiedTime:
           description: The date and time the reservation was modified.
           format: date-time
@@ -45,10 +45,10 @@ Reservation:
             "Ithaca HOUR".
           type: string
         programMembershipUsed:
-          $ref: 'programmembership.yaml#/ProgramMembership'
           description: >-
             Any membership in a frequent flyer, hotel loyalty program, etc.
             being applied to the reservation.
+          type: ProgramMembership
         provider:
           description: >-
             The service provider, service operator, or service performer; the
@@ -56,33 +56,33 @@ Reservation:
             goods on behalf of the provider. A provider may also serve as the
             seller.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         reservationFor:
-          $ref: 'thing.yaml#/Thing'
           description: 'The thing -- flight, event, restaurant,etc. being reserved.'
+          type: Thing
         reservationId:
           description: A unique identifier for the reservation.
           type: string
         reservationStatus:
-          $ref: 'reservationstatustype.yaml#/ReservationStatusType'
           description: The current status of the reservation.
+          type: ReservationStatusType
         reservedTicket:
-          $ref: 'ticket.yaml#/Ticket'
           description: A ticket associated with the reservation.
+          type: Ticket
         totalPrice:
           description: >-
             The total price for the reservation or ticket, including applicable
             taxes, shipping, etc.
           oneOf:
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
+            - type: PriceSpecification
             - type: string
             - type: number
         underName:
           description: The person or organization the reservation or ticket is for.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
       type: object
   description: >-
     Describes a reservation for travel, dining or an event. Some reservations

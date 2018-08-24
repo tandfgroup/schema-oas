@@ -16,11 +16,11 @@ AggregateOffer:
           description: The number of offers for the product.
           type: integer
         offers:
-          $ref: 'offer.yaml#/Offer'
           description: >-
             An offer to provide this item&#x2014;for example, an offer to sell a
             product, rent the DVD of a movie, perform a service, or give away
             tickets to an event.
+          type: Offer
       type: object
   description: >-
     When a single product is associated with multiple offers (for example, the

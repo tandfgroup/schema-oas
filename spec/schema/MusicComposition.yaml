@@ -7,28 +7,28 @@ MusicComposition:
             The person or organization who wrote a composition, or who is the
             composer of a work performed at some event.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         firstPerformance:
-          $ref: 'event.yaml#/Event'
           description: The date and place the work was first performed.
+          type: Event
         includedComposition:
-          $ref: 'musiccomposition.yaml#/MusicComposition'
           description: >-
             Smaller compositions included in this work (e.g. a movement in a
             symphony).
+          type: MusicComposition
         iswcCode:
           description: The International Standard Musical Work Code for the composition.
           type: string
         lyricist:
-          $ref: 'person.yaml#/Person'
           description: The person who wrote the words.
+          type: Person
         lyrics:
-          $ref: 'creativework.yaml#/CreativeWork'
           description: The words in the song.
+          type: CreativeWork
         musicArrangement:
-          $ref: 'musiccomposition.yaml#/MusicComposition'
           description: An arrangement derived from the composition.
+          type: MusicComposition
         musicCompositionForm:
           description: 'The type of composition (e.g. overture, sonata, symphony, etc.).'
           type: string
@@ -36,7 +36,7 @@ MusicComposition:
           description: 'The key, mode, or scale this composition uses.'
           type: string
         recordedAs:
-          $ref: 'musicrecording.yaml#/MusicRecording'
           description: An audio recording of the work.
+          type: MusicRecording
       type: object
   description: A musical composition.

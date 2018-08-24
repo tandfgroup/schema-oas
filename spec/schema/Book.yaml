@@ -9,11 +9,11 @@ Book:
           description: The edition of the book.
           type: string
         bookFormat:
-          $ref: 'bookformattype.yaml#/BookFormatType'
           description: The format of the book.
+          type: BookFormatType
         illustrator:
-          $ref: 'person.yaml#/Person'
           description: The illustrator of the book.
+          type: Person
         isbn:
           description: The ISBN of the book.
           type: string

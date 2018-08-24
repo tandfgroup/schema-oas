@@ -3,17 +3,17 @@ CreativeWorkSeason:
     - $ref: 'creativework.yaml#/CreativeWork'
     - properties:
         actor:
-          $ref: 'person.yaml#/Person'
           description: >-
             An actor, e.g. in tv, radio, movie, video games etc., or in an
             event. Actors can be associated with individual items or with a
             series, episode, clip.
+          type: Person
         director:
-          $ref: 'person.yaml#/Person'
           description: >-
             A director of e.g. tv, radio, movie, video gaming etc. content, or
             of an event. Directors can be associated with individual items or
             with a series, episode, clip.
+          type: Person
         endDate:
           description: >-
             The end date and time of the item (in <a
@@ -25,22 +25,22 @@ CreativeWorkSeason:
             - format: date-time
               type: string
         episode:
-          $ref: 'episode.yaml#/Episode'
           description: 'An episode of a tv, radio or game media within a series or season.'
+          type: Episode
         episodes:
-          $ref: 'episode.yaml#/Episode'
           description: An episode of a TV/radio series or season.
+          type: Episode
         numberOfEpisodes:
           description: The number of episodes in this season or series.
           type: integer
         partOfSeries:
-          $ref: 'creativeworkseries.yaml#/CreativeWorkSeries'
           description: The series to which this episode or season belongs.
+          type: CreativeWorkSeries
         productionCompany:
-          $ref: 'organization.yaml#/Organization'
           description: >-
             The production company or studio responsible for the item e.g.
             series, video game, episode etc.
+          type: Organization
         seasonNumber:
           description: Position of the season within an ordered group of seasons.
           oneOf:
@@ -57,7 +57,7 @@ CreativeWorkSeason:
             - format: date
               type: string
         trailer:
-          $ref: 'videoobject.yaml#/VideoObject'
           description: 'The trailer of a movie or tv/radio series, season, episode, etc.'
+          type: VideoObject
       type: object
   description: 'A media season e.g. tv, radio, video game etc.'

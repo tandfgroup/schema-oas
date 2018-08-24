@@ -3,8 +3,8 @@ VoteAction:
     - $ref: 'chooseaction.yaml#/ChooseAction'
     - properties:
         candidate:
-          $ref: 'person.yaml#/Person'
           description: A sub property of object. The candidate subject of this action.
+          type: Person
       type: object
   description: >-
     The act of expressing a preference from a fixed/finite/structured set of

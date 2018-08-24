@@ -3,105 +3,105 @@ VideoGameSeries:
     - $ref: 'creativeworkseries.yaml#/CreativeWorkSeries'
     - properties:
         actor:
-          $ref: 'person.yaml#/Person'
           description: >-
             An actor, e.g. in tv, radio, movie, video games etc., or in an
             event. Actors can be associated with individual items or with a
             series, episode, clip.
+          type: Person
         actors:
-          $ref: 'person.yaml#/Person'
           description: >-
             An actor, e.g. in tv, radio, movie, video games etc. Actors can be
             associated with individual items or with a series, episode, clip.
+          type: Person
         characterAttribute:
-          $ref: 'thing.yaml#/Thing'
           description: >-
             A piece of data that represents a particular aspect of a fictional
             character (skill, power, character points, advantage, disadvantage).
+          type: Thing
         cheatCode:
-          $ref: 'creativework.yaml#/CreativeWork'
           description: Cheat codes to the game.
+          type: CreativeWork
         containsSeason:
-          $ref: 'creativeworkseason.yaml#/CreativeWorkSeason'
           description: A season that is part of the media series.
+          type: CreativeWorkSeason
         director:
-          $ref: 'person.yaml#/Person'
           description: >-
             A director of e.g. tv, radio, movie, video gaming etc. content, or
             of an event. Directors can be associated with individual items or
             with a series, episode, clip.
+          type: Person
         directors:
-          $ref: 'person.yaml#/Person'
           description: >-
             A director of e.g. tv, radio, movie, video games etc. content.
             Directors can be associated with individual items or with a series,
             episode, clip.
+          type: Person
         episode:
-          $ref: 'episode.yaml#/Episode'
           description: 'An episode of a tv, radio or game media within a series or season.'
+          type: Episode
         episodes:
-          $ref: 'episode.yaml#/Episode'
           description: An episode of a TV/radio series or season.
+          type: Episode
         gameItem:
-          $ref: 'thing.yaml#/Thing'
           description: >-
             An item is an object within the game world that can be collected by
             a player or, occasionally, a non-player character.
+          type: Thing
         gameLocation:
           description: Real or fictional location of the game (or part of game).
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'postaladdress.yaml#/PostalAddress'
+            - type: Place
+            - type: URL
+            - type: PostalAddress
         gamePlatform:
           description: >-
             The electronic systems used to play <a
             href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
             games</a>.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
-            - $ref: 'thing.yaml#/Thing'
+            - type: Thing
         musicBy:
           description: The composer of the soundtrack.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'musicgroup.yaml#/MusicGroup'
+            - type: Person
+            - type: MusicGroup
         numberOfEpisodes:
           description: The number of episodes in this season or series.
           type: integer
         numberOfPlayers:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             Indicate how many people can play this game (minimum, maximum, or
             range).
+          type: QuantitativeValue
         numberOfSeasons:
           description: The number of seasons in this series.
           type: integer
         playMode:
-          $ref: 'gameplaymode.yaml#/GamePlayMode'
           description: >-
             Indicates whether this game is multi-player, co-op or
             single-player.  The game can be marked as multi-player, co-op and
             single-player at the same time.
+          type: GamePlayMode
         productionCompany:
-          $ref: 'organization.yaml#/Organization'
           description: >-
             The production company or studio responsible for the item e.g.
             series, video game, episode etc.
+          type: Organization
         quest:
-          $ref: 'thing.yaml#/Thing'
           description: >-
             The task that a player-controlled character, or group of characters
             may complete in order to gain a reward.
+          type: Thing
         season:
-          $ref: 'creativeworkseason.yaml#/CreativeWorkSeason'
           description: A season in a media series.
+          type: CreativeWorkSeason
         seasons:
-          $ref: 'creativeworkseason.yaml#/CreativeWorkSeason'
           description: A season in a media series.
+          type: CreativeWorkSeason
         trailer:
-          $ref: 'videoobject.yaml#/VideoObject'
           description: 'The trailer of a movie or tv/radio series, season, episode, etc.'
+          type: VideoObject
       type: object
   description: A video game series.

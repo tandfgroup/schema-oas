@@ -8,11 +8,11 @@ RsvpAction:
             to the invitee.
           type: number
         comment:
-          $ref: 'comment.yaml#/Comment'
           description: 'Comments, typically from users.'
+          type: Comment
         rsvpResponse:
-          $ref: 'rsvpresponsetype.yaml#/RsvpResponseType'
           description: 'The response (yes, no, maybe) to the RSVP.'
+          type: RsvpResponseType
       type: object
   description: >-
     The act of notifying an event organizer as to whether you expect to attend

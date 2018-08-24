@@ -21,7 +21,7 @@ Article:
             could include information about reporting process, methods,
             interviews, data sources, etc.
           oneOf:
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: CreativeWork
             - type: string
         pageEnd:
           description: The page on which the work ends; for example "138" or "xvi".
@@ -79,9 +79,8 @@ Article:
             which is defined to be a possible value of the <em>speakable</em>
             property.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - description: SpeakableSpecification type is not published yet in schema.org.
-              type: object
+            - type: URL
+            - type: SpeakableSpecification
         wordCount:
           description: The number of words in the text of the Article.
           type: integer

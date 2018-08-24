@@ -8,7 +8,7 @@ FinancialService:
             a class of financial product, or by a financial service
             organization.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
       type: object
   description: Financial services business.

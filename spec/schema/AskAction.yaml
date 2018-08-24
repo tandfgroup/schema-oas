@@ -3,8 +3,8 @@ AskAction:
     - $ref: 'communicateaction.yaml#/CommunicateAction'
     - properties:
         question:
-          $ref: 'question.yaml#/Question'
           description: A sub property of object. A question.
+          type: Question
       type: object
   description: >
     The act of posing a question / favor to someone.<br/><br/>

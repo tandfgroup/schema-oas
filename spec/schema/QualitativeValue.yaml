@@ -3,7 +3,6 @@ QualitativeValue:
     - $ref: 'enumeration.yaml#/Enumeration'
     - properties:
         additionalProperty:
-          $ref: 'propertyvalue.yaml#/PropertyValue'
           description: >-
             A property-value pair representing an additional characteristics of
             the entitity, e.g. a product feature or another characteristic for
@@ -15,46 +14,47 @@ QualitativeValue:
             http://schema.org/color, http://schema.org/gtin13, ...) will
             typically expect such data to be provided using those properties,
             rather than using the generic property/value mechanism.
+          type: PropertyValue
         equal:
-          $ref: 'qualitativevalue.yaml#/QualitativeValue'
           description: >-
             This ordering relation for qualitative values indicates that the
             subject is equal to the object.
+          type: QualitativeValue
         greater:
-          $ref: 'qualitativevalue.yaml#/QualitativeValue'
           description: >-
             This ordering relation for qualitative values indicates that the
             subject is greater than the object.
+          type: QualitativeValue
         greaterOrEqual:
-          $ref: 'qualitativevalue.yaml#/QualitativeValue'
           description: >-
             This ordering relation for qualitative values indicates that the
             subject is greater than or equal to the object.
+          type: QualitativeValue
         lesser:
-          $ref: 'qualitativevalue.yaml#/QualitativeValue'
           description: >-
             This ordering relation for qualitative values indicates that the
             subject is lesser than the object.
+          type: QualitativeValue
         lesserOrEqual:
-          $ref: 'qualitativevalue.yaml#/QualitativeValue'
           description: >-
             This ordering relation for qualitative values indicates that the
             subject is lesser than or equal to the object.
+          type: QualitativeValue
         nonEqual:
-          $ref: 'qualitativevalue.yaml#/QualitativeValue'
           description: >-
             This ordering relation for qualitative values indicates that the
             subject is not equal to the object.
+          type: QualitativeValue
         valueReference:
           description: >-
             A pointer to a secondary value that provides additional information
             on the original value, e.g. a reference temperature.
           oneOf:
-            - $ref: 'propertyvalue.yaml#/PropertyValue'
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - $ref: 'structuredvalue.yaml#/StructuredValue'
-            - $ref: 'enumeration.yaml#/Enumeration'
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+            - type: PropertyValue
+            - type: QuantitativeValue
+            - type: StructuredValue
+            - type: Enumeration
+            - type: QualitativeValue
       type: object
   description: >-
     A predefined value for a product characteristic, e.g. the power cord plug

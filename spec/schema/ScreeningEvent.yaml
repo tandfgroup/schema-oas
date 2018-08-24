@@ -9,14 +9,14 @@ ScreeningEvent:
             format</a>.
           oneOf:
             - type: string
-            - $ref: 'language.yaml#/Language'
+            - type: Language
         videoFormat:
           description: >-
             The type of screening or video broadcast used (e.g. IMAX, 3D, SD,
             HD, etc.).
           type: string
         workPresented:
-          $ref: 'movie.yaml#/Movie'
           description: The movie presented during this event.
+          type: Movie
       type: object
   description: A screening of a movie or other video.

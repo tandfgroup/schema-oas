@@ -7,16 +7,16 @@ BuyAction:
             An entity which offers (sells / leases / lends / loans) the services
             / goods.  A seller may also be a provider.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         vendor:
           description: '''vendor'' is an earlier term for ''seller''.'
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         warrantyPromise:
-          $ref: 'warrantypromise.yaml#/WarrantyPromise'
           description: The warranty promise(s) included in the offer.
+          type: WarrantyPromise
       type: object
   description: >-
     The act of giving money to a seller in exchange for goods or services

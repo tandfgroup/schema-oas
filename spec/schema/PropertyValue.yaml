@@ -49,7 +49,7 @@ PropertyValue:
             attach the corresponding <a class="localLink"
             href="http://schema.org/measurementTechnique">measurementTechnique</a>.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         minValue:
           description: The lower value of some characteristic or property.
@@ -72,7 +72,7 @@ PropertyValue:
             Standards bodies should promote a standard prefix for the
             identifiers of properties from their standards.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         unitCode:
           description: >-
@@ -80,7 +80,7 @@ PropertyValue:
             characters) or a URL. Other codes than the UN/CEFACT Common Code may
             be used with a prefix followed by a colon.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         unitText:
           description: >-
@@ -112,17 +112,17 @@ PropertyValue:
             - type: number
             - type: boolean
             - type: string
-            - $ref: 'structuredvalue.yaml#/StructuredValue'
+            - type: StructuredValue
         valueReference:
           description: >-
             A pointer to a secondary value that provides additional information
             on the original value, e.g. a reference temperature.
           oneOf:
-            - $ref: 'propertyvalue.yaml#/PropertyValue'
-            - $ref: 'structuredvalue.yaml#/StructuredValue'
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - $ref: 'enumeration.yaml#/Enumeration'
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+            - type: PropertyValue
+            - type: StructuredValue
+            - type: QuantitativeValue
+            - type: Enumeration
+            - type: QualitativeValue
       type: object
   description: >-
     A property-value pair, e.g. representing a feature of a product or place.

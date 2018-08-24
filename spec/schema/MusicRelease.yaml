@@ -11,24 +11,24 @@ MusicRelease:
             For example, Red and Blue is credited to "Stefani Germanotta Band",
             but by Lady Gaga.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         duration:
-          $ref: 'duration.yaml#/Duration'
           description: >-
             The duration of the item (movie, audio recording, event, etc.) in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date
             format</a>.
+          type: Duration
         musicReleaseFormat:
-          $ref: 'musicreleaseformattype.yaml#/MusicReleaseFormatType'
           description: >-
             Format of this release (the type of recording media used, ie.
             compact disc, digital media, LP, etc.).
+          type: MusicReleaseFormatType
         recordLabel:
-          $ref: 'organization.yaml#/Organization'
           description: The label that issued the release.
+          type: Organization
         releaseOf:
-          $ref: 'musicalbum.yaml#/MusicAlbum'
           description: The album this is a release of.
+          type: MusicAlbum
       type: object
   description: A MusicRelease is a specific release of a music album.
