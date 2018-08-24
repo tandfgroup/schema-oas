@@ -3,15 +3,15 @@ LodgingBusiness:
     - $ref: 'localbusiness.yaml#/LocalBusiness'
     - properties:
         amenityFeature:
-          $ref: 'locationfeaturespecification.yaml#/LocationFeatureSpecification'
           description: >-
             An amenity feature (e.g. a characteristic or service) of the
             Accommodation. This generic property does not make a statement about
             whether the feature is included in an offer for the main
             accommodation or available at extra costs.
+          type: LocationFeatureSpecification
         audience:
-          $ref: 'audience.yaml#/Audience'
           description: 'An intended audience, i.e. a group for whom something was created.'
+          type: Audience
         availableLanguage:
           description: >-
             A language someone may use with or at the item, service or place.
@@ -20,7 +20,7 @@ LodgingBusiness:
             See also <a class="localLink"
             href="http://schema.org/inLanguage">inLanguage</a>
           oneOf:
-            - $ref: 'language.yaml#/Language'
+            - type: Language
             - type: string
         checkinTime:
           description: The earliest someone may check into a lodging establishment.
@@ -39,12 +39,12 @@ LodgingBusiness:
             - type: string
             - type: boolean
         starRating:
-          $ref: 'rating.yaml#/Rating'
           description: >-
             An official rating for a lodging business or food establishment,
             e.g. from national associations or standards bodies. Use the author
             property to indicate the rating organization, e.g. as an
             Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or
             Hotelstars).
+          type: Rating
       type: object
   description: 'A lodging business, such as a motel, hotel, or inn.'

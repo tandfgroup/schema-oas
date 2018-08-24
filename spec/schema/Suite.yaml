@@ -10,9 +10,8 @@ Suite:
                   If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.
           oneOf:
             - type: string
-            - description: BedType type is not published yet in schema.org.
-              type: object
-            - $ref: 'beddetails.yaml#/BedDetails'
+            - type: BedType
+            - type: BedDetails
         numberOfRooms:
           description: >-
             The number of rooms (excluding bathrooms and closets) of the
@@ -21,10 +20,9 @@ Suite:
             Typical unit code(s): ROM for room or C62 for no unit. The type of
             room can be put in the unitText property of the QuantitativeValue.
           oneOf:
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
             - type: number
         occupancy:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The allowed total occupancy for the accommodation in persons
             (including infants etc). For individual accommodations, this is not
@@ -33,6 +31,7 @@ Suite:
             person).
 
             Typical unit code(s): C62 for person
+          type: QuantitativeValue
       type: object
   description: >-
     A suite in a hotel or other public accommodation, denotes a class of luxury

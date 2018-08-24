@@ -19,8 +19,8 @@ AlignmentObject:
           description: The name of a node in an established educational framework.
           type: string
         targetUrl:
-          $ref: 'url.yaml#/URL'
           description: The URL of a node in an established educational framework.
+          type: URL
       type: object
   description: >-
     An intangible item that describes an alignment between a learning resource

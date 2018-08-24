@@ -4,56 +4,56 @@ VideoGame:
     user interface to generate visual feedback on a video device.
   properties:
     actor:
-      $ref: 'person.yaml#/Person'
       description: >-
         An actor, e.g. in tv, radio, movie, video games etc., or in an event.
         Actors can be associated with individual items or with a series,
         episode, clip.
+      type: Person
     actors:
-      $ref: 'person.yaml#/Person'
       description: >-
         An actor, e.g. in tv, radio, movie, video games etc. Actors can be
         associated with individual items or with a series, episode, clip.
+      type: Person
     cheatCode:
-      $ref: 'creativework.yaml#/CreativeWork'
       description: Cheat codes to the game.
+      type: CreativeWork
     director:
-      $ref: 'person.yaml#/Person'
       description: >-
         A director of e.g. tv, radio, movie, video gaming etc. content, or of an
         event. Directors can be associated with individual items or with a
         series, episode, clip.
+      type: Person
     directors:
-      $ref: 'person.yaml#/Person'
       description: >-
         A director of e.g. tv, radio, movie, video games etc. content. Directors
         can be associated with individual items or with a series, episode, clip.
+      type: Person
     gamePlatform:
       description: >-
         The electronic systems used to play <a
         href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
         games</a>.
       oneOf:
-        - $ref: 'url.yaml#/URL'
-        - $ref: 'thing.yaml#/Thing'
+        - type: URL
+        - type: Thing
         - type: string
     gameServer:
-      $ref: 'gameserver.yaml#/GameServer'
       description: The server on which  it is possible to play the game.
+      type: GameServer
     gameTip:
-      $ref: 'creativework.yaml#/CreativeWork'
       description: 'Links to tips, tactics, etc.'
+      type: CreativeWork
     musicBy:
       description: The composer of the soundtrack.
       oneOf:
-        - $ref: 'person.yaml#/Person'
-        - $ref: 'musicgroup.yaml#/MusicGroup'
+        - type: Person
+        - type: MusicGroup
     playMode:
-      $ref: 'gameplaymode.yaml#/GamePlayMode'
       description: >-
         Indicates whether this game is multi-player, co-op or single-player. 
         The game can be marked as multi-player, co-op and single-player at the
         same time.
+      type: GamePlayMode
     trailer:
-      $ref: 'videoobject.yaml#/VideoObject'
       description: 'The trailer of a movie or tv/radio series, season, episode, etc.'
+      type: VideoObject

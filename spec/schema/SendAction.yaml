@@ -3,17 +3,17 @@ SendAction:
     - $ref: 'transferaction.yaml#/TransferAction'
     - properties:
         deliveryMethod:
-          $ref: 'deliverymethod.yaml#/DeliveryMethod'
           description: A sub property of instrument. The method of delivery.
+          type: DeliveryMethod
         recipient:
           description: >-
             A sub property of participant. The participant who is at the
             receiving end of the action.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'audience.yaml#/Audience'
-            - $ref: 'contactpoint.yaml#/ContactPoint'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Audience
+            - type: ContactPoint
+            - type: Person
       type: object
   description: >
     The act of physically/electronically dispatching an object for transfer from

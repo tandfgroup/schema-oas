@@ -3,7 +3,7 @@ LoseAction:
     - $ref: 'achieveaction.yaml#/AchieveAction'
     - properties:
         winner:
-          $ref: 'person.yaml#/Person'
           description: A sub property of participant. The winner of the action.
+          type: Person
       type: object
   description: The act of being defeated in a competitive activity.

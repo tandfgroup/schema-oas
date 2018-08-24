@@ -3,17 +3,17 @@ DeliveryChargeSpecification:
     - $ref: 'pricespecification.yaml#/PriceSpecification'
     - properties:
         appliesToDeliveryMethod:
-          $ref: 'deliverymethod.yaml#/DeliveryMethod'
           description: >-
             The delivery method(s) to which the delivery charge or payment
             charge specification applies.
+          type: DeliveryMethod
         areaServed:
           description: The geographic area where a service or offered item is provided.
           oneOf:
             - type: string
-            - $ref: 'place.yaml#/Place'
-            - $ref: 'administrativearea.yaml#/AdministrativeArea'
-            - $ref: 'geoshape.yaml#/GeoShape'
+            - type: Place
+            - type: AdministrativeArea
+            - type: GeoShape
         eligibleRegion:
           description: >-
             The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place,
@@ -24,9 +24,9 @@ DeliveryChargeSpecification:
             See also <a class="localLink"
             href="http://schema.org/ineligibleRegion">ineligibleRegion</a>.
           oneOf:
-            - $ref: 'place.yaml#/Place'
+            - type: Place
             - type: string
-            - $ref: 'geoshape.yaml#/GeoShape'
+            - type: GeoShape
         ineligibleRegion:
           description: >-
             The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place,
@@ -38,8 +38,8 @@ DeliveryChargeSpecification:
             See also <a class="localLink"
             href="http://schema.org/eligibleRegion">eligibleRegion</a>.
           oneOf:
-            - $ref: 'geoshape.yaml#/GeoShape'
+            - type: GeoShape
             - type: string
-            - $ref: 'place.yaml#/Place'
+            - type: Place
       type: object
   description: The price for the delivery of an offer using a particular delivery method.

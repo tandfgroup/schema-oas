@@ -3,8 +3,8 @@ CommunicateAction:
     - $ref: 'interactaction.yaml#/InteractAction'
     - properties:
         about:
-          $ref: 'thing.yaml#/Thing'
           description: The subject matter of the content.
+          type: Thing
         inLanguage:
           description: >-
             The language of the content or performance or used in an action.
@@ -14,19 +14,19 @@ CommunicateAction:
             href="http://schema.org/availableLanguage">availableLanguage</a>.
           oneOf:
             - type: string
-            - $ref: 'language.yaml#/Language'
+            - type: Language
         language:
-          $ref: 'language.yaml#/Language'
           description: A sub property of instrument. The language used on this action.
+          type: Language
         recipient:
           description: >-
             A sub property of participant. The participant who is at the
             receiving end of the action.
           oneOf:
-            - $ref: 'audience.yaml#/Audience'
-            - $ref: 'contactpoint.yaml#/ContactPoint'
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Audience
+            - type: ContactPoint
+            - type: Organization
+            - type: Person
       type: object
   description: >-
     The act of conveying information to another person via a communication

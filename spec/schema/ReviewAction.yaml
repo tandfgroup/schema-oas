@@ -3,10 +3,10 @@ ReviewAction:
     - $ref: 'assessaction.yaml#/AssessAction'
     - properties:
         resultReview:
-          $ref: 'review.yaml#/Review'
           description: >-
             A sub property of result. The review that resulted in the performing
             of the action.
+          type: Review
       type: object
   description: >-
     The act of producing a balanced opinion about the object for an audience. An

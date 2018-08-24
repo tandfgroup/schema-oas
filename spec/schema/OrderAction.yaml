@@ -3,7 +3,7 @@ OrderAction:
     - $ref: 'tradeaction.yaml#/TradeAction'
     - properties:
         deliveryMethod:
-          $ref: 'deliverymethod.yaml#/DeliveryMethod'
           description: A sub property of instrument. The method of delivery.
+          type: DeliveryMethod
       type: object
   description: An agent orders an object/product/service to be delivered/sent.

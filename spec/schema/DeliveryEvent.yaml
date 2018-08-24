@@ -16,7 +16,7 @@ DeliveryEvent:
           format: date-time
           type: string
         hasDeliveryMethod:
-          $ref: 'deliverymethod.yaml#/DeliveryMethod'
           description: Method used for delivery or shipping.
+          type: DeliveryMethod
       type: object
   description: An event involving the delivery of an item.

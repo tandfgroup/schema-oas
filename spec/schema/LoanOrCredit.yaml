@@ -6,7 +6,7 @@ LoanOrCredit:
           description: The amount of money.
           oneOf:
             - type: number
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: MonetaryAmount
         currency:
           description:
             - >-
@@ -28,26 +28,25 @@ LoanOrCredit:
               4217</a> format).
           type: string
         gracePeriod:
-          $ref: 'duration.yaml#/Duration'
           description: >-
             The period of time after any due date that the borrower has to
             fulfil its obligations before a default (failure to pay) is deemed
             to have occurred.
+          type: Duration
         loanRepaymentForm:
           description: >-
             A form of paying back money previously borrowed from a lender.
             Repayment usually takes the form of periodic payments that normally
-            include part principal plus interest in each payment. Note:
-            RepaymentSpecification type is not published yet in schema.org.
-          type: object
+            include part principal plus interest in each payment.
+          type: RepaymentSpecification
         loanTerm:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The duration of the loan or credit agreement.
+          type: QuantitativeValue
         loanType:
           description: The type of a loan or credit.
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         recourseLoan:
           description: >-
             The only way you get the money back in the event of default is the
@@ -66,7 +65,7 @@ LoanOrCredit:
             securities, etc.)
           oneOf:
             - type: string
-            - $ref: 'thing.yaml#/Thing'
+            - type: Thing
       type: object
   description: >-
     A financial product for the loaning of an amount of money under agreed terms

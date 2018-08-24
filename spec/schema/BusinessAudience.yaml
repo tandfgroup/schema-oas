@@ -3,14 +3,14 @@ BusinessAudience:
     - $ref: 'audience.yaml#/Audience'
     - properties:
         numberOfEmployees:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The number of employees in an organization e.g. business.
+          type: QuantitativeValue
         yearlyRevenue:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The size of the business in annual revenue.
+          type: QuantitativeValue
         yearsInOperation:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The age of the business.
+          type: QuantitativeValue
       type: object
   description: >-
     A set of characteristics belonging to businesses, e.g. who compose an item's

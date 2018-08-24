@@ -3,13 +3,13 @@ SellAction:
     - $ref: 'tradeaction.yaml#/TradeAction'
     - properties:
         buyer:
-          $ref: 'person.yaml#/Person'
           description: >-
             A sub property of participant. The participant/person/organization
             that bought the object.
+          type: Person
         warrantyPromise:
-          $ref: 'warrantypromise.yaml#/WarrantyPromise'
           description: The warranty promise(s) included in the offer.
+          type: WarrantyPromise
       type: object
   description: >-
     The act of taking money from a buyer in exchange for goods or services

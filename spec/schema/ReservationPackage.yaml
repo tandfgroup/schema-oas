@@ -3,10 +3,10 @@ ReservationPackage:
     - $ref: 'reservation.yaml#/Reservation'
     - properties:
         subReservation:
-          $ref: 'reservation.yaml#/Reservation'
           description: >-
             The individual reservations included in the package. Typically a
             repeated property.
+          type: Reservation
       type: object
   description: >-
     A group of multiple reservations with common values for all

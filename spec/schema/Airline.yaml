@@ -3,10 +3,10 @@ Airline:
     - $ref: 'organization.yaml#/Organization'
     - properties:
         boardingPolicy:
-          $ref: 'boardingpolicytype.yaml#/BoardingPolicyType'
           description: >-
             The type of boarding policy used by the airline (e.g. zone-based or
             group-based).
+          type: BoardingPolicyType
         iataCode:
           description: IATA identifier for an airline or airport.
           type: string

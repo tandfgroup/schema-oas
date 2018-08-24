@@ -3,10 +3,10 @@ JoinAction:
     - $ref: 'interactaction.yaml#/InteractAction'
     - properties:
         event:
-          $ref: 'event.yaml#/Event'
           description: >-
             Upcoming or past event associated with this place, organization, or
             action.
+          type: Event
       type: object
   description: >
     An agent joins an event/group with participants/friends at a

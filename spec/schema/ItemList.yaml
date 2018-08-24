@@ -22,12 +22,12 @@ ItemList:
             property in such cases.
           oneOf:
             - type: string
-            - $ref: 'listitem.yaml#/ListItem'
-            - $ref: 'thing.yaml#/Thing'
+            - type: ListItem
+            - type: Thing
         itemListOrder:
           description: 'Type of ordering (e.g. Ascending, Descending, Unordered).'
           oneOf:
-            - $ref: 'itemlistordertype.yaml#/ItemListOrderType'
+            - type: ItemListOrderType
             - type: string
         numberOfItems:
           description: >-

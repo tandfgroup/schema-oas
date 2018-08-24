@@ -16,8 +16,8 @@ LiveBlogPosting:
           format: date-time
           type: string
         liveBlogUpdate:
-          $ref: 'blogposting.yaml#/BlogPosting'
           description: An update to the LiveBlog.
+          type: BlogPosting
       type: object
   description: >-
     A blog post intended to provide a rolling textual coverage of an ongoing

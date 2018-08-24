@@ -11,14 +11,14 @@ FoodEstablishment:
           oneOf:
             - type: boolean
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         hasMenu:
           description: >-
             Either the actual menu as a structured representation, as text, or a
             URL of the menu.
           oneOf:
-            - $ref: 'menu.yaml#/Menu'
-            - $ref: 'url.yaml#/URL'
+            - type: Menu
+            - type: URL
             - type: string
         menu:
           description: >-
@@ -26,18 +26,18 @@ FoodEstablishment:
             URL of the menu.
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'menu.yaml#/Menu'
+            - type: URL
+            - type: Menu
         servesCuisine:
           description: The cuisine of the restaurant.
           type: string
         starRating:
-          $ref: 'rating.yaml#/Rating'
           description: >-
             An official rating for a lodging business or food establishment,
             e.g. from national associations or standards bodies. Use the author
             property to indicate the rating organization, e.g. as an
             Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or
             Hotelstars).
+          type: Rating
       type: object
   description: A food-related business.

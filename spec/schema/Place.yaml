@@ -3,7 +3,6 @@ Place:
     - $ref: 'thing.yaml#/Thing'
     - properties:
         additionalProperty:
-          $ref: 'propertyvalue.yaml#/PropertyValue'
           description: >-
             A property-value pair representing an additional characteristics of
             the entitity, e.g. a product feature or another characteristic for
@@ -15,23 +14,24 @@ Place:
             http://schema.org/color, http://schema.org/gtin13, ...) will
             typically expect such data to be provided using those properties,
             rather than using the generic property/value mechanism.
+          type: PropertyValue
         address:
           description: Physical address of the item.
           oneOf:
-            - $ref: 'postaladdress.yaml#/PostalAddress'
+            - type: PostalAddress
             - type: string
         aggregateRating:
-          $ref: 'aggregaterating.yaml#/AggregateRating'
           description: >-
             The overall rating, based on a collection of reviews or ratings, of
             the item.
+          type: AggregateRating
         amenityFeature:
-          $ref: 'locationfeaturespecification.yaml#/LocationFeatureSpecification'
           description: >-
             An amenity feature (e.g. a characteristic or service) of the
             Accommodation. This generic property does not make a statement about
             whether the feature is included in an offer for the main
             accommodation or available at extra costs.
+          type: LocationFeatureSpecification
         branchCode:
           description: >-
             A short textual code (also called "store code") that uniquely
@@ -44,36 +44,36 @@ Place:
             "3047" is a branchCode for a particular branch.
           type: string
         containedIn:
-          $ref: 'place.yaml#/Place'
           description: >-
             The basic containment relation between a place and one that contains
             it.
+          type: Place
         containedInPlace:
-          $ref: 'place.yaml#/Place'
           description: >-
             The basic containment relation between a place and one that contains
             it.
+          type: Place
         containsPlace:
-          $ref: 'place.yaml#/Place'
           description: >-
             The basic containment relation between a place and another that it
             contains.
+          type: Place
         event:
-          $ref: 'event.yaml#/Event'
           description: >-
             Upcoming or past event associated with this place, organization, or
             action.
+          type: Event
         events:
-          $ref: 'event.yaml#/Event'
           description: Upcoming or past events associated with this place or organization.
+          type: Event
         faxNumber:
           description: The fax number.
           type: string
         geo:
           description: The geo coordinates of the place.
           oneOf:
-            - $ref: 'geocoordinates.yaml#/GeoCoordinates'
-            - $ref: 'geoshape.yaml#/GeoShape'
+            - type: GeoCoordinates
+            - type: GeoShape
         geospatiallyContains:
           description: >-
             Represents a relationship between two geometries (or the places they
@@ -83,9 +83,8 @@ Place:
             defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - description: GeospatialGeometry type is not published yet in schema.org.
-              type: object
-            - $ref: 'place.yaml#/Place'
+            - type: GeospatialGeometry
+            - type: Place
         geospatiallyCoveredBy:
           description: >-
             Represents a relationship between two geometries (or the places they
@@ -93,9 +92,8 @@ Place:
             defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - description: GeospatialGeometry type is not published yet in schema.org.
-              type: object
-            - $ref: 'place.yaml#/Place'
+            - type: GeospatialGeometry
+            - type: Place
         geospatiallyCovers:
           description: >-
             Represents a relationship between two geometries (or the places they
@@ -104,9 +102,8 @@ Place:
             defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - description: GeospatialGeometry type is not published yet in schema.org.
-              type: object
+            - type: Place
+            - type: GeospatialGeometry
         geospatiallyCrosses:
           description: >-
             Represents a relationship between two geometries (or the places they
@@ -116,9 +113,8 @@ Place:
             of them". As defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - description: GeospatialGeometry type is not published yet in schema.org.
-              type: object
+            - type: Place
+            - type: GeospatialGeometry
         geospatiallyDisjoint:
           description: >-
             Represents spatial relations in which two geometries (or the places
@@ -127,9 +123,8 @@ Place:
             relationship, as defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>)
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - description: GeospatialGeometry type is not published yet in schema.org.
-              type: object
+            - type: Place
+            - type: GeospatialGeometry
         geospatiallyEquals:
           description: >-
             Represents spatial relations in which two geometries (or the places
@@ -139,18 +134,16 @@ Place:
             no part of the interior or boundary of one geometry intersects the
             exterior of the other" (a symmetric relationship)
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - description: GeospatialGeometry type is not published yet in schema.org.
-              type: object
+            - type: Place
+            - type: GeospatialGeometry
         geospatiallyIntersects:
           description: >-
             Represents spatial relations in which two geometries (or the places
             they represent) have at least one point in common. As defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - description: GeospatialGeometry type is not published yet in schema.org.
-              type: object
+            - type: Place
+            - type: GeospatialGeometry
         geospatiallyOverlaps:
           description: >-
             Represents a relationship between two geometries (or the places they
@@ -159,9 +152,8 @@ Place:
             defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - description: GeospatialGeometry type is not published yet in schema.org.
-              type: object
-            - $ref: 'place.yaml#/Place'
+            - type: GeospatialGeometry
+            - type: Place
         geospatiallyTouches:
           description: >-
             Represents spatial relations in which two geometries (or the places
@@ -170,9 +162,8 @@ Place:
             defined in <a href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>
             )
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - description: GeospatialGeometry type is not published yet in schema.org.
-              type: object
+            - type: Place
+            - type: GeospatialGeometry
         geospatiallyWithin:
           description: >-
             Represents a relationship between two geometries (or the places they
@@ -180,9 +171,8 @@ Place:
             inside (i.e. within) its interior. As defined in <a
             href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.
           oneOf:
-            - description: GeospatialGeometry type is not published yet in schema.org.
-              type: object
-            - $ref: 'place.yaml#/Place'
+            - type: GeospatialGeometry
+            - type: Place
         globalLocationNumber:
           description: >-
             The <a href="http://www.gs1.org/gln">Global Location Number</a>
@@ -193,8 +183,8 @@ Place:
         hasMap:
           description: A URL to a map of the place.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'map.yaml#/Map'
+            - type: URL
+            - type: Map
         isAccessibleForFree:
           description: >-
             A flag to signal that the item, event, or place is accessible for
@@ -209,30 +199,30 @@ Place:
         logo:
           description: An associated logo.
           oneOf:
-            - $ref: 'imageobject.yaml#/ImageObject'
-            - $ref: 'url.yaml#/URL'
+            - type: ImageObject
+            - type: URL
         map:
-          $ref: 'url.yaml#/URL'
           description: A URL to a map of the place.
+          type: URL
         maps:
-          $ref: 'url.yaml#/URL'
           description: A URL to a map of the place.
+          type: URL
         maximumAttendeeCapacity:
           description: The total number of individuals that may attend an event or venue.
           type: integer
         openingHoursSpecification:
-          $ref: 'openinghoursspecification.yaml#/OpeningHoursSpecification'
           description: The opening hours of a certain place.
+          type: OpeningHoursSpecification
         photo:
           description: A photograph of this place.
           oneOf:
-            - $ref: 'imageobject.yaml#/ImageObject'
-            - $ref: 'photograph.yaml#/Photograph'
+            - type: ImageObject
+            - type: Photograph
         photos:
           description: Photographs of this place.
           oneOf:
-            - $ref: 'photograph.yaml#/Photograph'
-            - $ref: 'imageobject.yaml#/ImageObject'
+            - type: Photograph
+            - type: ImageObject
         publicAccess:
           description: >-
             A flag to signal that the <a class="localLink"
@@ -241,18 +231,17 @@ Place:
             boolean value
           type: boolean
         review:
-          $ref: 'review.yaml#/Review'
           description: A review of the item.
+          type: Review
         reviews:
-          $ref: 'review.yaml#/Review'
           description: Review of the item.
+          type: Review
         smokingAllowed:
           description: >-
             Indicates whether it is allowed to smoke in the place, e.g. in the
             restaurant, hotel or hotel room.
           type: boolean
         specialOpeningHoursSpecification:
-          $ref: 'openinghoursspecification.yaml#/OpeningHoursSpecification'
           description: >-
             The special opening hours of a certain place.<br/><br/>
 
@@ -262,6 +251,7 @@ Place:
             href="http://schema.org/openingHoursSpecification">openingHoursSpecification</a>
             or <a class="localLink"
             href="http://schema.org/openingHours">openingHours</a>.
+          type: OpeningHoursSpecification
         telephone:
           description: The telephone number.
           type: string

@@ -5,9 +5,9 @@ EmployeeRole:
         baseSalary:
           description: The base salary of the job or of an employee in an EmployeeRole.
           oneOf:
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: MonetaryAmount
             - type: number
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
+            - type: PriceSpecification
         salaryCurrency:
           description: >-
             The currency (coded using <a

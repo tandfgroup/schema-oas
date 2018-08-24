@@ -6,14 +6,14 @@ TrainTrip:
           description: The platform where the train arrives.
           type: string
         arrivalStation:
-          $ref: 'trainstation.yaml#/TrainStation'
           description: The station where the train trip ends.
+          type: TrainStation
         departurePlatform:
           description: The platform from which the train departs.
           type: string
         departureStation:
-          $ref: 'trainstation.yaml#/TrainStation'
           description: The station from which the train departs.
+          type: TrainStation
         trainName:
           description: The name of the train (e.g. The Orient Express).
           type: string

@@ -3,11 +3,11 @@ DigitalDocument:
     - $ref: 'creativework.yaml#/CreativeWork'
     - properties:
         hasDigitalDocumentPermission:
-          $ref: 'digitaldocumentpermission.yaml#/DigitalDocumentPermission'
           description: >-
             A permission related to the access to this document (e.g. permission
             to read or write an electronic document). For a public document,
             specify a grantee with an Audience with audienceType equal to
             "public".
+          type: DigitalDocumentPermission
       type: object
   description: An electronic file or document.

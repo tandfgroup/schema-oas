@@ -3,19 +3,19 @@ Accommodation:
     - $ref: 'place.yaml#/Place'
     - properties:
         amenityFeature:
-          $ref: 'locationfeaturespecification.yaml#/LocationFeatureSpecification'
           description: >-
             An amenity feature (e.g. a characteristic or service) of the
             Accommodation. This generic property does not make a statement about
             whether the feature is included in an offer for the main
             accommodation or available at extra costs.
+          type: LocationFeatureSpecification
         floorSize:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The size of the accommodation, e.g. in square meter or squarefoot.
 
             Typical unit code(s): MTK for square meter, FTK for square foot, or
             YDK for square yard
+          type: QuantitativeValue
         numberOfRooms:
           description: >-
             The number of rooms (excluding bathrooms and closets) of the
@@ -25,7 +25,7 @@ Accommodation:
             room can be put in the unitText property of the QuantitativeValue.
           oneOf:
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
         permittedUsage:
           description: Indications regarding the permitted usage of the accommodation.
           type: string

@@ -7,14 +7,14 @@ DigitalDocumentPermission:
             The person, organization, contact point, or audience that has been
             granted this permission.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'contactpoint.yaml#/ContactPoint'
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'audience.yaml#/Audience'
+            - type: Organization
+            - type: ContactPoint
+            - type: Person
+            - type: Audience
         permissionType:
-          $ref: 'digitaldocumentpermissiontype.yaml#/DigitalDocumentPermissionType'
           description: >-
             The type of permission granted the person, organization, or
             audience.
+          type: DigitalDocumentPermissionType
       type: object
   description: A permission for a particular person or group to access a particular file.

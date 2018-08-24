@@ -7,7 +7,7 @@ EndorseAction:
             A sub property of participant. The person/organization being
             supported.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
       type: object
   description: An agent approves/certifies/likes/supports/sanction an object.

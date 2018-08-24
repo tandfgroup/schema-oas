@@ -3,10 +3,10 @@ SoftwareSourceCode:
     - $ref: 'creativework.yaml#/CreativeWork'
     - properties:
         codeRepository:
-          $ref: 'url.yaml#/URL'
           description: >-
             Link to the repository where the un-compiled, human readable code
             and related code is located (SVN, github, CodePlex).
+          type: URL
         codeSampleType:
           description: >-
             What type of code sample: full (compile ready) solution, code
@@ -16,7 +16,7 @@ SoftwareSourceCode:
           description: The computer programming language.
           oneOf:
             - type: string
-            - $ref: 'computerlanguage.yaml#/ComputerLanguage'
+            - type: ComputerLanguage
         runtime:
           description: >-
             Runtime platform or script interpreter dependencies (Example - Java
@@ -33,10 +33,10 @@ SoftwareSourceCode:
             snippet, inline code, scripts, template.
           type: string
         targetProduct:
-          $ref: 'softwareapplication.yaml#/SoftwareApplication'
           description: >-
             Target Operating System / Product to which the code applies.  If
             applies to several versions, just the product name can be used.
+          type: SoftwareApplication
       type: object
   description: >-
     Computer programming source code. Example: Full (compile ready) solutions,

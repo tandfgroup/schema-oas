@@ -3,13 +3,13 @@ Order:
     - $ref: 'intangible.yaml#/Intangible'
     - properties:
         acceptedOffer:
-          $ref: 'offer.yaml#/Offer'
           description: >-
             The offer(s) -- e.g., product, quantity and price combinations --
             included in the order.
+          type: Offer
         billingAddress:
-          $ref: 'postaladdress.yaml#/PostalAddress'
           description: The billing address for the order.
+          type: PostalAddress
         broker:
           description: >-
             An entity that arranges for an exchange between a buyer and a
@@ -18,16 +18,16 @@ Order:
             whether an entity is a broker, seller, or buyer, the latter two
             terms are preferred.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         confirmationNumber:
           description: A number that confirms the given order or payment has been received.
           type: string
         customer:
           description: Party placing the order or paying the invoice.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         discount:
           description: Any discount applied (to an Order).
           oneOf:
@@ -56,29 +56,29 @@ Order:
         merchant:
           description: '''merchant'' is an out-dated term for ''seller''.'
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         orderDate:
           description: Date order was placed.
           format: date-time
           type: string
         orderDelivery:
-          $ref: 'parceldelivery.yaml#/ParcelDelivery'
           description: The delivery of the parcel related to this order or order item.
+          type: ParcelDelivery
         orderNumber:
           description: The identifier of the transaction.
           type: string
         orderStatus:
-          $ref: 'orderstatus.yaml#/OrderStatus'
           description: The current status of the order.
+          type: OrderStatus
         orderedItem:
           description: The item ordered.
           oneOf:
-            - $ref: 'product.yaml#/Product'
-            - $ref: 'orderitem.yaml#/OrderItem'
+            - type: Product
+            - type: OrderItem
         partOfInvoice:
-          $ref: 'invoice.yaml#/Invoice'
           description: The order is being paid as part of the referenced Invoice.
+          type: Invoice
         paymentDue:
           description: The date that payment is due.
           format: date-time
@@ -88,25 +88,25 @@ Order:
           format: date-time
           type: string
         paymentMethod:
-          $ref: 'paymentmethod.yaml#/PaymentMethod'
           description: >-
             The name of the credit card or other method of payment for the
             order.
+          type: PaymentMethod
         paymentMethodId:
           description: >-
             An identifier for the method of payment used (e.g. the last 4 digits
             of the credit card).
           type: string
         paymentUrl:
-          $ref: 'url.yaml#/URL'
           description: The URL for sending a payment.
+          type: URL
         seller:
           description: >-
             An entity which offers (sells / leases / lends / loans) the services
             / goods.  A seller may also be a provider.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
       type: object
   description: >-
     An order is a confirmation of a transaction (a receipt), which can contain

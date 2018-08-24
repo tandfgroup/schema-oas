@@ -5,25 +5,25 @@ Demand:
         acceptedPaymentMethod:
           description: The payment method(s) accepted by seller for this offer.
           oneOf:
-            - $ref: 'paymentmethod.yaml#/PaymentMethod'
-            - $ref: 'loanorcredit.yaml#/LoanOrCredit'
+            - type: PaymentMethod
+            - type: LoanOrCredit
         advanceBookingRequirement:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The amount of time that is required between accepting the offer and
             the actual usage of the resource or service.
+          type: QuantitativeValue
         areaServed:
           description: The geographic area where a service or offered item is provided.
           oneOf:
-            - $ref: 'geoshape.yaml#/GeoShape'
-            - $ref: 'place.yaml#/Place'
+            - type: GeoShape
+            - type: Place
             - type: string
-            - $ref: 'administrativearea.yaml#/AdministrativeArea'
+            - type: AdministrativeArea
         availability:
-          $ref: 'itemavailability.yaml#/ItemAvailability'
           description: >-
             The availability of this item&#x2014;for example In stock, Out of
             stock, Pre-order, etc.
+          type: ItemAvailability
         availabilityEnds:
           description: >-
             The end of the availability of the product or service included in
@@ -37,38 +37,38 @@ Demand:
           format: date-time
           type: string
         availableAtOrFrom:
-          $ref: 'place.yaml#/Place'
           description: >-
             The place(s) from which the offer can be obtained (e.g. store
             locations).
+          type: Place
         availableDeliveryMethod:
-          $ref: 'deliverymethod.yaml#/DeliveryMethod'
           description: The delivery method(s) available for this offer.
+          type: DeliveryMethod
         businessFunction:
-          $ref: 'businessfunction.yaml#/BusinessFunction'
           description: >-
             The business function (e.g. sell, lease, repair, dispose) of the
             offer or component of a bundle (TypeAndQuantityNode). The default is
             http://purl.org/goodrelations/v1#Sell.
+          type: BusinessFunction
         deliveryLeadTime:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The typical delay between the receipt of the order and the goods
             either leaving the warehouse or being prepared for pickup, in case
             the delivery method is on site pickup.
+          type: QuantitativeValue
         eligibleCustomerType:
-          $ref: 'businessentitytype.yaml#/BusinessEntityType'
           description: The type(s) of customers for which the given offer is valid.
+          type: BusinessEntityType
         eligibleDuration:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The duration for which the given offer is valid.
+          type: QuantitativeValue
         eligibleQuantity:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The interval and unit of measurement of ordering quantities for
             which the offer or price specification is valid. This allows e.g.
             specifying that a certain freight charge is valid only for a certain
             quantity.
+          type: QuantitativeValue
         eligibleRegion:
           description: >-
             The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place,
@@ -79,17 +79,17 @@ Demand:
             See also <a class="localLink"
             href="http://schema.org/ineligibleRegion">ineligibleRegion</a>.
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - $ref: 'geoshape.yaml#/GeoShape'
+            - type: Place
+            - type: GeoShape
             - type: string
         eligibleTransactionVolume:
-          $ref: 'pricespecification.yaml#/PriceSpecification'
           description: >-
             The transaction volume, in a monetary unit, for which the offer or
             price specification is valid, e.g. for indicating a minimal
             purchasing volume, to express free shipping above a certain order
             volume, or to limit the acceptance of credit cards to purchases to a
             certain minimal amount.
+          type: PriceSpecification
         gtin12:
           description: >-
             The GTIN-12 code of the product, or the product to which the offer
@@ -125,10 +125,10 @@ Demand:
             Summary</a> for more details.
           type: string
         includesObject:
-          $ref: 'typeandquantitynode.yaml#/TypeAndQuantityNode'
           description: >-
             This links to a node or nodes indicating the exact quantity of the
             products included in the offer.
+          type: TypeAndQuantityNode
         ineligibleRegion:
           description: >-
             The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place,
@@ -140,40 +140,40 @@ Demand:
             See also <a class="localLink"
             href="http://schema.org/eligibleRegion">eligibleRegion</a>.
           oneOf:
-            - $ref: 'place.yaml#/Place'
+            - type: Place
             - type: string
-            - $ref: 'geoshape.yaml#/GeoShape'
+            - type: GeoShape
         inventoryLevel:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The current approximate inventory level for the item or items.
+          type: QuantitativeValue
         itemCondition:
-          $ref: 'offeritemcondition.yaml#/OfferItemCondition'
           description: >-
             A predefined value from OfferItemCondition or a textual description
             of the condition of the product or service, or the products or
             services included in the offer.
+          type: OfferItemCondition
         itemOffered:
           description: The item being offered.
           oneOf:
-            - $ref: 'product.yaml#/Product'
-            - $ref: 'service.yaml#/Service'
+            - type: Product
+            - type: Service
         mpn:
           description: >-
             The Manufacturer Part Number (MPN) of the product, or the product to
             which the offer refers.
           type: string
         priceSpecification:
-          $ref: 'pricespecification.yaml#/PriceSpecification'
           description: >-
             One or more detailed price specifications, indicating the unit price
             and delivery or payment charges.
+          type: PriceSpecification
         seller:
           description: >-
             An entity which offers (sells / leases / lends / loans) the services
             / goods.  A seller may also be a provider.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         serialNumber:
           description: >-
             The serial number or any alphanumeric identifier of a particular
@@ -196,8 +196,8 @@ Demand:
           format: date-time
           type: string
         warranty:
-          $ref: 'warrantypromise.yaml#/WarrantyPromise'
           description: The warranty promise(s) included in the offer.
+          type: WarrantyPromise
       type: object
   description: >-
     A demand entity represents the public, not necessarily binding, not

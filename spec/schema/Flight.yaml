@@ -5,11 +5,11 @@ Flight:
         aircraft:
           description: 'The kind of aircraft (e.g., "Boeing 747").'
           oneOf:
-            - $ref: 'vehicle.yaml#/Vehicle'
+            - type: Vehicle
             - type: string
         arrivalAirport:
-          $ref: 'airport.yaml#/Airport'
           description: The airport where the flight terminates.
+          type: Airport
         arrivalGate:
           description: Identifier of the flight's arrival gate.
           type: string
@@ -17,18 +17,18 @@ Flight:
           description: Identifier of the flight's arrival terminal.
           type: string
         boardingPolicy:
-          $ref: 'boardingpolicytype.yaml#/BoardingPolicyType'
           description: >-
             The type of boarding policy used by the airline (e.g. zone-based or
             group-based).
+          type: BoardingPolicyType
         carrier:
-          $ref: 'organization.yaml#/Organization'
           description: >-
             'carrier' is an out-dated term indicating the 'provider' for parcel
             delivery and flights.
+          type: Organization
         departureAirport:
-          $ref: 'airport.yaml#/Airport'
           description: The airport where the flight originates.
+          type: Airport
         departureGate:
           description: Identifier of the flight's departure gate.
           type: string
@@ -38,12 +38,12 @@ Flight:
         estimatedFlightDuration:
           description: The estimated time the flight will take.
           oneOf:
-            - $ref: 'duration.yaml#/Duration'
+            - type: Duration
             - type: string
         flightDistance:
           description: The distance of the flight.
           oneOf:
-            - $ref: 'distance.yaml#/Distance'
+            - type: Distance
             - type: string
         flightNumber:
           description: >-
@@ -61,8 +61,8 @@ Flight:
             An entity which offers (sells / leases / lends / loans) the services
             / goods.  A seller may also be a provider.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         webCheckinTime:
           description: The time when a passenger can check into the flight online.
           format: date-time

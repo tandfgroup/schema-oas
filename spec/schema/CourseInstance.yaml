@@ -10,14 +10,14 @@ CourseInstance:
             "part-time") or as a URL reference to a term from a controlled
             vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         instructor:
-          $ref: 'person.yaml#/Person'
           description: >-
             A person assigned to instruct or provide instructional assistance
             for the <a class="localLink"
             href="http://schema.org/CourseInstance">CourseInstance</a>.
+          type: Person
       type: object
   description: >-
     An instance of a <a class="localLink"

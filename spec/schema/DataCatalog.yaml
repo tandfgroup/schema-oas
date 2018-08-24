@@ -3,8 +3,8 @@ DataCatalog:
     - $ref: 'creativework.yaml#/CreativeWork'
     - properties:
         dataset:
-          $ref: 'dataset.yaml#/Dataset'
           description: A dataset contained in this catalog.
+          type: Dataset
         measurementTechnique:
           description: >-
             A technique or technology used in a <a class="localLink"
@@ -50,6 +50,6 @@ DataCatalog:
             href="http://schema.org/measurementTechnique">measurementTechnique</a>.
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
       type: object
   description: A collection of datasets.

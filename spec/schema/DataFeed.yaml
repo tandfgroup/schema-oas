@@ -5,8 +5,8 @@ DataFeed:
         dataFeedElement:
           description: An item within in a data feed. Data feeds may have many elements.
           oneOf:
-            - $ref: 'thing.yaml#/Thing'
-            - $ref: 'datafeeditem.yaml#/DataFeedItem'
+            - type: Thing
+            - type: DataFeedItem
             - type: string
       type: object
   description: >-

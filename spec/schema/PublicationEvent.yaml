@@ -15,11 +15,11 @@ PublicationEvent:
         publishedBy:
           description: An agent associated with the publication event.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         publishedOn:
-          $ref: 'broadcastservice.yaml#/BroadcastService'
           description: A broadcast service associated with the publication event.
+          type: BroadcastService
       type: object
   description: >-
     A PublicationEvent corresponds indifferently to the event of publication for

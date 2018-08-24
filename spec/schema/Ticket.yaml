@@ -7,8 +7,8 @@ Ticket:
           format: date-time
           type: string
         issuedBy:
-          $ref: 'organization.yaml#/Organization'
           description: The organization issuing the ticket or permit.
+          type: Organization
         priceCurrency:
           description: >-
             The currency of the price, or a price component when attached to <a
@@ -34,23 +34,23 @@ Ticket:
             Reference to an asset (e.g., Barcode, QR code image or PDF) usable
             for entrance.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         ticketedSeat:
-          $ref: 'seat.yaml#/Seat'
           description: The seat associated with the ticket.
+          type: Seat
         totalPrice:
           description: >-
             The total price for the reservation or ticket, including applicable
             taxes, shipping, etc.
           oneOf:
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
+            - type: PriceSpecification
             - type: string
             - type: number
         underName:
           description: The person or organization the reservation or ticket is for.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
       type: object
   description: 'Used to describe a ticket to an event, a flight, a bus ride, etc.'

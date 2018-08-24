@@ -15,6 +15,6 @@ Seat:
           description: The type/class of the seat.
           oneOf:
             - type: string
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+            - type: QualitativeValue
       type: object
   description: 'Used to describe a seat, such as a reserved seat in an event reservation.'

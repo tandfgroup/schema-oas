@@ -6,7 +6,7 @@ SportsOrganization:
           description: A type of sport (e.g. Baseball).
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
       type: object
   description: >-
     Represents the collection of all sports organizations, including sports

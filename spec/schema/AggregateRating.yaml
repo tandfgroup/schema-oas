@@ -3,8 +3,8 @@ AggregateRating:
     - $ref: 'rating.yaml#/Rating'
     - properties:
         itemReviewed:
-          $ref: 'thing.yaml#/Thing'
           description: The item that is being reviewed/rated.
+          type: Thing
         ratingCount:
           description: The count of total number of ratings.
           type: integer

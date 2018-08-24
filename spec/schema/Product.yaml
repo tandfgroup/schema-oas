@@ -3,7 +3,6 @@ Product:
     - $ref: 'thing.yaml#/Thing'
     - properties:
         additionalProperty:
-          $ref: 'propertyvalue.yaml#/PropertyValue'
           description: >-
             A property-value pair representing an additional characteristics of
             the entitity, e.g. a product feature or another characteristic for
@@ -15,14 +14,15 @@ Product:
             http://schema.org/color, http://schema.org/gtin13, ...) will
             typically expect such data to be provided using those properties,
             rather than using the generic property/value mechanism.
+          type: PropertyValue
         aggregateRating:
-          $ref: 'aggregaterating.yaml#/AggregateRating'
           description: >-
             The overall rating, based on a collection of reviews or ratings, of
             the item.
+          type: AggregateRating
         audience:
-          $ref: 'audience.yaml#/Audience'
           description: 'An intended audience, i.e. a group for whom something was created.'
+          type: Audience
         award:
           description: An award won by or for this item.
           type: string
@@ -34,27 +34,24 @@ Product:
             The brand(s) associated with a product or service, or the brand(s)
             maintained by an organization or business person.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'brand.yaml#/Brand'
+            - type: Organization
+            - type: Brand
         category:
           description: >-
             A category for the item. Greater signs or slashes can be used to
             informally indicate a category hierarchy.
           oneOf:
             - type: string
-            - $ref: 'thing.yaml#/Thing'
-            - description: >-
-                PhysicalActivityCategory type is not published yet in
-                schema.org.
-              type: object
+            - type: Thing
+            - type: PhysicalActivityCategory
         color:
           description: The color of the product.
           type: string
         depth:
           description: The depth of the item.
           oneOf:
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - $ref: 'distance.yaml#/Distance'
+            - type: QuantitativeValue
+            - type: Distance
         gtin12:
           description: >-
             The GTIN-12 code of the product, or the product to which the offer
@@ -92,54 +89,54 @@ Product:
         height:
           description: The height of the item.
           oneOf:
-            - $ref: 'distance.yaml#/Distance'
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: Distance
+            - type: QuantitativeValue
         isAccessoryOrSparePartFor:
-          $ref: 'product.yaml#/Product'
           description: >-
             A pointer to another product (or multiple products) for which this
             product is an accessory or spare part.
+          type: Product
         isConsumableFor:
-          $ref: 'product.yaml#/Product'
           description: >-
             A pointer to another product (or multiple products) for which this
             product is a consumable.
+          type: Product
         isRelatedTo:
           description: >-
             A pointer to another, somehow related product (or multiple
             products).
           oneOf:
-            - $ref: 'product.yaml#/Product'
-            - $ref: 'service.yaml#/Service'
+            - type: Product
+            - type: Service
         isSimilarTo:
           description: >-
             A pointer to another, functionally similar product (or multiple
             products).
           oneOf:
-            - $ref: 'product.yaml#/Product'
-            - $ref: 'service.yaml#/Service'
+            - type: Product
+            - type: Service
         itemCondition:
-          $ref: 'offeritemcondition.yaml#/OfferItemCondition'
           description: >-
             A predefined value from OfferItemCondition or a textual description
             of the condition of the product or service, or the products or
             services included in the offer.
+          type: OfferItemCondition
         logo:
           description: An associated logo.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'imageobject.yaml#/ImageObject'
+            - type: URL
+            - type: ImageObject
         manufacturer:
-          $ref: 'organization.yaml#/Organization'
           description: The manufacturer of the product.
+          type: Organization
         material:
           description: >-
             A material that something is made from, e.g. leather, wool, cotton,
             paper.
           oneOf:
-            - $ref: 'product.yaml#/Product'
+            - type: Product
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         model:
           description: >-
             The model of the product. Use with the URL of a ProductModel or a
@@ -148,7 +145,7 @@ Product:
             additionally provide strong product identifiers via the
             gtin8/gtin13/gtin14 and mpn properties.
           oneOf:
-            - $ref: 'productmodel.yaml#/ProductModel'
+            - type: ProductModel
             - type: string
         mpn:
           description: >-
@@ -156,11 +153,11 @@ Product:
             which the offer refers.
           type: string
         offers:
-          $ref: 'offer.yaml#/Offer'
           description: >-
             An offer to provide this item&#x2014;for example, an offer to sell a
             product, rent the DVD of a movie, perform a service, or give away
             tickets to an event.
+          type: Offer
         productID:
           description: >-
             The product identifier, such as ISBN. For example: <code>meta
@@ -181,24 +178,24 @@ Product:
           format: date
           type: string
         review:
-          $ref: 'review.yaml#/Review'
           description: A review of the item.
+          type: Review
         reviews:
-          $ref: 'review.yaml#/Review'
           description: Review of the item.
+          type: Review
         sku:
           description: >-
             The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier
             for a product or service, or the product to which the offer refers.
           type: string
         weight:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The weight of the product or person.
+          type: QuantitativeValue
         width:
           description: The width of the item.
           oneOf:
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - $ref: 'distance.yaml#/Distance'
+            - type: QuantitativeValue
+            - type: Distance
       type: object
   description: >-
     Any offered product or service. For example: a pair of shoes; a concert

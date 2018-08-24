@@ -3,7 +3,6 @@ Vehicle:
     - $ref: 'product.yaml#/Product'
     - properties:
         accelerationTime:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >
             The time needed to accelerate the vehicle from a given start
             velocity to a given target velocity.<br/><br/>
@@ -26,16 +25,16 @@ Vehicle:
             0..60 mph or 0..100 km/h to specify the reference speeds.</li>
 
             </ul>
+          type: QuantitativeValue
         bodyType:
           description: >-
             Indicates the design and body style of the vehicle (e.g. station
             wagon, hatchback, etc.).
           oneOf:
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
-            - $ref: 'url.yaml#/URL'
+            - type: QualitativeValue
+            - type: URL
             - type: string
         cargoVolume:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The available volume for cargo or luggage. For automobiles, this is
             usually the trunk volume.<br/><br/>
@@ -49,6 +48,7 @@ Vehicle:
             href="http://schema.org/minValue">minValue</a> and <a
             class="localLink" href="http://schema.org/maxValue">maxValue</a> to
             indicate ranges.
+          type: QuantitativeValue
         dateVehicleFirstRegistered:
           description: >-
             The date of the first registration of the vehicle with the
@@ -60,7 +60,7 @@ Vehicle:
             The drive wheel configuration, i.e. which roadwheels will receive
             torque from the vehicle's engine via the drivetrain.
           oneOf:
-            - $ref: 'drivewheelconfigurationvalue.yaml#/DriveWheelConfigurationValue'
+            - type: DriveWheelConfigurationValue
             - type: string
         emissionsCO2:
           description: >-
@@ -69,7 +69,6 @@ Vehicle:
             value, since there is no UN/CEFACT Common Code for "g/km".
           type: number
         fuelCapacity:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The capacity of the fuel tank or in the case of electric cars, the
             battery. If there are multiple components for storage, this should
@@ -78,8 +77,8 @@ Vehicle:
 
             Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK
             / imperial gallons, AMH for ampere-hours (for electrical vehicles).
+          type: QuantitativeValue
         fuelConsumption:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >
             The amount of fuel consumed for traveling a particular distance or
             temporal duration with the given vehicle (e.g. liters per 100
@@ -107,8 +106,8 @@ Vehicle:
             the value for the fuel consumption to another value.</li>
 
             </ul>
+          type: QuantitativeValue
         fuelEfficiency:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >
             The distance traveled per unit of fuel used; most commonly miles per
             gallon (mpg) or kilometers per liter (km/L).<br/><br/>
@@ -135,14 +134,15 @@ Vehicle:
             the value for the fuel economy to another value.</li>
 
             </ul>
+          type: QuantitativeValue
         fuelType:
           description: >-
             The type of fuel suitable for the engine or engines of the vehicle.
             If the vehicle has only one engine, this property can be attached
             directly to the vehicle.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+            - type: URL
+            - type: QualitativeValue
             - type: string
         knownVehicleDamages:
           description: >-
@@ -153,16 +153,16 @@ Vehicle:
           description: Indicates that the vehicle meets the respective emission standard.
           oneOf:
             - type: string
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
-            - $ref: 'url.yaml#/URL'
+            - type: QualitativeValue
+            - type: URL
         mileageFromOdometer:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The total distance travelled by the particular vehicle since its
             initial production, as read from its odometer.<br/><br/>
 
 
             Typical unit code(s): KMT for kilometers, SMI for statute miles
+          type: QuantitativeValue
         modelDate:
           description: >-
             The release date of a vehicle model (often used to differentiate
@@ -181,7 +181,7 @@ Vehicle:
             Typical unit code(s): C62
           oneOf:
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
         numberOfDoors:
           description: |-
             The number of doors.<br/><br/>
@@ -189,7 +189,7 @@ Vehicle:
             Typical unit code(s): C62
           oneOf:
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
         numberOfForwardGears:
           description: >-
             The total number of forward gears available for the transmission
@@ -199,7 +199,7 @@ Vehicle:
             Typical unit code(s): C62
           oneOf:
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
         numberOfPreviousOwners:
           description: >-
             The number of owners of the vehicle, including the current
@@ -209,9 +209,8 @@ Vehicle:
             Typical unit code(s): C62
           oneOf:
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
         payload:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >
             The permitted weight of passengers and cargo, EXCLUDING the weight
             of the empty vehicle.<br/><br/>
@@ -244,6 +243,7 @@ Vehicle:
             indicate ranges.</li>
 
             </ul>
+          type: QuantitativeValue
         productionDate:
           description: 'The date of production of the item, e.g. vehicle.'
           format: date
@@ -262,9 +262,8 @@ Vehicle:
             Typical unit code(s): C62 for persons
           oneOf:
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
         speed:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The speed range of the vehicle. If the vehicle is powered by an
             engine, the upper limit of the speed range (indicated by <a
@@ -286,13 +285,13 @@ Vehicle:
             range. You can link to information about how the given value has
             been determined using the <a class="localLink"
             href="http://schema.org/valueReference">valueReference</a> property.
+          type: QuantitativeValue
         steeringPosition:
-          $ref: 'steeringpositionvalue.yaml#/SteeringPositionValue'
           description: >-
             The position of the steering wheel or similar device (mostly for
             cars).
+          type: SteeringPositionValue
         tongueWeight:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >
             The permitted vertical load (TWR) of a trailer attached to the
             vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical
@@ -321,8 +320,8 @@ Vehicle:
             indicate ranges.</li>
 
             </ul>
+          type: QuantitativeValue
         trailerWeight:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The permitted weight of a trailer attached to the vehicle.<br/><br/>
 
@@ -344,14 +343,15 @@ Vehicle:
             href="http://schema.org/minValue">minValue</a> and <a
             class="localLink" href="http://schema.org/maxValue">maxValue</a> to
             indicate ranges.
+          type: QuantitativeValue
         vehicleConfiguration:
           description: >-
             A short text indicating the configuration of the vehicle, e.g. '5dr
             hatchback ST 2.5 MT 225 hp' or 'limited edition'.
           type: string
         vehicleEngine:
-          $ref: 'enginespecification.yaml#/EngineSpecification'
           description: Information about the engine or engines of the vehicle.
+          type: EngineSpecification
         vehicleIdentificationNumber:
           description: >-
             The Vehicle Identification Number (VIN) is a unique serial number
@@ -384,7 +384,7 @@ Vehicle:
             Typical unit code(s): C62 for persons.
           oneOf:
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
         vehicleSpecialUsage:
           description: >-
             Indicates whether the vehicle has been used for special purposes,
@@ -392,8 +392,7 @@ Vehicle:
             legislation in many countries requires this information to be
             revealed when offering a car for sale.
           oneOf:
-            - description: CarUsageType type is not published yet in schema.org.
-              type: object
+            - type: CarUsageType
             - type: string
         vehicleTransmission:
           description: >-
@@ -401,11 +400,10 @@ Vehicle:
             rotating power source to the wheels or other relevant component(s)
             ("gearbox" for cars).
           oneOf:
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+            - type: QualitativeValue
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         weightTotal:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >
             The permitted total weight of the loaded vehicle, including
             passengers and cargo and the weight of the empty vehicle.<br/><br/>
@@ -433,8 +431,8 @@ Vehicle:
             indicate ranges.</li>
 
             </ul>
+          type: QuantitativeValue
         wheelbase:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The distance between the centers of the front and rear
             wheels.<br/><br/>
@@ -442,6 +440,7 @@ Vehicle:
 
             Typical unit code(s): CMT for centimeters, MTR for meters, INH for
             inches, FOT for foot/feet
+          type: QuantitativeValue
       type: object
   description: >-
     A vehicle is a device that is designed or used to transport people or cargo

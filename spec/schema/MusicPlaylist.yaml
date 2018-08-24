@@ -11,10 +11,10 @@ MusicPlaylist:
             ItemList is given, the list should contain items of type
             MusicRecording.
           oneOf:
-            - $ref: 'musicrecording.yaml#/MusicRecording'
-            - $ref: 'itemlist.yaml#/ItemList'
+            - type: MusicRecording
+            - type: ItemList
         tracks:
-          $ref: 'musicrecording.yaml#/MusicRecording'
           description: 'A music recording (track)&#x2014;usually a single song.'
+          type: MusicRecording
       type: object
   description: A collection of music tracks in playlist form.

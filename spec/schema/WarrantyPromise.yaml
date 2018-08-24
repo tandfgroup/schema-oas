@@ -3,13 +3,13 @@ WarrantyPromise:
     - $ref: 'structuredvalue.yaml#/StructuredValue'
     - properties:
         durationOfWarranty:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The duration of the warranty promise. Common unitCode values are ANN
             for year, MON for months, or DAY for days.
+          type: QuantitativeValue
         warrantyScope:
-          $ref: 'warrantyscope.yaml#/WarrantyScope'
           description: The scope of the warranty promise.
+          type: WarrantyScope
       type: object
   description: >-
     A structured value representing the duration and scope of services that will

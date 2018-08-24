@@ -5,8 +5,8 @@ OwnershipInfo:
         acquiredFrom:
           description: The organization or person from which the product was acquired.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         ownedFrom:
           description: The date and time of obtaining the product.
           format: date-time
@@ -18,8 +18,8 @@ OwnershipInfo:
         typeOfGood:
           description: The product that this structured value is referring to.
           oneOf:
-            - $ref: 'service.yaml#/Service'
-            - $ref: 'product.yaml#/Product'
+            - type: Service
+            - type: Product
       type: object
   description: >-
     A structured value providing information about when a certain organization

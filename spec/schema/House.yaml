@@ -10,7 +10,7 @@ House:
             Typical unit code(s): ROM for room or C62 for no unit. The type of
             room can be put in the unitText property of the QuantitativeValue.
           oneOf:
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
             - type: number
       type: object
   description: >-

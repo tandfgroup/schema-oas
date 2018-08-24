@@ -11,9 +11,9 @@ WriteAction:
             href="http://schema.org/availableLanguage">availableLanguage</a>.
           oneOf:
             - type: string
-            - $ref: 'language.yaml#/Language'
+            - type: Language
         language:
-          $ref: 'language.yaml#/Language'
           description: A sub property of instrument. The language used on this action.
+          type: Language
       type: object
   description: The act of authoring written creative content.

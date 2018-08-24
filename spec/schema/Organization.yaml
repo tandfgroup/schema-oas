@@ -12,27 +12,27 @@ Organization:
             including involving the public - digitally or otherwise -- in
             coverage decisions, reporting and activities after publication.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: URL
+            - type: CreativeWork
         address:
           description: Physical address of the item.
           oneOf:
             - type: string
-            - $ref: 'postaladdress.yaml#/PostalAddress'
+            - type: PostalAddress
         aggregateRating:
-          $ref: 'aggregaterating.yaml#/AggregateRating'
           description: >-
             The overall rating, based on a collection of reviews or ratings, of
             the item.
+          type: AggregateRating
         alumni:
-          $ref: 'person.yaml#/Person'
           description: Alumni of an organization.
+          type: Person
         areaServed:
           description: The geographic area where a service or offered item is provided.
           oneOf:
-            - $ref: 'administrativearea.yaml#/AdministrativeArea'
-            - $ref: 'geoshape.yaml#/GeoShape'
-            - $ref: 'place.yaml#/Place'
+            - type: AdministrativeArea
+            - type: GeoShape
+            - type: Place
             - type: string
         award:
           description: An award won by or for this item.
@@ -45,14 +45,14 @@ Organization:
             The brand(s) associated with a product or service, or the brand(s)
             maintained by an organization or business person.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'brand.yaml#/Brand'
+            - type: Organization
+            - type: Brand
         contactPoint:
-          $ref: 'contactpoint.yaml#/ContactPoint'
           description: A contact point for a person or organization.
+          type: ContactPoint
         contactPoints:
-          $ref: 'contactpoint.yaml#/ContactPoint'
           description: A contact point for a person or organization.
+          type: ContactPoint
         correctionsPolicy:
           description: >-
             For an <a class="localLink"
@@ -62,15 +62,15 @@ Organization:
             a statement describing (in news media, the newsroom’s) disclosure
             and correction policy for errors.
           oneOf:
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - $ref: 'url.yaml#/URL'
+            - type: CreativeWork
+            - type: URL
         department:
-          $ref: 'organization.yaml#/Organization'
           description: >-
             A relationship between an organization and a department of that
             organization, also described as an organization (allowing different
             urls, logos, opening hours). For example: a store with a pharmacy,
             or a bakery with a cafe.
+          type: Organization
         dissolutionDate:
           description: The date that this organization was dissolved.
           format: date
@@ -86,8 +86,8 @@ Organization:
             a statement describing the newsroom’s diversity policy on both
             staffing and sources, typically providing staffing data.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: URL
+            - type: CreativeWork
         diversityStaffingReport:
           description: >-
             For an <a class="localLink"
@@ -97,8 +97,8 @@ Organization:
             a report on staffing diversity issues. In a news context this might
             be for example ASNE or RTDNA (US) reports, or self-reported.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'article.yaml#/Article'
+            - type: URL
+            - type: Article
         duns:
           description: >-
             The Dun &amp; Bradstreet DUNS number for identifying an organization
@@ -108,11 +108,11 @@ Organization:
           description: Email address.
           type: string
         employee:
-          $ref: 'person.yaml#/Person'
           description: Someone working for this organization.
+          type: Person
         employees:
-          $ref: 'person.yaml#/Person'
           description: People working for this organization.
+          type: Person
         ethicsPolicy:
           description: >-
             Statement about ethics policy, e.g. of a <a class="localLink"
@@ -127,39 +127,39 @@ Organization:
             organizational, and corporate standards of behavior expected by the
             organization.
           oneOf:
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - $ref: 'url.yaml#/URL'
+            - type: CreativeWork
+            - type: URL
         event:
-          $ref: 'event.yaml#/Event'
           description: >-
             Upcoming or past event associated with this place, organization, or
             action.
+          type: Event
         events:
-          $ref: 'event.yaml#/Event'
           description: Upcoming or past events associated with this place or organization.
+          type: Event
         faxNumber:
           description: The fax number.
           type: string
         founder:
-          $ref: 'person.yaml#/Person'
           description: A person who founded this organization.
+          type: Person
         founders:
-          $ref: 'person.yaml#/Person'
           description: A person who founded this organization.
+          type: Person
         foundingDate:
           description: The date that this organization was founded.
           format: date
           type: string
         foundingLocation:
-          $ref: 'place.yaml#/Place'
           description: The place where the Organization was founded.
+          type: Place
         funder:
           description: >-
             A person or organization that supports (sponsors) something through
             some kind of financial contribution.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         globalLocationNumber:
           description: >-
             The <a href="http://www.gs1.org/gln">Global Location Number</a>
@@ -168,13 +168,13 @@ Organization:
             13-digit number used to identify parties and physical locations.
           type: string
         hasOfferCatalog:
-          $ref: 'offercatalog.yaml#/OfferCatalog'
           description: >-
             Indicates an OfferCatalog listing for this Organization, Person, or
             Service.
+          type: OfferCatalog
         hasPOS:
-          $ref: 'place.yaml#/Place'
           description: Points-of-Sales operated by the organization or person.
+          type: Place
         isicV4:
           description: >-
             The International Standard of Industrial Classification of All
@@ -193,9 +193,9 @@ Organization:
             class="localLink" href="http://schema.org/JobPosting">JobPosting</a>
             descriptions.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
-            - $ref: 'thing.yaml#/Thing'
+            - type: Thing
         knowsLanguage:
           description: >-
             Of a <a class="localLink"
@@ -207,7 +207,7 @@ Organization:
             <a href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>.
           oneOf:
             - type: string
-            - $ref: 'language.yaml#/Language'
+            - type: Language
         legalName:
           description: >-
             The official name of the organization, e.g. the registered company
@@ -223,47 +223,47 @@ Organization:
             The location of for example where the event is happening, an
             organization is located, or where an action takes place.
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - $ref: 'postaladdress.yaml#/PostalAddress'
+            - type: Place
+            - type: PostalAddress
             - type: string
         logo:
           description: An associated logo.
           oneOf:
-            - $ref: 'imageobject.yaml#/ImageObject'
-            - $ref: 'url.yaml#/URL'
+            - type: ImageObject
+            - type: URL
         makesOffer:
-          $ref: 'offer.yaml#/Offer'
           description: >-
             A pointer to products or services offered by the organization or
             person.
+          type: Offer
         member:
           description: >-
             A member of an Organization or a ProgramMembership. Organizations
             can be members of organizations; ProgramMembership is typically for
             individuals.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         memberOf:
           description: >-
             An Organization (or ProgramMembership) to which this Person or
             Organization belongs.
           oneOf:
-            - $ref: 'programmembership.yaml#/ProgramMembership'
-            - $ref: 'organization.yaml#/Organization'
+            - type: ProgramMembership
+            - type: Organization
         members:
           description: A member of this organization.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         naics:
           description: >-
             The North American Industry Classification System (NAICS) code for a
             particular organization or business person.
           type: string
         numberOfEmployees:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The number of employees in an organization e.g. business.
+          type: QuantitativeValue
         ownershipFundingInfo:
           description: >-
             For an <a class="localLink"
@@ -276,22 +276,22 @@ Organization:
             href="http://schema.org/funder">funder</a> is also available and can
             be used to make basic funder information machine-readable.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - $ref: 'aboutpage.yaml#/AboutPage'
+            - type: CreativeWork
+            - type: AboutPage
         owns:
           description: Products owned by the organization or person.
           oneOf:
-            - $ref: 'ownershipinfo.yaml#/OwnershipInfo'
-            - $ref: 'product.yaml#/Product'
+            - type: OwnershipInfo
+            - type: Product
         parentOrganization:
-          $ref: 'organization.yaml#/Organization'
           description: >-
             The larger organization that this organization is a <a
             class="localLink"
             href="http://schema.org/subOrganization">subOrganization</a> of, if
             any.
+          type: Organization
         publishingPrinciples:
           description: >-
             The publishingPrinciples property indicates (typically via <a
@@ -315,39 +315,39 @@ Organization:
             class="localLink" href="http://schema.org/funder">funder</a>) can be
             expressed using schema.org terminology.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: URL
+            - type: CreativeWork
         review:
-          $ref: 'review.yaml#/Review'
           description: A review of the item.
+          type: Review
         reviews:
-          $ref: 'review.yaml#/Review'
           description: Review of the item.
+          type: Review
         seeks:
-          $ref: 'demand.yaml#/Demand'
           description: >-
             A pointer to products or services sought by the organization or
             person (demand).
+          type: Demand
         serviceArea:
           description: The geographic area where the service is provided.
           oneOf:
-            - $ref: 'geoshape.yaml#/GeoShape'
-            - $ref: 'place.yaml#/Place'
-            - $ref: 'administrativearea.yaml#/AdministrativeArea'
+            - type: GeoShape
+            - type: Place
+            - type: AdministrativeArea
         sponsor:
           description: >-
             A person or organization that supports a thing through a pledge,
             promise, or financial contribution. e.g. a sponsor of a Medical
             Study or a corporate sponsor of an event.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         subOrganization:
-          $ref: 'organization.yaml#/Organization'
           description: >-
             A relationship between two organizations where the first includes
             the second, e.g., as a subsidiary. See also: the more specific
             'department' property.
+          type: Organization
         taxID:
           description: >-
             The Tax / Fiscal ID of the organization or person, e.g. the TIN in
@@ -365,8 +365,8 @@ Organization:
             a statement about policy on use of unnamed sources and the decision
             process required.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: URL
+            - type: CreativeWork
         vatID:
           description: The Value-added Tax ID of the organization or person.
           type: string

@@ -7,7 +7,7 @@ WebPage:
             A set of links that can help a user understand and navigate a
             website hierarchy.
           oneOf:
-            - $ref: 'breadcrumblist.yaml#/BreadcrumbList'
+            - type: BreadcrumbList
             - type: string
         lastReviewed:
           description: >-
@@ -16,33 +16,33 @@ WebPage:
           format: date
           type: string
         mainContentOfPage:
-          $ref: 'webpageelement.yaml#/WebPageElement'
           description: Indicates if this web page element is the main subject of the page.
+          type: WebPageElement
         primaryImageOfPage:
-          $ref: 'imageobject.yaml#/ImageObject'
           description: Indicates the main image on the page.
+          type: ImageObject
         relatedLink:
-          $ref: 'url.yaml#/URL'
           description: >-
             A link related to this web page, for example to other related web
             pages.
+          type: URL
         reviewedBy:
           description: >-
             People or organizations that have reviewed the content on this web
             page for accuracy and/or completeness.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         significantLink:
-          $ref: 'url.yaml#/URL'
           description: >-
             One of the more significant URLs on the page. Typically, these are
             the non-navigation links that are clicked on the most.
+          type: URL
         significantLinks:
-          $ref: 'url.yaml#/URL'
           description: >-
             The most significant URLs on the page. Typically, these are the
             non-navigation links that are clicked on the most.
+          type: URL
         speakable:
           description: >-
             Indicates sections of a Web page that are particularly 'speakable'
@@ -84,14 +84,13 @@ WebPage:
             which is defined to be a possible value of the <em>speakable</em>
             property.
           oneOf:
-            - $ref: 'url.yaml#/URL'
-            - description: SpeakableSpecification type is not published yet in schema.org.
-              type: object
+            - type: URL
+            - type: SpeakableSpecification
         specialty:
-          $ref: 'specialty.yaml#/Specialty'
           description: >-
             One of the domain specialities to which this web page's content
             applies.
+          type: Specialty
       type: object
   description: >-
     A web page. Every web page is implicitly assumed to be declared to be of

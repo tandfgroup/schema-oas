@@ -16,65 +16,65 @@ VisualArtwork:
             Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel,
             Woodcut, Pencil, Mixed Media, etc.)
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         artform:
           description: >-
             e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage,
             Collage, etc.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         artist:
-          $ref: 'person.yaml#/Person'
           description: |-
             The primary artist for a work
                 in a medium other than pencils or digital line art--for example, if the
                 primary artwork is done in watercolors or digital paints.
+          type: Person
         artworkSurface:
           description: >-
             The supporting materials for the artwork, e.g. Canvas, Paper, Wood,
             Board, etc.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         colorist:
-          $ref: 'person.yaml#/Person'
           description: The individual who adds color to inked drawings.
+          type: Person
         depth:
           description: The depth of the item.
           oneOf:
-            - $ref: 'distance.yaml#/Distance'
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: Distance
+            - type: QuantitativeValue
         height:
           description: The height of the item.
           oneOf:
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - $ref: 'distance.yaml#/Distance'
+            - type: QuantitativeValue
+            - type: Distance
         inker:
-          $ref: 'person.yaml#/Person'
           description: >-
             The individual who traces over the pencil drawings in ink after
             pencils are complete.
+          type: Person
         letterer:
-          $ref: 'person.yaml#/Person'
           description: >-
             The individual who adds lettering, including speech balloons and
             sound effects, to artwork.
+          type: Person
         penciler:
-          $ref: 'person.yaml#/Person'
           description: The individual who draws the primary narrative artwork.
+          type: Person
         surface:
           description: >-
             A material used as a surface in some artwork, e.g. Canvas, Paper,
             Wood, Board, etc.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         width:
           description: The width of the item.
           oneOf:
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
-            - $ref: 'distance.yaml#/Distance'
+            - type: QuantitativeValue
+            - type: Distance
       type: object
   description: A work of art that is primarily visual in character.

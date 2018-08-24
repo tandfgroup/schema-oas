@@ -9,21 +9,21 @@ MenuItem:
             a menu section containing allowed add-on menu items for this menu
             item.
           oneOf:
-            - $ref: 'menusection.yaml#/MenuSection'
-            - $ref: 'menuitem.yaml#/MenuItem'
+            - type: MenuSection
+            - type: MenuItem
         nutrition:
-          $ref: 'nutritioninformation.yaml#/NutritionInformation'
           description: Nutrition information about the recipe or menu item.
+          type: NutritionInformation
         offers:
-          $ref: 'offer.yaml#/Offer'
           description: >-
             An offer to provide this item&#x2014;for example, an offer to sell a
             product, rent the DVD of a movie, perform a service, or give away
             tickets to an event.
+          type: Offer
         suitableForDiet:
-          $ref: 'restricteddiet.yaml#/RestrictedDiet'
           description: >-
             Indicates a dietary restriction or guideline for which this recipe
             or menu item is suitable, e.g. diabetic, halal etc.
+          type: RestrictedDiet
       type: object
   description: A food or drink item listed in a menu or menu section.

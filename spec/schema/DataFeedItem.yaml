@@ -25,9 +25,9 @@ DataFeedItem:
             - format: date-time
               type: string
         item:
-          $ref: 'thing.yaml#/Thing'
           description: >-
             An entity represented by an entry in a list or data feed (e.g. an
             'artist' in a list of 'artists')’.
+          type: Thing
       type: object
   description: A single item within a larger data feed.

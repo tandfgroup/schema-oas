@@ -3,25 +3,25 @@ MusicRecording:
     - $ref: 'creativework.yaml#/CreativeWork'
     - properties:
         byArtist:
-          $ref: 'musicgroup.yaml#/MusicGroup'
           description: The artist that performed this album or recording.
+          type: MusicGroup
         duration:
-          $ref: 'duration.yaml#/Duration'
           description: >-
             The duration of the item (movie, audio recording, event, etc.) in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date
             format</a>.
+          type: Duration
         inAlbum:
-          $ref: 'musicalbum.yaml#/MusicAlbum'
           description: The album to which this recording belongs.
+          type: MusicAlbum
         inPlaylist:
-          $ref: 'musicplaylist.yaml#/MusicPlaylist'
           description: The playlist to which this recording belongs.
+          type: MusicPlaylist
         isrcCode:
           description: The International Standard Recording Code for the recording.
           type: string
         recordingOf:
-          $ref: 'musiccomposition.yaml#/MusicComposition'
           description: The composition this track is a recording of.
+          type: MusicComposition
       type: object
   description: 'A music recording (track), usually a single song.'

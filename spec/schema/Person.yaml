@@ -8,18 +8,18 @@ Person:
         address:
           description: Physical address of the item.
           oneOf:
-            - $ref: 'postaladdress.yaml#/PostalAddress'
+            - type: PostalAddress
             - type: string
         affiliation:
-          $ref: 'organization.yaml#/Organization'
           description: >-
             An organization that this person is affiliated with. For example, a
             school/university, a club, or a team.
+          type: Organization
         alumniOf:
           description: An organization that the person is an alumni of.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'educationalorganization.yaml#/EducationalOrganization'
+            - type: Organization
+            - type: EducationalOrganization
         award:
           description: An award won by or for this item.
           type: string
@@ -31,39 +31,39 @@ Person:
           format: date
           type: string
         birthPlace:
-          $ref: 'place.yaml#/Place'
           description: The place where the person was born.
+          type: Place
         brand:
           description: >-
             The brand(s) associated with a product or service, or the brand(s)
             maintained by an organization or business person.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'brand.yaml#/Brand'
+            - type: Organization
+            - type: Brand
         children:
-          $ref: 'person.yaml#/Person'
           description: A child of the person.
+          type: Person
         colleague:
           description: A colleague of the person.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'url.yaml#/URL'
+            - type: Person
+            - type: URL
         colleagues:
-          $ref: 'person.yaml#/Person'
           description: A colleague of the person.
+          type: Person
         contactPoint:
-          $ref: 'contactpoint.yaml#/ContactPoint'
           description: A contact point for a person or organization.
+          type: ContactPoint
         contactPoints:
-          $ref: 'contactpoint.yaml#/ContactPoint'
           description: A contact point for a person or organization.
+          type: ContactPoint
         deathDate:
           description: Date of death.
           format: date
           type: string
         deathPlace:
-          $ref: 'place.yaml#/Place'
           description: The place where the person died.
+          type: Place
         duns:
           description: >-
             The Dun &amp; Bradstreet DUNS number for identifying an organization
@@ -81,22 +81,22 @@ Person:
           description: The fax number.
           type: string
         follows:
-          $ref: 'person.yaml#/Person'
           description: The most generic uni-directional social relation.
+          type: Person
         funder:
           description: >-
             A person or organization that supports (sponsors) something through
             some kind of financial contribution.
           oneOf:
-            - $ref: 'organization.yaml#/Organization'
-            - $ref: 'person.yaml#/Person'
+            - type: Organization
+            - type: Person
         gender:
           description: >-
             Gender of the person. While http://schema.org/Male and
             http://schema.org/Female may be used, text strings are also
             acceptable for people who do not identify as a binary gender.
           oneOf:
-            - $ref: 'gendertype.yaml#/GenderType'
+            - type: GenderType
             - type: string
         givenName:
           description: >-
@@ -113,27 +113,26 @@ Person:
         hasOccupation:
           description: >-
             The Person's occupation. For past professions, use Role for
-            expressing dates. Note: Occupation type is not published yet in
-            schema.org.
-          type: object
+            expressing dates.
+          type: Occupation
         hasOfferCatalog:
-          $ref: 'offercatalog.yaml#/OfferCatalog'
           description: >-
             Indicates an OfferCatalog listing for this Organization, Person, or
             Service.
+          type: OfferCatalog
         hasPOS:
-          $ref: 'place.yaml#/Place'
           description: Points-of-Sales operated by the organization or person.
+          type: Place
         height:
           description: The height of the item.
           oneOf:
-            - $ref: 'distance.yaml#/Distance'
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: Distance
+            - type: QuantitativeValue
         homeLocation:
           description: A contact location for a person's residence.
           oneOf:
-            - $ref: 'contactpoint.yaml#/ContactPoint'
-            - $ref: 'place.yaml#/Place'
+            - type: ContactPoint
+            - type: Place
         honorificPrefix:
           description: An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
           type: string
@@ -152,8 +151,8 @@ Person:
           description: 'The job title of the person (for example, Financial Manager).'
           type: string
         knows:
-          $ref: 'person.yaml#/Person'
           description: The most generic bi-directional social/work relation.
+          type: Person
         knowsAbout:
           description: >-
             Of a <a class="localLink"
@@ -167,8 +166,8 @@ Person:
             descriptions.
           oneOf:
             - type: string
-            - $ref: 'thing.yaml#/Thing'
-            - $ref: 'url.yaml#/URL'
+            - type: Thing
+            - type: URL
         knowsLanguage:
           description: >-
             Of a <a class="localLink"
@@ -179,49 +178,49 @@ Person:
             reading/writing/speaking/signing here. Use language codes from the
             <a href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>.
           oneOf:
-            - $ref: 'language.yaml#/Language'
+            - type: Language
             - type: string
         makesOffer:
-          $ref: 'offer.yaml#/Offer'
           description: >-
             A pointer to products or services offered by the organization or
             person.
+          type: Offer
         memberOf:
           description: >-
             An Organization (or ProgramMembership) to which this Person or
             Organization belongs.
           oneOf:
-            - $ref: 'programmembership.yaml#/ProgramMembership'
-            - $ref: 'organization.yaml#/Organization'
+            - type: ProgramMembership
+            - type: Organization
         naics:
           description: >-
             The North American Industry Classification System (NAICS) code for a
             particular organization or business person.
           type: string
         nationality:
-          $ref: 'country.yaml#/Country'
           description: Nationality of the person.
+          type: Country
         netWorth:
           description: >-
             The total financial value of the person as calculated by subtracting
             assets from liabilities.
           oneOf:
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: PriceSpecification
+            - type: MonetaryAmount
         owns:
           description: Products owned by the organization or person.
           oneOf:
-            - $ref: 'ownershipinfo.yaml#/OwnershipInfo'
-            - $ref: 'product.yaml#/Product'
+            - type: OwnershipInfo
+            - type: Product
         parent:
-          $ref: 'person.yaml#/Person'
           description: A parent of this person.
+          type: Person
         parents:
-          $ref: 'person.yaml#/Person'
           description: A parents of the person.
+          type: Person
         performerIn:
-          $ref: 'event.yaml#/Event'
           description: Event that this person is a performer or participant in.
+          type: Event
         publishingPrinciples:
           description: >-
             The publishingPrinciples property indicates (typically via <a
@@ -245,33 +244,33 @@ Person:
             class="localLink" href="http://schema.org/funder">funder</a>) can be
             expressed using schema.org terminology.
           oneOf:
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - $ref: 'url.yaml#/URL'
+            - type: CreativeWork
+            - type: URL
         relatedTo:
-          $ref: 'person.yaml#/Person'
           description: The most generic familial relation.
+          type: Person
         seeks:
-          $ref: 'demand.yaml#/Demand'
           description: >-
             A pointer to products or services sought by the organization or
             person (demand).
+          type: Demand
         sibling:
-          $ref: 'person.yaml#/Person'
           description: A sibling of the person.
+          type: Person
         siblings:
-          $ref: 'person.yaml#/Person'
           description: A sibling of the person.
+          type: Person
         sponsor:
           description: >-
             A person or organization that supports a thing through a pledge,
             promise, or financial contribution. e.g. a sponsor of a Medical
             Study or a corporate sponsor of an event.
           oneOf:
-            - $ref: 'person.yaml#/Person'
-            - $ref: 'organization.yaml#/Organization'
+            - type: Person
+            - type: Organization
         spouse:
-          $ref: 'person.yaml#/Person'
           description: The person's spouse.
+          type: Person
         taxID:
           description: >-
             The Tax / Fiscal ID of the organization or person, e.g. the TIN in
@@ -284,15 +283,15 @@ Person:
           description: The Value-added Tax ID of the organization or person.
           type: string
         weight:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: The weight of the product or person.
+          type: QuantitativeValue
         workLocation:
           description: A contact location for a person's place of work.
           oneOf:
-            - $ref: 'place.yaml#/Place'
-            - $ref: 'contactpoint.yaml#/ContactPoint'
+            - type: Place
+            - type: ContactPoint
         worksFor:
-          $ref: 'organization.yaml#/Organization'
           description: Organizations that the person works for.
+          type: Organization
       type: object
   description: 'A person (alive, dead, undead, or fictional).'

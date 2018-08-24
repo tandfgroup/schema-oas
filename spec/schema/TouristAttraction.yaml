@@ -10,7 +10,7 @@ TouristAttraction:
             See also <a class="localLink"
             href="http://schema.org/inLanguage">inLanguage</a>
           oneOf:
-            - $ref: 'language.yaml#/Language'
+            - type: Language
             - type: string
         touristType:
           description: >-
@@ -18,7 +18,7 @@ TouristAttraction:
             from a particular country, etc.
           oneOf:
             - type: string
-            - $ref: 'audience.yaml#/Audience'
+            - type: Audience
       type: object
   description: >-
     A tourist attraction.  In principle any Thing can be a <a class="localLink"

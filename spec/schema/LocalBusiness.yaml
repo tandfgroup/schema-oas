@@ -5,11 +5,11 @@ LocalBusiness:
     chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.
   properties:
     branchOf:
-      $ref: 'organization.yaml#/Organization'
       description: >-
         The larger organization that this local business is a branch of, if any.
         Not to be confused with (anatomical)<a class="localLink"
         href="http://schema.org/branch">branch</a>.
+      type: Organization
     currenciesAccepted:
       description: >-
         The currency accepted.<br/><br/>

@@ -45,10 +45,10 @@ TradeAction:
             - type: string
             - type: number
         priceSpecification:
-          $ref: 'pricespecification.yaml#/PriceSpecification'
           description: >-
             One or more detailed price specifications, indicating the unit price
             and delivery or payment charges.
+          type: PriceSpecification
       type: object
   description: >-
     The act of participating in an exchange of goods and services for monetary

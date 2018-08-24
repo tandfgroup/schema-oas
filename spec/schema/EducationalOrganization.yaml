@@ -3,7 +3,7 @@ EducationalOrganization:
     - $ref: 'organization.yaml#/Organization'
     - properties:
         alumni:
-          $ref: 'person.yaml#/Person'
           description: Alumni of an organization.
+          type: Person
       type: object
   description: An educational organization.

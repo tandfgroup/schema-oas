@@ -11,9 +11,8 @@ SingleFamilyResidence:
             room can be put in the unitText property of the QuantitativeValue.
           oneOf:
             - type: number
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
         occupancy:
-          $ref: 'quantitativevalue.yaml#/QuantitativeValue'
           description: >-
             The allowed total occupancy for the accommodation in persons
             (including infants etc). For individual accommodations, this is not
@@ -22,5 +21,6 @@ SingleFamilyResidence:
             person).
 
             Typical unit code(s): C62 for person
+          type: QuantitativeValue
       type: object
   description: 'Residence type: Single-family home.'

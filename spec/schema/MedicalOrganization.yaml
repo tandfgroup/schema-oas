@@ -11,10 +11,8 @@ MedicalOrganization:
           description: Whether the provider is accepting new patients.
           type: boolean
         medicalSpecialty:
-          description: >-
-            A medical specialty of the provider. Note: MedicalSpecialty type is
-            not published yet in schema.org.
-          type: object
+          description: A medical specialty of the provider.
+          type: MedicalSpecialty
       type: object
   description: >-
     A medical organization (physical or not), such as hospital, institution or

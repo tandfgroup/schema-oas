@@ -3,20 +3,20 @@ ListItem:
     - $ref: 'intangible.yaml#/Intangible'
     - properties:
         item:
-          $ref: 'thing.yaml#/Thing'
           description: >-
             An entity represented by an entry in a list or data feed (e.g. an
             'artist' in a list of 'artists')’.
+          type: Thing
         nextItem:
-          $ref: 'listitem.yaml#/ListItem'
           description: A link to the ListItem that follows the current one.
+          type: ListItem
         position:
           description: The position of an item in a series or sequence of items.
           oneOf:
             - type: integer
             - type: string
         previousItem:
-          $ref: 'listitem.yaml#/ListItem'
           description: A link to the ListItem that preceeds the current one.
+          type: ListItem
       type: object
   description: 'An list item, e.g. a step in a checklist or how-to description.'

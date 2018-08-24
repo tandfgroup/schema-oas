@@ -6,12 +6,12 @@ SoftwareApplication:
           description: 'Type of software application, e.g. ''Game, Multimedia''.'
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         applicationSubCategory:
           description: 'Subcategory of the application, e.g. ''Arcade Game''.'
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         applicationSuite:
           description: >-
             The name of the application suite to which the application belongs
@@ -38,14 +38,14 @@ SoftwareApplication:
             specific make/model is required to run the application.
           type: string
         downloadUrl:
-          $ref: 'url.yaml#/URL'
           description: 'If the file can be downloaded, URL to download the binary.'
+          type: URL
         featureList:
           description: >-
             Features or modules provided by this application (and possibly
             required by other applications).
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         fileSize:
           description: >-
@@ -53,15 +53,15 @@ SoftwareApplication:
             unit (MB, KB etc.), KB will be assumed.
           type: string
         installUrl:
-          $ref: 'url.yaml#/URL'
           description: >-
             URL at which the app may be installed, if different from the URL of
             the item.
+          type: URL
         memoryRequirements:
           description: Minimum memory requirements.
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         operatingSystem:
           description: 'Operating systems supported (Windows 7, OSX 10.6, Android 1.6).'
           type: string
@@ -76,7 +76,7 @@ SoftwareApplication:
         releaseNotes:
           description: Description of what changed in this version.
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         requirements:
           description: >-
@@ -85,19 +85,19 @@ SoftwareApplication:
             the application distribution package, but required to run the
             application (Examples: DirectX, Java or .NET runtime).
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         screenshot:
           description: A link to a screenshot image of the app.
           oneOf:
-            - $ref: 'imageobject.yaml#/ImageObject'
-            - $ref: 'url.yaml#/URL'
+            - type: ImageObject
+            - type: URL
         softwareAddOn:
-          $ref: 'softwareapplication.yaml#/SoftwareApplication'
           description: Additional content for a software application.
+          type: SoftwareApplication
         softwareHelp:
-          $ref: 'creativework.yaml#/CreativeWork'
           description: Software application help.
+          type: CreativeWork
         softwareRequirements:
           description: >-
             Component dependency requirements for application. This includes
@@ -105,7 +105,7 @@ SoftwareApplication:
             the application distribution package, but required to run the
             application (Examples: DirectX, Java or .NET runtime).
           oneOf:
-            - $ref: 'url.yaml#/URL'
+            - type: URL
             - type: string
         softwareVersion:
           description: Version of the software instance.
@@ -114,9 +114,9 @@ SoftwareApplication:
           description: Storage requirements (free space required).
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
         supportingData:
-          $ref: 'datafeed.yaml#/DataFeed'
           description: Supporting data for a SoftwareApplication.
+          type: DataFeed
       type: object
   description: A software application.

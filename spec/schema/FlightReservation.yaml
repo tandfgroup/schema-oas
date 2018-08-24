@@ -11,7 +11,7 @@ FlightReservation:
             (e.g. FastTrack or Priority).
           oneOf:
             - type: string
-            - $ref: 'qualitativevalue.yaml#/QualitativeValue'
+            - type: QualitativeValue
         passengerSequenceNumber:
           description: The passenger's sequence number as assigned by the airline.
           type: string

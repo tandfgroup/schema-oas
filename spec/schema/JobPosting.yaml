@@ -5,9 +5,9 @@ JobPosting:
         baseSalary:
           description: The base salary of the job or of an employee in an EmployeeRole.
           oneOf:
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: MonetaryAmount
             - type: number
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
+            - type: PriceSpecification
         benefits:
           description: Description of benefits associated with the job.
           type: string
@@ -37,13 +37,10 @@ JobPosting:
               The estimated salary for this occupation in the given
               occupationLocation.
           oneOf:
-            - $ref: 'pricespecification.yaml#/PriceSpecification'
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: PriceSpecification
+            - type: MonetaryAmount
             - type: number
-            - description: >-
-                MonetaryAmountDistribution type is not published yet in
-                schema.org.
-              type: object
+            - type: MonetaryAmountDistribution
         experienceRequirements:
           description:
             - Description of skills and experience needed for the position.
@@ -52,8 +49,8 @@ JobPosting:
               Occupation.
           type: string
         hiringOrganization:
-          $ref: 'organization.yaml#/Organization'
           description: Organization offering the job position.
+          type: Organization
         incentiveCompensation:
           description: Description of bonus and commission compensation aspects of the job.
           type: string
@@ -67,10 +64,10 @@ JobPosting:
           description: Description of benefits associated with the job.
           type: string
         jobLocation:
-          $ref: 'place.yaml#/Place'
           description: >-
             A (typically single) geographic location associated with the job
             position.
+          type: Place
         occupationalCategory:
           description: >-
             Category or categories describing the job. Use BLS O*NET-SOC
@@ -84,10 +81,8 @@ JobPosting:
             - Specific qualifications required for this role.
           type: string
         relevantOccupation:
-          description: >-
-            The Occupation for the JobPosting. Note: Occupation type is not
-            published yet in schema.org.
-          type: object
+          description: The Occupation for the JobPosting.
+          type: Occupation
         responsibilities:
           description:
             - Responsibilities associated with this role.

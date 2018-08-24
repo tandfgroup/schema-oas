@@ -47,6 +47,6 @@ DataDownload:
             href="http://schema.org/measurementTechnique">measurementTechnique</a>.
           oneOf:
             - type: string
-            - $ref: 'url.yaml#/URL'
+            - type: URL
       type: object
   description: A dataset in downloadable form.

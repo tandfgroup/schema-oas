@@ -3,14 +3,14 @@ OrderItem:
     - $ref: 'intangible.yaml#/Intangible'
     - properties:
         orderDelivery:
-          $ref: 'parceldelivery.yaml#/ParcelDelivery'
           description: The delivery of the parcel related to this order or order item.
+          type: ParcelDelivery
         orderItemNumber:
           description: The identifier of the order item.
           type: string
         orderItemStatus:
-          $ref: 'orderstatus.yaml#/OrderStatus'
           description: The current status of the order item.
+          type: OrderStatus
         orderQuantity:
           description: >-
             The number of the item ordered. If the property is not set, assume
@@ -19,8 +19,8 @@ OrderItem:
         orderedItem:
           description: The item ordered.
           oneOf:
-            - $ref: 'orderitem.yaml#/OrderItem'
-            - $ref: 'product.yaml#/Product'
+            - type: OrderItem
+            - type: Product
       type: object
   description: >-
     An order item is a line of an order. It includes the quantity and shipping

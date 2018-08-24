@@ -3,9 +3,9 @@ InsertAction:
     - $ref: 'addaction.yaml#/AddAction'
     - properties:
         toLocation:
-          $ref: 'place.yaml#/Place'
           description: >-
             A sub property of location. The final location of the object or the
             agent after the action.
+          type: Place
       type: object
   description: The act of adding at a specific location in an ordered collection.

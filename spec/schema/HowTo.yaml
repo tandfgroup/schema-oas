@@ -7,67 +7,67 @@ HowTo:
             The estimated cost of the supply or supplies consumed when
             performing instructions.
           oneOf:
-            - $ref: 'monetaryamount.yaml#/MonetaryAmount'
+            - type: MonetaryAmount
             - type: string
         performTime:
-          $ref: 'duration.yaml#/Duration'
           description: >-
             The length of time it takes to perform instructions or a direction
             (not including time to prepare the supplies), in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration
             format</a>.
+          type: Duration
         prepTime:
-          $ref: 'duration.yaml#/Duration'
           description: >-
             The length of time it takes to prepare the items to be used in
             instructions or a direction, in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration
             format</a>.
+          type: Duration
         step:
           description: >-
             A single step item (as HowToStep, text, document, video, etc.) or a
             HowToSection.
           oneOf:
-            - $ref: 'howtostep.yaml#/HowToStep'
+            - type: HowToStep
             - type: string
-            - $ref: 'howtosection.yaml#/HowToSection'
-            - $ref: 'creativework.yaml#/CreativeWork'
+            - type: HowToSection
+            - type: CreativeWork
         steps:
           description: >-
             A single step item (as HowToStep, text, document, video, etc.) or a
             HowToSection (originally misnamed 'steps'; 'step' is preferred).
           oneOf:
-            - $ref: 'creativework.yaml#/CreativeWork'
-            - $ref: 'itemlist.yaml#/ItemList'
+            - type: CreativeWork
+            - type: ItemList
             - type: string
         supply:
           description: >-
             A sub-property of instrument. A supply consumed when performing
             instructions or a direction.
           oneOf:
-            - $ref: 'howtosupply.yaml#/HowToSupply'
+            - type: HowToSupply
             - type: string
         tool:
           description: >-
             A sub property of instrument. An object used (but not consumed) when
             performing instructions or a direction.
           oneOf:
-            - $ref: 'howtotool.yaml#/HowToTool'
+            - type: HowToTool
             - type: string
         totalTime:
-          $ref: 'duration.yaml#/Duration'
           description: >-
             The total time required to perform instructions or a direction
             (including time to prepare the supplies), in <a
             href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 duration
             format</a>.
+          type: Duration
         yield:
           description: >-
             The quantity that results by performing instructions. For example, a
             paper airplane, 10 personalized candles.
           oneOf:
             - type: string
-            - $ref: 'quantitativevalue.yaml#/QuantitativeValue'
+            - type: QuantitativeValue
       type: object
   description: >-
     Instructions that explain how to achieve a result by performing a sequence

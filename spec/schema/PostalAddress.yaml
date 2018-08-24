@@ -8,7 +8,7 @@ PostalAddress:
             <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1 alpha-2
             country code</a>.
           oneOf:
-            - $ref: 'country.yaml#/Country'
+            - type: Country
             - type: string
         addressLocality:
           description: 'The locality. For example, Mountain View.'
