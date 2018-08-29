@@ -26,8 +26,8 @@
 
 set -o errexit # exit if a command fails
 set -o pipefail # return exit status of last command
-[[ ! -z "${NOUNSET:-}" ]] && set -o nounset # exit if using undeclared variable
-[[ ! -z "${TRACE:-}" ]] && set -o xtrace # trace of command execution
+[[ -n "${NOUNSET:-}" ]] && set -o nounset # exit if using undeclared variable
+[[ -n "${TRACE:-}" ]] && set -o xtrace # trace of command execution
 IFS=$'\n\t' # (Internal Field Separator) better word splitting
 
 __DIR=$( cd "${BASH_SOURCE%/*}" && pwd ) # path to script directory
@@ -417,7 +417,7 @@ APP_NAME=$(get_env_var "APP_NAME" "$(node -p "require('./package.json').name")")
 require_var "APP_NAME"
 APP_NAME_ALT=$(get_env_var "APP_NAME_ALT" "")
 APP_NAME_ENV_DEFAULT="${APP_NAME}-${ENV}"
-[[ ! -z "${APP_NAME_ALT}" ]] && APP_NAME_ENV_DEFAULT="${APP_NAME}-${APP_NAME_ALT}-${ENV}"
+[[ -n "${APP_NAME_ALT}" ]] && APP_NAME_ENV_DEFAULT="${APP_NAME}-${APP_NAME_ALT}-${ENV}"
 APP_NAME_ENV=$(get_env_var "APP_NAME_ENV" "${APP_NAME_ENV_DEFAULT}")
 API_URL=$(get_env_var "API_URL" "https://api.domain.com")
 APP_URL=$(get_env_var "APP_URL" "https://www.domain.com")
@@ -482,7 +482,7 @@ APP_VERSION="${APP_SEMVER}${APP_SEMVER_RELEASE}${APP_SEMVER_COMMIT}"
 APP_TAG="v$(lowercase "$APP_VERSION")"
 
 APP_NAMESPACE_TAG="$(lowercase "$APP_NAME")"
-[[ ! -z $APP_NAMESPACE ]] && APP_NAMESPACE_TAG="$(lowercase "$APP_NAMESPACE")/$APP_NAMESPACE_TAG"
+[[ -n $APP_NAMESPACE ]] && APP_NAMESPACE_TAG="$(lowercase "$APP_NAMESPACE")/$APP_NAMESPACE_TAG"
 
 
 # ==================================================================================================
@@ -930,11 +930,11 @@ sh_success "STOP script completed successfully"; fi
 #   "Y88888P"   88888888888  88     `8'     88        `8'        88888888888  88      `8b
 #
 # ==================================================================================================
-if [[ ! -z "${RUN_SEMVER}" ]] && ( $RUN_DEBUG ); then sh_alert "DEBUG MODE: SEMVER script bypassed"
+if [[ -n "${RUN_SEMVER}" ]] && ( $RUN_DEBUG ); then sh_alert "DEBUG MODE: SEMVER script bypassed"
   [[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]] && {
     sh_error "Git working directory not clean. Please stash or commit your changes."
   }
-elif [[ ! -z "${RUN_SEMVER}" ]]; then sh_heading "SEMVER script started"
+elif [[ -n "${RUN_SEMVER}" ]]; then sh_heading "SEMVER script started"
 # --------------------------------------------------------------------------------------------------
 # SCRIPTING GOES HERE:
 # --------------------------------------------------------------------------------------------------
