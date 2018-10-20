@@ -4,14 +4,9 @@
   "version": "0.0.0-development",
   "author": "T&F Group",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/tandfgroup/schema-oas",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tandfgroup/schema-oas.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tandfgroup/schema-oas/issues"
-  },
+  "homepage": "https://github.com/tandfgroup/schema-oas#readme",
+  "repository": "github:tandfgroup/schema-oas",
+  "bugs": "https://github.com/tandfgroup/schema-oas/issues",
   "scripts": {
     "semantic-release": "semantic-release"
   },
