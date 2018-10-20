@@ -13,7 +13,6 @@
     "url": "https://github.com/tandfgroup/schema-oas/issues"
   },
   "scripts": {
-    "commitmsg": "commitlint -E GIT_PARAMS",
     "semantic-release": "semantic-release"
   },
   "dependencies": {
@@ -25,7 +24,7 @@
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
     "@commitlint/travis-cli": "^7.0.0",
-    "husky": "^0.14.3",
+    "husky": "^1.0.0",
     "semantic-release": "^15.9.6",
     "tandf-shell": "^1.6.0"
   },
@@ -33,5 +32,10 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
