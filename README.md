@@ -1,5 +1,7 @@
 # OpenAPI Specifications for Schema.org
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tandfgroup/schema-oas.svg)](https://greenkeeper.io/)
+
 ## Table of Contents
 
 - [About the Service](#about)
